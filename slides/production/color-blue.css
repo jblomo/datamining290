@@ -1,0 +1,50 @@
+body {
+	background-color: #05565E;
+	color: rgba(255, 255, 255, 0.8);
+	font-family: 'Open Sans', sans-serif;
+}
+
+code, pre, .well {
+	background-color: rgba(255, 255, 255, 0.4);
+	border: 1px solid rgba(255, 255, 255, 0.4);
+	color: rgba(0, 0, 0, 0.7);
+}
+
+a {
+	color: rgba(0, 200, 255, 0.5);
+}
+
+dt {
+	font-weight: bold;
+}
+
+#c-panel a {
+   display: block;
+   color: #00E;
+}
+
+h1,h2,h3,h4,h5,h6,h7,h8 {
+	color: #EDB716;
+	font-family: 'Yanone Kaffeesatz', sans;
+}
+
+th {
+	color: #D91442;
+}
+
+b {
+	font-weight: bold;
+	color: #D91442;
+}
+
+h1 b,h2 b,h3 b,h4 b,h5 b,h6 b,h7 b,h8 {
+	font-family: 'Lobster Two', script;
+	font-size: 200%;
+	line-height: 100%;
+	display: block;
+}
+
+.well a {
+	text-decoration: underline;
+}
+
