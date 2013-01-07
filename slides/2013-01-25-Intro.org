@@ -1,0 +1,216 @@
+* Data Mining i290 :slide:
+  + Jim Blomo & Shreyas
+
+* Course Goals :slide:
+  + Extract *information* from *data*
+  + Understand techniques to find patterns
+  + Apply algorithms to real data sets
+
+* We'll Do Stuff :slide:
+  + 30%: 10 Homework Assignments
+  + 30%: 1 Midterm
+  + 40%: 1 Project: Find, Mine, Report on Data
+** Homework Details :notes:
+  + HW due at midnight Thursday before class
+  + Each 24 hours late is 10% off
+  + HW & Projects most often turned in by email
+
+* But Don't Worry :slide:
+  + This isn't a programming class
+  + Grades are based on understanding of the concepts, not the craziest project
+  + Shreyas & I are here to help
+** Help :notes:
+   + We realize there's a wide range of technical skill
+   + We will help get anyone up to speed in these techncial areas
+
+* This is a Graduate class :slide:
+  + Perform well without supervision
+  + Readings from both book and online documentation
+  + TMTOWTDI
+  + Getting frameworks working on your computer
+** Style :notes:
+   + More firehouse than spoon feed, you'll need to follow up for 
+     understanding
+   + Honor system: No copying code or answers. Helping each other with 
+     concepts is encouraged, but document it.
+   + Everybody has a different workflow.  We'll be covering the most basic.
+     Great if you want to do something different, but realize we may not be able
+     to help you as much.
+   + You may want to use other frameworks for your projects. Great! But again,
+     we may not be familiar with them
+
+* Lectures & Labs :slide:
+  + Start with Q&A for at least 10 minutes
+  + Expect to be asked a question
+  + Breaks
+  + Lab: Stick around and get the first question of HW done
+  + Slides on http://jblomo.github.com/datamining290/
+** Helpful tips :notes:
+   + Helpful to me if you say your name
+   + Sorry, I tend to forget names
+   + If I am not calling on you, check to make sure you are on the class list!
+   + I'm not taking attendance, but let me know if you can't make it so I 
+     won't call on you
+
+* Office Hours :slide:two_col:
+  + We'll stay after class
+  + or schedule a Skype call
+  + [[https://piazza.com/class#spring2013/i290][Piazza]] for questions and
+    announcements
+  + Wait list will be processed normally until 3rd week... then I'll accept 
+    everyone who's participated in class if we have physical room
+  [[file:img/Office_Hours.png]]
+** Details :notes:
+   + I expect that everyone will be able to get into the class
+   + img src: http://statweb.calpoly.edu/srein/Office%20Hours.png
+
+* *Questions?* :slide:
+
+* Schedule :slide:
+  + Jan 25 Class Intro ; Tools Intro by /GUEST: Shreyas/ 
+    + lab: Git Intro
+  + Feb 1 Case Studies ; Obtaining Data 
+  + Feb 8 Probabilitiy ; Preprocessing 
+  + Feb 15 MapReduce, Data Warehouse 
+  + Feb 22 Decision Trees; Naive Bayes 
+  + Mar 1 SVM ; Neural Networks 
+  + Mar 8 Clustering ; Review 
+    + lab: Project Proposal Due 
+  + Mar 15 *Midterm* 
+    + lab: -
+  + Mar 21 Dimensionality Curse ; Graph Mining 
+  + Mar 29 HOLIDAY
+  + Apr 5 Pattern ; Evaluations 
+  + Apr 12 Collaborative Filtering; PageRank 
+  + Apr 19 Feature Extraction ; Evaluation 
+  + Apr 26 Images ; Audio 
+  + May 3 Visualization ; HTML 
+  + May 10 In Real Life ; Review 
+    + lab: -
+  + May 17 Final Presentation 
+    + lab: Bye!
+ 
+* Hi, I'm Jim Blomo :slide:
+  [[file:img/jim-totem.jpg]]
+  TODO video
+  + Cal EECS
+  + A9 - Amazon Search
+  + PBworks
+  + Yelp
+  + Lecturer
+
+* Hi, I'm Shreyas :slide:
+  TODO
+
+* Data is Important :slide:
+  + Making decisions is a core part of humanity
+  + Data can help you make better decisions
+  + Challenge: extract information from data to improve decisions
+** Decisions :notes:
+   + From big to small; from planning to execution
+   + Business questions: what is the ROI of this feature? Where to concentrate
+     development?
+   + Personal questions: Where to eat dinner tonight? What movie to see?
+   + Improving decisions means improving quality of life
+
+* Data is Important :slide:center:
+#+BEGIN_HTML
+<iframe width="560" height="315" src="http://www.youtube.com/embed/y7een27u1GM" frameborder="0" allowfullscreen></iframe>
+#+END_HTML
+
+* Data Mining ecosystem :slide:
+  + Data mining is part of a process to make decisions from data
+  + Intersection between statistics, computer science, data management, machine
+    learning
+  + Analysis & visualization often required
+** Ecosystem :notes:
+   + We'll talk about several ways to think about the process from data to
+     knowledge
+   + No universally agreed process, or black-and-white boundaries
+   + Analysis: used at the begining of investigations to understand data
+     characteristics
+   + Visualization: better understanding of the results of analysis or data
+     minig
+
+** Analysis vs. Data Minig :slide:two_col:
+   + *Analysis*: manually investigating data. No algorithms.
+   + Statistical qualities: mean, median, standard deviation
+   + Histograms (manually set buckets)
+   + Counts / Percentages
+
+
+   + *Data Mining*: discovering patterns though automated algorithms
+   + Regressions: fitting data to a model
+   + Clustering: grouping data without manually set descriptions
+   + Classification: identifying devisive features
+*** Pedantic :notes:
+   + Difference is subtle, but important for both the project and your resume
+
+** Machine Learning :slide:two_col:
+   + Programs that can learn from data
+   + Focus on prediction, based on verified training data
+   + Used in two ways: during DM, after DM
+   [[file:img/Terminator.jpg]]
+*** Uses :notes:
+   + During :: assume we have training data, train on it, see how useful trained
+     program is or find outliers
+   + After :: Discover clusters, verify and label clusers. Use lableled clusters
+     to train a program to recognize new data points
+
+** Probability & Statistics :slide:two_col:
+   [[file:img/Poisson_cdf.svg.png]]
+   + Data describes real world events
+   + Probability can describe real world *expected* events
+   + Distributions can be used to summarize data, understand the factors behind
+     its creation
+*** Uses :notes:
+   + Can "fit" data to a distribution, find outliers that are unexpected
+   + An example: Poisson distribution describes the expectation of a particular
+     number of events occuring.
+     + Eg. pieces of mail. average is 4, but it can vary.  Is getting 7 or more
+       pieces of mail really an outlier?
+
+* Process :slide:two_col:
+  + *Knowledge Discovery in Databases (KDD)*
+  + Selection
+  + Pre-processing
+  + Transformation
+  + Data Mining
+  + Interpretation/Evaluation
+
+
+  + *Cross Industry Standard Process for Data Mining*
+  + Business Understanding
+  + Data Understanding
+  + Data Preparation
+  + Modeling
+  + Evaluation
+  + Deployment
+** Common Themes :notes:
+   + Figure out what you want to do
+   + Get the data
+   + Make sure it's OK
+   + Understanding
+   + Make a decision, test its effectiveness
+   + Reading will cover another process, aimed at "Data Science", but basically
+     applies to Data Mining
+
+* *Break* :slide:
+
+
+#+STYLE: <link rel="stylesheet" type="text/css" href="production/common.css" />
+#+STYLE: <link rel="stylesheet" type="text/css" href="production/screen.css" media="screen" />
+#+STYLE: <link rel="stylesheet" type="text/css" href="production/projection.css" media="projection" />
+#+STYLE: <link rel="stylesheet" type="text/css" href="production/color-blue.css" media="projection" />
+#+STYLE: <link rel="stylesheet" type="text/css" href="production/presenter.css" media="presenter" />
+#+STYLE: <link href='http://fonts.googleapis.com/css?family=Lobster+Two:700|Yanone+Kaffeesatz:700|Open+Sans' rel='stylesheet' type='text/css'>
+
+#+BEGIN_HTML
+<script type="text/javascript" src="production/org-html-slideshow.js"></script>
+#+END_HTML
+
+# Local Variables:
+# org-export-html-style-include-default: nil
+# org-export-html-style-include-scripts: nil
+# buffer-file-coding-system: utf-8-unix
+# End:

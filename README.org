@@ -1,0 +1,48 @@
+* Web Architecture 253 :slide:
+  + Description :: Learn how to obtain, clean, visualize, understand, model, and
+    predict the world around you using data.  Grading will consist of homework
+    (30%), midterm (30%), project (40%). 
+  + Instructor :: Jim Blomo <jblomo@ischool>
+  + GSI :: Shreyas <shreyas@ischool>
+  + Textbook :: Han, J., Kamber, M., & Pei, J. (2011). _Data Mining: Concepts and Techniques_, Third Edition *(3rd ed.)*. Morgan Kaufmann.
+
+
+* Syllabus :slide:
+DM[1-0]+ indicates chapters from the text, _Data Mining_.
+
+| Date | Readings | Slides | Homework / Project |
+|------+----------+--------+--------------------|
+| Jan 25 | [[http://gitimmersion.com/][Git Immersion]] ; [[http://www.dataists.com/2010/09/a-taxonomy-of-data-science/][A Taxonomy of Data Science]] | Class Intro ; Tools Intro by /GUEST: Shreyas/ | Git Intro |
+| Feb 1 | DM1 ; [[http://hbswk.hbs.edu/item/6836.html][The Yelp Factor: Are Consumer Reviews Good for Business?]] | Case Studies ; Obtaining Data | TBA |
+| Feb 8 | DM2, DM3 | Probabilitiy ; Preprocessing | TBA |
+| Feb 15 | DM4, [[http://www.youtube.com/watch?v=SS27F-hYWfU][Apache Hadoop: Petabytes and Terawatts]] ([[http://prezi.com/u0ukvqzpyh5p/apache-hadoop-petabytes-and-terawatts/][slides]]); [[http://packages.python.org/mrjob/][mrjob]] (for homework) | MapReduce, Data Warehouse | TBA |
+| Feb 22 | DM8 | Decision Trees; Naive Bayes | TBA |
+| Mar 1 | DM9 | SVM ; Neural Networks | TBA |
+| Mar 8 | DM10 | Clustering ; Review | Project Proposal Due | 
+| Mar 15 | 1 cheat sheet | *Midterm* | - |
+| Mar 21 | DM11 | Dimensionality Curse ; Graph Mining | TBA |
+| Mar 29 | HOLIDAY
+| Apr 5 | DM6 | Pattern ; Evaluations | TBA |
+| Apr 12 | TBA | Collaborative Filtering; PageRank | TBA |
+| Apr 19 | TBA | Feature Extraction ; Evaluation | TBA |
+| Apr 26 | TBA | Images ; Audio | TBA |
+| May 3 | TBA | Visualization ; HTML | TBA |
+| May 10 | TBA | In Real Life ; Review | - |
+| May 17 |  -  | Final Presentation | Bye! |
+
+
+#+STYLE: <link rel="stylesheet" type="text/css" href="slides/production/common.css" />
+#+STYLE: <link rel="stylesheet" type="text/css" href="slides/production/screen.css" media="screen" />
+#+STYLE: <link rel="stylesheet" type="text/css" href="slides/production/projection.css" media="projection" />
+#+STYLE: <link rel="stylesheet" type="text/css" href="slides/production/presenter.css" media="presenter" />
+
+#+BEGIN_HTML
+<script type="text/javascript" src="slides/production/org-html-slideshow.js"></script>
+<a href="https://github.com/jblomo/datamining290"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+#+END_HTML
+
+# Local Variables:
+# org-export-html-style-include-default: nil
+# org-export-html-style-include-scripts: nil
+# buffer-file-coding-system: utf-8-unix
+# End:
