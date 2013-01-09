@@ -1,4 +1,4 @@
-* Web Architecture 253 :slide:
+* Data Mining 290 :slide:
   + Description :: Learn how to obtain, clean, visualize, understand, model, and
     predict the world around you using data.  Grading will consist of homework
     (30%), midterm (30%), project (40%). 
