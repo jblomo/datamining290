@@ -21,7 +21,7 @@
   + Shreyas & I are here to help
 ** Help :notes:
    + We realize there's a wide range of technical skill
-   + We will help get anyone up to speed in these techncial areas
+   + We will help get anyone up to speed in these technical areas
 
 * This is a Graduate class :slide:
   + Perform well without supervision
@@ -39,6 +39,37 @@
    + You may want to use other frameworks for your projects. Great! But again,
      we may not be familiar with them
 
+* Prerequisites :slide:
+  + Basic probability: P(A), P(A or B), P(A and B), P(A | B)
+  + Basic programming: Python
+  + Basic command line: SSH, downloading, copying large files, running programs
+    against data
+  + Textbook: Han, J., Kamber, M., & Pei, J. (2011). _Data Mining: Concepts and Techniques_, Third Edition *(3rd ed.)*. Morgan Kaufmann.
+  + Technology will be available on =ischool.berkeley.edu=
+** Basics :notes:
+   + "Probability of A", "Probability of A or B" "A and B" "A given B"
+   + Most assignments filling in algorithm code
+   + Project you may use any language, though we suggest Python.
+   + We'll introduce any specific frameworks
+   + Command line: cp, mv, less... Imagine you have a 10G file, how are you
+     going to inspect the contents?
+
+* Material :slide:
+  + Process: from find data to mining it to visualizing results
+  + Algorithms: all intuitively motivated, some rigorously studied
+  + Programming: using algorithms against data sets
+  + Discovery: finding information in self-defined project
+** What will we learn? :notes:
+   + Data mining not just about algorithms. We'll learn how to obtain, clean,
+     and store data.
+   + In real life, this is 70% of the job!
+   + We'll cover many different algorithms, and dive in depth on several of
+     them. But we're not going to get into any hairy math proofs
+   + Programming is the best way to precisely describe an algorithm. It is also
+     the way data mining is used in the real world.
+   + Your own project should emphasize your passion. Again, real world requires
+     you to grab data and squeeze information out of it without external help
+   
 * Lectures & Labs :slide:
   + Start with Q&A for at least 10 minutes
   + Expect to be asked a question
@@ -62,15 +93,16 @@
   [[file:img/Office_Hours.png]]
 ** Details :notes:
    + I expect that everyone will be able to get into the class
-   + img src: http://statweb.calpoly.edu/srein/Office%20Hours.png
+   + img src: http://statweb.calpoly.edu/srein/
 
 * *Questions?* :slide:
 
 * Schedule :slide:
+Available at [[http://jblomo.github.com/datamining290/][GitHub Syllabus page]]
   + Jan 25 Class Intro ; Tools Intro by /GUEST: Shreyas/ 
     + lab: Git Intro
   + Feb 1 Case Studies ; Obtaining Data 
-  + Feb 8 Probabilitiy ; Preprocessing 
+  + Feb 8 Probability ; Preprocessing 
   + Feb 15 MapReduce, Data Warehouse 
   + Feb 22 Decision Trees; Naive Bayes 
   + Mar 1 SVM ; Neural Networks 
@@ -90,9 +122,9 @@
   + May 17 Final Presentation 
     + lab: Bye!
  
-* Hi, I'm Jim Blomo :slide:
-  [[file:img/jim-totem.jpg]]
-  TODO video
+* Hi, I'm Jim Blomo :slide:two_col:
+*[[https://www.dropbox.com/s/obnsldacg355wqn/2013-01-08%2021.50.03.mp4][Hello Class!]]*
+
   + Cal EECS
   + A9 - Amazon Search
   + PBworks
@@ -101,7 +133,8 @@
 
 * Hi, I'm Shreyas :slide:
   + First year Grad Student (MIMS '14)
-  + I can be reached at `seekshreyas@gmail.com`
+  + Also TA'd Analyzing Big Data class
+  + I can be reached at =seekshreyas@gmail.com=
 
 * Data is Important :slide:
   + Making decisions is a core part of humanity
@@ -118,6 +151,13 @@
 #+BEGIN_HTML
 <iframe width="560" height="315" src="http://www.youtube.com/embed/y7een27u1GM" frameborder="0" allowfullscreen></iframe>
 #+END_HTML
+** Nice example of data mining :notes:
+   + Stop at 3:51
+   + Had to work with external parties to get data (Yelp, city of Seattle)
+   + Had to clean data (literally, sometimes he was just handed paper receipts)
+   + Used regression analysis to discover patterns
+   + created follow up questions
+   + Used result to understand the meaning behind the data
 
 * Data Mining ecosystem :slide:
   + Data mining is part of a process to make decisions from data
@@ -128,12 +168,12 @@
    + We'll talk about several ways to think about the process from data to
      knowledge
    + No universally agreed process, or black-and-white boundaries
-   + Analysis: used at the begining of investigations to understand data
+   + Analysis: used at the beginning of investigations to understand data
      characteristics
    + Visualization: better understanding of the results of analysis or data
-     minig
+     mining
 
-** Analysis vs. Data Minig :slide:two_col:
+** Analysis vs. Data Mining :slide:two_col:
    + *Analysis*: manually investigating data. No algorithms.
    + Statistical qualities: mean, median, standard deviation
    + Histograms (manually set buckets)
@@ -143,7 +183,7 @@
    + *Data Mining*: discovering patterns though automated algorithms
    + Regressions: fitting data to a model
    + Clustering: grouping data without manually set descriptions
-   + Classification: identifying devisive features
+   + Classification: identifying divisive features
 *** Pedantic :notes:
    + Difference is subtle, but important for both the project and your resume
 
@@ -155,7 +195,7 @@
 *** Uses :notes:
    + During :: assume we have training data, train on it, see how useful trained
      program is or find outliers
-   + After :: Discover clusters, verify and label clusers. Use lableled clusters
+   + After :: Discover clusters, verify and label clusters. Use labelled clusters
      to train a program to recognize new data points
 
 ** Probability & Statistics :slide:two_col:
@@ -167,7 +207,7 @@
 *** Uses :notes:
    + Can "fit" data to a distribution, find outliers that are unexpected
    + An example: Poisson distribution describes the expectation of a particular
-     number of events occuring.
+     number of events occurring.
      + Eg. pieces of mail. average is 4, but it can vary.  Is getting 7 or more
        pieces of mail really an outlier?
 
