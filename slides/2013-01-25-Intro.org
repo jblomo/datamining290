@@ -100,7 +100,8 @@
   + Lecturer
 
 * Hi, I'm Shreyas :slide:
-  TODO
+  + First year Grad Student (MIMS '14)
+  + I can be reached at `seekshreyas@gmail.com`
 
 * Data is Important :slide:
   + Making decisions is a core part of humanity
