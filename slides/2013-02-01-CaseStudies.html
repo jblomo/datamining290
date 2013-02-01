@@ -1,0 +1,679 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+               "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>2013-02-01-CaseStudies</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<meta name="title" content="2013-02-01-CaseStudies"/>
+<meta name="generator" content="Org-mode"/>
+<meta name="generated" content="2013-01-31 22:38:52 PST"/>
+<meta name="author" content="Jim Blomo"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+
+<link rel="stylesheet" type="text/css" href="production/common.css" />
+<link rel="stylesheet" type="text/css" href="production/screen.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="production/projection.css" media="projection" />
+<link rel="stylesheet" type="text/css" href="production/color-blue.css" media="projection" />
+<link rel="stylesheet" type="text/css" href="production/presenter.css" media="presenter" />
+<link href='http://fonts.googleapis.com/css?family=Lobster+Two:700|Yanone+Kaffeesatz:700|Open+Sans' rel='stylesheet' type='text/css'>
+
+
+</head>
+<body>
+
+<div id="preamble">
+
+</div>
+
+<div id="content">
+<h1 class="title">2013-02-01-CaseStudies</h1>
+
+
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1 Case Studies</a></li>
+<li><a href="#sec-2">2 Process</a>
+<ul>
+<li><a href="#sec-2-1">2.1 Data to Knowledge</a></li>
+</ul>
+</li>
+<li><a href="#sec-3">3 Search Engine Logs</a>
+<ul>
+<li><a href="#sec-3-1">3.1 Raw Data</a></li>
+</ul>
+</li>
+<li><a href="#sec-4">4 Flu Trends</a>
+<ul>
+<li><a href="#sec-4-1">4.1 Other ideas</a></li>
+</ul>
+</li>
+<li><a href="#sec-5">5 Asking Questions</a>
+<ul>
+<li><a href="#sec-5-1">5.1 No magic</a></li>
+</ul>
+</li>
+<li><a href="#sec-6">6 Data Mining Process</a>
+<ul>
+<li><a href="#sec-6-1">6.1 We cover the full process</a></li>
+</ul>
+</li>
+<li><a href="#sec-7">7 Data Preparation</a>
+<ul>
+<li><a href="#sec-7-1">7.1 Data Scientist</a></li>
+</ul>
+</li>
+<li><a href="#sec-8">8 Transactional Data</a>
+<ul>
+<li><a href="#sec-8-1">8.1 Storage</a></li>
+</ul>
+</li>
+<li><a href="#sec-9">9 Other Data</a>
+<ul>
+<li><a href="#sec-9-1">9.1 Data</a></li>
+</ul>
+</li>
+<li><a href="#sec-10">10 Purpose of Data Mining</a>
+<ul>
+<li><a href="#sec-10-1">10.1 Tasks</a></li>
+</ul>
+</li>
+<li><a href="#sec-11">11 Types of Models</a>
+<ul>
+<li><a href="#sec-11-1">11.1 Details</a></li>
+<li><a href="#sec-11-2">11.2 Tip of the Iceburg</a></li>
+<li><a href="#sec-11-3">11.3 Survey</a></li>
+</ul>
+</li>
+<li><a href="#sec-12">12 Your own examples</a>
+<ul>
+<li><a href="#sec-12-1">12.1 Examples</a></li>
+</ul>
+</li>
+<li><a href="#sec-13">13 Machine Learning</a></li>
+<li><a href="#sec-14">14 <b>Break</b></a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> Case Studies &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h2>
+<div class="outline-text-2" id="text-1">
+
+
+</div>
+
+</div>
+
+<div id="outline-container-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> Process &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span>&nbsp;<span class="two_col">two_col</span></span></h2>
+<div class="outline-text-2" id="text-2">
+
+<ul>
+<li><b>Knowledge Discovery in Databases (KDD)</b>
+</li>
+<li>Selection
+</li>
+<li>Pre-processing
+</li>
+<li>Transformation
+</li>
+<li>Data Mining
+</li>
+<li>Interpretation/Evaluation
+</li>
+</ul>
+
+
+
+<ul>
+<li><b>Cross Industry Standard Process for Data Mining</b>
+</li>
+<li>Business Understanding
+</li>
+<li>Data Understanding
+</li>
+<li>Data Preparation
+</li>
+<li>Modeling
+</li>
+<li>Evaluation
+</li>
+<li>Deployment
+</li>
+</ul>
+
+
+</div>
+
+<div id="outline-container-2-1" class="outline-3">
+<h3 id="sec-2-1"><span class="section-number-3">2.1</span> Data to Knowledge &nbsp;&nbsp;&nbsp;<span class="tag"><span class="notes">notes</span></span></h3>
+<div class="outline-text-3" id="text-2-1">
+
+<ul>
+<li>We learned last week that the goal of data mining is to turn raw data into
+     knowledge
+</li>
+</ul>
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> Search Engine Logs &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h2>
+<div class="outline-text-2" id="text-3">
+
+
+
+
+<pre class="src src-log">193.139.1 jim [10/Oct/2013:13:55:36 -0700] <span style="color: #8b2252;">"GET /search?query=headache HTTP/1.1"</span> 200 9288
+282.482.3 shreyas [10/Oct/2013:13:56:36 -0700] <span style="color: #8b2252;">"GET /search?query=bananas HTTP/1.1"</span> 200 2929
+345.114.1 steven [10/Oct/2013:13:56:37 -0700] <span style="color: #8b2252;">"GET /search?query=cold HTTP/1.1"</span> 200 8232
+10.328.52 anne [10/Oct/2013:13:56:39 -0700] <span style="color: #8b2252;">"GET /search?query=flu+shot HTTP/1.1"</span> 200 2342
+10.328.52 lily [10/Oct/2013:13:57:40 -0700] <span style="color: #8b2252;">"GET /search?query=i290 HTTP/1.1"</span> 200 2342
+</pre>
+
+
+<ul>
+<li>what is a common theme in these queries?
+</li>
+</ul>
+
+
+</div>
+
+<div id="outline-container-3-1" class="outline-3">
+<h3 id="sec-3-1"><span class="section-number-3">3.1</span> Raw Data &nbsp;&nbsp;&nbsp;<span class="tag"><span class="notes">notes</span></span></h3>
+<div class="outline-text-3" id="text-3-1">
+
+<ul>
+<li>raw data comes in many forms
+</li>
+<li>often well use tech examples: eg search engine logs
+</li>
+<li>these have information like user, IP, date-time, HTTP version, query
+</li>
+<li>can we extract actionable information from it?
+</li>
+</ul>
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-4" class="outline-2">
+<h2 id="sec-4"><span class="section-number-2">4</span> Flu Trends &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span>&nbsp;<span class="two_col">two_col</span></span></h2>
+<div class="outline-text-2" id="text-4">
+
+<ul>
+<li>Use dates to plot trends over time
+</li>
+<li>Use IPs to show activity per state or city
+</li>
+<li>Other ideas?
+</li>
+</ul>
+
+
+<p>
+  <img src="img/flu-trends.png"  alt="img/flu-trends.png" />
+</p>
+</div>
+
+<div id="outline-container-4-1" class="outline-3">
+<h3 id="sec-4-1"><span class="section-number-3">4.1</span> Other ideas &nbsp;&nbsp;&nbsp;<span class="tag"><span class="notes">notes</span></span></h3>
+<div class="outline-text-3" id="text-4-1">
+
+<ul>
+<li>What other information could you extract from log data?
+</li>
+<li>Spread of flu over countries, cities?
+</li>
+<li>Time of day? Do people notice in the morning?
+</li>
+<li>correlated with any other activity? (eg. travel)
+</li>
+<li>best day of the week to call in sick (and get away with it)?
+</li>
+</ul>
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-5" class="outline-2">
+<h2 id="sec-5"><span class="section-number-2">5</span> Asking Questions &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h2>
+<div class="outline-text-2" id="text-5">
+
+<ul>
+<li>Many potential discoveries within search logs
+</li>
+<li>Asking meaningful questions is a difficult but essential part of data
+    mining
+</li>
+<li>Algorithms can answer questions for you, but it can't ask them
+</li>
+</ul>
+
+
+</div>
+
+<div id="outline-container-5-1" class="outline-3">
+<h3 id="sec-5-1"><span class="section-number-3">5.1</span> No magic &nbsp;&nbsp;&nbsp;<span class="tag"><span class="notes">notes</span></span></h3>
+<div class="outline-text-3" id="text-5-1">
+
+<ul>
+<li>Data mining is not a magical machine into which one throws data and gets
+     out interesting facts
+</li>
+<li>Data + question + algorithm suited for question =&gt; potential insights
+</li>
+</ul>
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-6" class="outline-2">
+<h2 id="sec-6"><span class="section-number-2">6</span> Data Mining Process &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span>&nbsp;<span class="animate">animate</span></span></h2>
+<div class="outline-text-2" id="text-6">
+
+<ol>
+<li>Data cleaning
+</li>
+<li>Data integration
+</li>
+<li>Data selection
+</li>
+<li>Data transformation
+</li>
+<li>Data mining*
+</li>
+<li>Pattern evaluation
+</li>
+<li>Knowledge presentation
+</li>
+</ol>
+
+
+</div>
+
+<div id="outline-container-6-1" class="outline-3">
+<h3 id="sec-6-1"><span class="section-number-3">6.1</span> We cover the full process &nbsp;&nbsp;&nbsp;<span class="tag"><span class="notes">notes</span></span></h3>
+<div class="outline-text-3" id="text-6-1">
+
+<dl>
+<dt>Cleaning</dt><dd>remove abuse requests, "Estimates for Connecticut for weeks
+     2012-12-16 to 2013-01-06 were affected by a software glitch"
+</dd>
+<dt>Integration</dt><dd>Collecting logs from different data centers, maybe from
+     different formats (over the years)
+</dd>
+<dt>Selection</dt><dd>IPs, dates, queries
+</dd>
+<dt>Transformation</dt><dd>IP to location. Dates to local time.
+</dd>
+<dt>Mining</dt><dd>what words are associated with the flu? cold? fever? other
+     languages?
+</dd>
+<dt>Evaluation</dt><dd>This year worse than last, peaking later.
+</dd>
+<dt>Presentation</dt><dd>plotting, cartograms
+</dd>
+</dl>
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-7" class="outline-2">
+<h2 id="sec-7"><span class="section-number-2">7</span> Data Preparation &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h2>
+<div class="outline-text-2" id="text-7">
+
+<ul>
+<li>Collecting, cleaning, integrating take &gt; 50% of the time in real world
+    situations
+</li>
+<li>Explains difficulty in finding good candidates for Data Scientist roles
+</li>
+</ul>
+
+
+</div>
+
+<div id="outline-container-7-1" class="outline-3">
+<h3 id="sec-7-1"><span class="section-number-3">7.1</span> Data Scientist &nbsp;&nbsp;&nbsp;<span class="tag"><span class="notes">notes</span></span></h3>
+<div class="outline-text-3" id="text-7-1">
+
+<ul>
+<li>In industry, most companies are hiring engineers to interact with the full
+     stack, so that they can collect data
+</li>
+<li>If preperation is &gt; 50% and they hire you just for algorithms, they need ot
+     hire &gt; 1 other person just to support you
+</li>
+<li>How many of you like just preparing data?
+</li>
+</ul>
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-8" class="outline-2">
+<h2 id="sec-8"><span class="section-number-2">8</span> Transactional Data &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h2>
+<div class="outline-text-2" id="text-8">
+
+<ul>
+<li>Discrete history of events, containing some minimum amount of data:
+</li>
+<li>Subject: Who initiated action?
+</li>
+<li>Verb: What was done?
+</li>
+<li>Object: What was it done to?
+</li>
+<li>Timestamp: When?
+</li>
+</ul>
+
+
+</div>
+
+<div id="outline-container-8-1" class="outline-3">
+<h3 id="sec-8-1"><span class="section-number-3">8.1</span> Storage &nbsp;&nbsp;&nbsp;<span class="tag"><span class="notes">notes</span></span></h3>
+<div class="outline-text-3" id="text-8-1">
+
+<ul>
+<li>Most common example is purchase history
+</li>
+<li>Subject: user ID, or name
+</li>
+<li>Verb: In logs, can vary. In databases, you'll have a purchases table, so
+     verb is assumed to be "purchased"
+</li>
+<li>Object: product IDs (or in web logs, web pages)
+</li>
+<li>Timestamp: Make sure you account for timezones
+</li>
+<li>Other Data: previous page, extra info about action (purchase with CC?
+     Cash?)
+</li>
+</ul>
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-9" class="outline-2">
+<h2 id="sec-9"><span class="section-number-2">9</span> Other Data &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h2>
+<div class="outline-text-2" id="text-9">
+
+<ul>
+<li>Often does not contain timestamps
+</li>
+<li>Spatial Data
+</li>
+<li>Multimedia
+</li>
+</ul>
+
+<p><img src="img/moonlight_sonata.jpg"  alt="img/moonlight_sonata.jpg" />
+</p>
+</div>
+
+<div id="outline-container-9-1" class="outline-3">
+<h3 id="sec-9-1"><span class="section-number-3">9.1</span> Data &nbsp;&nbsp;&nbsp;<span class="tag"><span class="notes">notes</span></span></h3>
+<div class="outline-text-3" id="text-9-1">
+
+<ul>
+<li>Maps in general can be used to find interesting information: where are
+     cities typically located? What are properties of well planned cities?
+</li>
+<li>Videos have a time component, but are not transactional.
+</li>
+<li>Music can be seen non-linearly and analyzed
+</li>
+<li>img: <a href="http://flyingpudding.com/projects/viz_music/">http://flyingpudding.com/projects/viz_music/</a>
+</li>
+</ul>
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-10" class="outline-2">
+<h2 id="sec-10"><span class="section-number-2">10</span> Purpose of Data Mining &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h2>
+<div class="outline-text-2" id="text-10">
+
+<ul>
+<li>Obtaining <b>actionable knowledge</b>
+</li>
+<li>explains data already seen
+</li>
+<li>Immediately understand new data
+</li>
+</ul>
+
+
+</div>
+
+<div id="outline-container-10-1" class="outline-3">
+<h3 id="sec-10-1"><span class="section-number-3">10.1</span> Tasks &nbsp;&nbsp;&nbsp;<span class="tag"><span class="notes">notes</span></span></h3>
+<div class="outline-text-3" id="text-10-1">
+
+<ul>
+<li>At Amazon, dashboards for different countries
+</li>
+<li>Americans shopped at work; Germans shopped early morning, early evening; Japanese shopped late at night
+</li>
+<li>Can help with capacity planning, ideas for discounts, warehouse staffing
+</li>
+<li>Predictive: at Yelp, what business are you most likely to want to review
+     next? As you have activity, instantly understand what is the best
+     recommendation
+</li>
+</ul>
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-11" class="outline-2">
+<h2 id="sec-11"><span class="section-number-2">11</span> Types of Models &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span>&nbsp;<span class="animate">animate</span></span></h2>
+<div class="outline-text-2" id="text-11">
+
+<ul>
+<li>Classifiers
+</li>
+<li>Regressions
+</li>
+<li>Clustering
+</li>
+<li>Outlier
+</li>
+</ul>
+
+
+</div>
+
+<div id="outline-container-11-1" class="outline-3">
+<h3 id="sec-11-1"><span class="section-number-3">11.1</span> Details &nbsp;&nbsp;&nbsp;<span class="tag"><span class="notes">notes</span></span></h3>
+<div class="outline-text-3" id="text-11-1">
+
+<dl>
+<dt>Classifiers</dt><dd>describes and distinguishes cases. Yelp may want to find a
+    category for a business based on the reviews and business description
+</dd>
+<dt>Regressions</dt><dd>Predict a continuous value. Eg. predict a home's selling
+    price given sq footage, # of bedrooms
+</dd>
+<dt>Clustering</dt><dd>find "natural" groups of data <b>without labels</b>
+</dd>
+<dt>Outlier</dt><dd>find anomalous transactions, eg. finding fraud for credit cards
+</dd>
+</dl>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-11-2" class="outline-3">
+<h3 id="sec-11-2"><span class="section-number-3">11.2</span> Tip of the Iceburg &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span>&nbsp;<span class="two_col">two_col</span></span></h3>
+<div class="outline-text-3" id="text-11-2">
+
+<p><img src="img/iceberg11.jpg"  alt="img/iceberg11.jpg" />
+</p><ul>
+<li>Thousands of ways to calculate a model
+</li>
+<li>Combinatorially more ways to combine them
+</li>
+<li>In technique, large amount of overlap between purpose
+</li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="outline-container-11-3" class="outline-3">
+<h3 id="sec-11-3"><span class="section-number-3">11.3</span> Survey &nbsp;&nbsp;&nbsp;<span class="tag"><span class="notes">notes</span></span></h3>
+<div class="outline-text-3" id="text-11-3">
+
+<ul>
+<li>ML and DM fields churn these models out
+</li>
+<li>Newest methods combine multiple models (boosting &amp; bagging)
+</li>
+<li>We're going to cover these in much greater detail in the course
+</li>
+</ul>
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-12" class="outline-2">
+<h2 id="sec-12"><span class="section-number-2">12</span> Your own examples &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span>&nbsp;<span class="animate">animate</span></span></h2>
+<div class="outline-text-2" id="text-12">
+
+<ul>
+<li>Classifiers
+</li>
+<li>Regressions
+</li>
+<li>Clustering
+</li>
+<li>Outlier
+</li>
+</ul>
+
+
+</div>
+
+<div id="outline-container-12-1" class="outline-3">
+<h3 id="sec-12-1"><span class="section-number-3">12.1</span> Examples &nbsp;&nbsp;&nbsp;<span class="tag"><span class="notes">notes</span></span></h3>
+<div class="outline-text-3" id="text-12-1">
+
+<dl>
+<dt>Classifiers</dt><dd>Newly opened business
+</dd>
+<dt>Regressions</dt><dd>Revenue estimates for a franchise store
+</dd>
+<dt>Clustering</dt><dd>Movie genres
+</dd>
+<dt>Outlier</dt><dd>Bot vs human web traffic
+</dd>
+</dl>
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-13" class="outline-2">
+<h2 id="sec-13"><span class="section-number-2">13</span> Machine Learning &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span>&nbsp;<span class="two_col">two_col</span></span></h2>
+<div class="outline-text-2" id="text-13">
+
+<dl>
+<dt>Supervised</dt><dd>Given data with a label, predict data without a
+    label
+</dd>
+<dt>Unsupervised</dt><dd>Given data without labels, group "similar" items
+    together
+</dd>
+<dt>Semi-supervised</dt><dd>Mix of the above: eg. unsupervised to find groups,
+    supervised to label and distinguish borderline cases
+</dd>
+<dt>Active</dt><dd>Starting with unlabeled data, select the most helpful cases for a
+    human to label
+</dd>
+</dl>
+
+
+
+<ul>
+<li>Categories for businesses, where some business have correct labels, but not sure how precise categories should be
+</li>
+<li>Comparing search results algorithms: some queries return the same results, some return very different businesses
+</li>
+<li>Spam filter with existing corpus
+</li>
+<li>Demographic information about customers
+</li>
+</ul>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-14" class="outline-2">
+<h2 id="sec-14"><span class="section-number-2">14</span> <b>Break</b> &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h2>
+<div class="outline-text-2" id="text-14">
+
+
+
+
+
+<script type="text/javascript" src="production/org-html-slideshow.js"></script>
+
+</div>
+</div>
+</div>
+
+<div id="postamble">
+<p class="date">Date: 2013-01-31 22:38:52 PST</p>
+<p class="author">Author: Jim Blomo</p>
+<p class="creator">Org version 7.8.02 with Emacs version 23</p>
+<a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>
+
+</div>
+</body>
+</html>
