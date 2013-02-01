@@ -67,13 +67,13 @@
    + Data + question + algorithm suited for question => potential insights
 
 * Data Mining Process :slide:animate:
-  1. Data cleaning
-  1. Data integration
-  1. Data selection
-  1. Data transformation
-  1. Data mining*
-  1. Pattern evaluation
-  1. Knowledge presentation
+  + Data cleaning
+  + Data integration
+  + Data selection
+  + Data transformation
+  + Data mining*
+  + Pattern evaluation
+  + Knowledge presentation
 ** We cover the full process :notes:
    + Cleaning :: remove abuse requests, "Estimates for Connecticut for weeks
      2012-12-16 to 2013-01-06 were affected by a software glitch"
@@ -87,7 +87,7 @@
    + Presentation :: plotting, cartograms
 
 * Data Preparation :slide:
-  + Collecting, cleaning, integrating take > 50% of the time in real world
+  + Collecting, cleaning, integrating takes > 50% of the time in real world
     situations
   + Explains difficulty in finding good candidates for Data Scientist roles
 ** Data Scientist :notes:
@@ -126,7 +126,7 @@
    + img: http://flyingpudding.com/projects/viz_music/
 
 * Purpose of Data Mining :slide:
-  + Obtaining *actionable knowledge*
+  + Purpose :: Obtaining *actionable knowledge*
   + Descriptive :: explains data already seen
   + Predictive :: Immediately understand new data
 ** Tasks :notes:
@@ -171,7 +171,7 @@
    + Clustering :: Movie genres
    + Outlier :: Bot vs human web traffic
 
-* Machine Learning :slide:two_col:
+* Machine Learning :slide:
   + Supervised :: Given data with a label, predict data without a
     label
   + Unsupervised :: Given data without labels, group "similar" items
@@ -181,11 +181,13 @@
   + Active :: Starting with unlabeled data, select the most helpful cases for a
     human to label
 
-
+* Matching :slide:
   + Categories for businesses, where some business have correct labels, but not sure how precise categories should be
   + Comparing search results algorithms: some queries return the same results, some return very different businesses
   + Spam filter with existing corpus
   + Demographic information about customers
+** Details :notes:
+   + Matching with the type of learning
 
 * *Break* :slide:
 

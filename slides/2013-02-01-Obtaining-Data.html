@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
 <meta name="title" content="2013-02-01-Obtaining-Data"/>
 <meta name="generator" content="Org-mode"/>
-<meta name="generated" content="2013-02-01 11:00:10 PST"/>
+<meta name="generated" content="2013-02-01 13:45:14 PST"/>
 <meta name="author" content="Jim Blomo"/>
 <meta name="description" content=""/>
 <meta name="keywords" content=""/>
@@ -218,34 +218,41 @@
 </ul>
 
 
-<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<p>
+users
+</p><table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 <caption></caption>
 <colgroup><col class="left" /><col class="left" /><col class="left" />
 </colgroup>
 <tbody>
-<tr><td class="left">user<sub>id</sub></td><td class="left">name</td><td class="left">flags</td></tr>
+<tr><td class="left">userID</td><td class="left">name</td><td class="left">flags</td></tr>
 <tr><td class="left">25234</td><td class="left">Jim</td><td class="left">0x200</td></tr>
 </tbody>
 </table>
 
 
-<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<p>
+reviews
+</p><table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 <caption></caption>
 <colgroup><col class="left" /><col class="left" /><col class="left" /><col class="left" /><col class="left" /><col class="left" />
 </colgroup>
 <tbody>
-<tr><td class="left">review<sub>id</sub></td><td class="left">business<sub>id</sub></td><td class="left">user<sub>id</sub></td><td class="left">stars</td><td class="left">text</td><td class="left">flags</td></tr>
+<tr><td class="left">reviewID</td><td class="left">businessID</td><td class="left">userID</td><td class="left">stars</td><td class="left">text</td><td class="left">flags</td></tr>
 <tr><td class="left">282</td><td class="left">52432</td><td class="left">25234</td><td class="left">4</td><td class="left">great place!</td><td class="left">0x1</td></tr>
 </tbody>
 </table>
 
 
-<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+<p>
+feedback
+</p><table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 <caption></caption>
 <colgroup><col class="left" /><col class="left" /><col class="left" /><col class="left" />
 </colgroup>
 <tbody>
-<tr><td class="left">review<sub>id</sub></td><td class="left">src<sub>user</sub><sub>id</sub></td><td class="left">ufc<sub>flags</sub></td><td class="left">flags</td></tr>
+<tr><td class="left">reviewID</td><td class="left">srcUserID</td><td class="left">ufcFlags</td><td class="left">flags</td></tr>
 <tr><td class="left">282</td><td class="left">8205</td><td class="left">0x1</td><td class="left">0x0</td></tr>
 </tbody>
 </table>
@@ -407,7 +414,7 @@
 <colgroup><col class="left" /><col class="left" /><col class="left" />
 </colgroup>
 <tbody>
-<tr><td class="left">user<sub>name</sub></td><td class="left">date</td><td class="left">query</td></tr>
+<tr><td class="left">userName</td><td class="left">date</td><td class="left">query</td></tr>
 <tr><td class="left">jim</td><td class="left">10/Oct/2013:13:55:36 -0700</td><td class="left">headache</td></tr>
 <tr><td class="left">shreyas</td><td class="left">10/Oct/2013:13:56:36 -0700</td><td class="left">bananas</td></tr>
 <tr><td class="left">steven</td><td class="left">10/Oct/2013:13:56:37 -0700</td><td class="left">cold</td></tr>
@@ -927,7 +934,7 @@ $ gunzip yelp_academic_dataset.json.gz
 </div>
 
 <div id="postamble">
-<p class="date">Date: 2013-02-01 11:00:10 PST</p>
+<p class="date">Date: 2013-02-01 13:45:14 PST</p>
 <p class="author">Author: Jim Blomo</p>
 <p class="creator">Org version 7.8.02 with Emacs version 23</p>
 <a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>

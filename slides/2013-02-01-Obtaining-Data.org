@@ -29,13 +29,17 @@
 ** Example :slide:
    + Find the user names with most "liked" reviews on Yelp
 
-| user_id | name | flags |
+users
+| userID | name | flags |
 | 25234   | Jim  | 0x200 |
 
-| review_id | business_id | user_id | stars | text | flags |
+reviews
+| reviewID | businessID | userID | stars | text | flags |
 | 282       | 52432       | 25234 |   4     | great place! | 0x1 |
 
-| review_id | src_user_id | ufc_flags | flags |
+
+feedback
+| reviewID | srcUserID | ufcFlags | flags |
 | 282       | 8205 | 0x1 | 0x0 |
 
 *** Distributed Data :notes:
@@ -99,7 +103,7 @@
 10.328.52 lily [10/Oct/2013:13:57:40 -0700] "GET /search?query=i290 HTTP/1.1" 200 2342
 #+end_src
 
-| user_name | date | query |
+| userName | date | query |
 | jim | 10/Oct/2013:13:55:36 -0700 | headache  |
 | shreyas | 10/Oct/2013:13:56:36 -0700 | bananas  |
 | steven | 10/Oct/2013:13:56:37 -0700 | cold  |
