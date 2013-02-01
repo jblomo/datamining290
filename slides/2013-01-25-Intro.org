@@ -13,7 +13,8 @@
 ** Homework Details :notes:
   + HW due at midnight Thursday before class
   + Each 24 hours late is 10% off
-  + HW & Projects most often turned in by email
+  + HW will be turned in by GitHub pull request
+  + Project will be submitted by email & presentation
 
 * But Don't Worry :slide:
   + This isn't a programming class
@@ -36,6 +37,8 @@
    + Everybody has a different workflow.  We'll be covering the most basic.
      Great if you want to do something different, but realize we may not be able
      to help you as much.
+   + Non ISchool students should email student ID from EDU account to shreyas and
+     jblomo and we will get them ischool accounts.
    + You may want to use other frameworks for your projects. Great! But again,
      we may not be familiar with them
 
