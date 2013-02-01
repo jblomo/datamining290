@@ -1,3 +1,10 @@
+* Questions :slide:
+  + Differences from [[http://bid.berkeley.edu/cs294-1-spring13/index.php/Main_Page][CS 294 Behavioral Data Mining]]
+  + Course Load
+  + Readings: after lecture
+** Memory :notes:
+   + Spaced intervals makes memorizing easiest
+
 * Case Studies :slide:
 
 * Process :slide:two_col:

@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
 <meta name="title" content="2013-02-01-Obtaining-Data"/>
 <meta name="generator" content="Org-mode"/>
-<meta name="generated" content="2013-02-01 08:11:45 PST"/>
+<meta name="generated" content="2013-02-01 11:00:10 PST"/>
 <meta name="author" content="Jim Blomo"/>
 <meta name="description" content=""/>
 <meta name="keywords" content=""/>
@@ -73,14 +73,53 @@
 <li><a href="#sec-2-7-1">2.7.1 Accessing these</a></li>
 </ul>
 </li>
-<li><a href="#sec-2-8">2.8 Datasets</a>
+<li><a href="#sec-2-8">2.8 Data Sets</a>
 <ul>
 <li><a href="#sec-2-8-1">2.8.1 Research</a></li>
 </ul>
 </li>
-<li><a href="#sec-2-9">2.9 Dataset Example</a></li>
+<li><a href="#sec-2-9">2.9 Data Set Example</a></li>
 </ul>
 </li>
+<li><a href="#sec-3">3 Exploring Data</a>
+<ul>
+<li><a href="#sec-3-1">3.1 Size</a></li>
+</ul>
+</li>
+<li><a href="#sec-4">4 Yelp Academic Dataset</a>
+<ul>
+<li><a href="#sec-4-1">4.1 Example</a></li>
+</ul>
+</li>
+<li><a href="#sec-5">5 CLI introduction</a>
+<ul>
+<li><a href="#sec-5-1">5.1 Help</a></li>
+</ul>
+</li>
+<li><a href="#sec-6">6 <code>wget</code></a>
+<ul>
+<li><a href="#sec-6-1">6.1 Command</a></li>
+</ul>
+</li>
+<li><a href="#sec-7">7 <code>scp</code></a>
+<ul>
+<li><a href="#sec-7-1">7.1 Command</a></li>
+</ul>
+</li>
+<li><a href="#sec-8">8 <code>gunzip</code> <code>unzip</code></a>
+<ul>
+<li><a href="#sec-8-1">8.1 Commands</a></li>
+</ul>
+</li>
+<li><a href="#sec-9">9 <code>less</code></a></li>
+<li><a href="#sec-10">10 Searching in <code>less</code></a>
+<ul>
+<li><a href="#sec-10-1">10.1 Command</a></li>
+</ul>
+</li>
+<li><a href="#sec-11">11 <code>grep</code></a></li>
+<li><a href="#sec-12">12 <code>wc</code></a></li>
+<li><a href="#sec-13">13 Composable</a></li>
 </ul>
 </div>
 </div>
@@ -107,7 +146,7 @@
 </li>
 <li>External API
 </li>
-<li>Datasets
+<li>Data Sets
 </li>
 </ul>
 
@@ -127,7 +166,7 @@
 </li>
 <li>Usually stored in databases best suited for transactional use
 </li>
-<li>Challenge is reoganizing data to suit question
+<li>Challenge is reorganizing data to suit question
 </li>
 </ul>
 
@@ -145,19 +184,19 @@
 <li>We'll go into more detail in another class, but online use is
       optimized for small queries and small updates
 </li>
-<li>Frequently just accessing the data in bulk is a software enginering
+<li>Frequently just accessing the data in bulk is a software engineering
       problem:
 <ul>
 <li>ensuring long queries don't hold up production usage
 </li>
 <li>joining across databases via software
 </li>
-<li>understanding esotaric columns, like "flags"
+<li>understanding esoteric columns, like "flags"
 </li>
 </ul>
 
 </li>
-<li>Often will want to reoganize data to look like transactional
+<li>Often will want to reorganize data to look like transactional
 </li>
 <li>img: <a href="http://woodwarddesign.ca/blog/2009/03/06/bottle-caps/">http://woodwarddesign.ca/blog/2009/03/06/bottle-caps/</a>
 </li>
@@ -260,7 +299,7 @@
 </li>
 <li>Organized for analytics queries
 </li>
-<li>Requires extra maintainence and understanding of construction
+<li>Requires extra maintenance and understanding of construction
 </li>
 </ul>
 
@@ -337,7 +376,7 @@
 <li>Pictures can contain attributes like color depth, length, width
 </li>
 <li>First step of data mining is often imposing structure on data: the data is
-      not inherintly unstructured, it just is unclear what the structure <b>should be</b>
+      not inherently unstructured, it just is unclear what the structure <b>should be</b>
       until query time
 </li>
 </ul>
@@ -419,11 +458,11 @@
 <div class="outline-text-4" id="text-2-6-1">
 
 <ul>
-<li>Comapnies are often searching for other ways to leverage their data
+<li>Companies are often searching for other ways to leverage their data
 </li>
 <li>Both for immediate business purposes, and for brand recognition
 </li>
-<li>Twitter more (in)famouse example
+<li>Twitter more (in)famous example
 </li>
 <li>NYTimes another good option
 </li>
@@ -454,7 +493,7 @@
 <div class="outline-text-4" id="text-2-7-1">
 
 <ul>
-<li>More info on how to access these APIs is in the Web Archetecture class,
+<li>More info on how to access these APIs is in the Web Architecture class,
       but feel free to ask Shreyas or I about how best to access them
 </li>
 </ul>
@@ -466,7 +505,7 @@
 </div>
 
 <div id="outline-container-2-8" class="outline-3">
-<h3 id="sec-2-8"><span class="section-number-3">2.8</span> Datasets &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h3>
+<h3 id="sec-2-8"><span class="section-number-3">2.8</span> Data Sets &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h3>
 <div class="outline-text-3" id="text-2-8">
 
 <ul>
@@ -489,7 +528,7 @@
 <div class="outline-text-4" id="text-2-8-1">
 
 <ul>
-<li>Datasets commonly used in research: can compare different techniques on
+<li>Data sets commonly used in research: can compare different techniques on
       same data to understand advantages
 </li>
 <li>Sizes can range to a few MB to GB
@@ -506,19 +545,378 @@
 </div>
 
 <div id="outline-container-2-9" class="outline-3">
-<h3 id="sec-2-9"><span class="section-number-3">2.9</span> Dataset Example &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h3>
+<h3 id="sec-2-9"><span class="section-number-3">2.9</span> Data Set Example &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span>&nbsp;<span class="two_col">two_col</span></span></h3>
 <div class="outline-text-3" id="text-2-9">
 
 <ul>
+<li><a href="http://www.grouplens.org/node/73">MovieLens Data Sets</a>
+</li>
 <li><a href="https://www.kaggle.com/c/digit-recognizer">Kaggle Digit Recognizer</a>
 </li>
 <li><a href="https://bitly.com/bundles/hmason/1">Hilary Mason's Data Sets</a>
 </li>
-<li><a href="http://www.grouplens.org/node/73">MovieLens Data Sets</a>
+</ul>
+
+
+<p>
+<img src="img/video.jpg"  alt="img/video.jpg" />
+</p>
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> Exploring Data &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h2>
+<div class="outline-text-2" id="text-3">
+
+<ul>
+<li>Data sets are frequently too large to fit in standard tools like Excel or
+    Word
+</li>
+<li>Simplest to explore on the command line
+</li>
+<li>Homework will be exploring a data set of your choice
 </li>
 </ul>
 
 
+</div>
+
+<div id="outline-container-3-1" class="outline-3">
+<h3 id="sec-3-1"><span class="section-number-3">3.1</span> Size &nbsp;&nbsp;&nbsp;<span class="tag"><span class="notes">notes</span></span></h3>
+<div class="outline-text-3" id="text-3-1">
+
+<ul>
+<li>Some formats will not be easily parsed into Excel: eg. JSON, XML
+</li>
+<li>Word will be slow, or unworkable for GB size data
+</li>
+<li>CLI provides many composable tools for text manipulation
+</li>
+</ul>
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-4" class="outline-2">
+<h2 id="sec-4"><span class="section-number-2">4</span> Yelp Academic Dataset &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h2>
+<div class="outline-text-2" id="text-4">
+
+<ul>
+<li><a href="http://yelp.com/academic_dataset">Yelp Data Set</a> covers reviews, users,
+    businesses
+</li>
+<li>To download, you'll need to sign up: process takes ~24 hours for approval
+</li>
+<li>Use .edu email
+</li>
+</ul>
+
+
+</div>
+
+<div id="outline-container-4-1" class="outline-3">
+<h3 id="sec-4-1"><span class="section-number-3">4.1</span> Example &nbsp;&nbsp;&nbsp;<span class="tag"><span class="notes">notes</span></span></h3>
+<div class="outline-text-3" id="text-4-1">
+
+<ul>
+<li>We'll use this as an example, you can use any data set of your choice
+</li>
+<li>Just for HW, don't need to use for project
+</li>
+</ul>
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-5" class="outline-2">
+<h2 id="sec-5"><span class="section-number-2">5</span> CLI introduction &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h2>
+<div class="outline-text-2" id="text-5">
+
+<ul>
+<li>Standard commands available in <a href="http://cli.learncodethehardway.com">Learn CLI the hard way</a>
+</li>
+<li>All example will be run on <code>ischool.berkeley.edu</code>
+</li>
+<li>Sheyas and I available for more help
+</li>
+</ul>
+
+
+</div>
+
+<div id="outline-container-5-1" class="outline-3">
+<h3 id="sec-5-1"><span class="section-number-3">5.1</span> Help &nbsp;&nbsp;&nbsp;<span class="tag"><span class="notes">notes</span></span></h3>
+<div class="outline-text-3" id="text-5-1">
+
+<ul>
+<li>If you're new, don't be intimidated.
+</li>
+<li>Security policies ensure you can't break anything besides your own files
+</li>
+<li>Keep backups of important stuff anyway
+</li>
+</ul>
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-6" class="outline-2">
+<h2 id="sec-6"><span class="section-number-2">6</span> <code>wget</code> &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h2>
+<div class="outline-text-2" id="text-6">
+
+<ul>
+<li>Used for downloading files
+</li>
+<li>Downloading with the browser is fine, but sometimes nice to use faster
+    connection, or download it directly to machine you're working on
+</li>
+</ul>
+
+
+
+
+<pre class="src src-bash">$ wget 'http://www.grouplens.org/system/files/ml-100k.zip'
+</pre>
+
+
+</div>
+
+<div id="outline-container-6-1" class="outline-3">
+<h3 id="sec-6-1"><span class="section-number-3">6.1</span> Command &nbsp;&nbsp;&nbsp;<span class="tag"><span class="notes">notes</span></span></h3>
+<div class="outline-text-3" id="text-6-1">
+
+<ul>
+<li>Just <code>wget URL</code>
+</li>
+<li>I like to use quotes in case there are special characters in the URL, eg
+     <code>?</code>
+</li>
+<li>Will download to current directory, same name as remote file
+</li>
+</ul>
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-7" class="outline-2">
+<h2 id="sec-7"><span class="section-number-2">7</span> <code>scp</code> &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h2>
+<div class="outline-text-2" id="text-7">
+
+<ul>
+<li>Copy a file to or from a remote machine
+</li>
+<li>Uses same connection as SSH, but copies data instead
+</li>
+<li>Example: Copy data you've downloaded in your browser
+</li>
+</ul>
+
+
+
+
+<pre class="src src-bash">$ scp ~/Downloads/ml-100k.zip jblomo@ischool.berkeley.edu:
+# or
+$ scp ~/Downloads/ml-100k.zip jblomo@ischool.berkeley.edu:i290/movielens-100k.zip
+</pre>
+
+
+</div>
+
+<div id="outline-container-7-1" class="outline-3">
+<h3 id="sec-7-1"><span class="section-number-3">7.1</span> Command &nbsp;&nbsp;&nbsp;<span class="tag"><span class="notes">notes</span></span></h3>
+<div class="outline-text-3" id="text-7-1">
+
+<ul>
+<li>Trailing <code>:</code> is important: signifies remote machine
+</li>
+<li>If you don't specify path or filename, will copy the file with the same
+     name into your home directory
+</li>
+</ul>
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-8" class="outline-2">
+<h2 id="sec-8"><span class="section-number-2">8</span> <code>gunzip</code> <code>unzip</code> &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h2>
+<div class="outline-text-2" id="text-8">
+
+<ul>
+<li>Uncompress data sets for simpler, faster manipulation
+</li>
+</ul>
+
+
+
+
+<pre class="src src-bash">$ unzip ml-100k.zip
+# or
+$ gunzip yelp_academic_dataset.json.gz
+</pre>
+
+
+</div>
+
+<div id="outline-container-8-1" class="outline-3">
+<h3 id="sec-8-1"><span class="section-number-3">8.1</span> Commands &nbsp;&nbsp;&nbsp;<span class="tag"><span class="notes">notes</span></span></h3>
+<div class="outline-text-3" id="text-8-1">
+
+<dl>
+<dt>unzip</dt><dd>expand potentially many file, leave original alone
+</dd>
+<dt>gunzip</dt><dd>expand original file, leaving only the uncompressed version
+</dd>
+</dl>
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-9" class="outline-2">
+<h2 id="sec-9"><span class="section-number-2">9</span> <code>less</code> &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h2>
+<div class="outline-text-2" id="text-9">
+
+<ul>
+<li>View a file
+</li>
+<li>History: original command was called <code>more</code> to see a file a page at a time
+</li>
+<li>"Less is more"
+</li>
+</ul>
+
+
+
+
+<pre class="src src-bash">less yelp_academic_dataset.json
+</pre>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-10" class="outline-2">
+<h2 id="sec-10"><span class="section-number-2">10</span> Searching in <code>less</code> &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h2>
+<div class="outline-text-2" id="text-10">
+
+<ul>
+<li><code>/</code> (forward slash) lets you input search text
+</li>
+<li><code>q</code> will quit
+</li>
+</ul>
+
+
+
+
+<pre class="src src-less">/type<span style="color: #8b2252;">": "</span>user<span style="color: #8b2252;">"</span>
+<span style="color: #8b2252;">/type"</span>: <span style="color: #8b2252;">"review"</span>
+</pre>
+
+
+</div>
+
+<div id="outline-container-10-1" class="outline-3">
+<h3 id="sec-10-1"><span class="section-number-3">10.1</span> Command &nbsp;&nbsp;&nbsp;<span class="tag"><span class="notes">notes</span></span></h3>
+<div class="outline-text-3" id="text-10-1">
+
+<ul>
+<li>Useful for finding specific instances to investigate
+</li>
+</ul>
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-11" class="outline-2">
+<h2 id="sec-11"><span class="section-number-2">11</span> <code>grep</code> &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h2>
+<div class="outline-text-2" id="text-11">
+
+<ul>
+<li>Find and print lines matching a "regular expression"
+</li>
+<li><a href="http://www.regular-expressions.info/quickstart.html">Regular expressions</a> are "find" on steroids, but you can use simple strings
+</li>
+</ul>
+
+
+
+
+<pre class="src src-bash">$ grep 'type<span style="color: #8b2252;">": "</span>review<span style="color: #8b2252;">"' yelp_academic_dataset.json</span>
+</pre>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-12" class="outline-2">
+<h2 id="sec-12"><span class="section-number-2">12</span> <code>wc</code> &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h2>
+<div class="outline-text-2" id="text-12">
+
+<ul>
+<li>"wordcount" counts characters, words, lines
+</li>
+<li>Most useful in data sets for lines: <code>-l</code>
+</li>
+</ul>
+
+
+
+
+<pre class="src src-bash">$ wc -l yelp_academic_dataset.json
+474434 yelp_academic_dataset.json
+</pre>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-13" class="outline-2">
+<h2 id="sec-13"><span class="section-number-2">13</span> Composable &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h2>
+<div class="outline-text-2" id="text-13">
+
+<ul>
+<li>Genius of Unix: do one thing well, compose commands to get what you want
+</li>
+<li><code>|</code> pipe characters "sends" output from one program to the input of another
+</li>
+<li>How many reviews in the data set?
+</li>
+</ul>
+
+
+
+
+<pre class="src src-bash">$ grep 'type<span style="color: #8b2252;">": "</span>review<span style="color: #8b2252;">"' yelp_academic_dataset.json | wc -l</span>
+<span style="color: #8b2252;">330071</span>
+<span style="color: #8b2252;">$ egrep -o 'business_id"</span>: <span style="color: #8b2252;">"\w+"</span>' yelp_academic_dataset.json  | sort -u | wc -l
+9592
+</pre>
 
 
 
@@ -527,10 +925,9 @@
 </div>
 </div>
 </div>
-</div>
 
 <div id="postamble">
-<p class="date">Date: 2013-02-01 08:11:45 PST</p>
+<p class="date">Date: 2013-02-01 11:00:10 PST</p>
 <p class="author">Author: Jim Blomo</p>
 <p class="creator">Org version 7.8.02 with Emacs version 23</p>
 <a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>

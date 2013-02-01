@@ -12,8 +12,8 @@ DM[1-0]+ indicates chapters from the text, _Data Mining_.
 
 | Date | Readings | Slides | Homework / Project |
 |------+----------+--------+--------------------|
-| Jan 25 | [[http://try.github.com][Try Github]] ; [[http://www.dataists.com/2010/09/a-taxonomy-of-data-science/][A Taxonomy of Data Science]] | [[file:slides/2013-01-25-Intro.html][Class Intro]] ; Tools Intro by /GUEST: Shreyas/ | Git Intro |
-| Feb 1 | DM1 ; [[http://hbswk.hbs.edu/item/6836.html][The Yelp Factor: Are Consumer Reviews Good for Business?]] | Case Studies ; Obtaining Data | TBA |
+| Jan 25 | [[http://try.github.com][Try Github]] ; [[http://www.dataists.com/2010/09/a-taxonomy-of-data-science/][A Taxonomy of Data Science]] | [[file:slides/2013-01-25-Intro.html][Class Intro]] ; Tools Intro by /GUEST: Shreyas/ | [[ https://github.com/seekshreyas/Introduction-to-Git-Github][Git Intro]] |
+| Feb 1 | DM1 ; [[http://hbswk.hbs.edu/item/6836.html][The Yelp Factor: Are Consumer Reviews Good for Business?]] | [[file:slides/2013-02-01-CaseStudies.html][Case Studies]] ; [[file:slides/2013-02-01-Obtaining-Data.html][Obtaining Data]] | [[file:slides/2013-02-01-Lab.html][Obtain & Explore Data]] |
 | Feb 8 | DM2, DM3 | Probability ; Preprocessing | TBA |
 | Feb 15 | DM4, [[http://www.youtube.com/watch?v=SS27F-hYWfU][Apache Hadoop: Petabytes and Terawatts]] ([[http://prezi.com/u0ukvqzpyh5p/apache-hadoop-petabytes-and-terawatts/][slides]]); [[http://packages.python.org/mrjob/][mrjob]] (for homework) | MapReduce, Data Warehouse | TBA |
 | Feb 22 | DM8 | Decision Trees; Naive Bayes | TBA |

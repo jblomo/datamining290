@@ -5,25 +5,25 @@
   + Data Warehouse
   + Unstructured Data
   + External API
-  + Datasets
+  + Data Sets
 
 [[file:img/bottlecaps.jpg]]
 
 ** Operational Data :slide:
    + Most frequent in industry
    + Usually stored in databases best suited for transactional use
-   + Challenge is reoganizing data to suit question
+   + Challenge is reorganizing data to suit question
 *** Data from production :notes:
     + Most frequently you'll have data that is being used by the application,
       and you'll want to find insights in it
     + We'll go into more detail in another class, but online use is
       optimized for small queries and small updates
-    + Frequently just accessing the data in bulk is a software enginering
+    + Frequently just accessing the data in bulk is a software engineering
       problem:
       + ensuring long queries don't hold up production usage
       + joining across databases via software
-      + understanding esotaric columns, like "flags"
-    + Often will want to reoganize data to look like transactional
+      + understanding esoteric columns, like "flags"
+    + Often will want to reorganize data to look like transactional
     + img: http://woodwarddesign.ca/blog/2009/03/06/bottle-caps/
 
 ** Example :slide:
@@ -56,7 +56,7 @@
 ** Data Warehouse :slide:two_col:
    + Data located on same system
    + Organized for analytics queries
-   + Requires extra maintainence and understanding of construction
+   + Requires extra maintenance and understanding of construction
 
    [[file:img/Ikea-Warehouse.jpg]]
 *** No free lunch :notes:
@@ -87,7 +87,7 @@
       radically between questions: How many words? Characters? What is the sentiment?
     + Pictures can contain attributes like color depth, length, width
     + First step of data mining is often imposing structure on data: the data is
-      not inherintly unstructured, it just is unclear what the structure *should be*
+      not inherently unstructured, it just is unclear what the structure *should be*
       until query time
 
 ** Search Logs Example :slide:
@@ -115,35 +115,147 @@
    + More limited in amount and detail
    + Commonly HTTP/REST based
 *** Motivation :notes:
-   + Comapnies are often searching for other ways to leverage their data
+   + Companies are often searching for other ways to leverage their data
    + Both for immediate business purposes, and for brand recognition
-   + Twitter more (in)famouse example
+   + Twitter more (in)famous example
    + NYTimes another good option
 
 ** NYTimes API Example :slide:
    + [[http://developer.nytimes.com/docs/read/article_search_api][Article Search API]]
    + http://api.nytimes.com/svc/search/v1/article?format=json&query=ballot&api-key=6578bab7f8c3808ce4c392edc9a793f0:8:5717915
 *** Accessing these :notes:
-    + More info on how to access these APIs is in the Web Archetecture class,
+    + More info on how to access these APIs is in the Web Architecture class,
       but feel free to ask Shreyas or I about how best to access them
 
-** Datasets :slide:
+** Data Sets :slide:
    + Download large, curated set of data all at once
    + Formats vary, but usually documented
    + Can be useful to combine with other datasets or APIs
 
 [[file:img/kaggle-digits.png]]
 *** Research :notes:
-    + Datasets commonly used in research: can compare different techniques on
+    + Data sets commonly used in research: can compare different techniques on
       same data to understand advantages
     + Sizes can range to a few MB to GB
     + JSON, CSV, XML all potential formats. Cleaning, organization for your
       question again becomes an important aspect
 
-** Dataset Example :slide:
+** Data Set Example :slide:two_col:
+   + [[http://www.grouplens.org/node/73][MovieLens Data Sets]]
    + [[https://www.kaggle.com/c/digit-recognizer][Kaggle Digit Recognizer]]
    + [[https://bitly.com/bundles/hmason/1][Hilary Mason's Data Sets]]
-   + [[http://www.grouplens.org/node/73][MovieLens Data Sets]]
+
+[[file:img/video.jpg]]
+
+* Exploring Data :slide:
+  + Data sets are frequently too large to fit in standard tools like Excel or
+    Word
+  + Simplest to explore on the command line
+  + Homework will be exploring a data set of your choice
+** Size :notes:
+   + Some formats will not be easily parsed into Excel: eg. JSON, XML
+   + Word will be slow, or unworkable for GB size data
+   + CLI provides many composable tools for text manipulation
+
+* Yelp Academic Dataset :slide:
+  + [[http://yelp.com/academic_dataset][Yelp Data Set]] covers reviews, users,
+    businesses
+  + To download, you'll need to sign up: process takes ~24 hours for approval
+  + Use .edu email
+** Example :notes:
+   + We'll use this as an example, you can use any data set of your choice
+   + Just for HW, don't need to use for project
+
+* CLI introduction :slide:
+  + Standard commands available in [[http://cli.learncodethehardway.com][Learn CLI the hard way]]
+  + All example will be run on =ischool.berkeley.edu=
+  + Sheyas and I available for more help
+** Help :notes:
+   + If you're new, don't be intimidated.
+   + Security policies ensure you can't break anything besides your own files
+   + Keep backups of important stuff anyway
+
+* =wget= :slide:
+  + Used for downloading files
+  + Downloading with the browser is fine, but sometimes nice to use faster
+    connection, or download it directly to machine you're working on
+#+begin_src bash
+$ wget 'http://www.grouplens.org/system/files/ml-100k.zip'
+#+end_src
+** Command :notes:
+   + Just =wget URL=
+   + I like to use quotes in case there are special characters in the URL, eg
+     =?=
+   + Will download to current directory, same name as remote file
+
+* =scp= :slide:
+  + Copy a file to or from a remote machine
+  + Uses same connection as SSH, but copies data instead
+  + Example: Copy data you've downloaded in your browser
+#+begin_src bash
+$ scp ~/Downloads/ml-100k.zip jblomo@ischool.berkeley.edu:
+# or
+$ scp ~/Downloads/ml-100k.zip jblomo@ischool.berkeley.edu:i290/movielens-100k.zip
+#+end_src
+** Command :notes:
+   + Trailing =:= is important: signifies remote machine
+   + If you don't specify path or filename, will copy the file with the same
+     name into your home directory
+
+* =gunzip= =unzip= :slide:
+  + Uncompress data sets for simpler, faster manipulation
+#+begin_src bash
+$ unzip ml-100k.zip
+# or
+$ gunzip yelp_academic_dataset.json.gz
+#+end_src
+** Commands :notes:
+   + unzip :: expand potentially many file, leave original alone
+   + gunzip :: expand original file, leaving only the uncompressed version
+
+* =less= :slide:
+  + View a file
+  + History: original command was called =more= to see a file a page at a time
+  + "Less is more"
+#+begin_src bash
+less yelp_academic_dataset.json
+#+end_src
+
+* Searching in =less= :slide:
+  + =/= (forward slash) lets you input search text
+  + =q= will quit
+#+begin_src less
+/type": "user"
+/type": "review"
+#+end_src
+** Command :notes:
+   + Useful for finding specific instances to investigate
+
+* =grep= :slide:
+  + Find and print lines matching a "regular expression"
+  + [[http://www.regular-expressions.info/quickstart.html][Regular expressions]] are "find" on steroids, but you can use simple strings
+#+begin_src bash
+$ grep 'type": "review"' yelp_academic_dataset.json
+#+end_src
+
+* =wc= :slide:
+  + "wordcount" counts characters, words, lines
+  + Most useful in data sets for lines: =-l=
+#+begin_src bash
+$ wc -l yelp_academic_dataset.json
+474434 yelp_academic_dataset.json
+#+end_src
+
+* Composable :slide:
+  + Genius of Unix: do one thing well, compose commands to get what you want
+  + =|= pipe characters "sends" output from one program to the input of another
+  + How many reviews in the data set?
+#+begin_src bash
+$ grep 'type": "review"' yelp_academic_dataset.json | wc -l
+330071
+$ egrep -o 'business_id": "\w+"' yelp_academic_dataset.json  | sort -u | wc -l
+9592
+#+end_src
 
 #+STYLE: <link rel="stylesheet" type="text/css" href="production/common.css" />
 #+STYLE: <link rel="stylesheet" type="text/css" href="production/screen.css" media="screen" />

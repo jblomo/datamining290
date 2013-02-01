@@ -1,0 +1,91 @@
+* Lab: Obtain and Explore Data :slide:
+  + Setup GitHub account
+  + Find a data set or external API
+  + Superficially examine it
+  + Summarize findings
+  + Submit assignment via GitHub
+
+* Why GitHub? :slide:
+  + =git= tool is standard in industry
+  + GitHub provides best tools for sharing, commenting code
+  + This assignment will not have code, just practice submitting
+
+* Setup GitHub account :slide:
+  + Create a [[https://github.com/signup/free][GitHub Account]], making sure to
+    use your .edu address
+  + Use [[https://github.com/edu][GitHub/Edu]] to request a free micro plan:
+    these let us use private accounts
+
+* Setup git repository on ischool server :slide:
+  + On the server ischool.berkeley.edu
+#+begin_src bash
+$ git clone git://github.com/jblomo/datamining290.git
+#+end_src
+  + On the server, in the datamining290 directory run 
+#+begin_src bash
+$ git remote rename origin jblomo
+#+end_src
+
+* Connect it to GitHub :slide:
+  + After you recieve your free micro account on GitHub, create a private repository called datamining290
+  + It will provide you with an SSH git path, let's call it PATH
+  + On the server, in the datamining290 directory, run
+#+begin_src html
+$ git remote add origin PATH
+$ git push origin
+#+end_src
+
+* Share with us :slide:
+  + Hopefully you now have a private copy of my repository
+  + Add Shreyas and me (users: seekshreyas, jblomo) as a contributor to your private repository
+
+* Obtain Data :slide:
+  + Look through the links in slides for interesting data sets, or find your own
+  + Or find a service API, like NYTimes
+  + Explore the data available to answer the following questions
+
+* Questions :slide:
+  + What are the types of data available to you?
+  + For data sets: how many records are in the data set?
+  + For API: what are the limits on fetching data?
+  + Provide an "interesting" record, explain its properties and why it is
+    interesting
+  + What are 3 questions you could answer using your data?
+
+* Submit Homework :slide:
+  + On the ischool server, create a branch called =hw-obtain-data=
+  + Create a text file to write the solution, a simple editor to use is =pico=
+  + =git add= the file
+  + =git commit= the change
+  + =git push origin= to put it on GitHub
+  + on github, submit a "pull request" from the =hw-obtain-data= branch to your master branch
+** Pull Requests :notes:
+   + Pull requests are a way of showing updates in a way that lets me provide
+     comments, get notifications
+   + This is the first time I've tried it for class, so you're on the cutting
+     edge. Hopefully it will work, give me feedback if it is not
+
+* Going Forward :slide:
+  + Other homework assignments will be completing code
+  + General work-flow:
+    + Start a new branch
+    + Add required files
+    + push to GitHub
+    + Submit Pull Request
+
+#+STYLE: <link rel="stylesheet" type="text/css" href="production/common.css" />
+#+STYLE: <link rel="stylesheet" type="text/css" href="production/screen.css" media="screen" />
+#+STYLE: <link rel="stylesheet" type="text/css" href="production/projection.css" media="projection" />
+#+STYLE: <link rel="stylesheet" type="text/css" href="production/color-blue.css" media="projection" />
+#+STYLE: <link rel="stylesheet" type="text/css" href="production/presenter.css" media="presenter" />
+#+STYLE: <link href='http://fonts.googleapis.com/css?family=Lobster+Two:700|Yanone+Kaffeesatz:700|Open+Sans' rel='stylesheet' type='text/css'>
+
+#+BEGIN_HTML
+<script type="text/javascript" src="production/org-html-slideshow.js"></script>
+#+END_HTML
+
+# Local Variables:
+# org-export-html-style-include-default: nil
+# org-export-html-style-include-scripts: nil
+# buffer-file-coding-system: utf-8-unix
+# End:
