@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
 <meta name="title" content="2013-02-01-Lab"/>
 <meta name="generator" content="Org-mode"/>
-<meta name="generated" content="2013-02-01 11:00:14 PST"/>
+<meta name="generated" content="2013-02-01 17:25:49 PST"/>
 <meta name="author" content="Jim Blomo"/>
 <meta name="description" content=""/>
 <meta name="keywords" content=""/>
@@ -104,6 +104,8 @@
 <li>Use <a href="https://github.com/edu">GitHub/Edu</a> to request a free micro plan:
     these let us use private accounts
 </li>
+<li>Setup a <a href="https://help.github.com/articles/generating-ssh-keys">GitHub SSH Key</a>
+</li>
 </ul>
 
 
@@ -151,6 +153,8 @@
 </li>
 <li>It will provide you with an SSH git path, let's call it PATH
 </li>
+<li>You must use the <b>SSH</b> PATH starting with <code>git://</code>
+</li>
 <li>On the server, in the datamining290 directory, run
 </li>
 </ul>
@@ -159,7 +163,7 @@
 
 
 <pre class="src src-html">$ git remote add origin PATH
-$ git push origin
+$ git push origin master
 </pre>
 
 
@@ -237,7 +241,7 @@ $ git push origin
 </li>
 <li><code>git commit</code> the change
 </li>
-<li><code>git push origin</code> to put it on GitHub
+<li><code>git push origin hw-obtain-data</code> to put it on GitHub
 </li>
 <li>on github, submit a "pull request" from the <code>hw-obtain-data</code> branch to your master branch
 </li>
@@ -298,7 +302,7 @@ $ git push origin
 </div>
 
 <div id="postamble">
-<p class="date">Date: 2013-02-01 11:00:14 PST</p>
+<p class="date">Date: 2013-02-01 17:25:49 PST</p>
 <p class="author">Author: Jim Blomo</p>
 <p class="creator">Org version 7.8.02 with Emacs version 23</p>
 <a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>

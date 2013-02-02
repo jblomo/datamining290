@@ -15,6 +15,7 @@
     use your .edu address
   + Use [[https://github.com/edu][GitHub/Edu]] to request a free micro plan:
     these let us use private accounts
+  + Setup a [[https://help.github.com/articles/generating-ssh-keys][GitHub SSH Key]]
 
 * Setup git repository on ischool server :slide:
   + On the server ischool.berkeley.edu
@@ -29,10 +30,11 @@ $ git remote rename origin jblomo
 * Connect it to GitHub :slide:
   + After you recieve your free micro account on GitHub, create a private repository called datamining290
   + It will provide you with an SSH git path, let's call it PATH
+  + You must use the *SSH* PATH starting with =git://=
   + On the server, in the datamining290 directory, run
 #+begin_src html
 $ git remote add origin PATH
-$ git push origin
+$ git push origin master
 #+end_src
 
 * Share with us :slide:
@@ -57,7 +59,7 @@ $ git push origin
   + Create a text file to write the solution, a simple editor to use is =pico=
   + =git add= the file
   + =git commit= the change
-  + =git push origin= to put it on GitHub
+  + =git push origin hw-obtain-data= to put it on GitHub
   + on github, submit a "pull request" from the =hw-obtain-data= branch to your master branch
 ** Pull Requests :notes:
    + Pull requests are a way of showing updates in a way that lets me provide
