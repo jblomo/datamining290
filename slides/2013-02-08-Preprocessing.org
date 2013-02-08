@@ -54,14 +54,14 @@
    + We have IPs in the logs, but will by plotting against geographical areas
 
 * Missing Values :slide:two_col:
-Class Height
+| Person | Height |
 | Jim | 6'0 |
 | Ashley | - |
 | Sam | 5'11 |
 | Alice | 5'9 |
 | Kate | - |
 
-[[file:tallest-shortest-man.jpg]]
+[[file:img/tallest-shortest-man.jpg]]
 ** What to do? :notes:
    + (Heights are made up)
    + We want to get an average class height
@@ -117,8 +117,8 @@ Class Height
    + When you have a distribution estimate, but are unsure of absolute min-max
 
 * Comparison :slide:
-[[file:outliers.png]]
-[[file:outliers-minmax-zscore.png]]
+[[file:img/outliers.png]]
+[[file:img/outliers-minmax-zscore.png]]
 ** Min-max vs Z-score :notes:
    + Min-max: Known range
    + Z-score: more expressive range
@@ -209,7 +209,7 @@ Are =A= and =B= close?
   + Numerosity :: represent or aggregate the data, sometimes with precision loss
   + Compression :: generalized techniques to decrease the number of bytes needed
     to store data
-[[file:compress-car.jpg]]
+[[file:img/compress-car.jpg]]
 ** Deep Dive :notes:
    + We're only going to cover selected topics in these areas.
    + When reading, make sure to understand the intuition behind the other
@@ -231,7 +231,7 @@ Are =A= and =B= close?
    + Ignore an attribute that can be built from others
 
 * Principal Component Analysis :slide:
-[[file:GaussianScatterPCA.png]]
+[[file:img/GaussianScatterPCA.png]]
   + Map data to a locatoin along a few vectors
 ** Higher dimensions :notes:
    + Remember, 2 dimensions might not make much sense, but becomes useful in
