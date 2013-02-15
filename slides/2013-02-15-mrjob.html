@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
 <meta name="title" content="2013-02-15-mrjob"/>
 <meta name="generator" content="Org-mode"/>
-<meta name="generated" content="2013-02-15 01:19:37 PST"/>
+<meta name="generated" content="2013-02-15 09:56:15 PST"/>
 <meta name="author" content="Jim Blomo"/>
 <meta name="description" content=""/>
 <meta name="keywords" content=""/>
@@ -40,9 +40,14 @@
 <li><a href="#sec-1-1">1.1 mrjob</a></li>
 </ul>
 </li>
-<li><a href="#sec-2">2 Understand <code>review_word_count.py</code></a></li>
-<li><a href="#sec-3">3 Fill in <code>unique_review.py</code></a></li>
-<li><a href="#sec-4">4 Write <code>user_similarity.py</code></a></li>
+<li><a href="#sec-2">2 Data</a>
+<ul>
+<li><a href="#sec-2-1">2.1 Agreement</a></li>
+</ul>
+</li>
+<li><a href="#sec-3">3 Understand review_word_count.py</a></li>
+<li><a href="#sec-4">4 Fill in unique_review.py</a></li>
+<li><a href="#sec-5">5 Write user_similarity.py</a></li>
 </ul>
 </div>
 </div>
@@ -82,7 +87,7 @@
 </li>
 <li>In lecture, we covered the steps for most unique words
 </li>
-<li>Use Jaccard similarity for user<sub>similarity</sub>
+<li>Use Jaccard similarity for user_similarity
 </li>
 </ul>
 
@@ -93,13 +98,45 @@
 </div>
 
 <div id="outline-container-2" class="outline-2">
-<h2 id="sec-2"><span class="section-number-2">2</span> Understand <code>review_word_count.py</code> &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h2>
+<h2 id="sec-2"><span class="section-number-2">2</span> Data &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h2>
 <div class="outline-text-2" id="text-2">
+
+<ul>
+<li>ischool: <code>~jblomo/yelp_academic_dataset.json</code>
+</li>
+<li>May copy or use in place
+</li>
+</ul>
+
+
+</div>
+
+<div id="outline-container-2-1" class="outline-3">
+<h3 id="sec-2-1"><span class="section-number-3">2.1</span> Agreement &nbsp;&nbsp;&nbsp;<span class="tag"><span class="notes">notes</span></span></h3>
+<div class="outline-text-3" id="text-2-1">
+
+<ul>
+<li>Data set only for use academic purposes
+</li>
+<li><a href="http://www.yelp.com/academic_dataset">Yelp Dataset</a>
+</li>
+</ul>
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> Understand review_word_count.py &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h2>
+<div class="outline-text-2" id="text-3">
 
 
 
 
 <pre class="src src-bash">$ python review_word_count.py yelp_academic_dataset.json
+
 no configs found; falling back on auto-configuration
 creating tmp directory /tmp/review_word_count.jim.20130215.071901.095847
 reading from file
@@ -127,9 +164,9 @@ Streaming final output from /tmp/review_word_count.jim.20130215.071901.095847/ou
 
 </div>
 
-<div id="outline-container-3" class="outline-2">
-<h2 id="sec-3"><span class="section-number-2">3</span> Fill in <code>unique_review.py</code> &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h2>
-<div class="outline-text-2" id="text-3">
+<div id="outline-container-4" class="outline-2">
+<h2 id="sec-4"><span class="section-number-2">4</span> Fill in unique_review.py &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h2>
+<div class="outline-text-2" id="text-4">
 
 <ul>
 <li>Mutli-step map reduce
@@ -145,9 +182,9 @@ Streaming final output from /tmp/review_word_count.jim.20130215.071901.095847/ou
 
 </div>
 
-<div id="outline-container-4" class="outline-2">
-<h2 id="sec-4"><span class="section-number-2">4</span> Write <code>user_similarity.py</code> &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h2>
-<div class="outline-text-2" id="text-4">
+<div id="outline-container-5" class="outline-2">
+<h2 id="sec-5"><span class="section-number-2">5</span> Write user_similarity.py &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h2>
+<div class="outline-text-2" id="text-5">
 
 <ul>
 <li>User Similarity: Jaccard similarity of businesses reviewed
@@ -167,7 +204,7 @@ Streaming final output from /tmp/review_word_count.jim.20130215.071901.095847/ou
 </div>
 
 <div id="postamble">
-<p class="date">Date: 2013-02-15 01:19:37 PST</p>
+<p class="date">Date: 2013-02-15 09:56:15 PST</p>
 <p class="author">Author: Jim Blomo</p>
 <p class="creator">Org version 7.8.02 with Emacs version 23</p>
 <a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>

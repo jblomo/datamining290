@@ -89,7 +89,7 @@
    + Advertising on Yelp
    + Now we want to know Product TYpe of things sold (CPC, CPM, National)
 
-** Cube: 3 Dimension :slide:
+** Cube: 3rd Dimension :slide:
 [[file:img/cube-3d.gif]]
 *** More :notes:
    + Now we want to know Page Type (Business, Search, Home)
@@ -123,9 +123,6 @@
   [[file:img/star-3.png]]
 
 ** Dimension tables :slide:
-  [[file:img/star-3.png]]
-
-** Dimension tables :slide:
   [[file:img/star-4.png]]
 
 ** Dimension tables :slide:
@@ -142,9 +139,6 @@
 
 ** Dimensions of Dimensions :slide:
   [[file:img/star-8.png]]
-
-** Dimensions of Dimensions :slide:
-  [[file:img/star-9.png]]
 
 ** Dimensions of Dimensions :slide:
   [[file:img/star-9.png]]
@@ -173,10 +167,12 @@
    + Pivot :: Swap axis on a chart
 
 * Materialized Views :slide:
-  + Full :: Pre-compute and store desired cubes
+  + View :: virtual table defined by a query
+  + Full :: Pre-compute and store
   + None :: Calculate summaries on the fly
   + Partial :: Variety of strategies: eg. cache results after calculating
 ** Usefulness :notes:
+   + In DW, often storing different cubes in the lattice
    + For the country sample, do we have those summaries stored in another DB
      table? On disk?  By month? Year?
    + Storing all possible summarize expensive when loading data, and requires a

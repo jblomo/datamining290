@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
 <meta name="title" content="2013-02-15-Data-Warehouse"/>
 <meta name="generator" content="Org-mode"/>
-<meta name="generated" content="2013-02-15 01:19:16 PST"/>
+<meta name="generated" content="2013-02-15 07:59:48 PST"/>
 <meta name="author" content="Jim Blomo"/>
 <meta name="description" content=""/>
 <meta name="keywords" content=""/>
@@ -71,7 +71,7 @@
 <li><a href="#sec-10">10 Dimensions</a>
 <ul>
 <li><a href="#sec-10-1">10.1 Data&hellip; Square</a></li>
-<li><a href="#sec-10-2">10.2 Cube: 3 Dimension</a>
+<li><a href="#sec-10-2">10.2 Cube: 3rd Dimension</a>
 <ul>
 <li><a href="#sec-10-2-1">10.2.1 More</a></li>
 </ul>
@@ -94,19 +94,17 @@
 <li><a href="#sec-11-3">11.3 Dimension tables</a></li>
 <li><a href="#sec-11-4">11.4 Dimension tables</a></li>
 <li><a href="#sec-11-5">11.5 Dimension tables</a></li>
-<li><a href="#sec-11-6">11.6 Dimension tables</a></li>
-<li><a href="#sec-11-7">11.7 Star Schema</a></li>
+<li><a href="#sec-11-6">11.6 Star Schema</a></li>
+<li><a href="#sec-11-7">11.7 Dimensions of Dimensions</a></li>
 <li><a href="#sec-11-8">11.8 Dimensions of Dimensions</a></li>
 <li><a href="#sec-11-9">11.9 Dimensions of Dimensions</a></li>
-<li><a href="#sec-11-10">11.10 Dimensions of Dimensions</a></li>
-<li><a href="#sec-11-11">11.11 Dimensions of Dimensions</a></li>
-<li><a href="#sec-11-12">11.12 Dimensions of Dimensions</a>
+<li><a href="#sec-11-10">11.10 Dimensions of Dimensions</a>
 <ul>
-<li><a href="#sec-11-12-1">11.12.1 Schema Name?</a></li>
+<li><a href="#sec-11-10-1">11.10.1 Schema Name?</a></li>
 </ul>
 </li>
-<li><a href="#sec-11-13">11.13 Snowflake Schema</a></li>
-<li><a href="#sec-11-14">11.14 Constellation Schema</a></li>
+<li><a href="#sec-11-11">11.11 Snowflake Schema</a></li>
+<li><a href="#sec-11-12">11.12 Constellation Schema</a></li>
 </ul>
 </li>
 <li><a href="#sec-12">12 Data Warehouse Operations</a>
@@ -433,7 +431,7 @@
 </div>
 
 <div id="outline-container-10-2" class="outline-3">
-<h3 id="sec-10-2"><span class="section-number-3">10.2</span> Cube: 3 Dimension &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h3>
+<h3 id="sec-10-2"><span class="section-number-3">10.2</span> Cube: 3rd Dimension &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h3>
 <div class="outline-text-3" id="text-10-2">
 
 <p><img src="img/cube-3d.gif"  alt="img/cube-3d.gif" />
@@ -560,7 +558,7 @@
 <h3 id="sec-11-4"><span class="section-number-3">11.4</span> Dimension tables &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h3>
 <div class="outline-text-3" id="text-11-4">
 
-<p>  <img src="img/star-3.png"  alt="img/star-3.png" />
+<p>  <img src="img/star-4.png"  alt="img/star-4.png" />
 </p>
 </div>
 
@@ -570,27 +568,27 @@
 <h3 id="sec-11-5"><span class="section-number-3">11.5</span> Dimension tables &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h3>
 <div class="outline-text-3" id="text-11-5">
 
-<p>  <img src="img/star-4.png"  alt="img/star-4.png" />
-</p>
-</div>
-
-</div>
-
-<div id="outline-container-11-6" class="outline-3">
-<h3 id="sec-11-6"><span class="section-number-3">11.6</span> Dimension tables &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h3>
-<div class="outline-text-3" id="text-11-6">
-
 <p>  <img src="img/star-5.png"  alt="img/star-5.png" />
 </p>
 </div>
 
 </div>
 
-<div id="outline-container-11-7" class="outline-3">
-<h3 id="sec-11-7"><span class="section-number-3">11.7</span> Star Schema &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h3>
-<div class="outline-text-3" id="text-11-7">
+<div id="outline-container-11-6" class="outline-3">
+<h3 id="sec-11-6"><span class="section-number-3">11.6</span> Star Schema &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h3>
+<div class="outline-text-3" id="text-11-6">
 
 <p>  <img src="img/star-schema.jpg"  alt="img/star-schema.jpg" />
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-11-7" class="outline-3">
+<h3 id="sec-11-7"><span class="section-number-3">11.7</span> Dimensions of Dimensions &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h3>
+<div class="outline-text-3" id="text-11-7">
+
+<p>  <img src="img/star-6.png"  alt="img/star-6.png" />
 </p>
 </div>
 
@@ -600,7 +598,7 @@
 <h3 id="sec-11-8"><span class="section-number-3">11.8</span> Dimensions of Dimensions &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h3>
 <div class="outline-text-3" id="text-11-8">
 
-<p>  <img src="img/star-6.png"  alt="img/star-6.png" />
+<p>  <img src="img/star-7.png"  alt="img/star-7.png" />
 </p>
 </div>
 
@@ -610,7 +608,7 @@
 <h3 id="sec-11-9"><span class="section-number-3">11.9</span> Dimensions of Dimensions &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h3>
 <div class="outline-text-3" id="text-11-9">
 
-<p>  <img src="img/star-7.png"  alt="img/star-7.png" />
+<p>  <img src="img/star-8.png"  alt="img/star-8.png" />
 </p>
 </div>
 
@@ -620,33 +618,13 @@
 <h3 id="sec-11-10"><span class="section-number-3">11.10</span> Dimensions of Dimensions &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h3>
 <div class="outline-text-3" id="text-11-10">
 
-<p>  <img src="img/star-8.png"  alt="img/star-8.png" />
-</p>
-</div>
-
-</div>
-
-<div id="outline-container-11-11" class="outline-3">
-<h3 id="sec-11-11"><span class="section-number-3">11.11</span> Dimensions of Dimensions &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h3>
-<div class="outline-text-3" id="text-11-11">
-
 <p>  <img src="img/star-9.png"  alt="img/star-9.png" />
 </p>
 </div>
 
-</div>
-
-<div id="outline-container-11-12" class="outline-3">
-<h3 id="sec-11-12"><span class="section-number-3">11.12</span> Dimensions of Dimensions &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h3>
-<div class="outline-text-3" id="text-11-12">
-
-<p>  <img src="img/star-9.png"  alt="img/star-9.png" />
-</p>
-</div>
-
-<div id="outline-container-11-12-1" class="outline-4">
-<h4 id="sec-11-12-1"><span class="section-number-4">11.12.1</span> Schema Name? &nbsp;&nbsp;&nbsp;<span class="tag"><span class="notes">notes</span></span></h4>
-<div class="outline-text-4" id="text-11-12-1">
+<div id="outline-container-11-10-1" class="outline-4">
+<h4 id="sec-11-10-1"><span class="section-number-4">11.10.1</span> Schema Name? &nbsp;&nbsp;&nbsp;<span class="tag"><span class="notes">notes</span></span></h4>
+<div class="outline-text-4" id="text-11-10-1">
 
 <ul>
 <li>Any guesses what this fractal looking schema is called?
@@ -659,9 +637,9 @@
 
 </div>
 
-<div id="outline-container-11-13" class="outline-3">
-<h3 id="sec-11-13"><span class="section-number-3">11.13</span> Snowflake Schema &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h3>
-<div class="outline-text-3" id="text-11-13">
+<div id="outline-container-11-11" class="outline-3">
+<h3 id="sec-11-11"><span class="section-number-3">11.11</span> Snowflake Schema &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h3>
+<div class="outline-text-3" id="text-11-11">
 
 <ul>
 <li>Schema with radiating dimension tables
@@ -674,9 +652,9 @@
 
 </div>
 
-<div id="outline-container-11-14" class="outline-3">
-<h3 id="sec-11-14"><span class="section-number-3">11.14</span> Constellation Schema &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h3>
-<div class="outline-text-3" id="text-11-14">
+<div id="outline-container-11-12" class="outline-3">
+<h3 id="sec-11-12"><span class="section-number-3">11.12</span> Constellation Schema &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h3>
+<div class="outline-text-3" id="text-11-12">
 
 <ul>
 <li>Schema with several fact tables and related dimensions
@@ -738,7 +716,9 @@
 <div class="outline-text-2" id="text-13">
 
 <dl>
-<dt>Full</dt><dd>Pre-compute and store desired cubes
+<dt>View</dt><dd>virtual table defined by a query
+</dd>
+<dt>Full</dt><dd>Pre-compute and store
 </dd>
 <dt>None</dt><dd>Calculate summaries on the fly
 </dd>
@@ -754,6 +734,8 @@
 <div class="outline-text-3" id="text-13-1">
 
 <ul>
+<li>In DW, often storing different cubes in the lattice
+</li>
 <li>For the country sample, do we have those summaries stored in another DB
      table? On disk?  By month? Year?
 </li>
@@ -826,7 +808,7 @@
 </div>
 
 <div id="postamble">
-<p class="date">Date: 2013-02-15 01:19:16 PST</p>
+<p class="date">Date: 2013-02-15 07:59:48 PST</p>
 <p class="author">Author: Jim Blomo</p>
 <p class="creator">Org version 7.8.02 with Emacs version 23</p>
 <a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>

@@ -7,11 +7,19 @@
 ** mrjob :notes:
    + Using the Yelp Academic Dataset
    + In lecture, we covered the steps for most unique words
-   + Use Jaccard similarity for user_similarity
+   + Use Jaccard similarity for user\_similarity
 
-* Understand =review_word_count.py= :slide:
+* Data :slide:
+  + ischool: =~jblomo/yelp_academic_dataset.json=
+  + May copy or use in place
+** Agreement :notes:
+   + Data set only for use academic purposes
+   + [[http://www.yelp.com/academic_dataset][Yelp Dataset]]
+
+* Understand review\_word\_count.py :slide:
 #+begin_src bash
 $ python review_word_count.py yelp_academic_dataset.json
+
 no configs found; falling back on auto-configuration
 creating tmp directory /tmp/review_word_count.jim.20130215.071901.095847
 reading from file
@@ -34,12 +42,12 @@ Streaming final output from /tmp/review_word_count.jim.20130215.071901.095847/ou
 "about"	4
 #+end_src
 
-* Fill in =unique_review.py= :slide:
+* Fill in unique\_review.py :slide:
   + Mutli-step map reduce
   + Steps are explained in lecture
   + Skeleton in code
 
-* Write =user_similarity.py= :slide:
+* Write user\_similarity.py :slide:
   + User Similarity: Jaccard similarity of businesses reviewed
   + {BizA, BizB, BizC} ~ {BizF, BizB, BizG}
 

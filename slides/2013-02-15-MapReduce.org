@@ -1,12 +1,16 @@
 * MapReduce :slide:
+** Spoilers :notes:
+   + Don't look ahead in the slides
+   + If you know MapReduce, try to let others answer and genuinely think about
+     how *you* would solve the problem.
 
 * Yelp has a problem :slide:
-  + 100 GB of logs per day
-  + Each GB takes 15 minutes to process
+  + 250+ GB of logs per day
+  + Each GB takes 10 minutes to process
   + How long to handle a day's logs?
 [[file:img/yelp-growth.png]]
 ** Too long :notes:
-   + On a single machine 25 hours
+   + On a single machine 40+ hours!
    + If we really had only a single machine, we wouldn't be able to keep up!
    + Mistake can't be fixed in a day (billing especially important)
 
@@ -24,11 +28,11 @@
      + Detecting failure (timeout waiting for data? Out of band?)
      + Decide who takes over the data
 
-* Do It Yourself :slide:
+* Do It Yourself :slide:two_col:
   + There are many ways to deal with these challenges
   + Often, people would "roll" their own solutions depending on the problem
   + Google implemented a generic solution, shared idea
-TODO: paper pic
+[[file:img/mapreduce-paper.png]]
 ** Dependencies :notes:
    + Did you have a super-computer?
    + What programming language were you using?
@@ -37,6 +41,10 @@ TODO: paper pic
 * Big Idea :slide:
   + Simplify, limit solution expression
   + Enable sophisticated implementation
+
+
+  + Interface: Map() Reduce()
+  + Implementation: Reliably run over 1000s of machines
 ** Really Big Idea :notes:
    + Limiting yourself to what can be expressed may seem like a loss
    + But it enables the implementation to handle the problems we talked about
@@ -68,12 +76,20 @@ TODO: paper pic
 
 ** Logs :slide:
 #+begin_src json
-{'page_type': 'search', 'user': 'jim', 'query': ...}
-{'page_type': 'biz_view', 'user': 'shreyas', 'biz_id': 55}
-{'page_type': 'user_profile', 'user': nil, 'profile_id: 123}
+{'page_type': 'search',
+ 'user': 'jim', 'query': ...}
+
+{'page_type': 'biz_view',
+ 'user': 'shreyas', 'biz_id': 55}
+
+{'page_type': 'user_profile',
+ 'user': null, 'profile_id: 123}
+
+...
 #+end_src
 *** Logs :notes:
     + JSON logs, various types of information
+    + entire record on one line (wrapped for slides)
 
 ** Map :slide:
    + Input :: Key, Value
@@ -94,9 +110,9 @@ TODO: paper pic
 
 ** Actions? :slide:
 #+begin_src text
+search       1 
 biz_view     1 
 user_profile 1 
-search       1 
 search       1 
 biz_view     1 
 search       1 
@@ -195,8 +211,9 @@ user_profile 1
 
 * Word Count :slide:
 #+begin_src json
-{'stars': 2, 'text': "Greatest pizza ever", 'user': ...}
-{'stars': 5, 'text': "good pizza selection", 'user': ...}
+{"text": "Greatest pizza ever", "stars": 2, "user": ...}
+
+{"text": "good pizza selection", "stars": 5, "user": ...}
 #+end_src
   + Total uses of a word in across all reviews
 ** Classic :notes:
@@ -207,9 +224,9 @@ user_profile 1
   + Map
   + Extract =text=
   + Count words in that review
-  + Key: word Value: count
+  + Key: word , Value: count
   + Reduce
-  + Key: word Values: all counts
+  + Key: word , Values: all counts
   + sum(values)
 ** Hints :notes:
    + What's the first step (of MapReduce)
@@ -247,22 +264,23 @@ user_profile 1
    + So iteratively calculate the important of all pages
    + Find average presidential donations by candidate, then normalize averages
 
-* Review with the most unique words :slide:animate:
+* Unique Review :slide:animate:
+  + Review ID with the most unique words 
   + Map Input: <line number, text>
-  + Map Output: <word, review_id>
-  + Reducer Input: <word, [review_ids]>
-  + Reducer Output: <review_id, 1> if the word is unique
+  + Map Output: <word, review\_id>
+  + Reducer Input: <word, [review\_ids]>
+  + Reducer Output: <review\_id, 1> if the word is unique
 ** Questions :notes:
    + For our purposes, what is always the mapper input?
    + What feature do we want to calculate first?
    + Given this mapper output, what *must* the reducer input be?
    + What property about a review are we interested in?
 
-** Step 2: Count Unique Words :slide:
-   + Map Input: <review_id, 1>
-   + Map Output: <review_id, 1>
-   + Reducer Input: <review_id, [1,1,...]>
-   + Reducer Output: <review_id, sum>
+** Step 2: Count Unique Words :slide:animate:
+   + Map Input: <review\_id, 1>
+   + Map Output: <review\_id, 1>
+   + Reducer Input: <review\_id, [1,1,...]>
+   + Reducer Output: <review\_id, sum>
 ** Questions :notes:
    + Given the reducer output, what *must* the mapper input be (for chained
      MapReduce steps)
@@ -270,11 +288,11 @@ user_profile 1
    + Given this mapper output, what *must* the reducer input be?
    + What are we calculating?
 
-** Step 3: Max :slide:
-   + Map Input: <review_id, sum>
-   + Map Output: <"MAX", [sum, review_id]>
-   + Reducer Input: <"MAX", [[sum, review_id],...]>
-   + Reducer Output: <review_id, sum> of the max(sum)
+** Step 3: Max :slide:animate:
+   + Map Input: <review\_id, sum>
+   + Map Output: <"MAX", [sum, review\_id]>
+   + Reducer Input: <"MAX", [[sum, review\_id],...]>
+   + Reducer Output: <review\_id, sum> of the max(sum)
 ** Questions :notes:
    + Given the reducer output, what *must* the mapper input be (for chained
      MapReduce steps)
