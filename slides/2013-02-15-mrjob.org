@@ -48,6 +48,7 @@ Streaming final output from /tmp/review_word_count.jim.20130215.071901.095847/ou
   + Skeleton in code
 
 * Write user\_similarity.py :slide:
+  + Find users >= 0.5 similarity
   + User Similarity: Jaccard similarity of businesses reviewed
   + {BizA, BizB, BizC} ~ {BizF, BizB, BizG}
 
