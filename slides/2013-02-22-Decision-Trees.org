@@ -163,6 +163,36 @@
 #+end_src
   Sum of the squares of the fraction of items in each class
 
+* Splitting :slide:
+  + Discrete values can split per value
+  + Or discrete values binary split into subsets
+  + Continuous values can split on range (usually 2)
+** Different :notes:
+   + If you'd like a binary tree (useful for some algorithms), can split on
+     subsets
+   + Can't split 400 different ways on continuous values... what about values
+     that haven't been seen before?
+
+* Continuous Splitting :slide:
+  + Test every split point to see which is best
+  + Possible split points: midpoint between every adjacent value pair
+  + Sort attribute, score midpoints
+1
+2
+2
+2
+26
+36
+36
+74
+323
+345
+2234
+** Review :notes:
+   + What does best mean?
+   + Can calculate with one pass through the data since you are just moving a
+     few cases from one class to another
+
 * Decision Tree Advantages :slide:
   + Models easy to understand and visualize
   + Can be faster to construct

@@ -23,12 +23,15 @@
 
 ** Set Aside Testing :slide:
    [[file:img/k-fold2.png]]
+
+   Testing Data  |  Training Data
 ** Colors :notes:
    + Red: Testing
    + Green: Training
 
 ** Cross Validation :slide:
    [[file:img/k-fold3.png]]
+
    Train and test model with different subsets of data
 ** Testing the model :notes:
    + This is used to test the *model*
@@ -36,17 +39,19 @@
    + Is it robust against outliers
 
 ** K-Fold Validation :slide:
-   [[file:img/kfold-4.png]]
+   [[file:img/k-fold4.png]]
+
    Test against K sections of the data
 ** Statstical Significance :notes:
    + Similar to the concept in stats: the more distinct samples you have, the
      better you know your data
 
 ** K-Fold Validation :slide:
-   [[file:img/kfold-5.png]]
+   [[file:img/k-fold5.png]]
 
 * Bayes Theorem :slide:
   [[file:img/bayes.png]]
+
   Can calculate a posterior given priors
 ** Read :notes:
    + Probability of A given B equals probability of B given A times prob of A
@@ -56,6 +61,7 @@
 
 * Spam :slide:
   [[file:img/bayes-spam.png]]
+
   Find the probability of spam given it contains a particular word
 ** Words :notes:
    + What words would you associate with spam?
@@ -88,14 +94,16 @@
    + Nice thing is that the diversity of models is important, and not so much
      the accuracy of any single model
 
-* Bootstrap Aggregating :slide:
+* Bootstrap Aggregating :slide:two_col:
   + Bagging: training data collected with replacement
   + Learn models on different samples
   + Run models on new incoming data
+  [[file:img/bagging.png]]
 ** Trade-offs :notes:
    + Fairly simple:
    + Majority vote
    + Train models independently
+   + img: http://cse-wiki.unl.edu/wiki/index.php/Bagging_and_Boosting
 
 * Boosting :slide:
   + Train classifier to catch what the last one missed

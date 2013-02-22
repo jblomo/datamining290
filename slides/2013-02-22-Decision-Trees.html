@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
 <meta name="title" content="2013-02-22-Decision-Trees"/>
 <meta name="generator" content="Org-mode"/>
-<meta name="generated" content="2013-02-22 02:31:31 PST"/>
+<meta name="generated" content="2013-02-22 08:41:02 PST"/>
 <meta name="author" content="Jim Blomo"/>
 <meta name="description" content=""/>
 <meta name="keywords" content=""/>
@@ -106,12 +106,17 @@
 </ul>
 </li>
 <li><a href="#sec-15">15 Gini Index</a></li>
-<li><a href="#sec-16">16 Decision Tree Advantages</a>
+<li><a href="#sec-16">16 Splitting</a>
 <ul>
-<li><a href="#sec-16-1">16.1 Trees</a></li>
+<li><a href="#sec-16-1">16.1 Different</a></li>
 </ul>
 </li>
-<li><a href="#sec-17">17 <b>Break</b></a></li>
+<li><a href="#sec-17">17 Decision Tree Advantages</a>
+<ul>
+<li><a href="#sec-17-1">17.1 Trees</a></li>
+</ul>
+</li>
+<li><a href="#sec-18">18 <b>Break</b></a></li>
 </ul>
 </div>
 </div>
@@ -659,8 +664,43 @@
 </div>
 
 <div id="outline-container-16" class="outline-2">
-<h2 id="sec-16"><span class="section-number-2">16</span> Decision Tree Advantages &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h2>
+<h2 id="sec-16"><span class="section-number-2">16</span> Splitting &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h2>
 <div class="outline-text-2" id="text-16">
+
+<ul>
+<li>Discrete values can split per value
+</li>
+<li>Or discrete values binary split into subsets
+</li>
+<li>Continuous values can split on range (usually 2)
+</li>
+</ul>
+
+
+</div>
+
+<div id="outline-container-16-1" class="outline-3">
+<h3 id="sec-16-1"><span class="section-number-3">16.1</span> Different &nbsp;&nbsp;&nbsp;<span class="tag"><span class="notes">notes</span></span></h3>
+<div class="outline-text-3" id="text-16-1">
+
+<ul>
+<li>If you'd like a binary tree (useful for some algorithms), can split on
+     subsets
+</li>
+<li>Can't split 400 different ways on continuous values&hellip; what about values
+     that haven't been seen before?
+</li>
+</ul>
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-17" class="outline-2">
+<h2 id="sec-17"><span class="section-number-2">17</span> Decision Tree Advantages &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h2>
+<div class="outline-text-2" id="text-17">
 
 <ul>
 <li>Models easy to understand and visualize
@@ -676,9 +716,9 @@
 
 </div>
 
-<div id="outline-container-16-1" class="outline-3">
-<h3 id="sec-16-1"><span class="section-number-3">16.1</span> Trees &nbsp;&nbsp;&nbsp;<span class="tag"><span class="notes">notes</span></span></h3>
-<div class="outline-text-3" id="text-16-1">
+<div id="outline-container-17-1" class="outline-3">
+<h3 id="sec-17-1"><span class="section-number-3">17.1</span> Trees &nbsp;&nbsp;&nbsp;<span class="tag"><span class="notes">notes</span></span></h3>
+<div class="outline-text-3" id="text-17-1">
 
 <ul>
 <li>Its a tree! Easy to draw
@@ -698,9 +738,9 @@
 
 </div>
 
-<div id="outline-container-17" class="outline-2">
-<h2 id="sec-17"><span class="section-number-2">17</span> <b>Break</b> &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h2>
-<div class="outline-text-2" id="text-17">
+<div id="outline-container-18" class="outline-2">
+<h2 id="sec-18"><span class="section-number-2">18</span> <b>Break</b> &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h2>
+<div class="outline-text-2" id="text-18">
 
 
 
@@ -713,7 +753,7 @@
 </div>
 
 <div id="postamble">
-<p class="date">Date: 2013-02-22 02:31:31 PST</p>
+<p class="date">Date: 2013-02-22 08:41:02 PST</p>
 <p class="author">Author: Jim Blomo</p>
 <p class="creator">Org version 7.8.02 with Emacs version 23</p>
 <a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>
