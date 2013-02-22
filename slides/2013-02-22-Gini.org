@@ -9,16 +9,20 @@
 
 * Data: Campaign Contributions :slide:
   + Calculating the Gini score of the Candidate Name by default
+  + Calculate the weighted average Gini Index on a split by zip code
 
 * Extra Credit :slide:
-  + Calculate the information gain (difference in gini index) after a split
-  + Split by all values
-  + Gini index after a split: weighted average gini index of each split
+  + Find a best split of a continuous field
 
-* Extra Credit: 2 :slide:
-  + Split continuous fields by using median or =max-min / 2=
+* Python Tips :slide:
+  + [[http://docs.python.org/2/library/collections.html][collections]]
+  + =defaultdict= autovivifies keys
+  + =Counter= autovivifies integer keys
+#+begin_src python
+zipcodes = defaultdict(Counter)
+#+end_src
 
-* Git :slide:
+* Git Tips :slide:
 #+begin_src bash
 $ git checkout master
 $ git pull jblomo master
