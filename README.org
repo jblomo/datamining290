@@ -8,7 +8,7 @@
 
 
 * Syllabus :slide:
-DM[1-0]+ indicates chapters from the text, _Data Mining_.
+DM[0-9]+ indicates chapters from the text, _Data Mining_.
 
 | Date | Readings | Slides | Homework / Project |
 |------+----------+--------+--------------------|
@@ -16,7 +16,7 @@ DM[1-0]+ indicates chapters from the text, _Data Mining_.
 | Feb 1 | DM1 ; [[http://hbswk.hbs.edu/item/6836.html][The Yelp Factor: Are Consumer Reviews Good for Business?]] | [[file:slides/2013-02-01-CaseStudies.html][Case Studies]] ; [[file:slides/2013-02-01-Obtaining-Data.html][Obtaining Data]] | [[file:slides/2013-02-01-Lab.html][Obtain & Explore Data]] |
 | Feb 8 | DM2, DM3 | [[file:slides/2013-02-08-Probability.html][Probability]] ; [[file:slides/2013-02-08-Preprocessing.html][Preprocessing]] | [[file:slides/2013-02-08-Lab.html][Data Stats]] |
 | Feb 15 | DM4, [[http://www.youtube.com/watch?v=SS27F-hYWfU][Apache Hadoop: Petabytes and Terawatts]] ([[http://prezi.com/u0ukvqzpyh5p/apache-hadoop-petabytes-and-terawatts/][slides]]); [[http://packages.python.org/mrjob/][mrjob docs]] (for homework) | [[file:slides/2013-02-15-Data-Warehouse.html][Data Warehouse]] ; [[file:slides/2013-02-15-MapReduce.html][MapReduce]] | [[file:slides/2013-02-15-Project.html][Project Details]] ; [[file:slides/2013-02-15-mrjob.html][mrjob]] |
-| Feb 22 | DM8 | Decision Trees; Naive Bayes | TBA |
+| Feb 22 | DM8 | [[file:slides/2013-02-22-Decision-Trees.html][Decision Trees]]; [[file:slides/2013-02-22-Bayes.html][Naive Bayes]] | [[file:slides/2013-02-22-Gini.html][Gini Index]] |
 | Mar 1 | DM9 | SVM ; Neural Networks | TBA |
 | Mar 8 | DM10 | Clustering ; Dimensionality Curse | TBA | 
 | Mar 15 | DM11 | Graph Mining ; Review  | - |
