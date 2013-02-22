@@ -42,7 +42,7 @@
    [[file:img/k-fold4.png]]
 
    Test against K sections of the data
-** Statstical Significance :notes:
+** Statistical Significance :notes:
    + Similar to the concept in stats: the more distinct samples you have, the
      better you know your data
 
@@ -55,7 +55,7 @@
   Can calculate a posterior given priors
 ** Read :notes:
    + Probability of A given B equals probability of B given A times prob of A
-     devided prob of B
+     divided prob of B
    + Importance is that we can figure out what future probabilities are based on
      what we've already seen
 
@@ -69,7 +69,7 @@
    + Why might you want to train a classifier per person?
 
 * Multiple Words :slide:animate:
-  + How to calculate probabilities of multiple independent events occuring?
+  + How to calculate probabilities of multiple independent events occurring?
   + Model words as independent events
   + Multiply probabilities
 ** Naive :notes:
@@ -112,7 +112,7 @@
   + Weight more heavily those failures in training a new model
   + Weight models by their accuracy
 ** Trade-offs :notes:
-   + Boosting can be suseptible to outliers
+   + Boosting can be susceptible to outliers
    + Longer to train
    + Observed to be more accurate
 
@@ -121,8 +121,9 @@
   + Combine trees using majority or weights
   + What to call many arbitrarily picked trees?
 
-** Random Forests :slide:
-   + Used successfully in many recent compititions
+** Random Forests :slide:two_col:
+[[file:img/green-forrest.jpg]]
+   + Used successfully in many recent competitions
    + Carry over robustness properties from individual decision trees
    + Can be trained in parallel
 ** Parallel :notes:
