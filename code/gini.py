@@ -9,20 +9,22 @@ import csv
 column = 2  # Candidate Name
 
 ############### Set up variables
-gini = 0
+# TODO: declare datastructures
 
 ############### Read through files
 for row in csv.reader(fileinput.input()):
     if not fileinput.isfirstline():
         ###
-        # TODO: replace line below with code to gather information needed to
-        # calculate Gini Index
-        pass
+        # TODO: replace line below with steps to save information to calculate
+        # Gini Index
+        row[cand_nm], row[contbr_zip]
         ##/
 
 ###
-# TODO: Calculate Gini Index with information gathered above
-#
-#/
+# TODO: calculate the values below:
+gini = 0  # current Gini Index using candidate name as the class
+split_gini = 0  # weighted average of the Gini Indexes using candidate names, split up by zip code
+##/
 
 print "Gini Index: %s" % gini
+print "Gini Index after split: %s" % split_gini
