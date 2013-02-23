@@ -6,7 +6,10 @@ Classes are strings."""
 import fileinput
 import csv
 
-column = 2  # Candidate Name
+(cmte_id, cand_id, cand_nm, contbr_nm, contbr_city, contbr_st, contbr_zip,
+contbr_employer, contbr_occupation, contb_receipt_amt, contb_receipt_dt,
+receipt_desc, memo_cd, memo_text, form_tp, file_num, tran_id, election_tp) = range(18)
+
 
 ############### Set up variables
 # TODO: declare datastructures
