@@ -8,8 +8,11 @@
   Sum of the squares of the fraction of items in each class
 
 * Data: Campaign Contributions :slide:
-  + Calculating the Gini score of the Candidate Name by default
-  + Calculate the weighted average Gini Index on a split by zip code
+  + Calculating the Gini Index for the Candidate Names for the enitre data set
+  + Partition by zip code, calculate the weighted average Gini Index score over
+    all partitions
+  + Partitions are weighted by the number of records they contain divided by the
+    total number of records in the data set
 
 * Extra Credit :slide:
   + Find a best split of a continuous field
