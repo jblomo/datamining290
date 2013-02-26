@@ -20,7 +20,7 @@ DM[0-9]+ indicates chapters from the text, _Data Mining_.
 | Mar 1 | DM9 | SVM ; Neural Networks | TBA |
 | Mar 8 | DM10 | Clustering ; Dimensionality Curse | TBA | 
 | Mar 15 | DM11 | Graph Mining ; Review  | - |
-| Mar 21 | 1 cheat sheet | *Midterm* | - |
+| Mar 22 | 1 cheat sheet | *Midterm* | - |
 | Mar 29 | HOLIDAY
 | Apr 5 | DM6 | Pattern ; Evaluations | Project Proposal Due |
 | Apr 12 | TBA | Collaborative Filtering; PageRank | TBA |
