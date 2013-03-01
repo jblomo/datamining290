@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
 <meta name="title" content="2013-03-01-Neural-Network"/>
 <meta name="generator" content="Org-mode"/>
-<meta name="generated" content="2013-03-01 00:36:55 PST"/>
+<meta name="generated" content="2013-03-01 08:44:40 PST"/>
 <meta name="author" content="Jim Blomo"/>
 <meta name="description" content=""/>
 <meta name="keywords" content=""/>
@@ -553,7 +553,7 @@
 </li>
 </ul>
 
-<p>   [file:img/sigmoid.png]]
+<p>   <img src="img/sigmoid.png"  alt="img/sigmoid.png" />]
 </p>
 </div>
 </div>
@@ -616,12 +616,7 @@
 <div class="outline-text-3" id="text-11-3">
 
 <p>   <img src="img/ann3.png"  alt="img/ann3.png" />
-</p><ul>
-<li><code>1 / (1 + e^-input)</code>
-</li>
-</ul>
-
-
+</p>
 </div>
 
 <div id="outline-container-11-3-1" class="outline-4">
@@ -644,12 +639,7 @@
 <div class="outline-text-3" id="text-11-4">
 
 <p>   <img src="img/ann4.png"  alt="img/ann4.png" />
-</p><ul>
-<li><code>1 / (1 + e^-input)</code>
-</li>
-</ul>
-
-
+</p>
 </div>
 
 <div id="outline-container-11-4-1" class="outline-4">
@@ -672,12 +662,7 @@
 <div class="outline-text-3" id="text-11-5">
 
 <p>   <img src="img/ann5.png"  alt="img/ann5.png" />
-</p><ul>
-<li><code>1 / (1 + e^-input)</code>
-</li>
-</ul>
-
-
+</p>
 </div>
 
 <div id="outline-container-11-5-1" class="outline-4">
@@ -700,12 +685,7 @@
 <div class="outline-text-3" id="text-11-6">
 
 <p>   <img src="img/ann6.png"  alt="img/ann6.png" />
-</p><ul>
-<li><code>1 / (1 + e^-input)</code>
-</li>
-</ul>
-
-
+</p>
 </div>
 
 <div id="outline-container-11-6-1" class="outline-4">
@@ -751,12 +731,7 @@
 <div class="outline-text-3" id="text-11-8">
 
 <p>   <img src="img/ann8.png"  alt="img/ann8.png" />
-</p><ul>
-<li><code>1 / (1 + e^-input)</code>
-</li>
-</ul>
-
-
+</p>
 </div>
 
 <div id="outline-container-11-8-1" class="outline-4">
@@ -852,18 +827,18 @@
 <h2 id="sec-14"><span class="section-number-2">14</span> Back Propagation &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h2>
 <div class="outline-text-2" id="text-14">
 
-<ol>
-<li>Run forward
-</li>
-<li>Calculate error of output layer: <code>Err_j = O_j(1-O_j)(T_j-O_j)</code>
-</li>
-<li>Caclulate error of hidden layer: <code>Err_j = O_j(1-O_j)*sum(Err_k*w_jk)</code>
-</li>
-<li>Find new weights: <code>w_ij = w_ij + I*Err_j*O_j</code>
-</li>
-<li>Repeat
-</li>
-</ol>
+<dl>
+<dt>Run forward</dt><dd>O<sub>j</sub> is output of node <code>j</code>
+</dd>
+<dt>Calculate error of output layer</dt><dd>Err<sub>j</sub> = O<sub>j</sub>(1-O<sub>j</sub>)(T<sub>j</sub>-O<sub>j</sub>)
+</dd>
+<dt>Caclulate error of hidden layer</dt><dd>Err<sub>j</sub> = O<sub>j</sub>(1-O<sub>j</sub>)*sum(Err<sub>k</sub>*w<sub>jk</sub>)
+</dd>
+<dt>Find new weights</dt><dd>w<sub>ij</sub> = w<sub>ij</sub> + I*Err<sub>j</sub>*O<sub>j</sub>
+</dd>
+<dt>Repeat</dt><dd>To move closer to correct weights
+</dd>
+</dl>
 
 
 </div>
@@ -964,7 +939,7 @@
 </div>
 
 <div id="postamble">
-<p class="date">Date: 2013-03-01 00:36:55 PST</p>
+<p class="date">Date: 2013-03-01 08:44:40 PST</p>
 <p class="author">Author: Jim Blomo</p>
 <p class="creator">Org version 7.8.02 with Emacs version 23</p>
 <a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>

@@ -21,7 +21,7 @@
    + Let's pretend this is the data we have
    + How would we guess that value for 2500 sq ft?
 
-* Solution :slide:animate:
+* Solution? :slide:animate:
   + Find a line that represents the data
   + =y = m*x + b=
   + A line that is not very far from the points
@@ -46,14 +46,14 @@
 ** Log & Square :slide:two_col:
    + Log :: Useful for de-emphasizing large raw differences
    + Square :: Useful for taking the approximate absolute value
+   [[file:img/logx.gif]]
 
 * Point Distance :slide:two_col:
   + =y= distance from line
   + Intuitively: error in estimate
   + =h(x) = m*x + b=
-
-
-  + =err = (h(x) - y)=
+  + =err = h(x) - y=
+  [[file:img/error.gif]]
 ** Error :notes:
    + We want the difference from what we estimate to be the value to what the
      value actually is
@@ -62,7 +62,7 @@
   + =sum=
   + What about negative error?
   + Sum of squares
-  + =err = sum( (h(x) - y)**2 for x in dataset) / num_points=
+  + =err = sum( (h(x) - y)**2 for x,y in dataset) / len(dataset)=
 ** Questions :notes:
    + Now we have info about all the errors from points, how to summarize?
    + Some points have negative error, some positive? Do they cancel each other
@@ -72,11 +72,10 @@
    + Use our squaring trick to make sure we don't have any negative values
    + Normalize by the number of points
 
-* Fitness Function :slide:two_col:
+* Fitness Function :slide:
   + Measures the quality or cost of the solution
   + *Key* ingredient for data mining algorithms
   + If you can measure it, you can find the best solution
-  [[file:img/reg_error.gif]]
 ** Fitness :notes:
    + Function spits out a metric. Metric can be thought of as *fitness* or
      *cost*
@@ -113,7 +112,7 @@
 * Gradient Descent :slide:two_col:
   1. Estimate current gradient (derivative)
   1. Take a step (=a * deriv=) in the direction of the gradient
-  1. Step size is small, stop
+  1. Step size is small, stop. Else repeat.
   [[file:img/parabola.png]]
 ** Steps :notes:
    + Take gradient by looking at the local derivative, or perturbating x
@@ -146,6 +145,7 @@
    + How to handle case where separator line is not along an axis?
   [[file:img/dataset_linsep.png]]
 ** Details :notes:
+   + Could say if =x>2= and =y>2=, but not a great intuitive fit
    + Draw a line that takes both into account
    + =y = m*x + b=
    + img: http://www.eric-kim.net/eric-kim-net/posts/1/kernel_trick.html
@@ -191,28 +191,30 @@
      =w= as the matrix representing all the =m= slopes
 
 * Challenge :slide:two_col:
-  + Find =w=, =b= such that =w * x + b= maximize the distance between the
+  + Find =w=, =b= such that =w * x + b= maximizes the distance between the
     support vectors
-  [[file:img/svg.png]]
+  [[file:img/svm.png]]
 
 * Maximizing Fitness Function :slide:two_col:
   + Now we have a fitness function and parameters we're trying to optimize
   + Sound familiar?
-  [[file:img/svg.png]]
+  [[file:img/svm.png]]
 
-* Kernel Tricks :slide:
+* Kernel Tricks :slide:two_col:
   + SVM good for linearly separable data
   + How to handle other data?
-  [[file:/img/svm-circular.jpg]]
+  [[file:img/svm-circular.jpg]]
 
 ** Polynomial Kernel :slide:
    + Transform it into linearly separable
    + What function can we apply to these data points to make them separable?
+  [[file:img/svm-circular.jpg]]
 *** Square :notes:
    + Square all of them
 
 ** Polynomial Kernel :slide:
-   [[file:kernel-trick.jpg]]
+   [[file:img/kernel-trick.jpg]]
+
    Now apply SVM
 ** Details :notes:
    + img: http://www.sciencedirect.com/science/article/pii/S1072751511001918

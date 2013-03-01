@@ -23,7 +23,7 @@ w_13 =
 
 * Project :slide:
   + Find a partner (if applicable)
-  + Find a data set
+  + Find a [[http://blog.bigml.com/2013/02/28/data-data-data-thousands-of-public-data-sources/][data set]]
   + Start brainstorming
 
 #+STYLE: <link rel="stylesheet" type="text/css" href="production/common.css" />

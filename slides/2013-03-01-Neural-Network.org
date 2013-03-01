@@ -114,7 +114,7 @@
    + Normalize input to [0,1]
    + Makes weak input weaker, strong input stronger
    + =1 / (1 + e^-input)=
-   [file:img/sigmoid.png]]
+   [[file:img/sigmoid.png]]]
 
 * Example :slide:
   [[file:img/nn-fp1.png]]
@@ -131,25 +131,21 @@
 
 ** Sigmoid :slide:
    [[file:img/ann3.png]]
-   + =1 / (1 + e^-input)=
 *** Apply :notes:
    + Apply the sigmoid to the incoming signals
 
 ** Sigmoid :slide:
    [[file:img/ann4.png]]
-   + =1 / (1 + e^-input)=
 *** Apply :notes:
    + Apply the sigmoid to the incoming signals
 
 ** Sigmoid :slide:
    [[file:img/ann5.png]]
-   + =1 / (1 + e^-input)=
 *** Apply :notes:
    + Apply the sigmoid to the incoming signals
 
 ** Sigmoid :slide:
    [[file:img/ann6.png]]
-   + =1 / (1 + e^-input)=
 *** Apply :notes:
    + Apply the sigmoid to the incoming signals
 
@@ -160,7 +156,6 @@
 
 ** Sigmoid :slide:
    [[file:img/ann8.png]]
-   + =1 / (1 + e^-input)=
 *** Apply :notes:
    + Apply the sigmoid to the incoming signals
    + Our result is greater than 0.5, so we can assume true
@@ -185,11 +180,11 @@
    + Adjust weights, try again
 
 * Back Propagation :slide:
-  1. Run forward
-  1. Calculate error of output layer: =Err_j = O_j(1-O_j)(T_j-O_j)=
-  1. Caclulate error of hidden layer: =Err_j = O_j(1-O_j)*sum(Err_k*w_jk)=
-  1. Find new weights: =w_ij = w_ij + I*Err_j*O_j=
-  1. Repeat
+  + Run forward :: O_j is output of node =j=
+  + Calculate error of output layer :: Err_j = O_j(1-O_j)(T_j-O_j)
+  + Caclulate error of hidden layer :: Err_j = O_j(1-O_j)*sum(Err_k*w_jk)
+  + Find new weights :: w_ij = w_ij + I*Err_j*O_j
+  + Repeat :: To move closer to correct weights
 ** Derivative :notes:
    + Derivative of the sigmoid is =O_j(1-O_j)=, so we're taking the gradient
    + =I= is the learning rate, similar to =a= step size in gradient descent

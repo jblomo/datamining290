@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
 <meta name="title" content="2013-03-01-SVM"/>
 <meta name="generator" content="Org-mode"/>
-<meta name="generated" content="2013-02-28 23:50:12 PST"/>
+<meta name="generated" content="2013-03-01 08:32:25 PST"/>
 <meta name="author" content="Jim Blomo"/>
 <meta name="description" content=""/>
 <meta name="keywords" content=""/>
@@ -46,7 +46,7 @@
 <li><a href="#sec-3-1">3.1 Problem</a></li>
 </ul>
 </li>
-<li><a href="#sec-4">4 Solution</a>
+<li><a href="#sec-4">4 Solution?</a>
 <ul>
 <li><a href="#sec-4-1">4.1 Prompts</a></li>
 </ul>
@@ -218,7 +218,7 @@
 </div>
 
 <div id="outline-container-4" class="outline-2">
-<h2 id="sec-4"><span class="section-number-2">4</span> Solution &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span>&nbsp;<span class="animate">animate</span></span></h2>
+<h2 id="sec-4"><span class="section-number-2">4</span> Solution? &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span>&nbsp;<span class="animate">animate</span></span></h2>
 <div class="outline-text-2" id="text-4">
 
 <ul>
@@ -303,7 +303,8 @@
 </dd>
 </dl>
 
-
+<p>   <img src="img/logx.gif"  alt="img/logx.gif" />
+</p>
 </div>
 </div>
 
@@ -320,16 +321,12 @@
 </li>
 <li><code>h(x) = m*x + b</code>
 </li>
-</ul>
-
-
-
-<ul>
-<li><code>err = (h(x) - y)</code>
+<li><code>err = h(x) - y</code>
 </li>
 </ul>
 
-
+<p>  <img src="img/error.gif"  alt="img/error.gif" />
+</p>
 </div>
 
 <div id="outline-container-6-1" class="outline-3">
@@ -359,7 +356,7 @@
 </li>
 <li>Sum of squares
 </li>
-<li><code>err = sum( (h(x) - y)**2 for x in dataset) / num_points</code>
+<li><code>err = sum( (h(x) - y)**2 for x,y in dataset) / len(dataset)</code>
 </li>
 </ul>
 
@@ -392,7 +389,7 @@
 </div>
 
 <div id="outline-container-8" class="outline-2">
-<h2 id="sec-8"><span class="section-number-2">8</span> Fitness Function &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span>&nbsp;<span class="two_col">two_col</span></span></h2>
+<h2 id="sec-8"><span class="section-number-2">8</span> Fitness Function &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h2>
 <div class="outline-text-2" id="text-8">
 
 <ul>
@@ -404,8 +401,7 @@
 </li>
 </ul>
 
-<p>  <img src="img/reg_error.gif"  alt="img/reg_error.gif" />
-</p>
+
 </div>
 
 <div id="outline-container-8-1" class="outline-3">
@@ -525,7 +521,7 @@
 </li>
 <li>Take a step (<code>a * deriv</code>) in the direction of the gradient
 </li>
-<li>Step size is small, stop
+<li>Step size is small, stop. Else repeat.
 </li>
 </ol>
 
@@ -641,6 +637,8 @@
 <div class="outline-text-3" id="text-15-2">
 
 <ul>
+<li>Could say if <code>x&gt;2</code> and <code>y&gt;2</code>, but not a great intuitive fit
+</li>
 <li>Draw a line that takes both into account
 </li>
 <li><code>y = m*x + b</code>
@@ -804,12 +802,12 @@
 <div class="outline-text-2" id="text-19">
 
 <ul>
-<li>Find <code>w</code>, <code>b</code> such that <code>w * x + b</code> maximize the distance between the
+<li>Find <code>w</code>, <code>b</code> such that <code>w * x + b</code> maximizes the distance between the
     support vectors
 </li>
 </ul>
 
-<p>  <img src="img/svg.png"  alt="img/svg.png" />
+<p>  <img src="img/svm.png"  alt="img/svm.png" />
 </p>
 </div>
 
@@ -826,14 +824,14 @@
 </li>
 </ul>
 
-<p>  <img src="img/svg.png"  alt="img/svg.png" />
+<p>  <img src="img/svm.png"  alt="img/svm.png" />
 </p>
 </div>
 
 </div>
 
 <div id="outline-container-21" class="outline-2">
-<h2 id="sec-21"><span class="section-number-2">21</span> Kernel Tricks &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h2>
+<h2 id="sec-21"><span class="section-number-2">21</span> Kernel Tricks &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span>&nbsp;<span class="two_col">two_col</span></span></h2>
 <div class="outline-text-2" id="text-21">
 
 <ul>
@@ -843,7 +841,7 @@
 </li>
 </ul>
 
-<p>  <img src="file:///img/svm-circular.jpg"  alt="file:///img/svm-circular.jpg" />
+<p>  <img src="img/svm-circular.jpg"  alt="img/svm-circular.jpg" />
 </p>
 
 </div>
@@ -859,7 +857,8 @@
 </li>
 </ul>
 
-
+<p>  <img src="img/svm-circular.jpg"  alt="img/svm-circular.jpg" />
+</p>
 </div>
 
 <div id="outline-container-21-1-1" class="outline-4">
@@ -881,7 +880,9 @@
 <h3 id="sec-21-2"><span class="section-number-3">21.2</span> Polynomial Kernel &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h3>
 <div class="outline-text-3" id="text-21-2">
 
-<p>   <img src="kernel-trick.jpg"  alt="kernel-trick.jpg" />
+<p>   <img src="img/kernel-trick.jpg"  alt="img/kernel-trick.jpg" />
+</p>
+<p>
    Now apply SVM
 </p></div>
 
@@ -917,7 +918,7 @@
 </div>
 
 <div id="postamble">
-<p class="date">Date: 2013-02-28 23:50:12 PST</p>
+<p class="date">Date: 2013-03-01 08:32:25 PST</p>
 <p class="author">Author: Jim Blomo</p>
 <p class="creator">Org version 7.8.02 with Emacs version 23</p>
 <a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>
