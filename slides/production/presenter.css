@@ -12,6 +12,10 @@ body.presenter-display {
    font-family: Helvetica, Arial, sans-serif;
 }
 
+.slide .outline-text {
+	color: black;
+}
+
 #presenter-current-slide-container {
    bottom: 200px;
    height: 40%;
