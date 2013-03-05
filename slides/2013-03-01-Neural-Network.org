@@ -183,18 +183,31 @@
   + Run forward :: O_j is output of node =j=
   + Calculate error of output layer :: Err_j = O_j(1-O_j)(T_j-O_j)
   + Caclulate error of hidden layer :: Err_j = O_j(1-O_j)*sum(Err_k*w_jk)
-  + Find new weights :: w_ij = w_ij + I*Err_j*O_j
+  + Find new weights :: w_ij = w_ij + l*Err_j*O_i
   + Repeat :: To move closer to correct weights
 ** Derivative :notes:
    + Derivative of the sigmoid is =O_j(1-O_j)=, so we're taking the gradient
-   + =I= is the learning rate, similar to =a= step size in gradient descent
+   + =l= is the learning rate, similar to =a= step size in gradient descent
 
 * Example :slide:
   [[file:img/ann8.png]]
 ** Expected :notes:
-   + If our target value was 0, =oj*(1-oj)*(tj-oj) = -0.143728988769=
-   + oh=0.9933, oh*(1-oh)*(1.5*-0.143728988769) = -0.0014347983456696979
-   + I=10, 1.5 + 1.5*10*-0.0014347983456696979*oh
+#+begin_src python
+# Expected Output is 0
+t_6 = 0
+# Actual Output
+o_6 = 0.8387
+# Output Error -0.11346127339699999
+err_6 = o_6*(1-o_6)*(t_6-o_6)
+# Setup hidden node 5
+o_5 = 0.9933 ; w_56 = 1.5
+# Error for node 5 = -0.0011326458827956695
+err_5 = o_5*(1-o_5)*(err_6*w_56)
+# Adjust weight to 0.37298917134759924
+l = 10  # learning rate
+w_56 = w_56 + l*err_6*o_5
+#+end_src
+
 
 * Terminate Learning :slide:
   + Changes in weights too small

@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
 <meta name="title" content="2013-03-01-Neural-Network"/>
 <meta name="generator" content="Org-mode"/>
-<meta name="generated" content="2013-03-01 08:44:40 PST"/>
+<meta name="generated" content="2013-03-04 23:20:39 PST"/>
 <meta name="author" content="Jim Blomo"/>
 <meta name="description" content=""/>
 <meta name="keywords" content=""/>
@@ -834,7 +834,7 @@
 </dd>
 <dt>Caclulate error of hidden layer</dt><dd>Err<sub>j</sub> = O<sub>j</sub>(1-O<sub>j</sub>)*sum(Err<sub>k</sub>*w<sub>jk</sub>)
 </dd>
-<dt>Find new weights</dt><dd>w<sub>ij</sub> = w<sub>ij</sub> + I*Err<sub>j</sub>*O<sub>j</sub>
+<dt>Find new weights</dt><dd>w<sub>ij</sub> = w<sub>ij</sub> + l*Err<sub>j</sub>*O<sub>i</sub>
 </dd>
 <dt>Repeat</dt><dd>To move closer to correct weights
 </dd>
@@ -850,7 +850,7 @@
 <ul>
 <li>Derivative of the sigmoid is <code>O_j(1-O_j)</code>, so we're taking the gradient
 </li>
-<li><code>I</code> is the learning rate, similar to <code>a</code> step size in gradient descent
+<li><code>l</code> is the learning rate, similar to <code>a</code> step size in gradient descent
 </li>
 </ul>
 
@@ -872,14 +872,24 @@
 <h3 id="sec-15-1"><span class="section-number-3">15.1</span> Expected &nbsp;&nbsp;&nbsp;<span class="tag"><span class="notes">notes</span></span></h3>
 <div class="outline-text-3" id="text-15-1">
 
-<ul>
-<li>If our target value was 0, <code>oj*(1-oj)*(tj-oj) = -0.143728988769</code>
-</li>
-<li>oh=0.9933, oh*(1-oh)*(1.5*-0.143728988769) = -0.0014347983456696979
-</li>
-<li>I=10, 1.5 + 1.5*10*-0.0014347983456696979*oh
-</li>
-</ul>
+
+
+
+<pre class="src src-python"><span style="color: #b22222;"># Expected Output is 0</span>
+<span style="color: #a0522d;">t_6</span> = 0
+<span style="color: #b22222;"># Actual Output</span>
+<span style="color: #a0522d;">o_6</span> = 0.8387
+<span style="color: #b22222;"># Output Error -0.11346127339699999</span>
+<span style="color: #a0522d;">err_6</span> = o_6*(1-o_6)*(t_6-o_6)
+<span style="color: #b22222;"># Setup hidden node 5</span>
+<span style="color: #a0522d;">o_5</span> = 0.9933 ; w_56 = 1.5
+<span style="color: #b22222;"># Error for node 5 = -0.0011326458827956695</span>
+<span style="color: #a0522d;">err_5</span> = o_5*(1-o_5)*(err_6*w_56)
+<span style="color: #b22222;"># Adjust weight to 0.37298917134759924</span>
+<span style="color: #a0522d;">l</span> = 10  <span style="color: #b22222;"># learning rate</span>
+<span style="color: #a0522d;">w_56</span> = w_56 + l*err_6*o_5
+</pre>
+
 
 
 </div>
@@ -939,7 +949,7 @@
 </div>
 
 <div id="postamble">
-<p class="date">Date: 2013-03-01 08:44:40 PST</p>
+<p class="date">Date: 2013-03-04 23:20:39 PST</p>
 <p class="author">Author: Jim Blomo</p>
 <p class="creator">Org version 7.8.02 with Emacs version 23</p>
 <a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>
