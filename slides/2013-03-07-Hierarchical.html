@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
 <meta name="title" content="2013-03-07-Hierarchical"/>
 <meta name="generator" content="Org-mode"/>
-<meta name="generated" content="2013-03-08 00:36:09 PST"/>
+<meta name="generated" content="2013-03-08 09:42:20 PST"/>
 <meta name="author" content="Jim Blomo"/>
 <meta name="description" content=""/>
 <meta name="keywords" content=""/>
@@ -61,7 +61,7 @@
 <li><a href="#sec-6-1">6.1 Details</a></li>
 </ul>
 </li>
-<li><a href="#sec-7">7 Dendogram</a>
+<li><a href="#sec-7">7 Dendrogram</a>
 <ul>
 <li><a href="#sec-7-1">7.1 Usefulness</a></li>
 </ul>
@@ -81,18 +81,23 @@
 <li><a href="#sec-10-1">10.1 Details</a></li>
 </ul>
 </li>
-<li><a href="#sec-11">11 Algorithm Choice</a>
+<li><a href="#sec-11">11 Density Trade-offs</a>
 <ul>
-<li><a href="#sec-11-1">11.1 Lessons</a></li>
+<li><a href="#sec-11-1">11.1 Details</a></li>
 </ul>
 </li>
-<li><a href="#sec-12">12 Elbow Method</a></li>
-<li><a href="#sec-13">13 Labels</a>
+<li><a href="#sec-12">12 Algorithm Choice</a>
 <ul>
-<li><a href="#sec-13-1">13.1 Homogeneity</a></li>
+<li><a href="#sec-12-1">12.1 Lessons</a></li>
 </ul>
 </li>
-<li><a href="#sec-14">14 <b>Break</b></a></li>
+<li><a href="#sec-13">13 Elbow Method</a></li>
+<li><a href="#sec-14">14 Labels</a>
+<ul>
+<li><a href="#sec-14-1">14.1 Homogeneity</a></li>
+</ul>
+</li>
+<li><a href="#sec-15">15 <b>Break</b></a></li>
 </ul>
 </div>
 </div>
@@ -162,7 +167,7 @@
 </li>
 <li><code>k</code>: number of clusters
 </li>
-<li>Cluster disjoint*
+<li>Clusters disjoint*
 </li>
 <li>Hierarchical clustering builds up clusters incrementally
 </li>
@@ -183,6 +188,9 @@
 </li>
 <li>Clusters are built 1 cluster at a time, starting with all points being
      their own cluster
+</li>
+<li>*We'll learn about "fuzzy" clustering next time, where cluster membership
+     is a probability
 </li>
 </ul>
 
@@ -302,10 +310,10 @@
 </div>
 
 <div id="outline-container-7" class="outline-2">
-<h2 id="sec-7"><span class="section-number-2">7</span> Dendogram &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span>&nbsp;<span class="two_col">two_col</span></span></h2>
+<h2 id="sec-7"><span class="section-number-2">7</span> Dendrogram &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span>&nbsp;<span class="two_col">two_col</span></span></h2>
 <div class="outline-text-2" id="text-7">
 
-<p>  <img src="img/dendogram1.jpg"  alt="img/dendogram1.jpg" />
+<p>  <img src="img/dendrogram1.jpg"  alt="img/dendrogram1.jpg" />
 </p>
 
 <ul>
@@ -336,12 +344,10 @@
 </div>
 
 <div id="outline-container-8" class="outline-2">
-<h2 id="sec-8"><span class="section-number-2">8</span> CHAMELEON &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h2>
+<h2 id="sec-8"><span class="section-number-2">8</span> CHAMELEON &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span>&nbsp;<span class="two_col">two_col</span></span></h2>
 <div class="outline-text-2" id="text-8">
 
 <ul>
-<li>Mix of partition &amp; agglomerative
-</li>
 <li>Discover large number of small clusters
 </li>
 <li>Group together small clusters
@@ -351,7 +357,8 @@
 </li>
 </ul>
 
-
+<p>  <img src="img/chameleon.png"  alt="img/chameleon.png" />
+</p>
 </div>
 
 <div id="outline-container-8-1" class="outline-3">
@@ -359,6 +366,8 @@
 <div class="outline-text-3" id="text-8-1">
 
 <ul>
+<li>Mix of partition &amp; agglomerative
+</li>
 <li>Partition by finding groups of k-nearest neighbors: A, B in the same group
      if A is a k-nearest neighbor of B.
 </li>
@@ -409,7 +418,7 @@
 </li>
 </ul>
 
-<p>  <img src="img/DBSCAN.png"  alt="img/DBSCAN.png" />
+<p>  <img src="img/density-connected.png"  alt="img/density-connected.png" />
 </p>
 </div>
 
@@ -420,9 +429,35 @@
 <ul>
 <li>Can find non linear "paths" to follow as long as they stay dense
 </li>
-<li>DBSCAN is sensitive to the parameters used. How big is <code>e</code>?  How many
-     points is "dense"?
+</ul>
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-11" class="outline-2">
+<h2 id="sec-11"><span class="section-number-2">11</span> Density Trade-offs &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span>&nbsp;<span class="two_col">two_col</span></span></h2>
+<div class="outline-text-2" id="text-11">
+
+<p>  <img src="img/DBSCAN.png"  alt="img/DBSCAN.png" />
+</p><ul>
+<li>Finds clusters of different sizes, shapes
 </li>
+<li>DBSCAN is sensitive to the parameters used. How big is <code>e</code>?  How many
+    points is "dense"?
+</li>
+</ul>
+
+
+</div>
+
+<div id="outline-container-11-1" class="outline-3">
+<h3 id="sec-11-1"><span class="section-number-3">11.1</span> Details &nbsp;&nbsp;&nbsp;<span class="tag"><span class="notes">notes</span></span></h3>
+<div class="outline-text-3" id="text-11-1">
+
+<ul>
 <li>img: <a href="http://en.wikipedia.org/wiki/DBSCAN">http://en.wikipedia.org/wiki/DBSCAN</a>
 </li>
 </ul>
@@ -433,9 +468,9 @@
 
 </div>
 
-<div id="outline-container-11" class="outline-2">
-<h2 id="sec-11"><span class="section-number-2">11</span> Algorithm Choice &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h2>
-<div class="outline-text-2" id="text-11">
+<div id="outline-container-12" class="outline-2">
+<h2 id="sec-12"><span class="section-number-2">12</span> Algorithm Choice &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h2>
+<div class="outline-text-2" id="text-12">
 
 <ul>
 <li>Simple techniques often work surprisingly well
@@ -449,9 +484,9 @@
 
 </div>
 
-<div id="outline-container-11-1" class="outline-3">
-<h3 id="sec-11-1"><span class="section-number-3">11.1</span> Lessons &nbsp;&nbsp;&nbsp;<span class="tag"><span class="notes">notes</span></span></h3>
-<div class="outline-text-3" id="text-11-1">
+<div id="outline-container-12-1" class="outline-3">
+<h3 id="sec-12-1"><span class="section-number-3">12.1</span> Lessons &nbsp;&nbsp;&nbsp;<span class="tag"><span class="notes">notes</span></span></h3>
+<div class="outline-text-3" id="text-12-1">
 
 <ul>
 <li>Just like Naive Bayes, we make assumptions about our data that turn out
@@ -476,9 +511,9 @@
 
 </div>
 
-<div id="outline-container-12" class="outline-2">
-<h2 id="sec-12"><span class="section-number-2">12</span> Elbow Method &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span>&nbsp;<span class="two_col">two_col</span></span></h2>
-<div class="outline-text-2" id="text-12">
+<div id="outline-container-13" class="outline-2">
+<h2 id="sec-13"><span class="section-number-2">13</span> Elbow Method &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span>&nbsp;<span class="two_col">two_col</span></span></h2>
+<div class="outline-text-2" id="text-13">
 
 <ul>
 <li>Calculate intra-cluster variance
@@ -489,15 +524,15 @@
 </li>
 </ul>
 
-<p>  <img src="img/elbow.jpg"  alt="img/elbow.jpg" />
+<p>  <img src="img/elbow.JPG"  alt="img/elbow.JPG" />
 </p>
 </div>
 
 </div>
 
-<div id="outline-container-13" class="outline-2">
-<h2 id="sec-13"><span class="section-number-2">13</span> Labels &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h2>
-<div class="outline-text-2" id="text-13">
+<div id="outline-container-14" class="outline-2">
+<h2 id="sec-14"><span class="section-number-2">14</span> Labels &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h2>
+<div class="outline-text-2" id="text-14">
 
 <ul>
 <li>Clustering is an example of unsupervised learning
@@ -511,9 +546,9 @@
 
 </div>
 
-<div id="outline-container-13-1" class="outline-3">
-<h3 id="sec-13-1"><span class="section-number-3">13.1</span> Homogeneity &nbsp;&nbsp;&nbsp;<span class="tag"><span class="notes">notes</span></span></h3>
-<div class="outline-text-3" id="text-13-1">
+<div id="outline-container-14-1" class="outline-3">
+<h3 id="sec-14-1"><span class="section-number-3">14.1</span> Homogeneity &nbsp;&nbsp;&nbsp;<span class="tag"><span class="notes">notes</span></span></h3>
+<div class="outline-text-3" id="text-14-1">
 
 <ul>
 <li>Gini Index
@@ -530,9 +565,9 @@
 
 </div>
 
-<div id="outline-container-14" class="outline-2">
-<h2 id="sec-14"><span class="section-number-2">14</span> <b>Break</b> &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h2>
-<div class="outline-text-2" id="text-14">
+<div id="outline-container-15" class="outline-2">
+<h2 id="sec-15"><span class="section-number-2">15</span> <b>Break</b> &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h2>
+<div class="outline-text-2" id="text-15">
 
 
 
@@ -545,7 +580,7 @@
 </div>
 
 <div id="postamble">
-<p class="date">Date: 2013-03-08 00:36:09 PST</p>
+<p class="date">Date: 2013-03-08 09:42:20 PST</p>
 <p class="author">Author: Jim Blomo</p>
 <p class="creator">Org version 7.8.02 with Emacs version 23</p>
 <a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>

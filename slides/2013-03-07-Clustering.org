@@ -68,29 +68,13 @@
 
 * Intuition :slide:
   + Intuition => Mathematical Expression => Solution => Evaluation
-  + Good clustering: high intra-class similarity, low inter-class similarity
-
-* Normalization :slide:
-  + Compare cities with average temperature and population attributes
-  + <x,y> <temp, pop>
-  + Using Euclidean distance, which attribute will affect similarity more?
-** Un-normalized :notes:
-   + Population: it is a much bigger number, will contribute much more to
-     distance
-   + Artificially inflating importance just because units are different
-
-* Normalization Techniques :slide:animate:
-  + Z-score :: =(v - mean) / stddev=
-  + Min-max :: =(v - min) / (max - min)=
-  + Decimal :: =* 10= =/ 10=
-  + Square :: =x**2=
-  + Log :: =log(x)=
-** Useful for? :notes:
-   + Z-score :: 1-pass normalization, retaining information about stdev
-  + Min-max :: keep within expected range, usually [0-1]
-  + Decimal :: easy to apply
-  + Square :: keep inputs positive
-  + Log :: de-emphasize differences between large numbers
+  + High intra-class similarity
+  + Low inter-class similarity
+  + Interpretable
+** Good Clusters :notes:
+   + Just like all data mining, needs to be used to take action
+   + Can't take action if you don't understand the results
+   + Trade-offs: testing shows it works, but you don't understand it
 
 * Methods :slide:
   + Partitioning :: Construct =k= groups, evaluate fitness, improve groups
@@ -128,6 +112,35 @@
    + Start again
    + img: http://apandre.wordpress.com/visible-data/cluster-analysis/
 
+* Distance :slide:
+  + *Centroid* is the average of all points in a cluster; the center
+  + Different distance metrics for real numbers
+  + But how to find "average" of binary or normative data?
+** You Can't :notes:
+   + k-means is used for numerical data
+
+* Normalization :slide:
+  + Cluster cities by average temperature and population attributes
+  + <x,y> = <temp, pop>
+  + Using Euclidean distance, which attribute will affect similarity more?
+** Un-normalized :notes:
+   + Population: it is a much bigger number, will contribute much more to
+     distance
+   + Artificially inflating importance just because units are different
+
+* Normalization Techniques :slide:
+  + Z-score :: =(v - mean) / stddev=
+  + Min-max :: =(v - min) / (max - min)=
+  + Decimal :: =* 10= =/ 10=
+  + Square :: =x**2=
+  + Log :: =log(x)=
+** Useful for? :notes:
+   + Z-score :: 1-pass normalization, retaining information about stdev
+  + Min-max :: keep within expected range, usually [0-1]
+  + Decimal :: easy to apply
+  + Square :: keep inputs positive
+  + Log :: de-emphasize differences between large numbers
+
 * Local Optima :slide:
   [[file:img/k-means-local.png]]
 ** No Guarantee :notes:
@@ -158,7 +171,7 @@
      points
 
 * Example :slide:
-  [[file:img/k-medoid.png]]
+  [[file:img/k-medoids.png]]
 ** Stability :notes:
    + No stability between real clusters
    + Outliers can't pull centroid far out of actual cluster

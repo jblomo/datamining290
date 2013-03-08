@@ -22,7 +22,7 @@
 * k-means Input :slide:animate:
   + What did we supply to k-means before we ran it?
   + =k=: number of clusters
-  + Cluster disjoint*
+  + Clusters disjoint*
   + Hierarchical clustering builds up clusters incrementally
 ** Difference :notes:
    + Hierarchical can find cluster of clusters
@@ -30,6 +30,8 @@
      sense without guess-and-check
    + Clusters are built 1 cluster at a time, starting with all points being
      their own cluster
+   + *We'll learn about "fuzzy" clustering next time, where cluster membership
+     is a probability
 
 * Agglomerative :slide:
   + All points are separate clusters
@@ -63,8 +65,8 @@
    + Distance or fitness function (eg. density or minimum intra-cluster
      similarity score) can help define =k= automatically
 
-* Dendogram :slide:two_col:
-  [[file:img/dendogram1.jpg]]
+* Dendrogram :slide:two_col:
+  [[file:img/dendrogram1.jpg]]
 
 
   + Display of clustered groups
@@ -73,13 +75,14 @@
 ** Usefulness :notes:
    + Can move up and down clustering to make sense of individual clusters
 
-* CHAMELEON :slide:
-  + Mix of partition & agglomerative
+* CHAMELEON :slide:two_col:
   + Discover large number of small clusters
   + Group together small clusters
   + Join clusters with a high interconnectedness relative to their existing
     interconnectedness
+  [[file:img/chameleon.png]]
 ** Details :notes:
+   + Mix of partition & agglomerative
    + Partition by finding groups of k-nearest neighbors: A, B in the same group
      if A is a k-nearest neighbor of B.
    + Interconnectedness measured by aggregate proximity in the group, or using a
@@ -94,11 +97,16 @@
   + Find "paths" of points that are in "dense" regions
   + Paths: points within a distance =e=
   + Density: surrounded by =MinPts= within region of radius =e=
-  [[file:img/DBSCAN.png]]
+  [[file:img/density-connected.png]]
 ** Details :notes:
    + Can find non linear "paths" to follow as long as they stay dense
-   + DBSCAN is sensitive to the parameters used. How big is =e=?  How many
-     points is "dense"?
+
+* Density Trade-offs :slide:two_col:
+  [[file:img/DBSCAN.png]]
+  + Finds clusters of different sizes, shapes
+  + DBSCAN is sensitive to the parameters used. How big is =e=?  How many
+    points is "dense"?
+** Details :notes:
    + img: http://en.wikipedia.org/wiki/DBSCAN
 
 * Algorithm Choice :slide:
@@ -121,7 +129,7 @@
   + Calculate intra-cluster variance
   + Compare to data set variance (F-test)
   + Find point where marginal gain of explicative power decreases
-  [[file:img/elbow.jpg]]
+  [[file:img/elbow.JPG]]
 
 * Labels :slide:
   + Clustering is an example of unsupervised learning

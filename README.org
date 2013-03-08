@@ -18,7 +18,7 @@ DM[0-9]+ indicates chapters from the text, _Data Mining_.
 | Feb 15 | DM4, [[http://www.youtube.com/watch?v=SS27F-hYWfU][Apache Hadoop: Petabytes and Terawatts]] ([[http://prezi.com/u0ukvqzpyh5p/apache-hadoop-petabytes-and-terawatts/][slides]]); [[http://packages.python.org/mrjob/][mrjob docs]] (for homework) | [[file:slides/2013-02-15-Data-Warehouse.html][Data Warehouse]] ; [[file:slides/2013-02-15-MapReduce.html][MapReduce]] | [[file:slides/2013-02-15-Project.html][Project Details]] ; [[file:slides/2013-02-15-mrjob.html][mrjob]] |
 | Feb 22 | DM8 | [[file:slides/2013-02-22-Decision-Trees.html][Decision Trees]]; [[file:slides/2013-02-22-Bayes.html][Naive Bayes]] | [[file:slides/2013-02-22-Gini.html][Gini Index]] |
 | Mar 1 | DM[9.1-9.3], 9.5 ; [[http://scott.fortmann-roe.com/docs/BiasVariance.html][Understanding the Bias-Variance Tradeoff]] | [[file:slides/2013-03-01-SVM.html][SVM]] ; [[file:slides/2013-03-01-Neural-Network.html][Neural Networks]] | [[file:slides/2013-03-01-Lab-NN.html][Neural Network Back Propagation]] |
-| Mar 8 | DM10 | Clustering ; Dimensionality Curse | TBA | 
+| Mar 8 | DM10 | [[file:slides/2013-03-07-Clustering.html][Agglomerative - Clustering]] ; [[file:slides/2013-03-07-Hierarchical.html][Hierarchical, Density - Clustering]] | [[file:slides/2013-03-07-k-means.html][K-Means]] | 
 | Mar 15 | DM11 | Graph Mining ; Review  | - |
 | Mar 22 | 1 cheat sheet | *Midterm* | - |
 | Mar 29 | HOLIDAY
