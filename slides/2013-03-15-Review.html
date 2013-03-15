@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+               "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>2013-03-14-Review</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<meta name="title" content="2013-03-14-Review"/>
+<meta name="generator" content="Org-mode"/>
+<meta name="generated" content="2013-03-15 13:36:52 PDT"/>
+<meta name="author" content="Jim Blomo"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+
+<link rel="stylesheet" type="text/css" href="production/common.css" />
+<link rel="stylesheet" type="text/css" href="production/screen.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="production/projection.css" media="projection" />
+<link rel="stylesheet" type="text/css" href="production/color-blue.css" media="projection" />
+<link rel="stylesheet" type="text/css" href="production/presenter.css" media="presenter" />
+<link href='http://fonts.googleapis.com/css?family=Lobster+Two:700|Yanone+Kaffeesatz:700|Open+Sans' rel='stylesheet' type='text/css'>
+
+
+</head>
+<body>
+
+<div id="preamble">
+
+</div>
+
+<div id="content">
+<h1 class="title">2013-03-14-Review</h1>
+
+
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1 Review</a></li>
+<li><a href="#sec-2">2 Case Studies</a></li>
+<li><a href="#sec-3">3 Obtaining Data</a></li>
+<li><a href="#sec-4">4 Probability</a></li>
+<li><a href="#sec-5">5 Preprocessing</a></li>
+<li><a href="#sec-6">6 Data Warehouse</a></li>
+<li><a href="#sec-7">7 MapReduce</a></li>
+<li><a href="#sec-8">8 Decision Tree</a></li>
+<li><a href="#sec-9">9 Naive Bays</a></li>
+<li><a href="#sec-10">10 SVM</a></li>
+<li><a href="#sec-11">11 Neural Networks</a></li>
+<li><a href="#sec-12">12 Partitioning Clusters</a></li>
+<li><a href="#sec-13">13 Hierarchical Clustering</a></li>
+<li><a href="#sec-14">14 <b>Good Luck!</b></a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> Review &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h2>
+<div class="outline-text-2" id="text-1">
+
+<ul>
+<li>Midterm target length: 1.5 hours
+</li>
+<li>Time limit: 3 hours
+</li>
+<li>1 cheat sheet, 8.5x11
+</li>
+<li>Calculators OK, not required
+</li>
+<li>Questions from slides have a higher probability of appearing
+</li>
+<li>Questions from the reading are fair game
+</li>
+</ul>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> Case Studies &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h2>
+<div class="outline-text-2" id="text-2">
+
+<ul>
+<li>Example of "transactional data"
+</li>
+<li>Example of non-transactional data
+</li>
+</ul>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> Obtaining Data &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h2>
+<div class="outline-text-2" id="text-3">
+
+<ul>
+<li>Tradeoffs of dataset vs API?
+</li>
+<li>Tradeoffs of operational database vs data warehouse
+</li>
+<li>Unix commands to explore data?
+</li>
+</ul>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-4" class="outline-2">
+<h2 id="sec-4"><span class="section-number-2">4</span> Probability &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h2>
+<div class="outline-text-2" id="text-4">
+
+<ul>
+<li>Other names for a Feature
+</li>
+<li>Difference between Discrete and Continuous feature
+</li>
+<li>What type of feature is day of the week?
+</li>
+<li>Ways to measure central tendency?
+</li>
+<li>What is skew?
+</li>
+<li>When is asymmetric binary dissimilarity useful?
+</li>
+<li>How to calculate L<sub>2</sub> norm of two points?
+</li>
+<li>What is cosign similarity?
+</li>
+</ul>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-5" class="outline-2">
+<h2 id="sec-5"><span class="section-number-2">5</span> Preprocessing &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h2>
+<div class="outline-text-2" id="text-5">
+
+<ul>
+<li>When storing the same fact in different ways, what type of problem is
+    likely?
+</li>
+<li>Can data corruption happen with no mistakes and no bugs?
+</li>
+<li>What are some options to deal with missing values?
+</li>
+<li>What are some options to deal with outliers?
+</li>
+<li>What does correlation imply?
+</li>
+</ul>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-6" class="outline-2">
+<h2 id="sec-6"><span class="section-number-2">6</span> Data Warehouse &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h2>
+<div class="outline-text-2" id="text-6">
+
+<ul>
+<li>OLAP vs OLTP
+</li>
+<li>Examples of database metadata?
+</li>
+<li>What is a data multi-cube?
+</li>
+<li>What is at the center of a star schema?
+</li>
+<li>What is the tradeoff being made in dimension tables?
+</li>
+<li>Define:
+<ul>
+<li>Rollup
+</li>
+<li>Drill-down
+</li>
+<li>Slice
+</li>
+<li>Dice
+</li>
+<li>Pivot
+</li>
+</ul>
+
+</li>
+</ul>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-7" class="outline-2">
+<h2 id="sec-7"><span class="section-number-2">7</span> MapReduce &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h2>
+<div class="outline-text-2" id="text-7">
+
+<ul>
+<li>What tradeoff are we making with MapReduce?
+</li>
+<li>Why is log processing a typical use of MapReduce?
+</li>
+<li>What types of processing is not well suited?
+</li>
+<li>For a multi-step job, the output of a reducer is fed into what?
+</li>
+</ul>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-8" class="outline-2">
+<h2 id="sec-8"><span class="section-number-2">8</span> Decision Tree &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h2>
+<div class="outline-text-2" id="text-8">
+
+<ul>
+<li>What table can we create from the verification results to understand
+    performance of our model?
+</li>
+<li>For supervised learning, what is required to train a model?
+</li>
+<li>What is a naive way to optimize precision?
+</li>
+<li>Recall?
+</li>
+<li>Assuming we use all attributes to classify, what is the height of
+    our tree?
+</li>
+<li>What are we optimizing for in the leaf nodes?
+</li>
+</ul>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-9" class="outline-2">
+<h2 id="sec-9"><span class="section-number-2">9</span> Naive Bays &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h2>
+<div class="outline-text-2" id="text-9">
+
+<ul>
+<li>Where does the testing set come from?
+</li>
+<li>What is the <code>k</code> in k-fold cross-validation?
+</li>
+<li>Bayes theorem finds P(A|B). In email spam detection, what are A and B?
+</li>
+<li>What is the Naive assumption we make in Naive Bayes?
+</li>
+<li>Why can training many models be useful?
+</li>
+<li>What is bootstrap sampling?
+</li>
+<li>What is a random forest?
+</li>
+</ul>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-10" class="outline-2">
+<h2 id="sec-10"><span class="section-number-2">10</span> SVM &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h2>
+<div class="outline-text-2" id="text-10">
+
+<ul>
+<li>When finding a linear fit for home prices, what is our fitness function?
+</li>
+<li>What is the gradient in gradient descent?
+</li>
+<li>In the general case, are you guaranteed to find the globally optimal
+    solution when using gradient descent?
+</li>
+<li>Why does SVM work so well in practice, even though it requires linear
+    separability?
+</li>
+<li>If your data is not linearly separable, can you use SVM?
+</li>
+</ul>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-11" class="outline-2">
+<h2 id="sec-11"><span class="section-number-2">11</span> Neural Networks &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h2>
+<div class="outline-text-2" id="text-11">
+
+<ul>
+<li>What is model variance?
+</li>
+<li>What problem does high model variance indicate?
+</li>
+<li>What is an activation function?
+</li>
+<li>What types of problems are neural networks especially suited for?
+</li>
+<li>What are we improve during backward propagation?
+</li>
+</ul>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-12" class="outline-2">
+<h2 id="sec-12"><span class="section-number-2">12</span> Partitioning Clusters &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h2>
+<div class="outline-text-2" id="text-12">
+
+<ul>
+<li>What is the difference between k-means and k-nearest-neighbor?
+</li>
+<li>What are some of the problems with k-means?
+</li>
+<li>Why is normalization especially useful in clustering?
+</li>
+<li>What are the tradeoffs for using k-medoid clustering?
+</li>
+</ul>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-13" class="outline-2">
+<h2 id="sec-13"><span class="section-number-2">13</span> Hierarchical Clustering &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h2>
+<div class="outline-text-2" id="text-13">
+
+<ul>
+<li>What are the options to calculate cluster distance?
+</li>
+<li>Describe how to draw a dendrogram
+</li>
+<li>What are the drawbacks to density clustering with DBSCAN?
+</li>
+<li>If you had movie description data, but no genres, would you use Fuzzy
+    Clustering or Partitioned Clustering?
+</li>
+<li>How can we evaluate a clustering algorithm if our data is already labeled
+    with clusters?
+</li>
+</ul>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-14" class="outline-2">
+<h2 id="sec-14"><span class="section-number-2">14</span> <b>Good Luck!</b> &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h2>
+<div class="outline-text-2" id="text-14">
+
+
+
+
+
+<script type="text/javascript" src="production/org-html-slideshow.js"></script>
+
+</div>
+</div>
+</div>
+
+<div id="postamble">
+<p class="date">Date: 2013-03-15 13:36:52 PDT</p>
+<p class="author">Author: Jim Blomo</p>
+<p class="creator">Org version 7.8.02 with Emacs version 23</p>
+<a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,122 @@
+* Review :slide:
+  + Midterm target length: 1.5 hours
+  + Time limit: 3 hours
+  + 1 cheat sheet, 8.5x11
+  + Calculators OK, not required
+  + Questions from slides have a higher probability of appearing
+  + Questions from the reading are fair game
+
+* Case Studies :slide:
+  + Example of "transactional data"
+  + Example of non-transactional data
+
+* Obtaining Data :slide:
+  + Tradeoffs of dataset vs API?
+  + Tradeoffs of operational database vs data warehouse
+  + Unix commands to explore data?
+
+* Probability :slide:
+  + Other names for a Feature
+  + Difference between Discrete and Continuous feature
+  + What type of feature is day of the week?
+  + Ways to measure central tendency?
+  + What is skew?
+  + When is asymmetric binary dissimilarity useful?
+  + How to calculate L_2 norm of two points?
+  + What is cosign similarity?
+
+* Preprocessing :slide:
+  + When storing the same fact in different ways, what type of problem is
+    likely?
+  + Can data corruption happen with no mistakes and no bugs?
+  + What are some options to deal with missing values?
+  + What are some options to deal with outliers?
+  + What does correlation imply?
+
+* Data Warehouse :slide:
+  + OLAP vs OLTP
+  + Examples of database metadata?
+  + What is a data multi-cube?
+  + What is at the center of a star schema?
+  + What is the tradeoff being made in dimension tables?
+  + Define:
+    + Rollup
+    + Drill-down
+    + Slice
+    + Dice
+    + Pivot
+
+* MapReduce :slide:
+  + What tradeoff are we making with MapReduce?
+  + Why is log processing a typical use of MapReduce?
+  + What types of processing is not well suited?
+  + For a multi-step job, the output of a reducer is fed into what?
+
+* Decision Tree :slide:
+  + What table can we create from the verification results to understand
+    performance of our model?
+  + For supervised learning, what is required to train a model?
+  + What is a naive way to optimize precision?
+  + Recall?
+  + Assuming we use all attributes to classify, what is the height of
+    our tree?
+  + What are we optimizing for in the leaf nodes?
+
+* Naive Bays :slide:
+  + Where does the testing set come from?
+  + What is the =k= in k-fold cross-validation?
+  + Bayes theorem finds P(A|B). In email spam detection, what are A and B?
+  + What is the Naive assumption we make in Naive Bayes?
+  + Why can training many models be useful?
+  + What is bootstrap sampling?
+  + What is a random forest?
+
+* SVM :slide:
+  + When finding a linear fit for home prices, what is our fitness function?
+  + What is the gradient in gradient descent?
+  + In the general case, are you guaranteed to find the globally optimal
+    solution when using gradient descent?
+  + Why does SVM work so well in practice, even though it requires linear
+    separability?
+  + If your data is not linearly separable, can you use SVM?
+
+* Neural Networks :slide:
+  + What is model variance?
+  + What problem does high model variance indicate?
+  + What is an activation function?
+  + What types of problems are neural networks especially suited for?
+  + What are we improve during backward propagation?
+
+* Partitioning Clusters :slide:
+  + What is the difference between k-means and k-nearest-neighbor?
+  + What are some of the problems with k-means?
+  + Why is normalization especially useful in clustering?
+  + What are the tradeoffs for using k-medoid clustering?
+
+* Hierarchical Clustering :slide:
+  + What are the options to calculate cluster distance?
+  + Describe how to draw a dendrogram
+  + What are the drawbacks to density clustering with DBSCAN?
+  + If you had movie description data, but no genres, would you use Fuzzy
+    Clustering or Partitioned Clustering?
+  + How can we evaluate a clustering algorithm if our data is already labeled
+    with clusters?
+
+*  *Good Luck!* :slide:
+
+#+STYLE: <link rel="stylesheet" type="text/css" href="production/common.css" />
+#+STYLE: <link rel="stylesheet" type="text/css" href="production/screen.css" media="screen" />
+#+STYLE: <link rel="stylesheet" type="text/css" href="production/projection.css" media="projection" />
+#+STYLE: <link rel="stylesheet" type="text/css" href="production/color-blue.css" media="projection" />
+#+STYLE: <link rel="stylesheet" type="text/css" href="production/presenter.css" media="presenter" />
+#+STYLE: <link href='http://fonts.googleapis.com/css?family=Lobster+Two:700|Yanone+Kaffeesatz:700|Open+Sans' rel='stylesheet' type='text/css'>
+
+#+BEGIN_HTML
+<script type="text/javascript" src="production/org-html-slideshow.js"></script>
+#+END_HTML
+
+# Local Variables:
+# org-export-html-style-include-default: nil
+# org-export-html-style-include-scripts: nil
+# buffer-file-coding-system: utf-8-unix
+# End:

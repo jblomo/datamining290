@@ -179,7 +179,7 @@
   + =y = m*x + b=
   + =x_2 = m*x_1 + b=
   + =0 = m*x_1 + b - x_2=
-  + =0 = [m 0] * [x_1, x_2] + b=
+  + =0 = [m -1] * [x_1, x_2] + b=
   + =0 = w * x + b=
 ** Questions :notes:
    + How do you mathematically represent a line?
