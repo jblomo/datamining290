@@ -9,7 +9,7 @@
    + Ask me before doing anything not discussed here
 
 * S3 :slide:
-  + [[http://aws.amazon.com/s3/][S3]: Simple Storage Service
+  + [[http://aws.amazon.com/s3/][S3]]: Simple Storage Service
   + Can store and share large data files
   + Free bandwidth when processing with EMR
 
