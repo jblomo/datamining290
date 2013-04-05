@@ -19,12 +19,12 @@ DM[0-9]+ indicates chapters from the text, _Data Mining_.
 | Feb 22 | DM8 | [[file:slides/2013-02-22-Decision-Trees.html][Decision Trees]]; [[file:slides/2013-02-22-Bayes.html][Naive Bayes]] | [[file:slides/2013-02-22-Gini.html][Gini Index]] |
 | Mar 1 | DM[9.1-9.3], 9.5 ; [[http://scott.fortmann-roe.com/docs/BiasVariance.html][Understanding the Bias-Variance Tradeoff]] | [[file:slides/2013-03-01-SVM.html][SVM]] ; [[file:slides/2013-03-01-Neural-Network.html][Neural Networks]] | [[file:slides/2013-03-01-Lab-NN.html][Neural Network Back Propagation]] |
 | Mar 8 | DM10 | [[file:slides/2013-03-07-Clustering.html][Agglomerative - Clustering]] ; [[file:slides/2013-03-07-Hierarchical.html][Hierarchical, Density - Clustering]] | [[file:slides/2013-03-07-k-means.html][K-Means]] | 
-| Mar 15 | DM11.1 | [[file:slides/2013-03-15-Advanced-Cluster.html][Advanced Clustering]]; [[file:slides/2013-03-15-Review.html][Review]]  | prepare 1 cheat sheet |
+| Mar 15 | DM11.1 | [[file:slides/2013-03-15-Review.html][Review]]  | prepare 1 cheat sheet |
 | Mar 22 | 1 cheat sheet | *Midterm* | - |
 | Mar 29 | HOLIDAY
-| Apr 5 | DM6 | Pattern ; Evaluations | Project Proposal Due |
+| Apr 5 | DM6 | [[file:slides/2013-03-15-Advanced-Cluster.html][Advanced Clustering]] ; [[file:slides/2013-04-05-Frequent-Pattern.html][Frequent Pattern]] | [[file:slides/2013-04-05-AWS.html][AWS]] ; Project Proposal Due |
 | Apr 12 | TBA | Collaborative Filtering; PageRank | TBA |
-| Apr 19 | TBA | Feature Extraction ; Evaluation | TBA |
+| Apr 19 | TBA | GUEST: Gene Lee Ceaser's | TBA |
 | Apr 26 | TBA | Images ; Audio | TBA |
 | May 3 | TBA | Visualization ; HTML | TBA |
 | May 10 | TBA | In Real Life ; Review | Project Papers Due |

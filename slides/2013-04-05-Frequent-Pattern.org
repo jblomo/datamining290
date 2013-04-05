@@ -1,0 +1,129 @@
+* Frequent Patterns :slide:
+
+* Finding Patterns :slide:
+  + Cookies frequently purchased with milk
+  + Website signups frequently occurring after reading FAQ
+  + DNA sections frequently seen with a drug reaction
+** Patterns :notes:
+   + set of items
+   + subsequences of actions
+   + substructures
+   + Generalized to any kind of pattern that occurs "frequently" in the dataset
+
+* Market Basket :slide:
+  + What things are frequently purchased together?
+  + Apocryphal example: beer and diapers
+  + Can be used for any natural grouping
+** Details :notes:
+   + Example of how patterns are discovered is to look at groups of actions
+   + One natural group is the shopping basket: what items are in it?
+   + But can also be applied to anytime there is a natural grouping
+     + Eg. web session logs group naturally around a person and time window
+
+* Define "Frequently" :slide:
+  + Action :: =A= and =B=
+  + Support :: probability that a transaction contains =A ∪ B=
+  + Confidence :: conditional probability that a transaction having =A= also
+    contains =B=
+** Probabilities :notes:
+   + We have two actions =A= and =B=
+   + Out of all the groupings, how many had both items?
+   + Out of all the groupings with =A=, how many had =B=?
+
+* Minimums :slide:two_col:
+  + Min Support :: lower bound on support probability
+  + Min Confidence :: lower bound on confidence probability
+  + Strong :: Rule that satisfies both minimums
+  [[file:img/strawberry-milk.jpg]]
+** "Frequently" :notes:
+   + Now we can talk about what frequently means
+   + It doesn't matter if two very unpopular items were purchased together: car
+     battery and smoke detector
+   + Also don't care if =A= happens a lot: everybody buys milk, so not a big
+     deal if some bought milk and strawberries
+   + Also important to note confidence is not symmetric: buying strawberries may be
+     frequent with buying milk, but not visa versa
+
+* Too Many Rules :slide:
+  + Patterns not limited to 2 events
+  + But looking for all patterns leads to combinatorial number of options
+  | a,b,c,d,e |
+  | a,b |
+  | a,c |
+  | ... |
+  | a,b,c |
+  | a,b,e |
+  |...|
+
+* Subset Patterns :slide:
+  + Max-Pattern :: =X= rule is frequent and there exists no frequent
+    super-pattern =Y=
+  + Closed :: =X= rule is frequent and there exists no super-pattern =Y= *with the same support*
+  + Shortcut :: Find only max-pattern or closed patterns, let other patterns be
+    subsets
+** Shortcut :notes:
+   + So how can we calculate all the potentially frequently occurring patterns?
+   + We can find either the max or closed pattern that encompasses all of the
+     patterns we're looking for
+   + These are more easily tracked, and we can still derive all of the
+     frequently occurring sub-patterns
+   + We can use the reverse: if a rule or item is not frequent enough alone, its
+     super-set will not be frequent enough:
+     + If =A= is does not meet min support, there's no way for =A,B= to make
+       support
+
+* Apriori :slide:
+  1. Find supported single event rules
+  1. Combine to make 2-event rules, check DB for support
+  1. Combine to make 3-event rules, check DB...
+  1. Stop when no N-event rules
+
+*  :slide:
+  [[file:img/apriori.png]]
+** Speed :notes:
+   + Isn't that slow? Yes!
+   + Book has some techniques to speed it up, mostly around grouping
+   + Can group together sets and if the group does not meet the support
+     threshold, then none of the members do
+
+* Interesting Patterns :slide:two_col:
+  + Strong rules may not always be interesting rules
+  + Basketball => eat cereal [40%, 66.7%] is strong
+  + But "not cereal" has a bigger effect on if you play basketball
+  | | Basketball | Not basketball | Sum |
+  | Cereal | 2000 | 1750 | 3750 |
+  | Not cereal | 1000 | 250 | 1250 |
+  | Sum | 3000 | 2000 | 5000 |
+** Details :notes:
+   + Not cereal column: has a huge effect on if someone plays basketball
+   + cereal + basketball... sure it happens frequently, but you'd actually
+     expect to see a bigger effect
+
+* Lift :slide:
+  + =P(A ∪ B) / P(A)*P(B)=
+  + If =A= and =B= independent, what is likelihood of =A= and =B=?
+** Correlation :notes:
+   + 1
+   + so if lift > 1, you're seeing something that is happening more often than
+     random
+   + < 1 means they negatively correlated
+   + X^2, cosine, others in book
+
+* *Break* :slide:
+
+#+STYLE: <link rel="stylesheet" type="text/css" href="production/common.css" />
+#+STYLE: <link rel="stylesheet" type="text/css" href="production/screen.css" media="screen" />
+#+STYLE: <link rel="stylesheet" type="text/css" href="production/projection.css" media="projection" />
+#+STYLE: <link rel="stylesheet" type="text/css" href="production/color-blue.css" media="projection" />
+#+STYLE: <link rel="stylesheet" type="text/css" href="production/presenter.css" media="presenter" />
+#+STYLE: <link href='http://fonts.googleapis.com/css?family=Lobster+Two:700|Yanone+Kaffeesatz:700|Open+Sans' rel='stylesheet' type='text/css'>
+
+#+BEGIN_HTML
+<script type="text/javascript" src="production/org-html-slideshow.js"></script>
+#+END_HTML
+
+# Local Variables:
+# org-export-html-style-include-default: nil
+# org-export-html-style-include-scripts: nil
+# buffer-file-coding-system: utf-8-unix
+# End:
