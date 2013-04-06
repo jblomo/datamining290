@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
 <meta name="title" content="2013-04-05-AWS"/>
 <meta name="generator" content="Org-mode"/>
-<meta name="generated" content="2013-04-05 14:03:10 PDT"/>
+<meta name="generated" content="2013-04-06 11:19:43 PDT"/>
 <meta name="author" content="Jim Blomo"/>
 <meta name="description" content=""/>
 <meta name="keywords" content=""/>
@@ -48,6 +48,13 @@
 </ul>
 </li>
 <li><a href="#sec-5">5 Elastic MapReduce</a></li>
+<li><a href="#sec-6">6 Copying Keys</a></li>
+<li><a href="#sec-7">7 All Together Now</a>
+<ul>
+<li><a href="#sec-7-1">7.1 Trade-offs</a></li>
+</ul>
+</li>
+<li><a href="#sec-8">8 Extra Notes</a></li>
 </ul>
 </div>
 </div>
@@ -164,6 +171,101 @@
 </ul>
 
 
+</div>
+
+</div>
+
+<div id="outline-container-6" class="outline-2">
+<h2 id="sec-6"><span class="section-number-2">6</span> Copying Keys &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h2>
+<div class="outline-text-2" id="text-6">
+
+<ul>
+<li>SSH keys are used to connect to server to check status
+</li>
+<li>Copy my keys, set correct permissions
+</li>
+</ul>
+
+
+
+
+<pre class="src src-bash">~$ cp ~jblomo/mrjob-common.conf ~/mrjob.conf
+~$ chmod 0600 ~/mrjob.conf
+</pre>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-7" class="outline-2">
+<h2 id="sec-7"><span class="section-number-2">7</span> All Together Now &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h2>
+<div class="outline-text-2" id="text-7">
+
+
+
+
+<pre class="src src-bash">~$ s3cmd put yelp_academic_dataset.json.gz s3://i290-jblomo/data/
+# yelp_academic_dataset.json.gz -&gt; s3://i290-jblomo/data/yelp_academic_dataset.json.gz  [1 of 1]
+# 127506871 of 127506871   100% in    8s    13.60 MB/s  done
+
+~$ cd datamining290/code/
+~/datamining290/code$ python unique_review.py -v -r emr -c ~jblomo/mrjob.conf --output-dir s3://i290-jblomo/output/unique_review/ --no-output s3://i290-jblomo/data/yelp_academic_dataset.json.gz
+# ...
+# Creating Elastic MapReduce job flow
+# ...
+# Job flow created with ID: j-EFG48CIR1APW
+# ...
+# Job launched 60.8s ago, status STARTING: Provisioning Amazon EC2 capacity
+# ...
+# Job launched 334.4s ago, status RUNNING: Running step (unique_review.jblomo.20130406.171258.267523: Step 1 of 3)
+# ...
+# map 73% reduce  42%
+# ...
+# Counters from step 1:
+# ...
+
+~/datamining290/code$ s3cmd ls -r s3://i290-jblomo/output/
+# ...
+# 2013-04-06 18:05        29   s3://i290-jblomo/output/unique_review/part-00005
+# ...
+</pre>
+
+
+</div>
+
+<div id="outline-container-7-1" class="outline-3">
+<h3 id="sec-7-1"><span class="section-number-3">7.1</span> Trade-offs &nbsp;&nbsp;&nbsp;<span class="tag"><span class="notes">notes</span></span></h3>
+<div class="outline-text-3" id="text-7-1">
+
+<ul>
+<li>Jobs may take 5 minutes to spin up
+</li>
+<li>Errors are harder to debug because they are mixed in with Hadoop and EMR
+     errors
+</li>
+</ul>
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-8" class="outline-2">
+<h2 id="sec-8"><span class="section-number-2">8</span> Extra Notes &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h2>
+<div class="outline-text-2" id="text-8">
+
+<ul>
+<li>Cannot overwrite output directory: choose a new one for each run
+</li>
+<li>Errors may be hard to debug. Run locally with a sample of your data
+</li>
+<li>Output from job will be split into files, recall the Hadoop video lecture
+</li>
+</ul>
+
+
 
 
 
@@ -174,7 +276,7 @@
 </div>
 
 <div id="postamble">
-<p class="date">Date: 2013-04-05 14:03:10 PDT</p>
+<p class="date">Date: 2013-04-06 11:19:43 PDT</p>
 <p class="author">Author: Jim Blomo</p>
 <p class="creator">Org version 7.8.02 with Emacs version 23</p>
 <a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>

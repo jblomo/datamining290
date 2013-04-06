@@ -27,6 +27,51 @@
   + =-c ~jblomo/mrjob.conf= : use a configuration file
     + 5 machines, can change with command line options
 
+* Copying Keys :slide:
+  + SSH keys are used to connect to server to check status
+  + Copy my keys, set correct permissions
+#+begin_src bash
+~$ cp ~jblomo/mrjob-common.conf ~/mrjob.conf
+~$ chmod 0600 ~/mrjob.conf
+#+end_src
+
+* All Together Now :slide:
+#+begin_src bash
+~$ s3cmd put yelp_academic_dataset.json.gz s3://i290-jblomo/data/
+# yelp_academic_dataset.json.gz -> s3://i290-jblomo/data/yelp_academic_dataset.json.gz  [1 of 1]
+# 127506871 of 127506871   100% in    8s    13.60 MB/s  done
+
+~$ cd datamining290/code/
+~/datamining290/code$ python unique_review.py -v -r emr -c ~jblomo/mrjob.conf --output-dir s3://i290-jblomo/output/unique_review/ --no-output s3://i290-jblomo/data/yelp_academic_dataset.json.gz
+# ...
+# Creating Elastic MapReduce job flow
+# ...
+# Job flow created with ID: j-EFG48CIR1APW
+# ...
+# Job launched 60.8s ago, status STARTING: Provisioning Amazon EC2 capacity
+# ...
+# Job launched 334.4s ago, status RUNNING: Running step (unique_review.jblomo.20130406.171258.267523: Step 1 of 3)
+# ...
+# map 73% reduce  42%
+# ...
+# Counters from step 1:
+# ...
+
+~/datamining290/code$ s3cmd ls -r s3://i290-jblomo/output/
+# ...
+# 2013-04-06 18:05        29   s3://i290-jblomo/output/unique_review/part-00005
+# ...
+#+end_src
+** Trade-offs :notes:
+   + Jobs may take 5 minutes to spin up
+   + Errors are harder to debug because they are mixed in with Hadoop and EMR
+     errors
+
+* Extra Notes :slide:
+  + Cannot overwrite output directory: choose a new one for each run
+  + Errors may be hard to debug. Run locally with a sample of your data
+  + Output from job will be split into files, recall the Hadoop video lecture
+
 #+STYLE: <link rel="stylesheet" type="text/css" href="production/common.css" />
 #+STYLE: <link rel="stylesheet" type="text/css" href="production/screen.css" media="screen" />
 #+STYLE: <link rel="stylesheet" type="text/css" href="production/projection.css" media="projection" />
