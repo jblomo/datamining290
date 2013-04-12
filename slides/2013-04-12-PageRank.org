@@ -139,7 +139,7 @@ D [A,B]
   [[file:img/Directed_acyclic_graph.png]]
   
   Connectivity Coefficient of 1; 4
-** Answer :notes:
+*** Answer :notes:
    + Neighbors of 1: 5 2
    + 2*(2-1) / 2 = 1
    + Actual links = 1
@@ -147,6 +147,8 @@ D [A,B]
    + 3*(3-1) / 2 = 3
    + Actual: 0
    + If 3-5 connected? 1/3
+
+* *Break* :slide:
 
 #+STYLE: <link rel="stylesheet" type="text/css" href="production/common.css" />
 #+STYLE: <link rel="stylesheet" type="text/css" href="production/screen.css" media="screen" />
