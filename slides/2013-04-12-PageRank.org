@@ -7,7 +7,7 @@
    + C still important, even though it only has one inbound
 
 * Random Walks :slide:
-  + Starting from a random page, what is the liklihood of winding up on a target
+  + Starting from a random page, what is the likelihood of winding up on a target
     page?
   + Starting point captured by initial constant
   + Stopping captured by "damping factor" (0.85)
@@ -48,7 +48,7 @@
    + Using linear algebra can help us translate graph concepts to fairly elegant
      code, as well as realize some optimizations
    + Draw
-   + Symetric? When?
+   + Symmetric? When?
 
 * Representing Graphs :slide:
   + Adjacency List :: For a vertex, list all connections
@@ -60,7 +60,7 @@ C [A,D]
 D [A,B]
 #+end_src
 ** Diversion :notes:
-   + You can think of this as keys (vertex) and values (list of verticies)
+   + You can think of this as keys (vertex) and values (list of vertices)
    + When would thinking in key-values be useful? MapReduce
    + Back to matrix representation
 
@@ -97,13 +97,13 @@ D [A,B]
   + Hubs: collected links to different resources
   + Authorities: Gave out specific information
   + Score separately?
-[[file:img/moznew.gif]]
+[[file:img/early-yahoo.jpg]]
 ** Alternatives :notes:
    + Some other interesting network analysis tools
 
 * HITS :slide:
-  + Authority score :: sum(hub(i) for i in inbound_links)
-  + Hub score :: sum(authority(i) for i in outbound_links)
+  + Authority score :: sum(hub(i) for i in inbound\_links)
+  + Hub score :: sum(authority(i) for i in outbound\_links)
   + Normalize :: to ensure convergence, square root sum of squares of scores
 ** Iterative :notes:
    + Sill iterative, but now using inbound and outbound links to judge
@@ -112,20 +112,20 @@ D [A,B]
 
 * Connections :slide:
   + Connected :: there exists a path from one vertex to another
-  + Connectivity :: minimm number of verticies to remove to disconnect remaining
-    verticies
+  + Connectivity :: minimum number of vertices to remove to disconnect remaining
+    vertices
   + Clustering Coefficient :: Measure of how connected a vertex or group of
-    verticies are
+    vertices are
 ** Robustness :notes:
    + This is used to understand robustness of a system: if an earthquake
-     dammaged the Bay Bridge, could we still travel from one point to another?
+     damaged the Bay Bridge, could we still travel from one point to another?
    + What is the connectedness of Oakland and SF?
    + Closely related to min-cuts, which is discussed in the book
    + Network topology: what happens if a router fails?
 
-* Clustering Coefficient :slide:annimate:
-  + How many directed edges are possible between 3 verticies?
-  + 4 verticies?
+* Clustering Coefficient :slide:animate:
+  + How many directed edges are possible between 3 vertices?
+  + 4 vertices?
   + =v*(v-1)=
   + Undirected?
   + =v*(v-1)/2=

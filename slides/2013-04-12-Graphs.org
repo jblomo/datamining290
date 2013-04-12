@@ -7,8 +7,8 @@
    + stdev	9.28
 
 * Graphs :slide:
-  + Can model a surpring number of domains
-  + Modeling with network opens up large number of algorithsm
+  + Can model a surprising number of domains
+  + Modeling with network opens up large number of algorithms
   + Linear math has many connection to graphs
 ** Math :notes:
    + Data mining theme: get your problem stated as a math problem, whole slew of
@@ -16,10 +16,10 @@
    + Linear math really useful for running equations of all nodes, are simulate
      moving across network
 
-* Verticies & Edges :slide:two_col:
+* Vertices & Edges :slide:two_col:
   + Vertex :: the interconnected objects, or nodes
-  + Edge :: the lines or curves that connect verticies
-  + Graph :: Collection of verticies and edges =G = (V,E)=
+  + Edge :: the lines or curves that connect vertices
+  + Graph :: Collection of vertices and edges =G = (V,E)=
   [[file:img/GraphNodesEdges.gif]]
 ** Definitions :notes:
    + These are the abstract terms, how do they relate to the real world?
@@ -31,7 +31,7 @@
     history
 ** Examples :notes:
    + Many graphs have assumed edge labels: they edges represent something
-     consistant
+     consistent
    + Some graphs have multiple times of edges: relationship is one of family,
      friend, co-worker, etc.
    + Edge can be anything that ties two things together: purchase history, eg.
@@ -42,9 +42,9 @@
   + If this is just a line, what information are we missing about how the link
     was formed?
   [[file:img/jblomo-linkedin.gif]]
-** Symetric :notes:
-   + "Just a line" is symetric, ie "undirected"
-   + We're missing information about who invited whom.  Asymetric and *directed*
+** Symmetric :notes:
+   + "Just a line" is symmetric, ie "undirected"
+   + We're missing information about who invited whom.  Asymmetric and *directed*
 
 * Definitions :slide:two_col:
   + Directed :: Connections have a direction. Invitations, water pipes, email
@@ -55,22 +55,22 @@
   [[file:img/Directed_acyclic_graph.png]]
 ** Modeling :notes:
    + Can always model undirected graph as a directed one by having two
-     connection sbetween nodes always
+     connections between nodes always
 
 * Acyclic? :slide:
   + Social network (undirected)
   + Product purchases (directed)
   + Internet links (directed)
-  + Class prerequesits (directed)
+  + Class prerequisites (directed)
 ** Answers :notes:
   + Social network: cyclic
   + Product purchases: acyclic
   + Internet links: cyclic
-  + Class prerequesits: acyclic
+  + Class prerequisites: acyclic
 
 * Bipartite :slide:two_col:
-  + Graph whose verticies can be devided into two distinct sets
-  + Verticies in =U= are only connected to those in =V=, vice versa
+  + Graph whose vertices can be divided into two distinct sets
+  + Vertices in =U= are only connected to those in =V=, vice versa
   + Product purchases: users =U=, products =V=
   [[file:img/Simple-bipartite-graph.svg.png]]
 ** Recommendations :notes:
@@ -102,9 +102,10 @@
    + Pericheral Verticies: 1, 2, 6
 
 * SimRank :slide:
-  + Verticies are similar if they share similar neighbors
-  + SimRank between two verticies is the average of the SimRank of its neighbors
+  + Vertices are similar if they share similar neighbors
+  + SimRank between two vertices is the average of the SimRank of its neighbors
   [[file:img/simrank.png]]
+  [[file:img/simrank-iterative.png]]
 ** Recursive :notes:
    + This is an iterative and recursive definition
    + Iterative because neighbors are influenced by each other
@@ -127,7 +128,7 @@
     + s0(1,5) = s0(1,3) = 0
     + s1= 0.6/(2*2) * sum(1,1,0,0,0,0)
     + 0.3
-    + Next round, we'll need to fiugre out s1 of 5,3 to calculate update
+    + Next round, we'll need to figure out s1 of 5,3 to calculate update
 
 * Random Walk :slide:
   + Many algorithms based on concept of randomly deciding:
