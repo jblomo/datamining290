@@ -28,6 +28,20 @@
 2,1,4
 #+end_src
 
+* [[http://networkx.github.io/][NetworkX]] :slide:
+  + Python library for manipulating graphs
+  + Potentially useful for your projects
+  + Not homework
+
+* [[https://pypi.python.org/pypi/virtualenv][VirtualEnv]] :slide:
+  + Install and manage libraries
+  + =activate= each time you start a new session
+#+begin_src bash
+$ virtualenv venv
+$ source venv/bin/activate
+$ pip install <python package>
+#+end_src
+
 #+STYLE: <link rel="stylesheet" type="text/css" href="production/common.css" />
 #+STYLE: <link rel="stylesheet" type="text/css" href="production/screen.css" media="screen" />
 #+STYLE: <link rel="stylesheet" type="text/css" href="production/projection.css" media="projection" />
