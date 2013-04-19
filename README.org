@@ -24,7 +24,7 @@ DM[0-9]+ indicates chapters from the text, _Data Mining_.
 | Mar 29 | HOLIDAY
 | Apr 5 | DM6 | [[file:slides/2013-03-15-Advanced-Cluster.html][Advanced Clustering]] ; [[file:slides/2013-04-05-Frequent-Pattern.html][Frequent Pattern]] | [[file:slides/2013-04-05-AWS.html][AWS]] ; Project Proposal Due |
 | Apr 12 | DM11.3; [[http://ilpubs.stanford.edu:8090/422/1/1999-66.pdf][PageRank]]; [[http://arxiv.org/pdf/1106.5321][Uncovering Social Network Sybils in the Wild]] | [[file:slides/2013-04-12-Graphs.html][Graphs]]; [[file:slides/2013-04-12-PageRank.html][PageRank]] | [[file:slides/2013-04-12-AdjacencyRepresentations.html][Adjacency Representations]] |
-| Apr 19 | TBA | GUEST: Gene Lee Ceaser's | TBA |
+| Apr 19 | [[file:slides/2013-04-19-Nonlinear.pdf][Non-linear regression]] | GUEST: Gene Lee Ceaser's | [[file:slides/2013-04-19-Elasticity.html][Price Elasticity]] |
 | Apr 26 | TBA | Images ; Audio | Midterm Review |
 | May 3 | TBA | Visualization ; HTML | TBA |
 | May 10 | TBA | In Real Life ; Review | Project Papers Due |

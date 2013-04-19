@@ -19,11 +19,16 @@
   1. What is the price elasticity of weekday prices?
   1. What is the price elasticity of weekend prices?
   1. If we are currently forecast to be at 1000 rooms at $200 rate with 100
-     available capacity, what price should we set to optimize max revenue
+     available capacity, what price should we set to optimize max revenue for
+     both
+     + Weekday
+     + Weekend
 
 * Excel :slide:
 #+begin_src Excel
-LOG()
+LN()
+Options > Add-Ins > Analysis ToolPak > Go > ToolPak
+Data Analysis > Regression > Y Range, X Range
 #+end_src
 
 * Python :slide:
