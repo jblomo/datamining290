@@ -14,7 +14,7 @@
   + Significant deviation
   + Probably generated through a *different model* than the rest of the data
   + Normal / Abnormal
-  [[file:img/outlier.png]]
+  [[file:img/outlier.jpg]]
 ** Intuitive :notes:
    + We all have a pretty good intuitive understand of what outliers are
    + Mathematically, you can express the variation as a different generative
@@ -23,8 +23,8 @@
    + img: http://enriquegortiz.com/wordpress/enriquegortiz/research/undergraduate/
 
 * Outlier Types :slide:
-  + Global :: points which deviate from the rest of the *enitre* data set. Point
-    anomolies
+  + Global :: points which deviate from the rest of the *entire* data set. Point
+    anomalies
   + Contextual :: points which deviate from their *peers*. Conditional outliers
   + Collective :: points which deviate as a *group*, even though individual
     points may not be considered outliers.
@@ -47,8 +47,8 @@
   [[file:img/ml-large-icon.png]]
 **  :notes:
   + Supervised :: learning from "gold standard" labels
-  + Unsupervised :: learning withough labels
-  + Semi-Supervised :: infer more labels from a few, learn based on infered +
+  + Unsupervised :: learning without labels
+  + Semi-Supervised :: infer more labels from a few, learn based on inferred +
     labeled
   + img :: https://www.coursera.org/course/ml
 
@@ -64,12 +64,12 @@
    + Some methods may be overlapping
    + When developing features for classification, using relative features can
      be helpful: eg. distance from mean
-   + Eg. applomerative clustering, find lone/small groups that are last to
+   + Eg. Agglomerative clustering, find lone/small groups that are last to
      glom together
    + Eg. k-means find points which are "far" out from centroids
      + Determining "far", "last" can be application specific, part of the
        challenge
-   + What alogirthm could we use to automatically label nearby points? k-nearest
+   + What algorithm could we use to automatically label nearby points? k-nearest
      neighbor
    + Statistical: Again, must define "low" in your domain
    + Proximity: basically translating features into another, relative, space,
@@ -86,11 +86,11 @@
 ** Statistical Example :slide:two_col:
    + Assume normal distribution
    + Determine mean and standard distribution
-   + If =point - mean / stddev > 3=, consider outlier
+   + If =(point-mean)/stddev > 3=, consider outlier
    [[file:img/gaussian-simple.png]]
 *** Pros/Cons :notes:
    + Straight forward
-   + Can use % to intuitiviely motivate (3 stdevs is outside 99.7%)
+   + Can use % to intuitively motivate (3 stdevs is outside 99.7%)
    + But must manually determine cut-off
    + How do we know we got the parameters right?
 
@@ -102,7 +102,7 @@
   [[file:img/grubbs.png]]
 ** Pros/Cons :notes:
    + Z-score: =abs(x-u)/s=
-   + This isn't actually *that* different from measuing stddev
+   + This isn't actually *that* different from measuring stddev
    + But accounts for sample size, can express your confidence with alpha 95% (0.05)
    + Not going to go into t-test/t-distribution here, but basically it helps
      show where the mean likely is, given a set of sample data.
@@ -115,19 +115,19 @@
    + What are the limitations of the techniques we've seen?
    + Limited to one dimension! Taking mean, stddev, etc. applies to 1
      dimension
-   + Euclidian: doesn't take into account dependent variables
+   + Euclidean: doesn't take into account dependent variables
 
 * Mahalanobis Distance :slide:two_col:
   + =y= depends somewhat on =x=
-  + Euclidian distance measures all dimensions equally
+  + Euclidean distance measures all dimensions equally
   + Use *covariance matrix* to normalize distances in each dimension
   + Matrix in which =E_i,j= is the covariance of =i=, =j= dimensions
 [[file:img/GaussianScatterPCA.png]]
 ** Mahalanobis :notes:
-   + How to capture intuion that a distance along major axis is different than
+   + How to capture intuition that a distance along major axis is different than
      along this minor axis?
    + Expand this drawing into 3 dimensions
-   + Euclidian distance will equally weight something that is out in the =z=
+   + Euclidean distance will equally weight something that is out in the =z=
      direction as something that is along this primary scatter area
 
 ** Mahalanobis Definition :slide:
@@ -137,7 +137,7 @@
 ** Some Math :notes:
    + Some extra math tricks to make the units work out:
    + We're taking the squared distance, then taking the square root
-   + DM has *squared* Mahalanobis distnace defined
+   + DM has *squared* Mahalanobis distance defined
    + What happens if we have no covariance? S is the Identity matrix
 
 * Contextual Outliers :slide:

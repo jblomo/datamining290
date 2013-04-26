@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
 <meta name="title" content="2013-04-26-Outliers"/>
 <meta name="generator" content="Org-mode"/>
-<meta name="generated" content="2013-04-26 08:46:59 PDT"/>
+<meta name="generated" content="2013-04-26 09:40:08 PDT"/>
 <meta name="author" content="Jim Blomo"/>
 <meta name="description" content=""/>
 <meta name="keywords" content=""/>
@@ -148,7 +148,7 @@
 </li>
 </ul>
 
-<p>  <img src="img/outlier.png"  alt="img/outlier.png" />
+<p>  <img src="img/outlier.jpg"  alt="img/outlier.jpg" />
 </p>
 </div>
 
@@ -179,8 +179,8 @@
 <div class="outline-text-2" id="text-4">
 
 <dl>
-<dt>Global</dt><dd>points which deviate from the rest of the <b>enitre</b> data set. Point
-    anomolies
+<dt>Global</dt><dd>points which deviate from the rest of the <b>entire</b> data set. Point
+    anomalies
 </dd>
 <dt>Contextual</dt><dd>points which deviate from their <b>peers</b>. Conditional outliers
 </dd>
@@ -254,9 +254,9 @@
 <dl>
 <dt>Supervised</dt><dd>learning from "gold standard" labels
 </dd>
-<dt>Unsupervised</dt><dd>learning withough labels
+<dt>Unsupervised</dt><dd>learning without labels
 </dd>
-<dt>Semi-Supervised</dt><dd>infer more labels from a few, learn based on infered +
+<dt>Semi-Supervised</dt><dd>infer more labels from a few, learn based on inferred +
     labeled
 </dd>
 <dt>img</dt><dd><a href="https://www.coursera.org/course/ml">https://www.coursera.org/course/ml</a>
@@ -301,7 +301,7 @@
 <li>When developing features for classification, using relative features can
      be helpful: eg. distance from mean
 </li>
-<li>Eg. applomerative clustering, find lone/small groups that are last to
+<li>Eg. Agglomerative clustering, find lone/small groups that are last to
      glom together
 </li>
 <li>Eg. k-means find points which are "far" out from centroids
@@ -312,7 +312,7 @@
 </ul>
 
 </li>
-<li>What alogirthm could we use to automatically label nearby points? k-nearest
+<li>What algorithm could we use to automatically label nearby points? k-nearest
      neighbor
 </li>
 <li>Statistical: Again, must define "low" in your domain
@@ -369,7 +369,7 @@
 </li>
 <li>Determine mean and standard distribution
 </li>
-<li>If <code>point - mean / stddev &gt; 3</code>, consider outlier
+<li>If <code>(point-mean)/stddev &gt; 3</code>, consider outlier
 </li>
 </ul>
 
@@ -384,7 +384,7 @@
 <ul>
 <li>Straight forward
 </li>
-<li>Can use % to intuitiviely motivate (3 stdevs is outside 99.7%)
+<li>Can use % to intuitively motivate (3 stdevs is outside 99.7%)
 </li>
 <li>But must manually determine cut-off
 </li>
@@ -424,7 +424,7 @@
 <ul>
 <li>Z-score: <code>abs(x-u)/s</code>
 </li>
-<li>This isn't actually <b>that</b> different from measuing stddev
+<li>This isn't actually <b>that</b> different from measuring stddev
 </li>
 <li>But accounts for sample size, can express your confidence with alpha 95% (0.05)
 </li>
@@ -465,7 +465,7 @@
 <li>Limited to one dimension! Taking mean, stddev, etc. applies to 1
      dimension
 </li>
-<li>Euclidian: doesn't take into account dependent variables
+<li>Euclidean: doesn't take into account dependent variables
 </li>
 </ul>
 
@@ -482,7 +482,7 @@
 <ul>
 <li><code>y</code> depends somewhat on <code>x</code>
 </li>
-<li>Euclidian distance measures all dimensions equally
+<li>Euclidean distance measures all dimensions equally
 </li>
 <li>Use <b>covariance matrix</b> to normalize distances in each dimension
 </li>
@@ -499,12 +499,12 @@
 <div class="outline-text-3" id="text-11-1">
 
 <ul>
-<li>How to capture intuion that a distance along major axis is different than
+<li>How to capture intuition that a distance along major axis is different than
      along this minor axis?
 </li>
 <li>Expand this drawing into 3 dimensions
 </li>
-<li>Euclidian distance will equally weight something that is out in the <code>z</code>
+<li>Euclidean distance will equally weight something that is out in the <code>z</code>
      direction as something that is along this primary scatter area
 </li>
 </ul>
@@ -539,7 +539,7 @@
 </li>
 <li>We're taking the squared distance, then taking the square root
 </li>
-<li>DM has <b>squared</b> Mahalanobis distnace defined
+<li>DM has <b>squared</b> Mahalanobis distance defined
 </li>
 <li>What happens if we have no covariance? S is the Identity matrix
 </li>
@@ -584,7 +584,7 @@
 </div>
 
 <div id="postamble">
-<p class="date">Date: 2013-04-26 08:46:59 PDT</p>
+<p class="date">Date: 2013-04-26 09:40:08 PDT</p>
 <p class="author">Author: Jim Blomo</p>
 <p class="creator">Org version 7.8.02 with Emacs version 23</p>
 <a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>

@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
 <meta name="title" content="2013-04-26-Multimedia"/>
 <meta name="generator" content="Org-mode"/>
-<meta name="generated" content="2013-04-26 08:46:32 PDT"/>
+<meta name="generated" content="2013-04-26 09:55:15 PDT"/>
 <meta name="author" content="Jim Blomo"/>
 <meta name="description" content=""/>
 <meta name="keywords" content=""/>
@@ -47,41 +47,41 @@
 <li><a href="#sec-4-1">4.1 Density</a></li>
 </ul>
 </li>
-<li><a href="#sec-5">5 GIS</a></li>
-<li><a href="#sec-6">6 Spatial Databases</a></li>
-<li><a href="#sec-7">7 Discovery</a>
+<li><a href="#sec-5">5 Generalized Features</a>
 <ul>
-<li><a href="#sec-7-1">7.1 Ideas</a></li>
+<li><a href="#sec-5-1">5.1 Techniques</a></li>
 </ul>
 </li>
-<li><a href="#sec-8">8 ATM Locations given obstacles</a>
+<li><a href="#sec-6">6 GIS</a></li>
+<li><a href="#sec-7">7 Spatial Databases</a></li>
+<li><a href="#sec-8">8 Discovery</a>
 <ul>
-<li><a href="#sec-8-1">8.1 Yelp</a></li>
+<li><a href="#sec-8-1">8.1 Ideas</a></li>
 </ul>
 </li>
-<li><a href="#sec-9">9 Images</a>
+<li><a href="#sec-9">9 ATM Locations given obstacles</a>
 <ul>
-<li><a href="#sec-9-1">9.1 Covering</a></li>
+<li><a href="#sec-9-1">9.1 Yelp</a></li>
 </ul>
 </li>
-<li><a href="#sec-10">10 SIFT</a>
+<li><a href="#sec-10">10 Images</a>
 <ul>
-<li><a href="#sec-10-1">10.1 Process</a></li>
+<li><a href="#sec-10-1">10.1 Covering</a></li>
 </ul>
 </li>
-<li><a href="#sec-11">11 Sketch Recognition</a>
+<li><a href="#sec-11">11 SIFT</a>
 <ul>
-<li><a href="#sec-11-1">11.1 Why?</a></li>
+<li><a href="#sec-11-1">11.1 Process</a></li>
 </ul>
 </li>
-<li><a href="#sec-12">12 Direction</a>
+<li><a href="#sec-12">12 Sketch Recognition</a>
 <ul>
-<li><a href="#sec-12-1">12.1 Angles?</a></li>
+<li><a href="#sec-12-1">12.1 Why?</a></li>
 </ul>
 </li>
-<li><a href="#sec-13">13 Direction Plot</a>
+<li><a href="#sec-13">13 Direction</a>
 <ul>
-<li><a href="#sec-13-1">13.1 Why?</a></li>
+<li><a href="#sec-13-1">13.1 Angles?</a></li>
 </ul>
 </li>
 <li><a href="#sec-14">14 Direction Plot</a>
@@ -89,18 +89,23 @@
 <li><a href="#sec-14-1">14.1 Why?</a></li>
 </ul>
 </li>
-<li><a href="#sec-15">15 Features</a>
+<li><a href="#sec-15">15 Direction Plot</a>
 <ul>
 <li><a href="#sec-15-1">15.1 Why?</a></li>
 </ul>
 </li>
-<li><a href="#sec-16">16 All Together Now</a></li>
-<li><a href="#sec-17">17 Music</a>
+<li><a href="#sec-16">16 Features</a>
 <ul>
-<li><a href="#sec-17-1">17.1 Relation to Images</a></li>
+<li><a href="#sec-16-1">16.1 Why?</a></li>
 </ul>
 </li>
-<li><a href="#sec-18">18 <b>Break</b></a></li>
+<li><a href="#sec-17">17 All Together Now</a></li>
+<li><a href="#sec-18">18 Music</a>
+<ul>
+<li><a href="#sec-18-1">18.1 Relation to Images</a></li>
+</ul>
+</li>
+<li><a href="#sec-19">19 <b>Break</b></a></li>
 </ul>
 </div>
 </div>
@@ -143,9 +148,9 @@
 </dd>
 <dt>Images</dt><dd>Size, color, shape, curves, relative positions
 </dd>
-<dt>Music</dt><dd>Tone, tempo, beat, rythem
+<dt>Music</dt><dd>Tone, tempo, beat, rhythm
 </dd>
-<dt>Voice</dt><dd>Speed, accent, word pasuses, background noise
+<dt>Voice</dt><dd>Speed, accent, word pauses, background noise
 </dd>
 </dl>
 
@@ -160,11 +165,11 @@
 <li>We'll cover these areas briefly to get an overview of techniques used in
      these fields
 </li>
-<li>All of these things <b>have</b> embeded information in them, and we are trying
+<li>All of these things <b>have</b> embedded information in them, and we are trying
      to extract it
 </li>
 <li>One of the reasons data mining is not a black box: some one has to be on
-     the outside interperating results. Results inform technique
+     the outside interpreting results. Results inform technique
 </li>
 </ul>
 
@@ -201,7 +206,7 @@
 <li>Key component of good learning is <b>data</b>, but you need fairly <b>dense</b> data
      to learn a pattern
 </li>
-<li>Hypothertically, a neural network could extract general features from raw
+<li>Hypothetically, a neural network could extract general features from raw
      data, but you'd need a really large amount of data in order to get the
      density needed
 </li>
@@ -218,13 +223,53 @@
 </div>
 
 <div id="outline-container-5" class="outline-2">
-<h2 id="sec-5"><span class="section-number-2">5</span> GIS &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span>&nbsp;<span class="two_col">two_col</span></span></h2>
+<h2 id="sec-5"><span class="section-number-2">5</span> Generalized Features &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h2>
 <div class="outline-text-2" id="text-5">
 
 <ul>
-<li>Geographic Inforamtion Systems
+<li>Derivative / Slope of behavior
 </li>
-<li>Analysis and visualtion of geographic data
+<li>Min / Max of groups of points
+</li>
+<li>Bucketing / Blurring
+</li>
+<li>Relative positions / angles
+</li>
+</ul>
+
+
+</div>
+
+<div id="outline-container-5-1" class="outline-3">
+<h3 id="sec-5-1"><span class="section-number-3">5.1</span> Techniques &nbsp;&nbsp;&nbsp;<span class="tag"><span class="notes">notes</span></span></h3>
+<div class="outline-text-3" id="text-5-1">
+
+<ul>
+<li>How can you strip some of the non-essential information, keep important
+     patterns?
+</li>
+<li>Many times we care about relative change, like in pricing
+</li>
+<li>Or group data points together (clustering is an advanced form of this)
+</li>
+<li>OK, let's get into some specifics:
+</li>
+</ul>
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-6" class="outline-2">
+<h2 id="sec-6"><span class="section-number-2">6</span> GIS &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span>&nbsp;<span class="two_col">two_col</span></span></h2>
+<div class="outline-text-2" id="text-6">
+
+<ul>
+<li>Geographic Information Systems
+</li>
+<li>Analysis and visualization of geographic data
 </li>
 <li>Search, terrain, object detection, flow calculations
 </li>
@@ -236,16 +281,16 @@
 
 </div>
 
-<div id="outline-container-6" class="outline-2">
-<h2 id="sec-6"><span class="section-number-2">6</span> Spatial Databases &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h2>
-<div class="outline-text-2" id="text-6">
+<div id="outline-container-7" class="outline-2">
+<h2 id="sec-7"><span class="section-number-2">7</span> Spatial Databases &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h2>
+<div class="outline-text-2" id="text-7">
 
 <ul>
 <li>Integrates spatial information with traditional DBMS operations
 </li>
 <li>Spatial indexing, distance metrics, polygon definitions, layering
 </li>
-<li>Eg: Oracle Spatial Data Catridge, ESRI Spatial Engine
+<li>Eg: Oracle Spatial Data Cartridge, ESRI Spatial Engine
 </li>
 </ul>
 
@@ -254,25 +299,25 @@
 
 </div>
 
-<div id="outline-container-7" class="outline-2">
-<h2 id="sec-7"><span class="section-number-2">7</span> Discovery &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h2>
-<div class="outline-text-2" id="text-7">
+<div id="outline-container-8" class="outline-2">
+<h2 id="sec-8"><span class="section-number-2">8</span> Discovery &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h2>
+<div class="outline-text-2" id="text-8">
 
 <ul>
 <li>What are examples of efficient city layouts?
 </li>
 <li>What influences successful business centers?
 </li>
-<li>Deforrestation rates
+<li>Deforestation rates
 </li>
 </ul>
 
 
 </div>
 
-<div id="outline-container-7-1" class="outline-3">
-<h3 id="sec-7-1"><span class="section-number-3">7.1</span> Ideas &nbsp;&nbsp;&nbsp;<span class="tag"><span class="notes">notes</span></span></h3>
-<div class="outline-text-3" id="text-7-1">
+<div id="outline-container-8-1" class="outline-3">
+<h3 id="sec-8-1"><span class="section-number-3">8.1</span> Ideas &nbsp;&nbsp;&nbsp;<span class="tag"><span class="notes">notes</span></span></h3>
+<div class="outline-text-3" id="text-8-1">
 
 <ul>
 <li>City layouts: Understanding home-&gt;work distances, not Euclidean, but
@@ -281,7 +326,7 @@
 <li>Business centers: analyzing network flow based on roads: industrial
      supply centers nearby?  Creative centers, restaurants, nightlife?
 </li>
-<li>Deforestation: nearby cities' effect? Recognizing forrested areas vs
+<li>Deforestation: nearby cities' effect? Recognizing forested areas vs
      clear cut. Time series
 </li>
 </ul>
@@ -292,17 +337,17 @@
 
 </div>
 
-<div id="outline-container-8" class="outline-2">
-<h2 id="sec-8"><span class="section-number-2">8</span> ATM Locations given obstacles &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span>&nbsp;<span class="center">center</span></span></h2>
-<div class="outline-text-2" id="text-8">
+<div id="outline-container-9" class="outline-2">
+<h2 id="sec-9"><span class="section-number-2">9</span> ATM Locations given obstacles &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span>&nbsp;<span class="center">center</span></span></h2>
+<div class="outline-text-2" id="text-9">
 
 <p>  <img src="img/obstacle-clustering.png"  alt="img/obstacle-clustering.png" />
 </p>
 </div>
 
-<div id="outline-container-8-1" class="outline-3">
-<h3 id="sec-8-1"><span class="section-number-3">8.1</span> Yelp &nbsp;&nbsp;&nbsp;<span class="tag"><span class="notes">notes</span></span></h3>
-<div class="outline-text-3" id="text-8-1">
+<div id="outline-container-9-1" class="outline-3">
+<h3 id="sec-9-1"><span class="section-number-3">9.1</span> Yelp &nbsp;&nbsp;&nbsp;<span class="tag"><span class="notes">notes</span></span></h3>
+<div class="outline-text-3" id="text-9-1">
 
 <ul>
 <li>This is a current area we could improve at Yelp:
@@ -321,9 +366,9 @@
 
 </div>
 
-<div id="outline-container-9" class="outline-2">
-<h2 id="sec-9"><span class="section-number-2">9</span> Images &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span>&nbsp;<span class="two_col">two_col</span></span></h2>
-<div class="outline-text-2" id="text-9">
+<div id="outline-container-10" class="outline-2">
+<h2 id="sec-10"><span class="section-number-2">10</span> Images &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span>&nbsp;<span class="two_col">two_col</span></span></h2>
+<div class="outline-text-2" id="text-10">
 
 <ul>
 <li>General Feature Extraction
@@ -338,12 +383,12 @@
 </p>
 </div>
 
-<div id="outline-container-9-1" class="outline-3">
-<h3 id="sec-9-1"><span class="section-number-3">9.1</span> Covering &nbsp;&nbsp;&nbsp;<span class="tag"><span class="notes">notes</span></span></h3>
-<div class="outline-text-3" id="text-9-1">
+<div id="outline-container-10-1" class="outline-3">
+<h3 id="sec-10-1"><span class="section-number-3">10.1</span> Covering &nbsp;&nbsp;&nbsp;<span class="tag"><span class="notes">notes</span></span></h3>
+<div class="outline-text-3" id="text-10-1">
 
 <ul>
-<li>We'll cover some interesting ways to extract dimenions
+<li>We'll cover some interesting ways to extract dimensions
 </li>
 <li>ML/data mining combine these dimensions to do recognition with, eg.
      labeled data
@@ -361,26 +406,26 @@
 
 </div>
 
-<div id="outline-container-10" class="outline-2">
-<h2 id="sec-10"><span class="section-number-2">10</span> SIFT &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h2>
-<div class="outline-text-2" id="text-10">
+<div id="outline-container-11" class="outline-2">
+<h2 id="sec-11"><span class="section-number-2">11</span> SIFT &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h2>
+<div class="outline-text-2" id="text-11">
 
 <p>  <img src="img/Sift_keypoints_filtering.jpg"  alt="img/Sift_keypoints_filtering.jpg" />
 </p>
 </div>
 
-<div id="outline-container-10-1" class="outline-3">
-<h3 id="sec-10-1"><span class="section-number-3">10.1</span> Process &nbsp;&nbsp;&nbsp;<span class="tag"><span class="notes">notes</span></span></h3>
-<div class="outline-text-3" id="text-10-1">
+<div id="outline-container-11-1" class="outline-3">
+<h3 id="sec-11-1"><span class="section-number-3">11.1</span> Process &nbsp;&nbsp;&nbsp;<span class="tag"><span class="notes">notes</span></span></h3>
+<div class="outline-text-3" id="text-11-1">
 
 <ul>
-<li>Successively apply gaussian blur to image
+<li>Successively apply Gaussian blur to image
 </li>
 <li>Find points which "stand out" between blurs (ie big differences)
 </li>
 <li>You can connect these keypoints to make a kind of fingerprint
 </li>
-<li>These fingerprints can be used, scaled, etc to match against other images
+<li>These fingerprints can be used, scaled, etc. to match against other images
 </li>
 </ul>
 
@@ -390,9 +435,9 @@
 
 </div>
 
-<div id="outline-container-11" class="outline-2">
-<h2 id="sec-11"><span class="section-number-2">11</span> Sketch Recognition &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span>&nbsp;<span class="center">center</span></span></h2>
-<div class="outline-text-2" id="text-11">
+<div id="outline-container-12" class="outline-2">
+<h2 id="sec-12"><span class="section-number-2">12</span> Sketch Recognition &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span>&nbsp;<span class="center">center</span></span></h2>
+<div class="outline-text-2" id="text-12">
 
 <p>  <img src="img/sketch-1.png"  alt="img/sketch-1.png" />
 </p><ul>
@@ -403,9 +448,9 @@
 
 </div>
 
-<div id="outline-container-11-1" class="outline-3">
-<h3 id="sec-11-1"><span class="section-number-3">11.1</span> Why? &nbsp;&nbsp;&nbsp;<span class="tag"><span class="notes">notes</span></span></h3>
-<div class="outline-text-3" id="text-11-1">
+<div id="outline-container-12-1" class="outline-3">
+<h3 id="sec-12-1"><span class="section-number-3">12.1</span> Why? &nbsp;&nbsp;&nbsp;<span class="tag"><span class="notes">notes</span></span></h3>
+<div class="outline-text-3" id="text-12-1">
 
 <ul>
 <li>Sketch recognition can be used to see if you're drawing shapes
@@ -427,9 +472,9 @@
 
 </div>
 
-<div id="outline-container-12" class="outline-2">
-<h2 id="sec-12"><span class="section-number-2">12</span> Direction &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span>&nbsp;<span class="center">center</span></span></h2>
-<div class="outline-text-2" id="text-12">
+<div id="outline-container-13" class="outline-2">
+<h2 id="sec-13"><span class="section-number-2">13</span> Direction &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span>&nbsp;<span class="center">center</span></span></h2>
+<div class="outline-text-2" id="text-13">
 
 <p>  <img src="img/sketch-2.png"  alt="img/sketch-2.png" />
 </p><ul>
@@ -440,14 +485,14 @@
 
 </div>
 
-<div id="outline-container-12-1" class="outline-3">
-<h3 id="sec-12-1"><span class="section-number-3">12.1</span> Angles? &nbsp;&nbsp;&nbsp;<span class="tag"><span class="notes">notes</span></span></h3>
-<div class="outline-text-3" id="text-12-1">
+<div id="outline-container-13-1" class="outline-3">
+<h3 id="sec-13-1"><span class="section-number-3">13.1</span> Angles? &nbsp;&nbsp;&nbsp;<span class="tag"><span class="notes">notes</span></span></h3>
+<div class="outline-text-3" id="text-13-1">
 
 <ul>
 <li>Instead of points, measure the angle at each turn
 </li>
-<li>You'll notice something peculiear about these angles. What?
+<li>You'll notice something peculiar about these angles. What?
 </li>
 <li>They're more than +/- 180 because we want to continue a "trend" if
      they're turning the same way. Help identify changes in direction vs
@@ -461,9 +506,9 @@
 
 </div>
 
-<div id="outline-container-13" class="outline-2">
-<h2 id="sec-13"><span class="section-number-2">13</span> Direction Plot &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span>&nbsp;<span class="center">center</span></span></h2>
-<div class="outline-text-2" id="text-13">
+<div id="outline-container-14" class="outline-2">
+<h2 id="sec-14"><span class="section-number-2">14</span> Direction Plot &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span>&nbsp;<span class="center">center</span></span></h2>
+<div class="outline-text-2" id="text-14">
 
 <p>  <img src="img/sketch-3.png"  alt="img/sketch-3.png" />
 </p><ul>
@@ -474,9 +519,9 @@
 
 </div>
 
-<div id="outline-container-13-1" class="outline-3">
-<h3 id="sec-13-1"><span class="section-number-3">13.1</span> Why? &nbsp;&nbsp;&nbsp;<span class="tag"><span class="notes">notes</span></span></h3>
-<div class="outline-text-3" id="text-13-1">
+<div id="outline-container-14-1" class="outline-3">
+<h3 id="sec-14-1"><span class="section-number-3">14.1</span> Why? &nbsp;&nbsp;&nbsp;<span class="tag"><span class="notes">notes</span></span></h3>
+<div class="outline-text-3" id="text-14-1">
 
 <ul>
 <li>Becomes even more generalized:
@@ -496,9 +541,9 @@
 
 </div>
 
-<div id="outline-container-14" class="outline-2">
-<h2 id="sec-14"><span class="section-number-2">14</span> Direction Plot &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span>&nbsp;<span class="center">center</span></span></h2>
-<div class="outline-text-2" id="text-14">
+<div id="outline-container-15" class="outline-2">
+<h2 id="sec-15"><span class="section-number-2">15</span> Direction Plot &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span>&nbsp;<span class="center">center</span></span></h2>
+<div class="outline-text-2" id="text-15">
 
 <p>  <img src="img/sketch-4.png"  alt="img/sketch-4.png" />
 </p><ul>
@@ -509,9 +554,9 @@
 
 </div>
 
-<div id="outline-container-14-1" class="outline-3">
-<h3 id="sec-14-1"><span class="section-number-3">14.1</span> Why? &nbsp;&nbsp;&nbsp;<span class="tag"><span class="notes">notes</span></span></h3>
-<div class="outline-text-3" id="text-14-1">
+<div id="outline-container-15-1" class="outline-3">
+<h3 id="sec-15-1"><span class="section-number-3">15.1</span> Why? &nbsp;&nbsp;&nbsp;<span class="tag"><span class="notes">notes</span></span></h3>
+<div class="outline-text-3" id="text-15-1">
 
 <ul>
 <li>Example where we change directions
@@ -524,11 +569,11 @@
 
 </div>
 
-<div id="outline-container-15" class="outline-2">
-<h2 id="sec-15"><span class="section-number-2">15</span> Features &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span>&nbsp;<span class="center">center</span></span></h2>
-<div class="outline-text-2" id="text-15">
+<div id="outline-container-16" class="outline-2">
+<h2 id="sec-16"><span class="section-number-2">16</span> Features &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span>&nbsp;<span class="center">center</span></span></h2>
+<div class="outline-text-2" id="text-16">
 
-<p>  <img src="img/sketch-5.png"  alt="img/sketch-5.png" />
+<p>  <img src="img/sketch-4.png"  alt="img/sketch-4.png" />
 </p><dl>
 <dt>NDDE</dt><dd>Normalized Distance between Direction Extremes
 </dd>
@@ -539,14 +584,14 @@
 
 </div>
 
-<div id="outline-container-15-1" class="outline-3">
-<h3 id="sec-15-1"><span class="section-number-3">15.1</span> Why? &nbsp;&nbsp;&nbsp;<span class="tag"><span class="notes">notes</span></span></h3>
-<div class="outline-text-3" id="text-15-1">
+<div id="outline-container-16-1" class="outline-3">
+<h3 id="sec-16-1"><span class="section-number-3">16.1</span> Why? &nbsp;&nbsp;&nbsp;<span class="tag"><span class="notes">notes</span></span></h3>
+<div class="outline-text-3" id="text-16-1">
 
 <dl>
 <dt>NDDE</dt><dd>Are the discontinuous changes in direction, or is the line
 <ul>
-<li>generally curvey, and follows a similar path?
+<li>generally curvy, and follows a similar path?
 </li>
 </ul>
 
@@ -554,7 +599,7 @@
 <dt>DCR</dt><dd>Total amount of angle change in the sketch. Low for first, high
      for second
 </dd>
-<dt>Others?</dt><dd>bounding box size/ratio, storke length, disntance betwen endpoints,
+<dt>Others?</dt><dd>bounding box size/ratio, stroke length, distance between endpoints,
      length, width, height, speed, direction, acceleration
 </dd>
 </dl>
@@ -565,9 +610,9 @@
 
 </div>
 
-<div id="outline-container-16" class="outline-2">
-<h2 id="sec-16"><span class="section-number-2">16</span> All Together Now &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h2>
-<div class="outline-text-2" id="text-16">
+<div id="outline-container-17" class="outline-2">
+<h2 id="sec-17"><span class="section-number-2">17</span> All Together Now &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h2>
+<div class="outline-text-2" id="text-17">
 
 
 <iframe src="http://player.vimeo.com/video/6496886" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> <p><a href="http://vimeo.com/6496886">Sketch2Photo: Internet Image Montage</a> from <a href="http://vimeo.com/user2276797">Tao Chen</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
@@ -578,9 +623,9 @@
 
 </div>
 
-<div id="outline-container-17" class="outline-2">
-<h2 id="sec-17"><span class="section-number-2">17</span> Music &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h2>
-<div class="outline-text-2" id="text-17">
+<div id="outline-container-18" class="outline-2">
+<h2 id="sec-18"><span class="section-number-2">18</span> Music &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h2>
+<div class="outline-text-2" id="text-18">
 
 <ul>
 <li>Generate a finger print: time, frequency, amplitude
@@ -597,12 +642,12 @@
 </p>
 </div>
 
-<div id="outline-container-17-1" class="outline-3">
-<h3 id="sec-17-1"><span class="section-number-3">17.1</span> Relation to Images &nbsp;&nbsp;&nbsp;<span class="tag"><span class="notes">notes</span></span></h3>
-<div class="outline-text-3" id="text-17-1">
+<div id="outline-container-18-1" class="outline-3">
+<h3 id="sec-18-1"><span class="section-number-3">18.1</span> Relation to Images &nbsp;&nbsp;&nbsp;<span class="tag"><span class="notes">notes</span></span></h3>
+<div class="outline-text-3" id="text-18-1">
 
 <ul>
-<li>Intreesting to note: we transformed one media type (music) into another
+<li>Interesting to note: we transformed one media type (music) into another
      (image), then started using some techniques we've seen in image
      fingerprinting
 </li>
@@ -616,9 +661,9 @@
 
 </div>
 
-<div id="outline-container-18" class="outline-2">
-<h2 id="sec-18"><span class="section-number-2">18</span> <b>Break</b> &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h2>
-<div class="outline-text-2" id="text-18">
+<div id="outline-container-19" class="outline-2">
+<h2 id="sec-19"><span class="section-number-2">19</span> <b>Break</b> &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h2>
+<div class="outline-text-2" id="text-19">
 
 
 
@@ -631,7 +676,7 @@
 </div>
 
 <div id="postamble">
-<p class="date">Date: 2013-04-26 08:46:32 PDT</p>
+<p class="date">Date: 2013-04-26 09:55:15 PDT</p>
 <p class="author">Author: Jim Blomo</p>
 <p class="creator">Org version 7.8.02 with Emacs version 23</p>
 <a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>
