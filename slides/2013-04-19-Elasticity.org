@@ -15,6 +15,10 @@
 |1|781|$165.35 |
 |1|209|$287.84 |
 
+* Data meanings :slide:
+  + DOW: 1 == Sunday
+  + Weekends are nights going into a weekend, ie Friday, Saturday, ie 6 & 7
+
 * Result :slide:
   1. What is the price elasticity of weekday prices?
   1. What is the price elasticity of weekend prices?
