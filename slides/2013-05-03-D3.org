@@ -1,0 +1,65 @@
+* Develop a Visualization :slide:
+  + Learn D3
+  + Extract data from your project
+  + Build a visualization of it
+
+* Deliverable :slide:
+  + HTML with visualization
+  + Dependencies
+
+* Example :slide:
+  + =code/histogram.html=
+#+begin_src shell
+# extract 2000 reviews
+grep 'type": "review' ../yelp_phoenix_academic_dataset/yelp_academic_dataset_review.json | head -n 200 > reviews-200.json
+#+end_src
+#+begin_src python
+import json
+with open("reviews-200.json") as f:
+    r = map(json.loads, f)
+# extract star ratings
+[rev['stars'] for rev in r]
+#+end_src
+** Notes :notes:
+   + Include notes on how you extracted your data
+   + Notes can be in a separate files, or comments in the code
+   + My notes might be these shell/python commands
+
+* Partners :slide:
+  + If you've *never* written JS on your own:
+  + Find someone familiar with D3
+  + Still must turn in separate homeworks
+  + Cite your sources
+** Javascript :notes:
+   + Since this class is not teaching Javascript, you'll need to learn on your
+     own
+   + Special case: find someone to help you *learn*
+   + Folks who know D3: this assignment is not a challenge, so please find
+     someone to help. Teaching is a great way to learn
+
+* Extra Credit :slide:
+  + [[http://trifacta.github.io/vega/][Vega] is a JS visualization Grammer
+  + Write homework in Vega instead
+** Closer to Grammar :notes:
+   + Vega is a declarative way of specifying a graphic
+   + Uses D3 underneath
+
+* D3 Intro :slide:
+  + [[http://vogievetsky.github.io/IntroD3][D3 Intro]]
+
+#+STYLE: <link rel="stylesheet" type="text/css" href="production/common.css" />
+#+STYLE: <link rel="stylesheet" type="text/css" href="production/screen.css" media="screen" />
+#+STYLE: <link rel="stylesheet" type="text/css" href="production/projection.css" media="projection" />
+#+STYLE: <link rel="stylesheet" type="text/css" href="production/color-blue.css" media="projection" />
+#+STYLE: <link rel="stylesheet" type="text/css" href="production/presenter.css" media="presenter" />
+#+STYLE: <link href='http://fonts.googleapis.com/css?family=Lobster+Two:700|Yanone+Kaffeesatz:700|Open+Sans' rel='stylesheet' type='text/css'>
+
+#+BEGIN_HTML
+<script type="text/javascript" src="production/org-html-slideshow.js"></script>
+#+END_HTML
+
+# Local Variables:
+# org-export-html-style-include-default: nil
+# org-export-html-style-include-scripts: nil
+# buffer-file-coding-system: utf-8-unix
+# End:
