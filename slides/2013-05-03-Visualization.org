@@ -80,21 +80,25 @@
 ** Slide Switch :notes:
    + Hadley Wickham slides, OSCON
 
-* Color: HCL :slide:
+* Color: HCL :slide:two_col:
   + Hue :: color type, relative to RGBY
-  + Chroma :: colorfulness, percieved intensity
+  + Chroma :: colorfulness, perceived color intensity
   + Luminosity :: brightness, light-dark
+  [[file:img/Munsell.png]]
 ** Color Spaces :notes:
    + Many other color spaces, probably most familiar with RGB
    + HCL is useful because it separates the properties of a color into ones
      that can be mapped to data
    + Hue: nominal, can't compare
    + Chroma, Luminosity: numerical / comparable value
+   + Chroma vs Saturation: chroma *perception* relative to white, saturation
+     measure of color intensity
+     + http://rourkevisualart.com/wordpress/2008/02/22/the-difference-between-chroma-and-saturation/
 
 ** ColorBrewer :slide:
    + http://colorbrewer2.org/
    + Type of comparison => type of color difference
-   + Lots of other practicle features
+   + Lots of other practical features
 
 * Careful :slide:
   + Some aesthetics can combine to form illusions
