@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
 <meta name="title" content="2013-05-03-Visualization"/>
 <meta name="generator" content="Org-mode"/>
-<meta name="generated" content="2013-05-03 01:36:00 PDT"/>
+<meta name="generated" content="2013-05-03 09:44:30 PDT"/>
 <meta name="author" content="Jim Blomo"/>
 <meta name="description" content=""/>
 <meta name="keywords" content=""/>
@@ -53,57 +53,67 @@
 <li><a href="#sec-4-3">4.3 vp</a></li>
 </ul>
 </li>
-<li><a href="#sec-5">5 Chart Types</a>
+<li><a href="#sec-5">5 Geographic</a>
 <ul>
-<li><a href="#sec-5-1">5.1 Types</a></li>
+<li><a href="#sec-5-1">5.1 Trade-offs</a></li>
 </ul>
 </li>
-<li><a href="#sec-6">6 Aesthetics</a>
+<li><a href="#sec-6">6 Other Chart Types</a>
 <ul>
-<li><a href="#sec-6-1">6.1 Aesthetics</a></li>
-<li><a href="#sec-6-2">6.2 Larger Value?</a></li>
-<li><a href="#sec-6-3">6.3 Slide Switch</a></li>
+<li><a href="#sec-6-1">6.1 Types</a></li>
 </ul>
 </li>
-<li><a href="#sec-7">7 Color: HCL</a>
+<li><a href="#sec-7">7 Aesthetics</a>
 <ul>
-<li><a href="#sec-7-1">7.1 Color Spaces</a></li>
-<li><a href="#sec-7-2">7.2 ColorBrewer</a></li>
+<li><a href="#sec-7-1">7.1 Aesthetics</a></li>
+<li><a href="#sec-7-2">7.2 Larger Value?</a></li>
+<li><a href="#sec-7-3">7.3 Slide Switch</a></li>
 </ul>
 </li>
-<li><a href="#sec-8">8 Careful</a>
+<li><a href="#sec-8">8 Color: HCL</a>
 <ul>
-<li><a href="#sec-8-1">8.1 Line Lengths</a></li>
-<li><a href="#sec-8-2">8.2 Careful</a></li>
-<li><a href="#sec-8-3">8.3 Careful</a></li>
+<li><a href="#sec-8-1">8.1 Color Spaces</a></li>
+<li><a href="#sec-8-2">8.2 ColorBrewer</a></li>
 </ul>
 </li>
-<li><a href="#sec-9">9 Grammar of Graphics</a>
+<li><a href="#sec-9">9 Careful</a>
 <ul>
-<li><a href="#sec-9-1">9.1 Bringing Together</a></li>
+<li><a href="#sec-9-1">9.1 Line Lengths</a></li>
+<li><a href="#sec-9-2">9.2 Careful</a></li>
+<li><a href="#sec-9-3">9.3 Careful</a></li>
 </ul>
 </li>
-<li><a href="#sec-10">10 Scatter Plot</a>
+<li><a href="#sec-10">10 Grammar of Graphics</a>
 <ul>
-<li><a href="#sec-10-1">10.1 Ice Cream</a></li>
+<li><a href="#sec-10-1">10.1 Bringing Together</a></li>
 </ul>
 </li>
-<li><a href="#sec-11">11 Bar Plot</a>
+<li><a href="#sec-11">11 Scatter Plot</a>
 <ul>
-<li><a href="#sec-11-1">11.1 Fruit</a></li>
+<li><a href="#sec-11-1">11.1 Ice Cream</a></li>
 </ul>
 </li>
-<li><a href="#sec-12">12 Hipmonk</a>
+<li><a href="#sec-12">12 Bar Plot</a>
 <ul>
 <li><a href="#sec-12-1">12.1 Fruit</a></li>
 </ul>
 </li>
-<li><a href="#sec-13">13 Recursive</a>
+<li><a href="#sec-13">13 Hipmonk</a>
 <ul>
-<li><a href="#sec-13-1">13.1 Complex</a></li>
+<li><a href="#sec-13-1">13.1 Fruit</a></li>
 </ul>
 </li>
-<li><a href="#sec-14">14 <b>Break</b></a></li>
+<li><a href="#sec-14">14 Recursive</a>
+<ul>
+<li><a href="#sec-14-1">14.1 Complex</a></li>
+</ul>
+</li>
+<li><a href="#sec-15">15 Tufte</a>
+<ul>
+<li><a href="#sec-15-1">15.1 Tufte</a></li>
+</ul>
+</li>
+<li><a href="#sec-16">16 <b>Break</b></a></li>
 </ul>
 </div>
 </div>
@@ -247,9 +257,9 @@
 <li>This data is for body positions over time
 </li>
 <li>Dimensions are the different angles for different body parts, like hip
-     ancle, knee, over time
+     ankle, knee, over time
 </li>
-<li>We can see sonme strong patterns. Maybe we'll need to kernelize them to
+<li>We can see some strong patterns. Maybe we'll need to kernelize them to
      make them learnable, but we have a good understanding that there are, or
      are not relationships between the data
 </li>
@@ -262,24 +272,52 @@
 </div>
 
 <div id="outline-container-5" class="outline-2">
-<h2 id="sec-5"><span class="section-number-2">5</span> Chart Types &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h2>
+<h2 id="sec-5"><span class="section-number-2">5</span> Geographic &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h2>
 <div class="outline-text-2" id="text-5">
+
+<p>  <img src="img/cancer-county.jpg"  alt="img/cancer-county.jpg" />
+</p>
+</div>
+
+<div id="outline-container-5-1" class="outline-3">
+<h3 id="sec-5-1"><span class="section-number-3">5.1</span> Trade-offs &nbsp;&nbsp;&nbsp;<span class="tag"><span class="notes">notes</span></span></h3>
+<div class="outline-text-3" id="text-5-1">
+
+<ul>
+<li>Coordinates intuitively understandable
+</li>
+<li>Lots of ways to bucket/aggregate
+</li>
+<li>Dependence on geographical area (eg. when you'd like to depend
+    on human impact instead)
+</li>
+</ul>
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-6" class="outline-2">
+<h2 id="sec-6"><span class="section-number-2">6</span> Other Chart Types &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h2>
+<div class="outline-text-2" id="text-6">
 
 <dl>
 <dt>Box plot</dt><dd>aggregate data
 </dd>
 <dt>Bar charts</dt><dd>simple summaries
 </dd>
-<dt>Pie chargs</dt><dd>compound proportions
+<dt>Pie charts</dt><dd>compound proportions
 </dd>
 </dl>
 
 
 </div>
 
-<div id="outline-container-5-1" class="outline-3">
-<h3 id="sec-5-1"><span class="section-number-3">5.1</span> Types &nbsp;&nbsp;&nbsp;<span class="tag"><span class="notes">notes</span></span></h3>
-<div class="outline-text-3" id="text-5-1">
+<div id="outline-container-6-1" class="outline-3">
+<h3 id="sec-6-1"><span class="section-number-3">6.1</span> Types &nbsp;&nbsp;&nbsp;<span class="tag"><span class="notes">notes</span></span></h3>
+<div class="outline-text-3" id="text-6-1">
 
 <ul>
 <li>Box plots, for real data, still carry a lot of data
@@ -297,12 +335,12 @@
 
 </div>
 
-<div id="outline-container-6" class="outline-2">
-<h2 id="sec-6"><span class="section-number-2">6</span> Aesthetics &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h2>
-<div class="outline-text-2" id="text-6">
+<div id="outline-container-7" class="outline-2">
+<h2 id="sec-7"><span class="section-number-2">7</span> Aesthetics &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h2>
+<div class="outline-text-2" id="text-7">
 
 <ul>
-<li>The visual aetshetics you use should be tied to the data
+<li>The visual aesthetics you use should be tied to the data
 </li>
 </ul>
 
@@ -310,9 +348,9 @@
 </p>
 </div>
 
-<div id="outline-container-6-1" class="outline-3">
-<h3 id="sec-6-1"><span class="section-number-3">6.1</span> Aesthetics &nbsp;&nbsp;&nbsp;<span class="tag"><span class="notes">notes</span></span></h3>
-<div class="outline-text-3" id="text-6-1">
+<div id="outline-container-7-1" class="outline-3">
+<h3 id="sec-7-1"><span class="section-number-3">7.1</span> Aesthetics &nbsp;&nbsp;&nbsp;<span class="tag"><span class="notes">notes</span></span></h3>
+<div class="outline-text-3" id="text-7-1">
 
 <ul>
 <li>What are some of the techniques we can use to tie data to a visual
@@ -327,9 +365,9 @@
 
 </div>
 
-<div id="outline-container-6-2" class="outline-3">
-<h3 id="sec-6-2"><span class="section-number-3">6.2</span> Larger Value? &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h3>
-<div class="outline-text-3" id="text-6-2">
+<div id="outline-container-7-2" class="outline-3">
+<h3 id="sec-7-2"><span class="section-number-3">7.2</span> Larger Value? &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h3>
+<div class="outline-text-3" id="text-7-2">
 
 <ul>
 <li>Position
@@ -338,7 +376,7 @@
 </li>
 <li>Area / Volume
 </li>
-<li>Color: Chromea Lumainance
+<li>Color: Chroma Luminance
 </li>
 </ul>
 
@@ -346,9 +384,9 @@
 
 </div>
 
-<div id="outline-container-6-3" class="outline-3">
-<h3 id="sec-6-3"><span class="section-number-3">6.3</span> Slide Switch &nbsp;&nbsp;&nbsp;<span class="tag"><span class="notes">notes</span></span></h3>
-<div class="outline-text-3" id="text-6-3">
+<div id="outline-container-7-3" class="outline-3">
+<h3 id="sec-7-3"><span class="section-number-3">7.3</span> Slide Switch &nbsp;&nbsp;&nbsp;<span class="tag"><span class="notes">notes</span></span></h3>
+<div class="outline-text-3" id="text-7-3">
 
 <ul>
 <li>Hadley Wickham slides, OSCON
@@ -361,9 +399,9 @@
 
 </div>
 
-<div id="outline-container-7" class="outline-2">
-<h2 id="sec-7"><span class="section-number-2">7</span> Color: HCL &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h2>
-<div class="outline-text-2" id="text-7">
+<div id="outline-container-8" class="outline-2">
+<h2 id="sec-8"><span class="section-number-2">8</span> Color: HCL &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h2>
+<div class="outline-text-2" id="text-8">
 
 <dl>
 <dt>Hue</dt><dd>color type, relative to RGBY
@@ -377,9 +415,9 @@
 
 </div>
 
-<div id="outline-container-7-1" class="outline-3">
-<h3 id="sec-7-1"><span class="section-number-3">7.1</span> Color Spaces &nbsp;&nbsp;&nbsp;<span class="tag"><span class="notes">notes</span></span></h3>
-<div class="outline-text-3" id="text-7-1">
+<div id="outline-container-8-1" class="outline-3">
+<h3 id="sec-8-1"><span class="section-number-3">8.1</span> Color Spaces &nbsp;&nbsp;&nbsp;<span class="tag"><span class="notes">notes</span></span></h3>
+<div class="outline-text-3" id="text-8-1">
 
 <ul>
 <li>Many other color spaces, probably most familiar with RGB
@@ -398,9 +436,9 @@
 
 </div>
 
-<div id="outline-container-7-2" class="outline-3">
-<h3 id="sec-7-2"><span class="section-number-3">7.2</span> ColorBrewer &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h3>
-<div class="outline-text-3" id="text-7-2">
+<div id="outline-container-8-2" class="outline-3">
+<h3 id="sec-8-2"><span class="section-number-3">8.2</span> ColorBrewer &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h3>
+<div class="outline-text-3" id="text-8-2">
 
 <ul>
 <li><a href="http://colorbrewer2.org/">http://colorbrewer2.org/</a>
@@ -417,9 +455,9 @@
 
 </div>
 
-<div id="outline-container-8" class="outline-2">
-<h2 id="sec-8"><span class="section-number-2">8</span> Careful &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h2>
-<div class="outline-text-2" id="text-8">
+<div id="outline-container-9" class="outline-2">
+<h2 id="sec-9"><span class="section-number-2">9</span> Careful &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h2>
+<div class="outline-text-2" id="text-9">
 
 <ul>
 <li>Some aesthetics can combine to form illusions
@@ -431,9 +469,9 @@
 
 </div>
 
-<div id="outline-container-8-1" class="outline-3">
-<h3 id="sec-8-1"><span class="section-number-3">8.1</span> Line Lengths &nbsp;&nbsp;&nbsp;<span class="tag"><span class="notes">notes</span></span></h3>
-<div class="outline-text-3" id="text-8-1">
+<div id="outline-container-9-1" class="outline-3">
+<h3 id="sec-9-1"><span class="section-number-3">9.1</span> Line Lengths &nbsp;&nbsp;&nbsp;<span class="tag"><span class="notes">notes</span></span></h3>
+<div class="outline-text-3" id="text-9-1">
 
 <ul>
 <li>Line lengths can appear to look smaller when extended instead of right
@@ -446,9 +484,9 @@
 
 </div>
 
-<div id="outline-container-8-2" class="outline-3">
-<h3 id="sec-8-2"><span class="section-number-3">8.2</span> Careful &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h3>
-<div class="outline-text-3" id="text-8-2">
+<div id="outline-container-9-2" class="outline-3">
+<h3 id="sec-9-2"><span class="section-number-3">9.2</span> Careful &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h3>
+<div class="outline-text-3" id="text-9-2">
 
 
 <iframe width="560" height="315" src="http://www.youtube.com/embed/FWSxSQsspiQ" frameborder="0" allowfullscreen></iframe>
@@ -457,9 +495,9 @@
 
 </div>
 
-<div id="outline-container-8-3" class="outline-3">
-<h3 id="sec-8-3"><span class="section-number-3">8.3</span> Careful &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h3>
-<div class="outline-text-3" id="text-8-3">
+<div id="outline-container-9-3" class="outline-3">
+<h3 id="sec-9-3"><span class="section-number-3">9.3</span> Careful &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h3>
+<div class="outline-text-3" id="text-9-3">
 
 
 <iframe src="http://player.vimeo.com/video/18074674" width="500" height="500" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> <p><a href="http://vimeo.com/18074674">Motion silences awareness of color changes</a> from <a href="http://vimeo.com/suchow">Jordan Suchow</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
@@ -469,14 +507,14 @@
 
 </div>
 
-<div id="outline-container-9" class="outline-2">
-<h2 id="sec-9"><span class="section-number-2">9</span> Grammar of Graphics &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h2>
-<div class="outline-text-2" id="text-9">
+<div id="outline-container-10" class="outline-2">
+<h2 id="sec-10"><span class="section-number-2">10</span> Grammar of Graphics &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h2>
+<div class="outline-text-2" id="text-10">
 
 <dl>
 <dt>Geom</dt><dd>Graphic element
 </dd>
-<dt>Aesthetics</dt><dd>appearence of a geom
+<dt>Aesthetics</dt><dd>appearance of a geom
 </dd>
 <dt>Data</dt><dd>raw, context, statistical aggregations of data
 </dd>
@@ -487,17 +525,17 @@
 
 </div>
 
-<div id="outline-container-9-1" class="outline-3">
-<h3 id="sec-9-1"><span class="section-number-3">9.1</span> Bringing Together &nbsp;&nbsp;&nbsp;<span class="tag"><span class="notes">notes</span></span></h3>
-<div class="outline-text-3" id="text-9-1">
+<div id="outline-container-10-1" class="outline-3">
+<h3 id="sec-10-1"><span class="section-number-3">10.1</span> Bringing Together &nbsp;&nbsp;&nbsp;<span class="tag"><span class="notes">notes</span></span></h3>
+<div class="outline-text-3" id="text-10-1">
 
 <ul>
 <li>We've talked about different aesthetics of showing data, we've talked about
-     data, all that's needed is to bring them togehter
+     data, all that's needed is to bring them together
 </li>
 <li>Wilkinson, L. (2005), The Grammar of Graphics (2nd ed.). Statistics and Computing, New York: Springer.
 </li>
-<li>Rigerous way of describing graphics beyond "scatter plot" or "bar chart"
+<li>Rigorous way of describing graphics beyond "scatter plot" or "bar chart"
 </li>
 </ul>
 
@@ -507,9 +545,9 @@
 
 </div>
 
-<div id="outline-container-10" class="outline-2">
-<h2 id="sec-10"><span class="section-number-2">10</span> Scatter Plot &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span>&nbsp;<span class="animate">animate</span></span></h2>
-<div class="outline-text-2" id="text-10">
+<div id="outline-container-11" class="outline-2">
+<h2 id="sec-11"><span class="section-number-2">11</span> Scatter Plot &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span>&nbsp;<span class="animate">animate</span></span></h2>
+<div class="outline-text-2" id="text-11">
 
 <p>  <img src="img/scatter-ice-cream.gif"  alt="img/scatter-ice-cream.gif" />
 </p>
@@ -543,12 +581,12 @@
 
 </div>
 
-<div id="outline-container-10-1" class="outline-3">
-<h3 id="sec-10-1"><span class="section-number-3">10.1</span> Ice Cream &nbsp;&nbsp;&nbsp;<span class="tag"><span class="notes">notes</span></span></h3>
-<div class="outline-text-3" id="text-10-1">
+<div id="outline-container-11-1" class="outline-3">
+<h3 id="sec-11-1"><span class="section-number-3">11.1</span> Ice Cream &nbsp;&nbsp;&nbsp;<span class="tag"><span class="notes">notes</span></span></h3>
+<div class="outline-text-3" id="text-11-1">
 
 <ul>
-<li>Plot shows hypothertical sales of ice cream vs temperature
+<li>Plot shows hypothetical sales of ice cream vs temperature
 </li>
 <li>Geoms: points (actually, ticks are geoms, too)
 </li>
@@ -567,9 +605,9 @@
 
 </div>
 
-<div id="outline-container-11" class="outline-2">
-<h2 id="sec-11"><span class="section-number-2">11</span> Bar Plot &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span>&nbsp;<span class="animate">animate</span></span></h2>
-<div class="outline-text-2" id="text-11">
+<div id="outline-container-12" class="outline-2">
+<h2 id="sec-12"><span class="section-number-2">12</span> Bar Plot &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span>&nbsp;<span class="animate">animate</span></span></h2>
+<div class="outline-text-2" id="text-12">
 
 <p>  <img src="img/bar-graph-fruit.gif"  alt="img/bar-graph-fruit.gif" />
 </p>
@@ -600,9 +638,9 @@
 
 </div>
 
-<div id="outline-container-11-1" class="outline-3">
-<h3 id="sec-11-1"><span class="section-number-3">11.1</span> Fruit &nbsp;&nbsp;&nbsp;<span class="tag"><span class="notes">notes</span></span></h3>
-<div class="outline-text-3" id="text-11-1">
+<div id="outline-container-12-1" class="outline-3">
+<h3 id="sec-12-1"><span class="section-number-3">12.1</span> Fruit &nbsp;&nbsp;&nbsp;<span class="tag"><span class="notes">notes</span></span></h3>
+<div class="outline-text-3" id="text-12-1">
 
 <ul>
 <li>Plot shows fruit popularity
@@ -623,9 +661,9 @@
 
 </div>
 
-<div id="outline-container-12" class="outline-2">
-<h2 id="sec-12"><span class="section-number-2">12</span> Hipmonk &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h2>
-<div class="outline-text-2" id="text-12">
+<div id="outline-container-13" class="outline-2">
+<h2 id="sec-13"><span class="section-number-2">13</span> Hipmonk &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h2>
+<div class="outline-text-2" id="text-13">
 
 <p>  <img src="img/hipmonk.png"  alt="img/hipmonk.png" />
 </p>
@@ -656,14 +694,14 @@
 
 </div>
 
-<div id="outline-container-12-1" class="outline-3">
-<h3 id="sec-12-1"><span class="section-number-3">12.1</span> Fruit &nbsp;&nbsp;&nbsp;<span class="tag"><span class="notes">notes</span></span></h3>
-<div class="outline-text-3" id="text-12-1">
+<div id="outline-container-13-1" class="outline-3">
+<h3 id="sec-13-1"><span class="section-number-3">13.1</span> Fruit &nbsp;&nbsp;&nbsp;<span class="tag"><span class="notes">notes</span></span></h3>
+<div class="outline-text-3" id="text-13-1">
 
 <ul>
 <li>Shows travel options from SFO to Ithica, connecting flights, airports, etc.
 </li>
-<li>More complex, but still expressable via Grammar
+<li>More complex, but still expressible via Grammar
 </li>
 <li>img: <a href="http://www.hipmonk.com">http://www.hipmonk.com</a>
 </li>
@@ -675,9 +713,9 @@
 
 </div>
 
-<div id="outline-container-13" class="outline-2">
-<h2 id="sec-13"><span class="section-number-2">13</span> Recursive &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h2>
-<div class="outline-text-2" id="text-13">
+<div id="outline-container-14" class="outline-2">
+<h2 id="sec-14"><span class="section-number-2">14</span> Recursive &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h2>
+<div class="outline-text-2" id="text-14">
 
 <p>  <img src="img/grammar-af.png"  alt="img/grammar-af.png" />
 </p>
@@ -689,9 +727,9 @@
 
 </div>
 
-<div id="outline-container-13-1" class="outline-3">
-<h3 id="sec-13-1"><span class="section-number-3">13.1</span> Complex &nbsp;&nbsp;&nbsp;<span class="tag"><span class="notes">notes</span></span></h3>
-<div class="outline-text-3" id="text-13-1">
+<div id="outline-container-14-1" class="outline-3">
+<h3 id="sec-14-1"><span class="section-number-3">14.1</span> Complex &nbsp;&nbsp;&nbsp;<span class="tag"><span class="notes">notes</span></span></h3>
+<div class="outline-text-3" id="text-14-1">
 
 <ul>
 <li>Reading will go a further extension of this, where the geoms are themselves
@@ -705,9 +743,43 @@
 
 </div>
 
-<div id="outline-container-14" class="outline-2">
-<h2 id="sec-14"><span class="section-number-2">14</span> <b>Break</b> &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h2>
-<div class="outline-text-2" id="text-14">
+<div id="outline-container-15" class="outline-2">
+<h2 id="sec-15"><span class="section-number-2">15</span> Tufte &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h2>
+<div class="outline-text-2" id="text-15">
+
+<ul>
+<li>Clarity from data
+</li>
+<li>Avoid chart junk
+</li>
+<li>Techniques for displaying many types
+</li>
+</ul>
+
+<p>  <img src="img/tufte-books.jpg"  alt="img/tufte-books.jpg" />
+</p>
+</div>
+
+<div id="outline-container-15-1" class="outline-3">
+<h3 id="sec-15-1"><span class="section-number-3">15.1</span> Tufte &nbsp;&nbsp;&nbsp;<span class="tag"><span class="notes">notes</span></span></h3>
+<div class="outline-text-3" id="text-15-1">
+
+<ul>
+<li>No talk on visualization would be complete without mentioning Tufte
+</li>
+<li>Great examples
+</li>
+</ul>
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-16" class="outline-2">
+<h2 id="sec-16"><span class="section-number-2">16</span> <b>Break</b> &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h2>
+<div class="outline-text-2" id="text-16">
 
 
 
@@ -720,7 +792,7 @@
 </div>
 
 <div id="postamble">
-<p class="date">Date: 2013-05-03 01:36:00 PDT</p>
+<p class="date">Date: 2013-05-03 09:44:30 PDT</p>
 <p class="author">Author: Jim Blomo</p>
 <p class="creator">Org version 7.8.02 with Emacs version 23</p>
 <a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>

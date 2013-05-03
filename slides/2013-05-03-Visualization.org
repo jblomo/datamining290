@@ -41,15 +41,23 @@
 ** vp :notes:
    + This data is for body positions over time
    + Dimensions are the different angles for different body parts, like hip
-     ancle, knee, over time
-   + We can see sonme strong patterns. Maybe we'll need to kernelize them to
+     ankle, knee, over time
+   + We can see some strong patterns. Maybe we'll need to kernelize them to
      make them learnable, but we have a good understanding that there are, or
      are not relationships between the data
 
-* Chart Types :slide:
+* Geographic :slide:
+  [[file:img/cancer-county.jpg]]
+** Trade-offs :notes:
+  + Coordinates intuitively understandable
+  + Lots of ways to bucket/aggregate
+  + Dependence on geographical area (eg. when you'd like to depend
+    on human impact instead)
+
+* Other Chart Types :slide:
   + Box plot :: aggregate data
   + Bar charts :: simple summaries
-  + Pie chargs :: compound proportions
+  + Pie charts :: compound proportions
 ** Types :notes:
    + Box plots, for real data, still carry a lot of data
    + Bar charts nice for summarizing, not great for exploring
@@ -57,7 +65,7 @@
      circumstances
 
 * Aesthetics :slide:
-  + The visual aetshetics you use should be tied to the data
+  + The visual aesthetics you use should be tied to the data
   [[file:img/graphics-aesthetics.png]]
 ** Aesthetics :notes:
    + What are some of the techniques we can use to tie data to a visual
@@ -68,7 +76,7 @@
    + Position
    + Length / Angle
    + Area / Volume
-   + Color: Chromea Lumainance
+   + Color: Chroma Luminance
 ** Slide Switch :notes:
    + Hadley Wickham slides, OSCON
 
@@ -107,14 +115,14 @@
 
 * Grammar of Graphics :slide:
   + Geom :: Graphic element
-  + Aesthetics :: appearence of a geom
+  + Aesthetics :: appearance of a geom
   + Data :: raw, context, statistical aggregations of data
   + Mapping :: functions which map data to geom properties or aesthetics
 ** Bringing Together :notes:
    + We've talked about different aesthetics of showing data, we've talked about
-     data, all that's needed is to bring them togehter
+     data, all that's needed is to bring them together
    + Wilkinson, L. (2005), The Grammar of Graphics (2nd ed.). Statistics and Computing, New York: Springer.
-   + Rigerous way of describing graphics beyond "scatter plot" or "bar chart"
+   + Rigorous way of describing graphics beyond "scatter plot" or "bar chart"
 
 * Scatter Plot :slide:animate:
   [[file:img/scatter-ice-cream.gif]]
@@ -128,7 +136,7 @@
     + Note, not a simple 1:1 mapping, we must map to something visual, like
       pixels
 ** Ice Cream :notes:
-   + Plot shows hypothertical sales of ice cream vs temperature
+   + Plot shows hypothetical sales of ice cream vs temperature
    + Geoms: points (actually, ticks are geoms, too)
    + Data: sales, temperature (and context: how large is the potential plot
      size)
@@ -162,7 +170,7 @@
     + travel time -> bar length, flight times -> sub-bars, "agony" -> y, airline -> color
 ** Fruit :notes:
    + Shows travel options from SFO to Ithica, connecting flights, airports, etc.
-   + More complex, but still expressable via Grammar
+   + More complex, but still expressible via Grammar
    + img: http://www.hipmonk.com
 
 * Recursive :slide:
@@ -172,6 +180,15 @@
 ** Complex :notes:
    + Reading will go a further extension of this, where the geoms are themselves
      other plots
+
+* Tufte :slide:
+  + Clarity from data
+  + Avoid chart junk
+  + Techniques for displaying many types
+  [[file:img/tufte-books.jpg]]
+** Tufte :notes:
+   + No talk on visualization would be complete without mentioning Tufte
+   + Great examples
 
 * *Break* :slide:
 
