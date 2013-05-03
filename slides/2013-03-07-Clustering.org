@@ -115,7 +115,7 @@
 * Distance :slide:
   + *Centroid* is the average of all points in a cluster; the center
   + Different distance metrics for real numbers
-  + But how to find "average" of binary or normative data?
+  + But how to find "average" of binary or nominal data?
 ** You Can't :notes:
    + k-means is used for numerical data
 
