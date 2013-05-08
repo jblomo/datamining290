@@ -6,9 +6,7 @@
   + Presentation
   + Code
   + Data (URL or sampled)
-  + *May 9* midnight
-** Details :notes:
-   + technically May 10
+  + *May 16* midnight
 
 * Groups :slide:
   + 1-2 people
