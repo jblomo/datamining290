@@ -7,7 +7,7 @@
    + Brian Harvey, [[http://www.eecs.berkeley.edu/~bh/sicp.html][Why SCIP matters]]
 ** Important Parts :notes:
    + Important: understanding your domain, asking interesting questions,
-     answering them with data, fitting questions to mathmatical concepts
+     answering them with data, fitting questions to mathematical concepts
    + Not as important: scipy lingregress, d3
 
 * But :slide:two_col:
@@ -84,7 +84,7 @@
    + Disruption most often comes from using established technologies in new ways
      or areas
    + Can disrupt by completely simplified, often crappy at first, solutions to
-     an even more fundemental problem
+     an even more fundamental problem
    + Dell did a great job selling cheap computers, then more expensive computers
    + But now Amazon is saying: "you don't even need to own computers!" (Cloud)
    + More info: [[http://www.claytonchristensen.com/][Clayton Christensen]]
@@ -184,7 +184,7 @@
 * Data Storage :slide:
   + S3 for unstructured data
   + PostgreSQL for structured
-  + Hive on S3 for very large structred data
+  + Hive on S3 for very large structured data
 ** Data most important asset :notes:
    + S3 is a pay-as-you go model, opens up many data processing possibilities
    + Don't have to worry about how to connect
@@ -196,7 +196,7 @@
   + Python
   + IPython Notebook, matplotlib
 ** Py :notes:
-   + Main reason: it is convinient and practical to stay in the same language as
+   + Main reason: it is convenient and practical to stay in the same language as
      production
    + Using production libraries, settings, to extract data
    + R, matlab/octive, Tableau are typically not used in large production code
@@ -206,9 +206,21 @@
 * Public Visualizations :slide:
   + D3 for visualizations
   + HTML is sharable, universal
-  + (Adventerous: Vega)
+  + (Adventurous: Vega)
 ** Visualization :notes:
-   + Vega more directly maps to grammer of graphics, but is very new library
+   + Vega more directly maps to grammar of graphics, but is very new library
+
+* Processing :slide:two_col:
+  + Hadoop + mrjob
+  + Elastic MapReduce
+  + (Adventurous: [[http://spark-project.org][Spark]]
+  [[file:img/hadoop.png]]
+** Scaling :notes:
+   + Hadoop scales up and down fairly well, especially with mrjob
+   + Constraints are going to be on *your* time, not necessary to eek out every
+     bit of computing poser
+   + Spark is a new model out of Berkeley that does a better job of keeping data
+     in memory, but doesn't have the maturity of Hadoop
 
 * Models :slide:
   + Text: Naive Bayes
