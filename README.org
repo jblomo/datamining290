@@ -27,7 +27,7 @@ DM[0-9]+ indicates chapters from the text, _Data Mining_.
 | Apr 19 | [[file:slides/2013-04-19-Nonlinear.pdf][Non-linear regression]] | GUEST: Gene Lee Ceaser's [[file:slides/RM Pricing Strategy.ppt][Pricing Strategy]]; [[file:slides/Campus Recruiting Deck_2012_UC Berkeley.ppt][Ceaser's Recruiting]]| [[file:slides/2013-04-19-Elasticity.html][Price Elasticity]] |
 | Apr 26 | DM12; [[http://www.ee.columbia.edu/~dpwe/papers/Wang03-shazam.pdf][Shazam Audio Search]] | [[file:slides/2013-04-26-Outliers.html][Outliers]]; [[file:slides/2013-04-26-Multimedia.html][Images & Audio]] | [[file:slides/2013-04-26-Midterm-HW.html][Midterm Review]] |
 | May 3 | [[https://groups.google.com/group/gsofgs/attach/2f1cdd7a999c3ad8/embedded-plots.pdf?part=2&authuser=0][Embedded Plots]] ; [[http://vis.stanford.edu/files/2011-D3-InfoVis.pdf][Data-Driven Documents]]| [[file:slides/2013-05-03-Visualization.html][Visualization]] ; [[file:slides/2013-05-03-Yelp-Visualization.html][Yelp's Visualizations]] | [[http://vogievetsky.github.io/IntroD3/][D3 Intro]] [[file:slides/2013-05-03-D3.html][D3 Lab]] |
-| May 10 | TBA | In Real Life ; Review | May 16th: Project Papers Due |
+| May 10 | [[http://homes.cs.washington.edu/~pedrod/papers/cacm12.pdf][A Few Useful Things to Know about Machine Learning]] ; [[http://www.cs.uvm.edu/~icdm/algorithms/10Algorithms-08.pdf][Top 10 Algorithms in Data Mining]] | [[file:slides/2013-05-10-Real-World.html][In Real Life]] ; Presentations | May 16th: Project Papers Due |
 | May 17 |  -  | Final Presentation | Bye! |
 
 

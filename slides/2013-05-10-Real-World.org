@@ -10,7 +10,7 @@
      answering them with data, fitting questions to mathematical concepts
    + Not as important: scipy lingregress, d3
 
-* But :slide:two_col:
+* But :slide:
   + Who is doing interviews?
   + Who is starting their own company?
   + Who wants to build their portfolio?
@@ -19,13 +19,14 @@
    + So here's the lecture where I try to tell you what I would do when
      practicing data mining
 
-* Ideas :slide:two_col:
+* Product or Company Ideas :slide:
   + Understand exponential growth
   + Get the timing right
   + Execute, execute, execute
 ** Idea required but not sufficient :notes:
    + Wide variation of thoughts on ideas
    + One of the biggest road blocks for wanna be entrepreneurs, but most derided
+   + Timing is mostly luck, is the world ready for your ideas?
    + I think the *vision* is important, it's what drives the company, keeps
      people working
    + The plan for the idea less so
@@ -56,6 +57,7 @@
 
 ** Exercise :slide:two_col:
    [[file:img/strava.jpg]]
+
    [[file:img/strava-ride.png]]
 *** Strava :notes:
     + No device, just data
@@ -115,7 +117,7 @@
    + Github will solve a few problems on this list, just use it, even if you're
      developing alone
 
-** One step build :slide:two_col:
+** One step build :slide:
   + Data mining exploration often involves manual commands
   + *Don't* do that in production
   + Should have scripts which extract features, build model, verify, deploy
@@ -192,9 +194,10 @@
      geo data
    + Once you get beyond PostgreSQL limits, use Hive to structure data in S3
 
-* Exploration :slide:
+* Exploration :slide:two_col:
   + Python
   + IPython Notebook, matplotlib
+  [[file:img/ipython-notebook.jpg]]
 ** Py :notes:
    + Main reason: it is convenient and practical to stay in the same language as
      production
@@ -230,8 +233,10 @@
    + Start with simple stats to understand your data
    + Next: use heuristics, they are easy to understand and change
    + Next: use third party models that you can drop in
+   + Often heuristics with understanding of false postive/negative costs will
+     get you far
 
-* Practice :slide:two_col:
+* Practice :slide:
   + [[http://www.yelp.com/dataset_challenge/][Yelp Dataset Challenge]] :)
   + [[http://www.kaggle.com/][kaggle]]
   + [[http://www.amazon.com/Programming-Collective-Intelligence-Building-Applications/dp/0596529325][Programming Collective Intelligence]]
@@ -260,15 +265,6 @@
    + Think of the "interview" as a conversation, what would you say if you met
      in a coffee shop?
 
-* Resume :slide:
-  + Use quantitative data
-  + Describe the difference you made in a company/project, not what you did
-  + Include your side projects!
-** Unique :notes:
-   + What makes you a unique candidate?
-   + Your side projects set you apart. All students here have made a mobile
-     page. How is yours different?
-
 * Resume is a Formality :slide:
   + Be recognized independently of being in the resume pile
   + Present at meetup
@@ -278,6 +274,15 @@
    + Also makes you think "Do I *want* to work for this company?"
    + Stories
 
+* Resume :slide:
+  + Use quantitative data
+  + Describe the difference you made in a company/project, not what you did
+  + Include your side projects!
+** Unique :notes:
+   + What makes you a unique candidate?
+   + Your side projects set you apart. All students here have made a mobile
+     page. How is yours different?
+
 * Negotiation :slide:
   + Always try to have > 2 offers on the table
   + Once a company decides, they've already sunk a lot of resources into you
@@ -285,18 +290,24 @@
 ** Timing :notes:
    + Pace interviews so you can make the decision together
 
-* Do What it Takes :slide:two_col:
-  + Remember, > 50% of the work will be finding, formatting data
+* Do What it Takes :slide:
+  + Most essential attribute: asking great questions
+  + > 50% of the work will be finding, formatting data
   + Data product must be reliable to be effective
   + Learn about distributed computing, software engineering
-  [[file:img/scrumtshape.jpg]]
 ** The Job :notes:
+   + As Gene said, the thing that can't be taught is to think creatively about
+     all the cool stuff you can do with this data, frame it in a way that is
+     specific, actionable
    + Most jobs require a combination of DM and coding skills
    + Companies don't need just "idea people", need "idea + execution"
    + Don't expect to just put on you DM lab coat and work with Kaggle-style data
      all day
    + Remember, biggest impact comes from putting together *existing* technology
      in a useful way
+
+* T-shape Skills :slide:center:
+  [[file:img/scrumtshape.jpg]]
 
 * Managing upward :slide:
   + Ideal email: "I've done the analysis below and recommend we do X.  Sound good?"
