@@ -39,7 +39,7 @@ Data Analysis > Regression > Y Range, X Range
 #+begin_src python
 from math import log, exp
 from scipy.stats import linregress
-slope, intercept, r_value, p_value, std_err = linregress(y, x)
+slope, intercept, r_value, p_value, std_err = linregress(indep, depend)
 #+end_src
 
 #+STYLE: <link rel="stylesheet" type="text/css" href="production/common.css" />
