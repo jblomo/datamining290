@@ -11,14 +11,14 @@ class: center
 
 ---
 
-# Course Goals
+## Course Goals
   + Extract *information* from *data*
   + Understand techniques to find patterns
   + Apply algorithms to real data sets
 
 ---
 
-# We'll Do Stuff
+## We'll Do Stuff
   + 30%: 10 Homework Assignments
   + 30%: 1 Midterm
   + 40%: 1 Project: Find, Mine, Report on Data
@@ -33,7 +33,7 @@ class: center
 
 ---
 
-# But Don't Worry
+## But Don't Worry
   + This isn't a programming class
   + Grades are based on understanding of the concepts, not the craziest project
   + Shreyas & I are here to help
@@ -41,12 +41,12 @@ class: center
 ???
 
 ## Help
-   + We realize there's a wide range of technical skill
-   + We will help get anyone up to speed in these technical areas
+  + We realize there's a wide range of technical skill
+  + We will help get anyone up to speed in these technical areas
 
 ---
 
-# This is a Graduate class
+## This is a Graduate Course
   + Perform well without supervision
   + Readings from both book and online documentation
   + TMTOWTDI
@@ -68,7 +68,7 @@ class: center
 
 ---
 
-# Prerequisites
+## Prerequisites
   + Basic probability: P(A), P(A or B), P(A and B), P(A | B)
   + Basic programming: Python
   + Basic command line: SSH, downloading, copying large files, running programs
@@ -88,11 +88,11 @@ class: center
 
 ---
 
-# Material
+## Material
   + Process: from finding data to mining it to visualizing results
   + Algorithms: all intuitively motivated, some rigorously studied
   + Programming: using algorithms against data sets
-  + Discovery: finding information in self-defined project
+  + Discovery: finding information in a self-defined project
 
 ???
 
@@ -109,12 +109,12 @@ class: center
 
 ---
 
-# Lectures & Labs
+## Lectures & Labs
   + Start with Q&A for at least 10 minutes
   + Expect to be asked a question
   + Breaks
   + Lab: Stick around and get the first question of homework done
-  + Slides on http://jretz.github.com/datamining290/
+  + Slides on http://github.com/jretz/datamining290/
 
 ???
 
@@ -128,7 +128,7 @@ class: center
 ---
 
 Todo - setup piazza
-# Office Hours
+## Office Hours
   + We'll stay after class
   + or schedule a Skype call
   + [Piazza](https://piazza.com/class#spring2014/i290) for questions and
@@ -138,40 +138,39 @@ Todo - setup piazza
 
 ---
 
-# *Questions?*
+## *Questions?*
 
 ---
 
-Todo - use real dates and make it fit
-# Schedule
-Available at [GitHub Syllabus page](http://jretz.github.com/datamining290/)
+## Schedule
+Available at [GitHub Syllabus page](http://github.com/jretz/datamining290/)
 
-  + Jan 25 Class Intro ; Tools Intro by /GUEST: Shreyas/
+  + Jan 23 Class Intro ; Tools Intro by /GUEST: Shreyas/
     + lab: Git Intro
-  + Feb 1 Case Studies ; Obtaining Data
-  + Feb 8 Probability ; Preprocessing
-  + Feb 15 MapReduce, Data Warehouse
-  + Feb 22 Decision Trees; Naive Bayes
-  + Mar 1 SVM ; Neural Networks
-  + Mar 8 Clustering ; Review
+  + Jan 30 Case Studies ; Obtaining Data
+  + Feb 6 Probability ; Preprocessing
+  + Feb 13 MapReduce, Data Warehouse
+  + Feb 20 Decision Trees; Naive Bayes
+  + Feb 27 SVM ; Neural Networks
+  + Mar 6 Clustering ; Review
     + lab: Project Proposal Due
-  + Mar 15 *Midterm*
+  + Mar 13 *Midterm*
     + lab: -
-  + Mar 21 Dimensionality Curse ; Graph Mining
-  + Mar 29 HOLIDAY
-  + Apr 5 Pattern ; Evaluations
-  + Apr 12 Collaborative Filtering; PageRank
-  + Apr 19 Feature Extraction ; Evaluation
-  + Apr 26 Images ; Audio
-  + May 3 Visualization ; HTML
-  + May 10 In Real Life ; Review
+  + Mar 20 Dimensionality Curse ; Graph Mining
+  + Mar 27 HOLIDAY
+  + Apr 3 Pattern ; Evaluations
+  + Apr 10 Collaborative Filtering; PageRank
+  + Apr 17 Feature Extraction ; Evaluation
+  + Apr 24 Images ; Audio
+  + May 1 Visualization ; HTML
+  + May 8 In Real Life ; Review
     + lab: -
-  + May 17 Final Presentation
+  + May 15 Final Presentation
     + lab: Bye!
 
 ---
 
-# Hi, I'm Jimmy Retzlaff
+## Hi, I'm Jimmy Retzlaff
   + Yelp - ads engineer and now ads engineering manager
   + Amazon / Lab126 - Kindle on-device content search
   + Aver - sales visualizations for the investment industry
@@ -182,14 +181,14 @@ Available at [GitHub Syllabus page](http://jretz.github.com/datamining290/)
 
 ---
 
-# Hi, I'm Shreyas
+## Hi, I'm Shreyas
   + First year Grad Student (MIMS '14)
   + Also TA'd Analyzing Big Data class
   + I can be reached at [seekshreyas@gmail.com](mailto:seekshreyas@gmail.com)
 
 ---
 
-# Data is Important
+## Data is Important
   + Making decisions is a core part of humanity
   + Data can help you make better decisions
   + Challenge: extract information from data to improve decisions
@@ -197,29 +196,27 @@ Available at [GitHub Syllabus page](http://jretz.github.com/datamining290/)
 ???
 
 ## Decisions
-   + From big to small; from planning to execution
-   + Business questions: what is the ROI of this feature? Where to concentrate
-     development?
-   + Personal questions: Where to eat dinner tonight? What movie to see?
-   + Improving decisions means improving quality of life
+  + From big to small; from planning to execution
+  + Business questions: what is the ROI of this feature? Where to concentrate
+    development?
+  + Personal questions: Where to eat dinner tonight? What movie to see?
+  + Improving decisions means improving quality of life
 
 ---
 
-class: center
-
-Todo - get iframe to work
-# Data is Important
-<iframe width="560" height="315" src="http://www.youtube.com/embed/y7een27u1GM" frameborder="0" allowfullscreen></iframe>
+## Data is Important
+[![Reviews, Reputation, and Revenue: The Case for Yelp.com](http://img.youtube.com/vi/y7een27u1GM/0.jpg)](http://www.youtube.com/embed/y7een27u1GM)
 
 ???
+[![Reviews, Reputation, and Revenue: The Case for Yelp.com](http://img.youtube.com/vi/y7een27u1GM/0.jpg)](http://www.youtube.com/watch?v=y7een27u1GM)
 
 ## Nice example of data mining
-   + Stop at 3:51
-   + Had to work with external parties to get data (Yelp, city of Seattle)
-   + Had to clean data (literally, sometimes he was just handed paper receipts)
-   + Used regression analysis to discover patterns
-   + created follow up questions
-   + Used result to understand the meaning behind the data
+  + Stop at 3:51
+  + Had to work with external parties to get data (Yelp, city of Seattle)
+  + Had to clean data (literally, sometimes he was just handed paper receipts)
+  + Used regression analysis to discover patterns
+  + created follow up questions
+  + Used result to understand the meaning behind the data
 
 ---
 
@@ -232,10 +229,106 @@ Todo - get iframe to work
 ???
 
 ## Ecosystem
-   + We'll talk about several ways to think about the process from data to
-     knowledge
-   + No universally agreed process, or black-and-white boundaries
-   + Analysis: used at the beginning of investigations to understand data
-     characteristics
-   + Visualization: better understanding of the results of analysis or data
-     mining
+  + We'll talk about several ways to think about the process from data to
+    knowledge
+  + No universally agreed process, or black-and-white boundaries
+  + Analysis: used at the beginning of investigations to understand data
+    characteristics
+  + Visualization: better understanding of the results of analysis or data
+    mining
+
+---
+
+## Analysis vs. Data Mining
+
+### Analysis
+  + Manually investigating data. No algorithms.
+  + Statistical qualities: mean, median, standard deviation
+  + Histograms (manually set buckets)
+  + Counts / Percentages
+
+### Data Mining
+  + Discovering patterns though automated algorithms
+  + Regressions: fitting data to a model
+  + Clustering: grouping data without manually set descriptions
+  + Classification: identifying divisive features
+
+???
+
+## Pedantic
+
+  + Difference is subtle, but important for both the project and your resume
+
+---
+
+## Machine Learning
+
+  + Programs that can learn from data
+  + Focus on prediction, based on verified training data
+  + Used in two ways: during Data Mining and after Data Mining
+
+[![Robot reading](http://distillery.s3.amazonaws.com/media/2011/06/15/04cfeacce2f4404483d96a4428f9adbd_7.jpg)](http://photopile.me/user/hartanta/?max_id=100596871_2487764#)
+
+???
+
+## Uses
+
+  + During - assume we have training data, train on it, see how useful trained
+    program is or find outliers
+  + After - Discover clusters, verify and label clusters. Use labeled clusters
+    to train a program to recognize new data points
+
+---
+
+## Probability & Statistics
+
+  + Data describes real world events
+  + Probability can describe real world *expected* events
+  + Distributions can be used to summarize data, understand the factors behind
+    its creation
+
+<center><img src="file:img/Poisson_cdf.svg.png" width=60% /></center>
+
+???
+
+## Uses
+
+  + Can "fit" data to a distribution, find outliers that are unexpected
+  + An example: Poisson distribution describes the expectation of a particular
+    number of events occurring.
+    + e.g., pieces of mail. Average is 4, but it can vary. Is getting 7 or more
+      pieces of mail really an outlier?
+
+---
+
+## Process
+
+### [Knowledge Discovery in Databases (KDD)](http://en.wikipedia.org/wiki/Data_mining#Process)
+  + Selection
+  + Pre-processing
+  + Transformation
+  + Data Mining
+  + Interpretation/Evaluation
+
+### [Cross Industry Standard Process for Data Mining](http://en.wikipedia.org/wiki/Cross_Industry_Standard_Process_for_Data_Mining)
+  + Business Understanding
+  + Data Understanding
+  + Data Preparation
+  + Modeling
+  + Evaluation
+  + Deployment
+
+???
+
+## Common Themes
+   + Figure out what you want to do
+   + Get the data
+   + Make sure it's OK
+   + Understanding
+   + Make a decision, test its effectiveness
+   + Reading will cover another process, aimed at "Data Science", but basically
+     applies to Data Mining
+
+---
+
+## *Break*
