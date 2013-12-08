@@ -2,14 +2,14 @@
 
 ### Description
 Learn how to obtain, clean, visualize, understand, model, and
-predict the world around you using data.  Grading will consist of homework
-(30%), midterm (30%), project (40%).
+predict the world around you using data. Grading will consist of homework
+(30%), a midterm (30%), and a project (40%).
 
 ### Instructor
-Jimmy Retzlaff <jretz@ischool>
+Jimmy Retzlaff <jretz@ischool\>
 
 ### GSI
-Shreyas <shreyas@ischool>
+Shreyas <shreyas@ischool\>
 
 ### Textbook
 Han, J., Kamber, M., & Pei, J. (2011). _Data Mining: Concepts and Techniques_, Third Edition *(3rd ed.)*. Morgan Kaufmann.
@@ -37,4 +37,4 @@ DM[0-9]+ indicates chapters from the text, _Data Mining_.
 | Apr 24 | DM12; [Shazam Audio Search](http://www.ee.columbia.edu/~dpwe/papers/Wang03-shazam.pdf)                                                                                                                                                     | [Outliers](file:slides/2014-04-24-Outliers.html); [Images & Audio](file:slides/2014-04-24-Multimedia.html)                                                       | [Midterm Review](file:slides/2014-04-24-Midterm-HW.html)                                            |
 | May 1  | [Embedded Plots](https://groups.google.com/group/gsofgs/attach/2f1cdd7a999c3ad8/embedded-plots.pdf?part=2&authuser=0) ; [Data-Driven Documents](http://vis.stanford.edu/files/2011-D3-InfoVis.pdf)                                         | [Visualization]file:slides/2014-05-01-Visualization.html) ; [Yelp's Visualizations](file:slides/2014-05-01-Yelp-Visualization.html)                              | [D3 Intro](http://vogievetsky.github.io/IntroD3/); [D3 Lab](file:slides/2014-05-01-D3.html)         |
 | May 18 | [A Few Useful Things to Know about Machine Learning](http://homes.cs.washington.edu/~pedrod/papers/cacm12.pdf) ; [Top 10 Algorithms in Data Mining](http://www.cs.uvm.edu/~icdm/algorithms/10Algorithms-08.pdf)                            | [In Real Life](file:slides/2014-05-08-Real-World.html) ; Presentations                                                                                           | May 14th: Project Papers Due                                                                        |
-| May 15 |  -                                                                                                                                                                                                                                         | Final Presentation                                                                                                                                               | Bye!                                                                                                |
+| May 15 |                                                                                                                                                                                                                                            | Final Presentation                                                                                                                                               | Bye!                                                                                                |
