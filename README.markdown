@@ -6,10 +6,10 @@ predict the world around you using data. Grading will consist of homework
 (30%), a midterm (30%), and a project (40%).
 
 ### Instructor
-Jimmy Retzlaff <jretz@ischool\>
+Jimmy Retzlaff &lt;jretz@ischool&gt;
 
 ### GSI
-Shreyas <shreyas@ischool\>
+Shreyas &lt;shreyas@ischool&gt;
 
 ### Textbook
 Han, J., Kamber, M., & Pei, J. (2011). _Data Mining: Concepts and Techniques_, Third Edition *(3rd ed.)*. Morgan Kaufmann.
