@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Data Mining</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <style type="text/css">
+      @import url(http://fonts.googleapis.com/css?family=Droid+Serif);
+      @import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+
+      body {
+        font-family: 'Droid Serif';
+        font-size: 20px;
+      }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: 400;
+        margin-bottom: 0;
+      }
+      h1 { font-size: 4em; }
+      h2 { font-size: 2em; }
+      h3 { font-size: 1.6em; }
+      .footnote {
+        position: absolute;
+        bottom: 3em;
+      }
+      li p { line-height: 1.25em; }
+      .red { color: #fa0000; }
+      .large { font-size: 2em; }
+      a, a > code {
+        color: rgb(249, 38, 114);
+        text-decoration: none;
+      }
+      code {
+        -moz-border-radius: 3px;
+        -web-border-radius: 3px;
+        background: #e7e8e2;
+        color: black;
+        border-radius: 3px;
+        /*font-size: 16px;*/
+      }
+      em { color: #80cafa; }
+      .pull-left {
+        float: left;
+        width: 47%;
+      }
+      .pull-right {
+        float: right;
+        width: 47%;
+      }
+      .pull-right ~ p {
+        clear: both;
+      }
+      #slideshow .slide .content code {
+        font-size: 0.8em;
+      }
+      #slideshow .slide .content pre code {
+        font-size: 0.9em;
+        padding: 15px;
+      }
+      .inverse {
+        background: #272822;
+        color: #e3e3e3;
+        text-shadow: 0 0 20px #333;
+      }
+      .inverse h1, .inverse h2 {
+        color: #f3f3f3;
+        line-height: 0.8em;
+      }
+
+      /* Slide-specific styling */
+      #slide-inverse .footnote {
+        bottom: 12px;
+        left: 20px;
+      }
+      #slide-how .slides {
+        font-size: 0.9em;
+        position: absolute;
+        top:  151px;
+        right: 140px;
+      }
+      #slide-how .slides h3 {
+        margin-top: 0.2em;
+      }
+      #slide-how .slides .first, #slide-how .slides .second {
+        padding: 1px 20px;
+        height: 90px;
+        width: 120px;
+        -moz-box-shadow: 0 0 10px #777;
+        -webkit-box-shadow: 0 0 10px #777;
+        box-shadow: 0 0 10px #777;
+      }
+      #slide-how .slides .first {
+        background: #fff;
+        position: absolute;
+        top: 20%;
+        left: 20%;
+        z-index: 1;
+      }
+      #slide-how .slides .second {
+        position: relative;
+        background: #fff;
+        z-index: 0;
+      }
+
+      /* Two-column layout */
+      .left-column {
+        width: 48%;
+        float: left;
+      }
+      .right-column {
+        width: 48%;
+        float: right;
+      }
+
+      /* Tables */
+      table {
+        border-collapse: collapse;
+        margin: 0px;
+      }
+      table, th, td {
+        border: 1px solid white;
+      }
+      th, td {
+        padding: 7px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+
+name: inverse
+layout: true
+class: left, top, inverse
+
+---
+
+*Todo: test!*
+
+## Lab: Data Stats
+
+  + Obtain California (CA) [campaign finance data](http://www.fec.gov/disclosurep/PDownload.do)
+  + Decompress
+  + Manually check
+  + Run ```code/stats.py```
+  + Edit ```code/stats.py``` to add functionality
+  + Pull Request submission
+
+---
+
+*Todo: test!*
+
+## Data
+
+  + [campaign finance data](http://www.fec.gov/disclosurep/PDownload.do)
+  + We'll just be using CA data
+  + Decompress and investigate using the tools we discussed
+
+---
+
+## Code
+
+```bash
+$ git checkout master
+$ git pull jretz master
+$ git checkout -b hw-stats
+```
+  + Run and edit ```code/stats.py```
+
+---
+
+## Stats
+
+  + Minimum
+  + Maximum
+  + Mean
+  + Median
+  + Standard Deviation
+  + Candidates
+  + Normalized sample contributions
+
+---
+
+## Extra credit
+
+  + Extra credit is used to get you *up to 100%*
+  + On the *current assignment*
+  + Also helpful for learning topics more in depth
+  + You may do partial extra credit
+
+???
+
+## Overall Extra Credit
+
+  + Extra credit that applies to overall grade will not be assigned
+
+---
+
+## Extra Credit
+  + Stats per candidate
+  + z-score
+
+---
+
+## Git usage
+
+  + All edits, commits, pushes should happen on a ```hw-``` or ```project``` branch
+  + ```git status```
+  + All pulls (typically from ```jretz```) should happen on ```master``` branch
+  + If you use an editor connected to ischool server, make sure you are
+    *either* editing *or* using git
+
+???
+
+## Exceptions
+
+  + There are exceptions but know what you're trying to do
+  + External editors can write back files *after* you've changed git branches
+
+---
+
+## Submission
+
+  + GitHub pull request
+  + If something is going wrong, submit by email: jretz@ischool,
+    shreyas@ischool
+  + We'll help you submit the pull request, but you'll get full credit
+
+???
+
+## Submission
+
+  + The pull request is a way for Shreyas and I to easily see changes, grade
+  + It'll give you good experience, but it is not a fundamental skill of the
+    class, so I'm not too worried about it
+
+    </textarea>
+    <script src="production/remark-0.5.9.min.js" type="text/javascript">
+    </script>
+    <script type="text/javascript">
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>
