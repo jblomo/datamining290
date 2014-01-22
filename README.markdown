@@ -1,6 +1,4 @@
----
-title: Data Mining 290
----
+# Data Mining 290
 
 ### Description
 Learn how to obtain, clean, visualize, understand, model, and
