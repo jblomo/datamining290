@@ -74,7 +74,7 @@ class: center
   + Basic command line: SSH, downloading, copying large files, running programs
     against data
   + Textbook: Han, J., Kamber, M., & Pei, J. (2011). _Data Mining: Concepts and Techniques_, Third Edition *(3rd ed.)*. Morgan Kaufmann.
-  + Technology will be available on http://ischool.berkeley.edu
+  + Technology will be available on ```ischool.berkeley.edu```
 
 ???
 
