@@ -6,7 +6,7 @@ class: left, top, inverse
 
 class: center
 
-# Data Mining i290
+# Data Mining 290T-03
 ## Jimmy Retzlaff & Shreyas
 
 ---
@@ -114,7 +114,8 @@ class: center
   + Expect to be asked a question
   + Breaks
   + Lab: Stick around and get the first question of homework done
-  + Slides on http://github.com/jretz/datamining290/
+  + Slides on http://jretz.github.io/datamining290/
+  + Source for everything on https://github.com/jretz/datamining290/
 
 ???
 
@@ -127,12 +128,11 @@ class: center
 
 ---
 
-Todo - setup piazza
 ## Office Hours
   + We'll stay after class
   + or schedule a Skype call
-  + [Piazza](https://piazza.com/class#spring2014/i290) for questions and
-    announcements
+  + [Piazza](https://piazza.com/berkeley/spring2014/info290t03/home) for
+    questions and announcements
   + Wait list will be processed normally until 3rd week... then I'll accept
     everyone who's participated in class if we have physical room
 
@@ -145,7 +145,7 @@ Todo - setup piazza
 ## Schedule
 Available at [GitHub Syllabus page](http://github.com/jretz/datamining290/)
 
-  + Jan 23 Class Intro ; Tools Intro by /GUEST: Shreyas/
+  + Jan 23 Class Intro ; Tools Intro by GUEST: Shreyas
     + lab: Git Intro
   + Jan 30 Case Studies ; Obtaining Data
   + Feb 6 Probability ; Preprocessing
