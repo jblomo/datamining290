@@ -182,9 +182,9 @@ Available at [GitHub Syllabus page](http://github.com/jretz/datamining290/)
 ---
 
 ## Hi, I'm Shreyas
-  + First year Grad Student (MIMS '14)
-  + Also TA'd Analyzing Big Data class
-  + I can be reached at [seekshreyas@gmail.com](mailto:seekshreyas@gmail.com)
+  + Second year graduate student at ISchool
+  + Also TA'd Analyzing Big Data class and this class last year
+  + I can be reached at [shreyas@ischool](mailto:shreyas@ischool)
 
 ---
 
