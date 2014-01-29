@@ -20,7 +20,7 @@ class: left, top, inverse
 ]
 
 .right-column[
-<img src="file:img/bottlecaps.jpg" width=100%/>
+<img src="img/bottlecaps.jpg" width=100%/>
 ]
 
 ???
@@ -102,7 +102,7 @@ Feedback
   + Requires extra maintenance and understanding of construction
 ]
 .right-column[
-  <img src="file:img/Ikea-Warehouse.jpg" width=100%/>
+  <img src="img/Ikea-Warehouse.jpg" width=100%/>
 ]
 ???
 
@@ -212,7 +212,7 @@ Feedback
   + Formats vary, but usually documented
   + Can be useful to combine with other datasets or APIs
 
-<img src="file:img/kaggle-digits.png" width=80%/>
+<img src="img/kaggle-digits.png" width=80%/>
 
 ???
 
@@ -235,7 +235,7 @@ Feedback
   + [Hilary Mason's Data Sets](https://bitly.com/bundles/hmason/1)
 ]
 .right-column[
-<img src="file:img/video.jpg" width=100%/>
+<img src="img/video.jpg" width=100%/>
 ]
 
 ---

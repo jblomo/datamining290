@@ -287,7 +287,7 @@ Available at [GitHub Syllabus page](http://jretz.github.io/datamining290/)
   + Distributions can be used to summarize data, understand the factors behind
     its creation
 
-<center><img src="file:img/Poisson_cdf.svg.png" width=60% /></center>
+<center><img src="img/Poisson_cdf.svg.png" width=60% /></center>
 
 ???
 
