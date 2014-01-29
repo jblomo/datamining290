@@ -149,21 +149,23 @@ Feedback
 
 ## Search Logs Example
 
+.tight-code[
 ```
-193.139.1 jimmy [10/Oct/2013:13:55:36 -0700] "GET /search?query=headache HTTP/1.1" 200 9288
-282.482.3 shreyas [10/Oct/2013:13:56:36 -0700] "GET /search?query=bananas HTTP/1.1" 200 2929
-345.114.1 steven [10/Oct/2013:13:56:37 -0700] "GET /search?query=cold HTTP/1.1" 200 8232
-10.328.52 anne [10/Oct/2013:13:56:39 -0700] "GET /search?query=flu+shot HTTP/1.1" 200 2342
-10.328.52 lily [10/Oct/2013:13:57:40 -0700] "GET /search?query=i290 HTTP/1.1" 200 2342
+193.139.1 jimmy [10/Oct/2013:13:55:36] "GET /search?q=headache HTTP/1.1" 200 9288
+282.482.3 shreyas [10/Oct/2013:13:56:36] "GET /search?q=bananas HTTP/1.1" 200 2929
+345.114.1 steven [10/Oct/2013:13:56:37] "GET /search?q=cold HTTP/1.1" 200 8232
+10.328.52 anne [10/Oct/2013:13:56:39] "GET /search?q=flu+shot HTTP/1.1" 200 2342
+10.328.52 lily [10/Oct/2013:13:57:40] "GET /search?q=i290 HTTP/1.1" 200 2342
 ```
+]
 
-| user_name | date                       | query    |
-|-----------|----------------------------|----------|
-| jimmy     | 10/Oct/2013:13:55:36 -0700 | headache |
-| shreyas   | 10/Oct/2013:13:56:36 -0700 | bananas  |
-| steven    | 10/Oct/2013:13:56:37 -0700 | cold     |
-| anne      | 10/Oct/2013:13:56:39 -0700 | flu shot |
-| lily      | 10/Oct/2013:13:57:40 -0700 | i290     |
+| user_name | date                 | query    |
+|-----------|----------------------|----------|
+| jimmy     | 10/Oct/2013:13:55:36 | headache |
+| shreyas   | 10/Oct/2013:13:56:36 | bananas  |
+| steven    | 10/Oct/2013:13:56:37 | cold     |
+| anne      | 10/Oct/2013:13:56:39 | flu shot |
+| lily      | 10/Oct/2013:13:57:40 | i290     |
 
 ???
 
@@ -193,8 +195,8 @@ Feedback
 
 ## NYTimes API Example
 
-  + [Article Search API](http://developer.nytimes.com/docs/read/article_search_api)
-  + http://api.nytimes.com/svc/search/v1/article?format=json&query=ballot&api-key=6578bab7f8c3808ce4c392edc9a793f0:8:5717915
+  + [Article Search API](http://developer.nytimes.com/docs/read/article_search_api_v2)
+  + http://api.nytimes.com/svc/search/v2/articlesearch.json?fq=berkeley&begin_date=20140101&end_date=20140131&api-key=d394cd6a13605351d187e3864dfcea30:8:68746734
 
 ???
 
@@ -292,9 +294,11 @@ Feedback
   + Used for downloading files
   + Downloading with the browser is fine, but sometimes nice to use a faster
     connection, or download it directly to the machine you're working on
+.tight-code[
 ```bash
 $ wget 'http://www.grouplens.org/system/files/ml-100k.zip'
 ```
+]
 
 ???
 
@@ -313,14 +317,20 @@ $ wget 'http://www.grouplens.org/system/files/ml-100k.zip'
   + Uses same connection as SSH, but copies data instead
   + Example: Copy data you've downloaded in your browser
 
+.tight-code[
 ```bash
 $ scp ~/Downloads/ml-100k.zip jretz@ischool.berkeley.edu:
+```
+]
 
-# or
+OR
 
+.tight-code[
+```
 $ scp ~/Downloads/ml-100k.zip \
 jretz@ischool.berkeley.edu:i290/movielens-100k.zip
 ```
+]
 
 ???
 
@@ -337,9 +347,11 @@ jretz@ischool.berkeley.edu:i290/movielens-100k.zip
   + Uncompress data sets for simpler, faster manipulation
   ```
   $ unzip ml-100k.zip
+  ```
 
-  # or
+  OR
 
+  ```
   $ gunzip dataset.json.gz
   ```
 
@@ -388,10 +400,14 @@ jretz@ischool.berkeley.edu:i290/movielens-100k.zip
 ## ```grep```
 
   + Find and print lines matching a "regular expression"
-  + [Regular expressions](http://www.regular-expressions.info/quickstart.html) are "find" on steroids, but you can use simple strings
+  + [Regular expressions](http://www.regular-expressions.info/quickstart.html)
+    are "find" on steroids, but you can use simple strings
+
+.tight-code[
 ```bash
 $ grep '"name": "Cindy"' yelp_academic_dataset_user.json
 ```
+]
 
 ---
 
@@ -412,16 +428,19 @@ $ wc -l yelp_academic_dataset_user.json
   + ```|``` pipe characters "sends" output of one program to the input of another
   + How many people named Cindy in the dataset?
 
+.tight-code[
 ```bash
 $ grep '"name": "Cindy"' yelp_academic_dataset_user.json | wc -l
 91
 ```
+]
 
 + What are the most common names in the dataset?
 
+.tight-code[
 ```bash
 $ egrep -o '"name": "([^"]*)"' yelp_academic_dataset_user.json | \
-  sort -n | uniq -c | sort -nr | head
+  sort | uniq -c | sort -nr | head
 465 "name": "David"
 447 "name": "John"
 418 "name": "Michael"
@@ -433,3 +452,4 @@ $ egrep -o '"name": "([^"]*)"' yelp_academic_dataset_user.json | \
 265 "name": "Jason"
 261 "name": "Mark"
 ```
+]

@@ -4,19 +4,7 @@ class: left, top, inverse
 
 ---
 
-## Questions
-  + Differences from [CS 294 Behavioral Data Mining](http://bid.berkeley.edu/cs294-1-spring13/index.php/Main_Page)
-  + Course Load
-  + Readings: after lecture
-
-???
-
-## Memory :notes:
-  + Spaced intervals makes memorizing easiest
-
----
-
-## Case Studies
+# Case Studies
 
 ---
 
@@ -48,13 +36,15 @@ class: left, top, inverse
 
 ## Search Engine Logs
 
+.tight-code[
 ```log
-193.139.1 jimmy [10/Oct/2013:13:55:36 -0700] "GET /search?query=headache HTTP/1.1" 200 9288
-282.482.3 shreyas [10/Oct/2013:13:56:36 -0700] "GET /search?query=bananas HTTP/1.1" 200 2929
-345.114.1 steven [10/Oct/2013:13:56:37 -0700] "GET /search?query=cold HTTP/1.1" 200 8232
-10.328.52 anne [10/Oct/2013:13:56:39 -0700] "GET /search?query=flu+shot HTTP/1.1" 200 2342
-10.328.52 lily [10/Oct/2013:13:57:40 -0700] "GET /search?query=i290 HTTP/1.1" 200 2342
+193.139.1 jimmy [10/Oct/2013:13:55:36] "GET /search?q=headache HTTP/1.1" 200 9288
+282.482.3 shreyas [10/Oct/2013:13:56:36] "GET /search?q=bananas HTTP/1.1" 200 2929
+345.114.1 steven [10/Oct/2013:13:56:37] "GET /search?q=cold HTTP/1.1" 200 8232
+10.328.52 anne [10/Oct/2013:13:56:39] "GET /search?q=flu+shot HTTP/1.1" 200 2342
+10.328.52 lily [10/Oct/2013:13:57:40] "GET /search?q=i290 HTTP/1.1" 200 2342
 ```
+]
 
 What is a common theme in these queries?
 
@@ -77,7 +67,7 @@ What is a common theme in these queries?
 ]
 
 .right-column[
-![Flu Trends](file:img/flu-trends.png)
+  ![Flu Trends](file:img/flu-trends.png)
 ]
 
 ???
@@ -87,8 +77,8 @@ What is a common theme in these queries?
   + What other information could you extract from log data?
   + Spread of flu over countries, cities?
   + Time of day? Do people notice in the morning?
-  + correlated with any other activity? (e.g., travel)
-  + best day of the week to call in sick (and get away with it)?
+  + Correlated with any other activity? (e.g., travel)
+  + Best day of the week to call in sick (and get away with it)?
 
 ---
 

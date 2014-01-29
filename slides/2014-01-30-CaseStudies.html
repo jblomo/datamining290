@@ -9,20 +9,25 @@
 
       body {
         font-family: 'Droid Serif';
-        font-size: 20px;
+        font-size: 25px;
+      }
+      .remark-slide-content {
+        padding: 1em 2em 1em 2em;
       }
       h1, h2, h3 {
         font-family: 'Yanone Kaffeesatz';
         font-weight: 400;
+        margin-top: 0;
         margin-bottom: 0;
       }
-      h1 { font-size: 4em; }
-      h2 { font-size: 2em; }
-      h3 { font-size: 1.6em; }
+      h1 { font-size: 3em; }
+      h2 { font-size: 1.8em; }
+      h3 { font-size: 1.4em; }
       .footnote {
         position: absolute;
         bottom: 3em;
       }
+      ul { margin: 8px;}
       li p { line-height: 1.25em; }
       .red { color: #fa0000; }
       .large { font-size: 2em; }
@@ -36,7 +41,9 @@
         background: #e7e8e2;
         color: black;
         border-radius: 3px;
-        /*font-size: 16px;*/
+      }
+      .tight-code {
+        font-size: 20px;
       }
       em { color: #80cafa; }
       .pull-left {
@@ -51,10 +58,10 @@
         clear: both;
       }
       #slideshow .slide .content code {
-        font-size: 0.8em;
+        font-size: 1.6em;
       }
       #slideshow .slide .content pre code {
-        font-size: 0.9em;
+        font-size: 1.6em;
         padding: 15px;
       }
       .inverse {
@@ -64,7 +71,7 @@
       }
       .inverse h1, .inverse h2 {
         color: #f3f3f3;
-        line-height: 0.8em;
+        line-height: 1.6em;
       }
 
       /* Slide-specific styling */
@@ -73,7 +80,7 @@
         left: 20px;
       }
       #slide-how .slides {
-        font-size: 0.9em;
+        font-size: 1.6em;
         position: absolute;
         top:  151px;
         right: 140px;
@@ -111,6 +118,10 @@
         width: 48%;
         float: right;
       }
+      .right-column img {
+        max-width: 120%;
+        max-height: 120%;
+      }
 
       /* Tables */
       table {
@@ -136,19 +147,7 @@ class: left, top, inverse
 
 ---
 
-## Questions
-  + Differences from [CS 294 Behavioral Data Mining](http://bid.berkeley.edu/cs294-1-spring13/index.php/Main_Page)
-  + Course Load
-  + Readings: after lecture
-
-???
-
-## Memory :notes:
-  + Spaced intervals makes memorizing easiest
-
----
-
-## Case Studies
+# Case Studies
 
 ---
 
@@ -180,13 +179,15 @@ class: left, top, inverse
 
 ## Search Engine Logs
 
+.tight-code[
 ```log
-193.139.1 jimmy [10/Oct/2013:13:55:36 -0700] "GET /search?query=headache HTTP/1.1" 200 9288
-282.482.3 shreyas [10/Oct/2013:13:56:36 -0700] "GET /search?query=bananas HTTP/1.1" 200 2929
-345.114.1 steven [10/Oct/2013:13:56:37 -0700] "GET /search?query=cold HTTP/1.1" 200 8232
-10.328.52 anne [10/Oct/2013:13:56:39 -0700] "GET /search?query=flu+shot HTTP/1.1" 200 2342
-10.328.52 lily [10/Oct/2013:13:57:40 -0700] "GET /search?query=i290 HTTP/1.1" 200 2342
+193.139.1 jimmy [10/Oct/2013:13:55:36] "GET /search?q=headache HTTP/1.1" 200 9288
+282.482.3 shreyas [10/Oct/2013:13:56:36] "GET /search?q=bananas HTTP/1.1" 200 2929
+345.114.1 steven [10/Oct/2013:13:56:37] "GET /search?q=cold HTTP/1.1" 200 8232
+10.328.52 anne [10/Oct/2013:13:56:39] "GET /search?q=flu+shot HTTP/1.1" 200 2342
+10.328.52 lily [10/Oct/2013:13:57:40] "GET /search?q=i290 HTTP/1.1" 200 2342
 ```
+]
 
 What is a common theme in these queries?
 
@@ -209,7 +210,7 @@ What is a common theme in these queries?
 ]
 
 .right-column[
-![Flu Trends](file:img/flu-trends.png)
+  ![Flu Trends](file:img/flu-trends.png)
 ]
 
 ???
@@ -219,8 +220,8 @@ What is a common theme in these queries?
   + What other information could you extract from log data?
   + Spread of flu over countries, cities?
   + Time of day? Do people notice in the morning?
-  + correlated with any other activity? (e.g., travel)
-  + best day of the week to call in sick (and get away with it)?
+  + Correlated with any other activity? (e.g., travel)
+  + Best day of the week to call in sick (and get away with it)?
 
 ---
 
