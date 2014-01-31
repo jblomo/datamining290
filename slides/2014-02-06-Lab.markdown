@@ -1,0 +1,104 @@
+name: inverse
+layout: true
+class: left, top, inverse
+
+---
+
+*Todo: test!*
+
+## Lab: Data Stats
+
+  + Obtain California (CA) [campaign finance data](http://www.fec.gov/disclosurep/PDownload.do)
+  + Decompress
+  + Manually check
+  + Run ```code/stats.py```
+  + Edit ```code/stats.py``` to add functionality
+  + Pull Request submission
+
+---
+
+*Todo: test!*
+
+## Data
+
+  + [campaign finance data](http://www.fec.gov/disclosurep/PDownload.do)
+  + We'll just be using CA data
+  + Decompress and investigate using the tools we discussed
+
+---
+
+## Code
+
+```bash
+$ git checkout master
+$ git pull jretz master
+$ git checkout -b hw-stats
+```
+  + Run and edit ```code/stats.py```
+
+---
+
+## Stats
+
+  + Minimum
+  + Maximum
+  + Mean
+  + Median
+  + Standard Deviation
+  + Candidates
+  + Normalized sample contributions
+
+---
+
+## Extra credit
+
+  + Extra credit is used to get you *up to 100%*
+  + On the *current assignment*
+  + Also helpful for learning topics more in depth
+  + You may do partial extra credit
+
+???
+
+## Overall Extra Credit
+
+  + Extra credit that applies to overall grade will not be assigned
+
+---
+
+## Extra Credit
+  + Stats per candidate
+  + z-score
+
+---
+
+## Git usage
+
+  + All edits, commits, pushes should happen on a ```hw-``` or ```project``` branch
+  + ```git status```
+  + All pulls (typically from ```jretz```) should happen on ```master``` branch
+  + If you use an editor connected to ischool server, make sure you are
+    *either* editing *or* using git
+
+???
+
+## Exceptions
+
+  + There are exceptions but know what you're trying to do
+  + External editors can write back files *after* you've changed git branches
+
+---
+
+## Submission
+
+  + GitHub pull request
+  + If something is going wrong, submit by email: jretz@ischool,
+    shreyas@ischool
+  + We'll help you submit the pull request, but you'll get full credit
+
+???
+
+## Submission
+
+  + The pull request is a way for Shreyas and I to easily see changes, grade
+  + It'll give you good experience, but it is not a fundamental skill of the
+    class, so I'm not too worried about it
