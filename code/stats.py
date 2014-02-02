@@ -7,7 +7,7 @@ http://www.fec.gov/finance/disclosure/metadata/DataDictionaryContributionstoCand
 import fileinput
 import csv
 
-total = 0
+total = 0.0
 
 for row in csv.reader(fileinput.input(), delimiter='|'):
     if not fileinput.isfirstline():
