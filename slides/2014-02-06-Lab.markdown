@@ -4,11 +4,10 @@ class: left, top, inverse
 
 ---
 
-*Todo: test!*
-
 ## Lab: Data Stats
 
-  + Obtain California (CA) [campaign finance data](http://www.fec.gov/disclosurep/PDownload.do)
+  + Obtain federal [campaign finance data](ftp://ftp.fec.gov/FEC/2012/pas212.zip)
+  + Reference the [data dictionary](http://www.fec.gov/finance/disclosure/metadata/DataDictionaryContributionstoCandidates.shtml)
   + Decompress
   + Manually check
   + Run ```code/stats.py```
@@ -17,15 +16,15 @@ class: left, top, inverse
 
 ---
 
-*Todo: test!*
-
 ## Data
 
-  + [campaign finance data](http://www.fec.gov/disclosurep/PDownload.do)
-  + We'll just be using CA data
+  + [Campaign finance data](ftp://ftp.fec.gov/FEC/2012/pas212.zip)
+  + The [data dictionary](http://www.fec.gov/finance/disclosure/metadata/DataDictionaryContributionstoCandidates.shtml) tells you the format of the data
   + Decompress and investigate using the tools we discussed
 
 ---
+
+*TODO: did we tell them to name the remote jretz?*
 
 ## Code
 
