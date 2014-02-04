@@ -108,13 +108,13 @@ dimension, variable, signal
 
 ---
 
-*Todo: image assumes light background*
-
 ## Dispersion
 
   + Centrality not the whole story
 
+.white-background[
 <img src="img/dispersion.png" width=90%/>
+]
 
 ???
 
@@ -124,11 +124,11 @@ dimension, variable, signal
 
 ---
 
-*Todo: image assumes light background*
-
 ## Quartiles
 
+.limit-size[.white-background[
 <img src="img/quartiles.png" width=100%/>
+]]
 
 ???
 
@@ -146,15 +146,15 @@ dimension, variable, signal
 
 ---
 
-*Todo: image assumes light background*
-
 ## Standard Deviation
 
   + Within 1: 68%
   + Within 2: 95%
   + Within 3: 99.7%
 
+.white-background[
 <img src="img/stddev.png" width=100%/>
+]
 
 ???
 
@@ -289,15 +289,15 @@ dimension, variable, signal
 
 ---
 
-*Todo: image assumes light background*
-
 ## Euclidean distance
 
   + Straight line between two points
   + Again: usually considered with just (x,y), but can calculate for any number
     of dimensions
 
+.white-background[
 <img src="img/euclidean.png"/>
+]
 
 ???
 
@@ -307,13 +307,14 @@ dimension, variable, signal
 
 ---
 
-*Todo: image assumes light background*
 
 ## Manhattan distance
 
   + How many blocks would you need to walk between two points?
 
+.white-background[
 <img src="img/manhattan.png"/>
+]
 
 ???
 
@@ -323,21 +324,19 @@ dimension, variable, signal
 
 ---
 
-*Todo: image assumes light background*
-
-*Todo: math symbols*
-
-## L_p norm
+## L<sub>p</sub> norm
 
   + Euclidean distance and Manhattan can be generalized
-  + Euclidean distance referred to as L_2 norm
-  + Chebyshev distance is L_∞
+  + Euclidean distance referred to as L<sub>2</sub> norm
+  + Chebyshev distance is L<sub>∞</sub>
 
+.white-background[
 <img src="img/lp-norm.png"/>
+]
 
 ???
 
-## L_p space
+## L<sub>p</sub> space
 
   + Important for signal processing, math, other applications
   + You may want to study these distances for comparing wave forms, like audio
@@ -357,7 +356,9 @@ dimension, variable, signal
   + How to compare sets with a large difference in magnitude?
   + Model them as vectors, take the cosign of the angle between
 
+.white-background[
 <img src="img/cosine-similarity.png" width=100%/>
+]
 
 ???
 
