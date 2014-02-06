@@ -213,14 +213,6 @@ dimension, variable, signal
 
 ---
 
-*Todo: waterworld?*
-
-## Waterworld
-
-<img src="img/waterworld.jpg"/>
-
----
-
 ## Similarity | Distance
 
   + Two sides of the same coin
