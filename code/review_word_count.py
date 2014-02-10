@@ -5,6 +5,7 @@ import re
 
 WORD_RE = re.compile(r"[\w']+")
 
+
 class ReviewWordCount(MRJob):
     INPUT_PROTOCOL = JSONValueProtocol
 
@@ -24,7 +25,10 @@ class ReviewWordCount(MRJob):
         extract_words: <line, record> => <word, count>
         count_words: <word, counts> => <word, total>
         """
-        return [self.mr(self.extract_words, self.count_words)]
+        return [
+            self.mr(self.extract_words, self.count_words),
+        ]
+
 
 if __name__ == '__main__':
     ReviewWordCount.run()
