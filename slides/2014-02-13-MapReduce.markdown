@@ -34,13 +34,21 @@ class: left, top, inverse
 
 ---
 
-## Solution? animate:
+## Solution?
 
   + Don't use one machine!
   + What are the new challenges?
-  + Distributing data
-  + Calculating overall statistics
-  + Failures
+
+---
+
+
+## Solution?
+
+  + Don't use one machine!
+  + What are the new challenges?
+    + Distributing data
+    + Calculating overall statistics
+    + Failures
 
 ???
 
