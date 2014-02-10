@@ -6,7 +6,6 @@ class: left, top, inverse
 
 # MapReduce
 
-
 ???
 
 ## Spoilers
@@ -17,24 +16,25 @@ class: left, top, inverse
 
 ---
 
-# Yelp has a problem
+## Yelp has a problem
 
-  + 250+ GB of logs per day
-  + Each GB takes 10 minutes to process
+  + 2+ TB of logs per day
+  + Each GB takes at least 2 minutes to process
   + How long to handle a day's logs?
-<img src="img/yelp-growth.png"/>
+
+<img src="img/yelp-growth.png" width=100% />
 
 ???
 
 ## Too long
 
-  + On a single machine 40+ hours!
+  + On a single machine 65+ hours!
   + If we really had only a single machine, we wouldn't be able to keep up!
   + Mistake can't be fixed in a day (billing especially important)
 
 ---
 
-# Solution? animate:
+## Solution? animate:
 
   + Don't use one machine!
   + What are the new challenges?
@@ -46,7 +46,7 @@ class: left, top, inverse
 
 ## New Challenges
 
-  + With many machines, how to they get access to the 100 GB of logs?
+  + With many machines, how do they get access to the 2 TB of logs?
   + How do they coordinate who gets which section of logs?
   + How do we calculate the average?
   + What happens when one of the boxes dies?
@@ -55,12 +55,10 @@ class: left, top, inverse
 
 ---
 
-# Do It Yourself two_col:
+## Do It Yourself
 
   + There are many ways to deal with these challenges
   + Often, people would "roll" their own solutions depending on the problem
-  + Google implemented a generic solution, shared idea
-<img src="img/mapreduce-paper.png"/>
 
 ???
 
@@ -72,14 +70,31 @@ class: left, top, inverse
 
 ---
 
-# Big Idea
+## MapReduce
+
+  + Google implemented a generic solution and shared the idea
+
+<img src="img/mapreduce-paper.png"/>
+
+???
+
+http://research.google.com/archive/mapreduce.html
+
+---
+
+## Big Idea
 
   + Simplify, limit solution expression
   + Enable sophisticated implementation
 
+### Interface
 
-  + Interface: Map() Reduce()
-  + Implementation: Reliably run over 1000s of machines
+  + mapper()
+  + reducer()
+
+### Implementation
+
+  + Reliably use 1,000s of machines for each job
 
 ???
 
@@ -91,13 +106,16 @@ class: left, top, inverse
 
 ---
 
-# MapReduce
+## MapReduce
 
-  + Map: Extract a property to summarize over
-  + Reduce: Summarize all items with a particular property
+  + Mapper
+    + Extracts a property to summarize over
+  + Reducer
+    + Summarizes all items with a particular property
 
+### Simple Constraint
 
-  + Simple: Each operation stateless
++ Each operation is stateless
 
 ???
 
@@ -105,7 +123,7 @@ class: left, top, inverse
 
   + Reading this week includes a video explaining MapReduce much more generally
   + This lecture will focus on it from a practical standpoint for homework
-  + MapReduce's main benefits are for running over many machines, fault
+  + MapReduce's main benefits are for running on many machines, with fault
     tolerance
   + But we'll just practice on one machine
 
@@ -114,18 +132,18 @@ class: left, top, inverse
 ## Example
 
   + Web application logs
-  + How many actions have we seen?
+  + Question: How many instance of each of these actions have we seen?
     + Business views
     + User profile views
     + Searches
 
 ???
 
-### Details
+## Details
 
-  + Business Views: Triple Rock, Bear Raman
-  + User profile: jimmyblomo.yelp.com
-  + Searches: query, location
+  + Business Views: [I.B.'s Hoagies](http://www.yelp.com/biz/i-b-s-hoagies-berkeley) or [Gypsy's Trattoria Italiano](http://www.yelp.com/biz/gypsys-trattoria-italiano-berkeley)
+  + User profile: [Jimmy](http://jretz.yelp.com)
+  + Searches: [cheese near Downtown Berkeley](http://www.yelp.com/search?find_desc=cheese&find_loc=Downtown+Berkeley%2C+Berkeley%2C+CA&ns=1)
 
 ---
 
@@ -146,35 +164,35 @@ class: left, top, inverse
 
 ???
 
-### Logs
+## Logs
 
     + JSON logs, various types of information
     + entire record on one line (wrapped for slides)
 
 ---
 
-## Map
+## Mapper
 
   + Input: Key, Value
   + Output: Keys, Values
 
 ---
 
-## Map Example
+## Mapper Example
 
   + Input Key: Log line number
   + Input Value: Log line text
   + Output Key: Action
-  + Output Value: times this action has occurred *on this line*
+  + Output Value: times this action occurred *on this line*
 
 ???
 
-### Counts
+## Counts
 
   + Log line number is not helpful in our specific case
   + Log line text: we hope it is machine readable so we can accurately extract
     the action
-  + It has datetime, cookie, action, etc.
+    + It has datetime, cookie, action, etc.
   + How many times has this action occurred? 1
   + Tunnel vision: all we care about is this line
 
@@ -196,25 +214,25 @@ search       1
 
 ???
 
-### Middle Step
+## Middle Step
 
   + From log lines, we've extracted the information out that we care about
   + The counts and the actions
   + Next step summarize
-  + Next step after Map?
+  + Next step after Mapper?
 
 ---
 
-## Reduce
+## Reducer
 
   + Input: Key, Values
   + Output: Keys, Values
 
 ???
 
-### Values
+## Values
 
-  + Note: The input is values! Plural
+  + Note: The input is value*s* (plural)
   + Because we get a key and all of its associated values
   + Remind me: what are we trying to get out of this computation?
   + So what do you think the output keys are?
@@ -222,18 +240,18 @@ search       1
 
 ---
 
-## Reduce Example
+## Reducer Example
 
   + Input Key: Action
-  + Input Values: Counts: ```[1,1,1,1]```
+  + Input Values: Counts: ```[1, 1, 1, 1]```
   + Output Key: Action
   + Output Value: Total Count
 
 ???
 
-### Details
+## Details
 
-  + Action is *one of* search biz_view profile_view
+  + Action is *one of* search/biz_view/profile_view
   + To get total count, sum all of the counts
 
 ---
@@ -250,7 +268,7 @@ search       1
 
 ---
 
-# Point?
+## Point?
 
   + A lot of work for counting!
   + More complex calculations can be done this way, eg. PageRank
@@ -320,9 +338,9 @@ user_profile 1
 
 ???
 
-### Splitting Files
+## Splitting Files
 
-  + Image you have a lot of large log files, GB each
+  + Imagine you have a lot of large log files, GBs each
   + You'd like to let different machines work on the same file
   + Split file down the middle, well, at least on a newline
   + Enable two separate machines to work on the parts
@@ -333,14 +351,15 @@ user_profile 1
 
 ---
 
-# Word Count
+## Word Count
 
+.tight-code[
 ```json
 {"text": "Greatest pizza ever", "stars": 2, "user": ...}
-
 {"text": "good pizza selection", "stars": 5, "user": ...}
 ```
-  + Total uses of a word in across all reviews
+]
+  + Total uses of a word across all reviews
 
 ???
 
@@ -351,48 +370,181 @@ user_profile 1
 
 ---
 
-# Steps animate:
-
-  + Map
-  + Extract ```text```
-  + Count words in that review
-  + Key: word , Value: count
-  + Reduce
-  + Key: word , Values: all counts
-  + sum(values)
+## Steps
 
 ???
 
 ## Hints
 
-  + What's the first step (of MapReduce)
+  + What's the first step of MapReduce?
+
+---
+
+## Steps
+
+  + Mapper
+
+???
+
+## Hints
+
   + What part of the record are we interested in?
-  + What do we want with those words?
-  + Mapper: Key Value? What are we grouping by?
-  + Next step (of MapReduce)
-  + What are the reducer inputs
-  + with all of these counts, how do we summarize
 
 ---
 
-## Examples animate:
+## Steps
 
-  + "Greatest pizza ever"
-  + Counts
-    + Greatest: 1
-    + pizza: 1
-    + ever: 1
-  + Reducer, Key: pizza
-    + Values: [1, 1]
-    + Output: ["pizza", 2]
+  + Mapper
+  + Extract the ```text``` of the review
+
+???
+
+## Hints
+
+  + What do we want to do with the text?
 
 ---
 
-# Multi-Step
+## Steps
+
+  + Mapper
+  + Extract the ```text``` of the review
+  + Split text up into words
+
+???
+
+## Hints
+
+  + Mapper: Key / Value? What are we grouping by?
+
+---
+
+## Steps
+
+  + Mapper
+  + Extract the ```text``` of the review
+  + Split text up into words
+  + Key: word ; Value: count
+
+???
+
+## Hints
+
+  + Next step of MapReduce?
+
+---
+
+## Steps
+
+  + Mapper
+  + Extract the ```text``` of the review
+  + Split text up into words
+  + Key: word ; Value: count
+  + Reducer
+
+???
+
+## Hints
+
+  + What are the reducer inputs?
+
+---
+
+## Steps
+
+  + Mapper
+  + Extract the ```text``` of the review
+  + Split text up into words
+  + Key: word ; Value: count
+  + Reducer
+  + Key: word ; Values: all counts for that word
+
+???
+
+## Hints
+
+  + With all of these counts, how do we summarize?
+
+---
+
+## Steps
+
+  + Mapper
+  + Extract the ```text``` of the review
+  + Split text up into words
+  + Key: word ; Value: count
+  + Reducer
+  + Key: word ; Values: all counts for that word
+  + ```sum(values)```
+
+---
+
+## Example
+
+  + ```"Greatest pizza ever"```
+  + Mapper
+
+---
+
+## Example
+
+  + ```"Greatest pizza ever"```
+  + Mapper
+    + Greatest: ```1```
+
+---
+
+## Example
+
+  + ```"Greatest pizza ever"```
+  + Mapper
+    + Greatest: ```1```
+    + pizza: ```1```
+
+---
+
+## Example
+
+  + ```"Greatest pizza ever"```
+  + Mapper
+    + Greatest: ```1```
+    + pizza: ```1```
+    + ever: ```1```
+
+---
+
+## Example
+
+  + ```"Greatest pizza ever"```
+  + Mapper
+    + Greatest: ```1```
+    + pizza: ```1```
+    + ever: ```1```
+  + Reducer
+    + Key: ```pizza```
+    + Values: ```[1, 1]```
+
+---
+
+## Example
+
+  + ```"Greatest pizza ever"```
+  + Mapper
+    + Greatest: ```1```
+    + pizza: ```1```
+    + ever: ```1```
+  + Reducer
+    + Key: ```pizza```
+    + Values: ```[1, 1]```
+    + Output: ```["pizza", 2]```
+
+---
+
+## Multi-Step
 
   + Not all computations can be done in a single MapReduce step
-  + Map Input: <key, value>
-  + Reducer Output: <key, value>
+  + Map Input: ```<key, value>```
+  + Reducer Output: ```<key, value>```
   + Compose MapReduce steps!
 
 ???
@@ -412,38 +564,74 @@ user_profile 1
 
 ## PageRank
 
-  + PageRank is an algorithm for calculating the important of a page
+  + PageRank is an algorithm for calculating the importance of a page
   + But it depends on the importance of every page pointing to it!
-  + So iteratively calculate the important of all pages
+  + So iteratively calculate the importance of all pages
   + Find average presidential donations by candidate, then normalize averages
 
 ---
 
-# Unique Review animate:
+## Unique Review, Step 1
 
-  + Review ID with the most unique words
-  + Map Input: <line number, text>
-  + Map Output: <word, review\_id>
-  + Reducer Input: <word, [review\_ids]>
-  + Reducer Output: <review\_id, 1> if the word is unique
+  + Determine the Review ID with the most unique words
 
 ???
 
 ## Questions
 
   + For our purposes, what is always the mapper input?
+
+---
+
+## Unique Review, Step 1
+
+  + Determine the Review ID with the most unique words
+  + Mapper Input: ```<line number, text>```
+
+???
+
+## Questions
+
   + What feature do we want to calculate first?
+
+---
+
+## Unique Review, Step 1
+
+  + Determine the Review ID with the most unique words
+  + Mapper Input: ```<line number, text>```
+  + Mapper Output: ```<word, review_id>```
+
+???
+
+## Questions
+
   + Given this mapper output, what *must* the reducer input be?
+
+---
+
+## Unique Review, Step 1
+
+  + Determine the Review ID with the most unique words
+  + Mapper Input: ```<line number, text>```
+  + Mapper Output: ```<word, review_id>```
+  + Reducer Input: ```<word, [review_ids]>```
+
+???
+
+## Questions
+
   + What property about a review are we interested in?
 
 ---
 
-## Step 2: Count Unique Words animate:
+## Unique Review, Step 1
 
-  + Map Input: <review\_id, 1>
-  + Map Output: <review\_id, 1>
-  + Reducer Input: <review\_id, [1,1,...]>
-  + Reducer Output: <review\_id, sum>
+  + Determine the Review ID with the most unique words
+  + Mapper Input: ```<line number, text>```
+  + Mapper Output: ```<word, review_id>```
+  + Reducer Input: ```<word, [review_ids]>```
+  + Reducer Output: ```<review_id, 1>``` if the word is unique
 
 ???
 
@@ -451,18 +639,54 @@ user_profile 1
 
   + Given the reducer output, what *must* the mapper input be (for chained
     MapReduce steps)
+
+---
+
+## Step 2: Count Unique Words in Each Review
+
+  + Mapper Input: ```<review_id, 1>```
+
+???
+
+## Questions
+
   + What do we want to group by?
+
+---
+
+## Step 2: Count Unique Words in Each Review
+
+  + Mapper Input: ```<review_id, 1>```
+  + Mapper Output: ```<review_id, 1>```
+
+???
+
+## Questions
+
   + Given this mapper output, what *must* the reducer input be?
+
+---
+
+## Step 2: Count Unique Words in Each Review
+
+  + Mapper Input: ```<review_id, 1>```
+  + Mapper Output: ```<review_id, 1>```
+  + Reducer Input: ```<review_id, [1, 1, ...]>```
+
+???
+
+## Questions
+
   + What are we calculating?
 
 ---
 
-## Step 3: Max animate:
+## Step 2: Count Unique Words in Each Review
 
-  + Map Input: <review\_id, sum>
-  + Map Output: <"MAX", [sum, review\_id]>
-  + Reducer Input: <"MAX", [[sum, review\_id],...]>
-  + Reducer Output: <review\_id, sum> of the max(sum)
+  + Mapper Input: ```<review_id, 1>```
+  + Mapper Output: ```<review_id, 1>```
+  + Reducer Input: ```<review_id, [1, 1, ...]>```
+  + Reducer Output: ```<review_id, sum>```
 
 ???
 
@@ -470,115 +694,52 @@ user_profile 1
 
   + Given the reducer output, what *must* the mapper input be (for chained
     MapReduce steps)
-  + We're calculating a statistic over what portion of the data set?
-  + What stat are we calculating?
-
-
-
 
 ---
 
-Slide 1
-  main
-  notes
-Slide 2
-  main
-    does image fit? is it OK on a dark background?
-  notes
-next slide is animated
-Slide 3
-  main
-  notes
-next slide is two column
-Slide 4
-  main
-    does image fit? is it OK on a dark background?
-  notes
-Slide 5
-  main
-  notes
-Slide 6
-  main
-    a series of sections will work better for some definitions
-    a series of sections will work better for some definitions
-  notes
-Slide 7
-  main
-  notes
-    a series of sections will work better for some definitions
-    a series of sections will work better for some definitions
-    a series of sections will work better for some definitions
-Slide 8
-  main
-  notes
-Slide 9
-  main
-    a series of sections will work better for some definitions
-    a series of sections will work better for some definitions
-Slide 10
-  main
-    a series of sections will work better for some definitions
-    a series of sections will work better for some definitions
-    a series of sections will work better for some definitions
-    a series of sections will work better for some definitions
-  notes
-Slide 11
-  main
-  notes
-Slide 12
-  main
-    a series of sections will work better for some definitions
-    a series of sections will work better for some definitions
-  notes
-Slide 13
-  main
-    a series of sections will work better for some definitions
-    a series of sections will work better for some definitions
-    a series of sections will work better for some definitions
-    a series of sections will work better for some definitions
-  notes
-Slide 14
-  main
-    a series of sections will work better for some definitions
-    a series of sections will work better for some definitions
-Slide 15
-  main
-  notes
-Slide 16
-  main
-  notes
-Slide 17
-  main
-  notes
-Slide 18
-  main
-  notes
-Slide 19
-  main
-  notes
-next slide is animated
-Slide 20
-  main
-  notes
-next slide is animated
-Slide 21
-  main
-Slide 22
-  main
-  notes
-Slide 23
-  main
-  notes
-next slide is animated
-Slide 24
-  main
-  notes
-next slide is animated
-Slide 25
-  main
-  notes
-next slide is animated
-Slide 26
-  main
-  notes
-Headings are the right level?
+## Step 3: Max
+
+  + Mapper Input: ```<review_id, sum>```
+
+???
+
+## Questions
+
+  + We're calculating a statistic over what portion of the data set?
+  + How do we get all of the data to one reducer?
+
+---
+
+## Step 3: Max
+
+  + Mapper Input: ```<review_id, sum>```
+  + Mapper Output: ```<"MAX", [sum, review_id]>```
+
+???
+
+## Questions
+
+  + Given this mapper output, what *must* the reducer input be?
+
+---
+
+## Step 3: Max
+
+  + Mapper Input: ```<review_id, sum>```
+  + Mapper Output: ```<"MAX", [sum, review_id]>```
+  + Reducer Input: ```<"MAX", [[sum, review_id],...]>```
+
+???
+
+## Questions
+
+  + What stat are we calculating?
+
+---
+
+## Step 3: Max
+
+  + Mapper Input: ```<review_id, sum>```
+  + Mapper Output: ```<"MAX", [sum, review_id]>```
+  + Reducer Input: ```<"MAX", [[sum, review_id],...]>```
+  + Reducer Output: ```<review_id, sum>``` of the ```max(sum)```
