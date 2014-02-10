@@ -1,216 +1,265 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-               "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
-<head>
-<title>2013-02-15-mrjob</title>
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
-<meta name="title" content="2013-02-15-mrjob"/>
-<meta name="generator" content="Org-mode"/>
-<meta name="generated" content="2013-02-15 13:52:26 PST"/>
-<meta name="author" content="Jim Blomo"/>
-<meta name="description" content=""/>
-<meta name="keywords" content=""/>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Data Mining</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <style type="text/css">
+      @import url(http://fonts.googleapis.com/css?family=Droid+Serif);
+      @import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
 
-<link rel="stylesheet" type="text/css" href="production/common.css" />
-<link rel="stylesheet" type="text/css" href="production/screen.css" media="screen" />
-<link rel="stylesheet" type="text/css" href="production/projection.css" media="projection" />
-<link rel="stylesheet" type="text/css" href="production/color-blue.css" media="projection" />
-<link rel="stylesheet" type="text/css" href="production/presenter.css" media="presenter" />
-<link href='http://fonts.googleapis.com/css?family=Lobster+Two:700|Yanone+Kaffeesatz:700|Open+Sans' rel='stylesheet' type='text/css'>
+      body {
+        font-family: 'Droid Serif';
+        font-size: 25px;
+      }
+      .remark-slide-content {
+        padding: 1em 2em 1em 2em;
+      }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: 400;
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+      h1 { font-size: 3em; }
+      h2 { font-size: 1.8em; }
+      h3 { font-size: 1.4em; }
+      .footnote {
+        position: absolute;
+        bottom: 3em;
+      }
+      ul { margin: 8px;}
+      li p { line-height: 1.25em; }
+      .red { color: #fa0000; }
+      .large { font-size: 2em; }
+      a, a > code {
+        color: rgb(249, 38, 114);
+        text-decoration: none;
+      }
+      code {
+        -moz-border-radius: 3px;
+        -web-border-radius: 3px;
+        background: #e7e8e2;
+        color: black;
+        border-radius: 3px;
+      }
+      .tight-code {
+        font-size: 20px;
+      }
+      .white-background {
+        background-color: white;
+        padding: 10px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .limit-size img {
+        height: auto;
+        width: auto;
+        max-width: 1000px;
+        max-height: 500px;
+       }
+      em { color: #80cafa; }
+      .pull-left {
+        float: left;
+        width: 47%;
+      }
+      .pull-right {
+        float: right;
+        width: 47%;
+      }
+      .pull-right ~ p {
+        clear: both;
+      }
+      #slideshow .slide .content code {
+        font-size: 1.6em;
+      }
+      #slideshow .slide .content pre code {
+        font-size: 1.6em;
+        padding: 15px;
+      }
+      .inverse {
+        background: #272822;
+        color: #e3e3e3;
+        text-shadow: 0 0 20px #333;
+      }
+      .inverse h1, .inverse h2 {
+        color: #f3f3f3;
+        line-height: 1.6em;
+      }
+
+      /* Slide-specific styling */
+      #slide-inverse .footnote {
+        bottom: 12px;
+        left: 20px;
+      }
+      #slide-how .slides {
+        font-size: 1.6em;
+        position: absolute;
+        top:  151px;
+        right: 140px;
+      }
+      #slide-how .slides h3 {
+        margin-top: 0.2em;
+      }
+      #slide-how .slides .first, #slide-how .slides .second {
+        padding: 1px 20px;
+        height: 90px;
+        width: 120px;
+        -moz-box-shadow: 0 0 10px #777;
+        -webkit-box-shadow: 0 0 10px #777;
+        box-shadow: 0 0 10px #777;
+      }
+      #slide-how .slides .first {
+        background: #fff;
+        position: absolute;
+        top: 20%;
+        left: 20%;
+        z-index: 1;
+      }
+      #slide-how .slides .second {
+        position: relative;
+        background: #fff;
+        z-index: 0;
+      }
+
+      /* Two-column layout */
+      .left-column {
+        width: 48%;
+        float: left;
+      }
+      .right-column {
+        width: 48%;
+        float: right;
+      }
+      .right-column img {
+        max-width: 120%;
+        max-height: 120%;
+      }
+
+      /* Tables */
+      table {
+        border-collapse: collapse;
+        margin: 0px;
+      }
+      table, th, td {
+        border: 1px solid white;
+      }
+      th, td {
+        padding: 7px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
 
 
-</head>
-<body>
+name: inverse
+layout: true
+class: left, top, inverse
 
-<div id="preamble">
+---
 
-</div>
+# Lab: mrjob
 
-<div id="content">
-<h1 class="title">2013-02-15-mrjob</h1>
+  + Understand ```review_word_count.py```
+  + Find review with most unique words
+    + Fill in ```unique_review.py```
+  + Find similar users
+    + Write ```user_similarity.py```
 
+???
 
-<div id="table-of-contents">
-<h2>Table of Contents</h2>
-<div id="text-table-of-contents">
-<ul>
-<li><a href="#sec-1">1 Lab: mrjob</a>
-<ul>
-<li><a href="#sec-1-1">1.1 mrjob</a></li>
-</ul>
-</li>
-<li><a href="#sec-2">2 Data</a>
-<ul>
-<li><a href="#sec-2-1">2.1 Agreement</a></li>
-</ul>
-</li>
-<li><a href="#sec-3">3 Understand review_word_count.py</a></li>
-<li><a href="#sec-4">4 Fill in unique_review.py</a></li>
-<li><a href="#sec-5">5 Write user_similarity.py</a></li>
-</ul>
-</div>
-</div>
+## mrjob
 
-<div id="outline-container-1" class="outline-2">
-<h2 id="sec-1"><span class="section-number-2">1</span> Lab: mrjob &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h2>
-<div class="outline-text-2" id="text-1">
+  + Using the Yelp Academic Dataset
+  + In lecture, we covered the steps for most unique words
+  + Use Jaccard similarity for user\_similarity
 
-<ul>
-<li>Understand <code>review_word_count.py</code>
-</li>
-<li>Find review with most unique words
-<ul>
-<li>Fill in <code>unique_review.py</code>
-</li>
-</ul>
+---
 
-</li>
-<li>Find similar users
-<ul>
-<li>Write <code>user_similarity.py</code>
-</li>
-</ul>
+# Data
 
-</li>
-</ul>
+  + ischool: ```~jretz/yelp_academic_dataset.json```
+  + May copy or use in place
 
+???
 
-</div>
+## Agreement
 
-<div id="outline-container-1-1" class="outline-3">
-<h3 id="sec-1-1"><span class="section-number-3">1.1</span> mrjob &nbsp;&nbsp;&nbsp;<span class="tag"><span class="notes">notes</span></span></h3>
-<div class="outline-text-3" id="text-1-1">
+  + Data set only for use academic purposes
+  + [Yelp Dataset](http://www.yelp.com/academic_dataset)
 
-<ul>
-<li>Using the Yelp Academic Dataset
-</li>
-<li>In lecture, we covered the steps for most unique words
-</li>
-<li>Use Jaccard similarity for user_similarity
-</li>
-</ul>
+---
 
+# Understand review\_word\_count.py
 
-</div>
-</div>
-
-</div>
-
-<div id="outline-container-2" class="outline-2">
-<h2 id="sec-2"><span class="section-number-2">2</span> Data &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h2>
-<div class="outline-text-2" id="text-2">
-
-<ul>
-<li>ischool: <code>~jblomo/yelp_academic_dataset.json</code>
-</li>
-<li>May copy or use in place
-</li>
-</ul>
-
-
-</div>
-
-<div id="outline-container-2-1" class="outline-3">
-<h3 id="sec-2-1"><span class="section-number-3">2.1</span> Agreement &nbsp;&nbsp;&nbsp;<span class="tag"><span class="notes">notes</span></span></h3>
-<div class="outline-text-3" id="text-2-1">
-
-<ul>
-<li>Data set only for use academic purposes
-</li>
-<li><a href="http://www.yelp.com/academic_dataset">Yelp Dataset</a>
-</li>
-</ul>
-
-
-</div>
-</div>
-
-</div>
-
-<div id="outline-container-3" class="outline-2">
-<h2 id="sec-3"><span class="section-number-2">3</span> Understand review_word_count.py &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h2>
-<div class="outline-text-2" id="text-3">
-
-
-
-
-<pre class="src src-bash">$ python review_word_count.py yelp_academic_dataset.json
+```bash
+$ python review_word_count.py yelp_academic_dataset.json
 
 no configs found; falling back on auto-configuration
-creating tmp directory /tmp/review_word_count.jim.20130215.071901.095847
+creating tmp directory /tmp/review_word_count.jimmy.20130215.071901.095847
 reading from file
-&gt; /home/jim/src/datamining290/code/venv/bin/python review_word_count.py --step-num=0 --mapper /tmp/review_word_count.jim.20130215.071901.095847/input_part-00000
-writing to /tmp/review_word_count.jim.20130215.071901.095847/step-0-mapper_part-00000
+> /home/jimmy/src/datamining290/code/venv/bin/python review_word_count.py --step-num=0 --mapper /tmp/review_word_count.jimmy.20130215.071901.095847/input_part-00000
+writing to /tmp/review_word_count.jimmy.20130215.071901.095847/step-0-mapper_part-00000
 Counters from step 1:
   (no counters found)
 ...
-Streaming final output from /tmp/review_word_count.jim.20130215.071901.095847/output
-<span style="color: #8b2252;">"4"</span>     2
-<span style="color: #8b2252;">"5"</span>     1
-<span style="color: #8b2252;">"50"</span>    1
-<span style="color: #8b2252;">"6"</span>     2
-<span style="color: #8b2252;">"7"</span>     2
-<span style="color: #8b2252;">"70s"</span>   1
-<span style="color: #8b2252;">"9"</span>     2
-<span style="color: #8b2252;">"a"</span>     46
-<span style="color: #8b2252;">"abbey"</span> 4
-<span style="color: #8b2252;">"able"</span>  1
-<span style="color: #8b2252;">"about"</span> 4
-</pre>
+Streaming final output from /tmp/review_word_count.jimmy.20130215.071901.095847/output
+"4" 2
+"5" 1
+"50"  1
+"6" 2
+"7" 2
+"70s" 1
+"9" 2
+"a" 46
+"abbey" 4
+"able"  1
+"about" 4
+```
 
+---
 
-</div>
+# Fill in unique\_review.py
 
-</div>
+  + Mutli-step map reduce
+  + Steps are explained in lecture
+  + Skeleton in code
 
-<div id="outline-container-4" class="outline-2">
-<h2 id="sec-4"><span class="section-number-2">4</span> Fill in unique_review.py &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h2>
-<div class="outline-text-2" id="text-4">
+---
 
-<ul>
-<li>Mutli-step map reduce
-</li>
-<li>Steps are explained in lecture
-</li>
-<li>Skeleton in code
-</li>
-</ul>
+# Write user\_similarity.py
 
-
-</div>
-
-</div>
-
-<div id="outline-container-5" class="outline-2">
-<h2 id="sec-5"><span class="section-number-2">5</span> Write user_similarity.py &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h2>
-<div class="outline-text-2" id="text-5">
-
-<ul>
-<li>Find users &gt;= 0.5 similarity
-</li>
-<li>User Similarity: Jaccard similarity of businesses reviewed
-</li>
-<li>{BizA, BizB, BizC} ~ {BizF, BizB, BizG}
-</li>
-</ul>
+  + Find users >= 0.5 similarity
+  + User Similarity: Jaccard similarity of businesses reviewed
+  + {BizA, BizB, BizC} ~ {BizF, BizB, BizG}
 
 
 
 
+---
 
-<script type="text/javascript" src="production/org-html-slideshow.js"></script>
+Slide 1
+  main
+  notes
+Slide 2
+  main
+  notes
+    check link
+Slide 3
+  main
+Slide 4
+  main
+Slide 5
+  main
+Headings are the right level?
 
-</div>
-</div>
-</div>
-
-<div id="postamble">
-<p class="date">Date: 2013-02-15 13:52:26 PST</p>
-<p class="author">Author: Jim Blomo</p>
-<p class="creator">Org version 7.8.02 with Emacs version 23</p>
-<a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>
-
-</div>
-</body>
+    </textarea>
+    <script src="production/remark-0.5.9.min.js" type="text/javascript">
+    </script>
+    <script type="text/javascript">
+      var slideshow = remark.create();
+    </script>
+  </body>
 </html>
