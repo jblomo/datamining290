@@ -31,7 +31,7 @@ dimension, variable, signal
 
 ---
 
-## Feautre Types
+## Feature Types
 
   + Binary: True/False. Also: 0/1
   + Numeric: Involving numbers. Also: integer, float, double
