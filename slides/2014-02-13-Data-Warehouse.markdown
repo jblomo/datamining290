@@ -329,7 +329,7 @@ class: left, top, inverse
 ## Fact table
 
 .white-background[
-<img src="img/star-1.png" width=300 />
+<img src="img/star-1.png" width=313 />
 ]
 
 ---
@@ -505,10 +505,3 @@ class: left, top, inverse
 ---
 
 ## *Break*
-
-
-
-
----
-
-next slide is animated Slide 4
