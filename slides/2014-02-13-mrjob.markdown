@@ -42,7 +42,8 @@ class: left, top, inverse
 
 ## Understand review_word_count.py
 
-  + Note, this will take ~8 minutes on the ischool machine.
+  + Note, this will take ~8 minutes on the ischool machine
+  + Don't run it just yet!
 
 .tight-code[
 ```bash
