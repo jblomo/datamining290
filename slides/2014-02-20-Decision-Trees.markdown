@@ -4,11 +4,63 @@ class: left, top, inverse
 
 ---
 
-# Classification: Decision Trees
+## Classification: Decision Trees
 
 ---
 
-# Types of Models animate:
+## Types of Models
+
+???
+
+## Details
+
+---
+
+## Types of Models
+
+  + Classifiers
+
+???
+
+## Details
+
+  + Classifiers
+    + describes and distinguishes cases. Yelp may want to find a category for
+      a business based on the reviews and business description
+
+---
+
+## Types of Models
+
+  + Classifiers
+  + Regressions
+
+???
+
+## Details
+
+  + Regressions
+    + Predict a continuous value. e.g., predict a home's selling price given
+      square footage and # of bedrooms
+
+---
+
+## Types of Models
+
+  + Classifiers
+  + Regressions
+  + Clustering
+
+???
+
+## Details
+
+  + Clustering
+    + find "natural" groups of data *without labels*
+
+---
+
+## Types of Models
 
   + Classifiers
   + Regressions
@@ -19,16 +71,121 @@ class: left, top, inverse
 
 ## Details
 
-  + Classifiers: describes and distinguishes cases. Yelp may want to find a
-    category for a business based on the reviews and business description
-  + Regressions: Predict a continuous value. Eg. predict a home's selling
-    price given sq footage, # of bedrooms
-  + Clustering: find "natural" groups of data *without labels*
-  + Outlier: find anomalous transactions, eg. finding fraud for credit cards
+   + Outlier
+    + find anomalous transactions, e.g., finding fraud for credit cards
 
 ---
 
-# Process animate:
+## Process
+
+???
+
+## Steps
+
+  + Process
+    + to be able to classify data
+
+---
+
+## Process
+
+  + Training Set
+
+???
+
+## Steps
+
+  + Training Set
+    + Cleaned, preprocessed data that has labels. What are labels?
+
+---
+
+## Process
+
+  + Training Set
+  + Learning
+
+???
+
+## Steps
+
+  + Learning
+    + Feed the training set into an algorithm. Algorithm associates some of the
+      features with the labels and generates a model.
+
+---
+
+## Process
+
+  + Training Set
+  + Learning
+  + Model / Classifier
+
+???
+
+## Steps
+
+  + Model / Classifier
+    + Process or formula used to predict the label (class) given inputs (data
+      records)
+
+---
+
+## Process
+
+  + Training Set
+  + Learning
+  + Model / Classifier
+  + Testing Set
+
+???
+
+## Steps
+
+  + Testing Set
+    + Data *not in training set*, with labels. Run through model to see how the
+      model compares with the real labels.
+
+---
+
+## Process
+
+  + Training Set
+  + Learning
+  + Model / Classifier
+  + Testing Set
+  + Verification / Accuracy
+
+???
+
+## Steps
+
+  + Verification / Accuracy
+    + Given the matches / mismatches in the testing set, how can we measure how
+      well the model reflects reality?
+
+---
+
+## Process
+
+  + Training Set
+  + Learning
+  + Model / Classifier
+  + Testing Set
+  + Verification / Accuracy
+  + New Data
+
+???
+
+## Steps
+
+  + Unseen Data
+    + Finally, we're ready to start using our model / classifier to label new,
+    real, unknown data! So clean and pre-process it the same way.
+
+---
+
+## Process
 
   + Training Set
   + Learning
@@ -42,26 +199,14 @@ class: left, top, inverse
 
 ## Steps
 
-  + Process: to be able to classify data
-  + Training Set: Cleaned, preprocessed data that has labels. What are
-    labels?
-  + Learning: Feed the training set to an algorithm. Algorithm associates
-    some of the features with the labels and generates a model.
-  + Model / Classifier: Process or formula used to predict the label (class) given inputs
-    (data record)
-  + Testing Set: Data *not in training set*, with labels.  Run through model
-    to see how the model compares with the real labels.
-  + Verification / Accuracy: Given the matches / mismatches in the testing
-    set, how can we measure how well the model reflects reality?
-  + Unseen Data: Finally, we're ready to start using our model / classifier to
-    label new, real, unknown data! So clean and pre-process it the same way.
-  + Classification: Feed the unknown data and get out results!
+  + Classification
+    + Feed in the unknown data and get out results!
 
 ---
 
-# Learning
+## Learning
 
-  <img src="img/model.png"/>
+<img src="img/model.png" width=100% />
 
 ???
 
@@ -76,9 +221,9 @@ class: left, top, inverse
 
 ---
 
-# Classification
+## Classification
 
-  <img src="img/classifying.png"/>
+<img src="img/classifying.png" width=100% />
 
 ???
 
@@ -92,16 +237,20 @@ class: left, top, inverse
 
 ---
 
-# Machine Learning
+## Machine Learning
 
-  + Supervised: Given data with a label, predict data without a
-    label
-  + Unsupervised: Given data without labels, group "similar" items
-    together
-  + Semi-supervised: Mix of the above: eg. unsupervised to find groups,
-    supervised to label and distinguish borderline cases
-  + Active: Starting with unlabeled data, select the most helpful cases for a
-    human to label
+  + Supervised
+    + Given data with a label, predict data without a
+      label
+  + Unsupervised
+    + Given data without labels, group "similar" items
+      together
+  + Semi-supervised
+    + Mix of the above: eg. unsupervised to find groups,
+      supervised to label and distinguish borderline cases
+  + Active
+    + Starting with unlabeled data, select the most helpful cases for a
+      human to label
 
 ???
 
@@ -112,12 +261,16 @@ class: left, top, inverse
 
 ---
 
-# Confusion Matrix
+## Confusion Matrix
 
   + What are the ways that classification can be wrong?
-  |                  | Predict: Positive | Predict: Negative |
-  | Actual: Positive | True Positive     | False Negative    |
-  | Actual: Negative | False Negative    | True Negative     |
+
+&nbsp;
+
+|                  | Predict: Positive | Predict: Negative |
+|------------------|-------------------|-------------------|
+| Actual: Positive | True Positive     | False Negative    |
+| Actual: Negative | False Negative    | True Negative     |
 
 ???
 
@@ -129,7 +282,7 @@ class: left, top, inverse
 
 ---
 
-# Recall & Precision
+## Recall & Precision
 
   + Recall: ```TP / P```
   + Precision: ```TP / (TP + FP)```
@@ -143,9 +296,9 @@ class: left, top, inverse
 
 ---
 
-# Example: Search
+## Example: Search
 
-  <img src="img/burrito-search.png"/>
+<img src="img/burrito-search.png" width=100% />
 
 ???
 
@@ -163,7 +316,7 @@ class: left, top, inverse
 
 ---
 
-# Decision Trees
+## Decision Trees
 
   + Rules formulated as a tree of decisions
   + Choose Your Own Adventure for machine learning
@@ -171,7 +324,7 @@ class: left, top, inverse
 
 ???
 
-## Rules expressed trees
+## Rules expressed as trees
 
   + At each node in the tree, pose a question
   + Take a branch depending on your answer
@@ -179,9 +332,9 @@ class: left, top, inverse
 
 ---
 
-# Build a Tree
+## Build a Tree
 
-  <img src="img/model.png"/>
+<img src="img/model.png" width=100% />
 
 ???
 
@@ -196,9 +349,9 @@ class: left, top, inverse
 
 ---
 
-# Build a Tree
+## Build a Tree
 
-  <img src="img/tree-dataset.png"/>
+<img src="img/tree-dataset.png" width=100% />
 
 ???
 
@@ -210,17 +363,17 @@ class: left, top, inverse
 
 ## Build a Tree
 
-  <img src="img/tree.png"/>
+<img src="img/tree.png" width=100% />
 
 ???
 
-### Result
+## Result
 
-    + To a tree like this?
+  + To a tree like this?
 
 ---
 
-# Decision Tree Induction
+## Decision Tree Induction
 
   + Start with all the data
   + Choose the "best" way to divide it up based on one attribute
@@ -244,7 +397,7 @@ class: left, top, inverse
 
 ---
 
-# Information Gain
+## Information Gain
 
   + Comparison of how mixed results are before and after splitting
   + Entropy measurement of "mixed"
@@ -263,7 +416,7 @@ class: left, top, inverse
 
 ---
 
-# Gini Index
+## Gini Index
 
 ```python
   Gini(D) = 1 - sum(frac**2 for frac in classes)
@@ -272,7 +425,7 @@ class: left, top, inverse
 
 ---
 
-# Splitting
+## Splitting
 
   + Discrete values can split per value
   + Or discrete values binary split into subsets
@@ -289,11 +442,12 @@ class: left, top, inverse
 
 ---
 
-# Continuous Splitting
+## Continuous Splitting
 
   + Test every split point to see which is best
   + Possible split points: midpoint between every adjacent value pair
   + Sort attribute, score midpoints
+
 1
 2
 2
@@ -316,7 +470,7 @@ class: left, top, inverse
 
 ---
 
-# Decision Tree Advantages
+## Decision Tree Advantages
 
   + Models easy to understand and visualize
   + Can be faster to construct
@@ -335,95 +489,4 @@ class: left, top, inverse
 
 ---
 
-# *Break*
-
-
-
-
----
-
-Slide 1
-  main
-next slide is animated
-Slide 2
-  main
-  notes
-    a series of sections will work better for some definitions
-    a series of sections will work better for some definitions
-    a series of sections will work better for some definitions
-    a series of sections will work better for some definitions
-next slide is animated
-Slide 3
-  main
-  notes
-    a series of sections will work better for some definitions
-    a series of sections will work better for some definitions
-    a series of sections will work better for some definitions
-    a series of sections will work better for some definitions
-    a series of sections will work better for some definitions
-    a series of sections will work better for some definitions
-    a series of sections will work better for some definitions
-    a series of sections will work better for some definitions
-Slide 4
-  main
-    does image fit? is it OK on a dark background?
-  notes
-Slide 5
-  main
-    does image fit? is it OK on a dark background?
-  notes
-Slide 6
-  main
-    a series of sections will work better for some definitions
-    a series of sections will work better for some definitions
-    a series of sections will work better for some definitions
-    a series of sections will work better for some definitions
-  notes
-Slide 7
-  main
-    table
-    table
-    table
-  notes
-Slide 8
-  main
-  notes
-Slide 9
-  main
-    does image fit? is it OK on a dark background?
-  notes
-Slide 10
-  main
-  notes
-Slide 11
-  main
-    does image fit? is it OK on a dark background?
-  notes
-Slide 12
-  main
-    does image fit? is it OK on a dark background?
-  notes
-Slide 13
-  main
-    does image fit? is it OK on a dark background?
-  notes
-Slide 14
-  main
-  notes
-Slide 15
-  main
-  notes
-Slide 16
-  main
-Slide 17
-  main
-  notes
-Slide 18
-  main
-  notes
-Slide 19
-  main
-  notes
-Slide 20
-  main
-Headings are the right level?
+## *Break*

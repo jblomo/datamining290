@@ -160,16 +160,20 @@ class: left, top, inverse
 
 ---
 
-# Classification: Bayes
+## Classification: Bayes
 
 ---
 
-# Confusion Matrix
+## Confusion Matrix
 
   + What are the ways that classification can be wrong?
-  |                  | Predict: Positive | Predict: Negative |
-  | Actual: Positive | True Positive     | False Negative    |
-  | Actual: Negative | False Negative    | True Negative     |
+
+&nbsp;
+
+|                  | Predict: Positive | Predict: Negative |
+|------------------|-------------------|-------------------|
+| Actual: Positive | True Positive     | False Negative    |
+| Actual: Negative | False Negative    | True Negative     |
 
 ???
 
@@ -179,12 +183,13 @@ class: left, top, inverse
 
 ---
 
-# Testing Data two_col:
+## Testing Data
 
   + Data used to test a learned model
   + Test data was not used to learn
   + Where does test data come from?
-  <img src="img/stork.jpg"/>
+
+<img src="img/stork.jpg"/>
 
 ???
 
@@ -194,17 +199,18 @@ class: left, top, inverse
 
 ---
 
-# Training Data
+## Training Data
 
   + Set aside a portion of training data to test with
   + Test data:
-  <img src="img/k-fold1.png"/>
+
+<img src="img/k-fold1.png"/>
 
 ---
 
 ## Set Aside Testing
 
-  <img src="img/k-fold2.png"/>
+<img src="img/k-fold2.png"/>
 
   Testing Data  |  Training Data
 
@@ -219,9 +225,9 @@ class: left, top, inverse
 
 ## Cross Validation
 
-  <img src="img/k-fold3.png"/>
+<img src="img/k-fold3.png"/>
 
-  Train and test model with different subsets of data
+Train and test model with different subsets of data
 
 ???
 
@@ -235,9 +241,9 @@ class: left, top, inverse
 
 ## K-Fold Validation
 
-  <img src="img/k-fold4.png"/>
+<img src="img/k-fold4.png"/>
 
-  Test against K sections of the data
+Test against K sections of the data
 
 ???
 
@@ -250,15 +256,17 @@ class: left, top, inverse
 
 ## K-Fold Validation
 
-  <img src="img/k-fold5.png"/>
+<img src="img/k-fold5.png"/>
 
 ---
 
-# Bayes Theorem
+## Bayes Theorem
 
-  <img src="img/bayes.png"/>
+.white-background[
+<img src="img/bayes.png"/>
+]
 
-  Can calculate a posterior given priors
+Can calculate a posterior given priors
 
 ???
 
@@ -271,11 +279,13 @@ class: left, top, inverse
 
 ---
 
-# Spam
+## Spam
 
-  <img src="img/bayes-spam.png"/>
+.white-background[
+<img src="img/bayes-spam.png"/>
+]
 
-  Find the probability of spam given it contains a particular word
+Find the probability of spam given it contains a particular word
 
 ???
 
@@ -287,7 +297,20 @@ class: left, top, inverse
 
 ---
 
-# Multiple Words animate:
+## Multiple Words
+
+  + How to calculate probabilities of multiple independent events occurring?
+
+???
+
+## Naive
+
+  + Words are not independent
+  + San? Francisco is more likely
+
+---
+
+## Multiple Words
 
   + How to calculate probabilities of multiple independent events occurring?
   + Model words as independent events
@@ -299,27 +322,48 @@ class: left, top, inverse
 
   + Words are not independent
   + San? Francisco is more likely
-  + But works suprisingly well in practice
+  + But works surprisingly well in practice
 
 ---
 
-# Practical concerns animate:
+## Practical concerns
 
   + What is the probability of a word we've never seen before?
-  + Underflow: multiplying numbers still everything is rounded to 0
-  + Normalizing words: v1agra
 
 ???
 
 ## Solutions
 
   + divide by 0. Instead, add 1 to all words
-  + using log of probabilities
-  + Rules
+
+---
+## Practical concerns
+
+  + What is the probability of a word we've never seen before?
+  + Underflow: multiplying small numbers eventually causes rounding to 0
+
+???
+
+## Solutions
+
+  + use log of probabilities
+
+---
+## Practical concerns
+
+  + What is the probability of a word we've never seen before?
+  + Underflow: multiplying small numbers eventually causes rounding to 0
+  + Normalizing words: v1agra
+
+???
+
+## Solutions
+
+  + come up with rules
 
 ---
 
-# Ensemble
+## Ensemble
 
   + Using multiple models simultaneously
   + Run all classifiers over new data, take majority vote
@@ -334,25 +378,28 @@ class: left, top, inverse
 
 ---
 
-# Bootstrap Aggregating two_col:
+## Bootstrap Aggregating
 
   + Bagging: training data collected with replacement
   + Learn models on different samples
   + Run models on new incoming data
-  <img src="img/bagging.png"/>
+
+<img src="img/bagging.png"/>
 
 ???
+
+*TODO should both be indented?*
 
 ## Trade-offs
 
   + Fairly simple:
-  + Majority vote
-  + Train models independently
+    + Majority vote
+    + Train models independently
   + img: http://cse-wiki.unl.edu/wiki/index.php/Bagging_and_Boosting
 
 ---
 
-# Boosting
+## Boosting
 
   + Train classifier to catch what the last one missed
   + Train and test first classifier
@@ -365,104 +412,32 @@ class: left, top, inverse
 ## Trade-offs
 
   + Boosting can be susceptible to outliers
-  + Longer to train
+  + Takes longer to train
   + Observed to be more accurate
 
 ---
 
-# Many Decision Trees
+## Many Decision Trees
 
-  + Train trees with random selection of attributes, subset of data
+  + Train trees with random selection of attributes and a subset of the data
   + Combine trees using majority or weights
   + What to call many arbitrarily picked trees?
 
 ---
 
-## Random Forests two_col:
+## Random Forests
 
-<img src="img/green-forrest.jpg"/>
   + Used successfully in many recent competitions
   + Carry over robustness properties from individual decision trees
   + Can be trained in parallel
+
+<img src="img/green-forrest.jpg" width=600px />
 
 ???
 
 ## Parallel
 
   + Potentially good fit for MapReduce paradigms
-
-
-
-
----
-
-Slide 1
-  main
-Slide 2
-  main
-    table
-    table
-    table
-  notes
-next slide is two column
-Slide 3
-  main
-    does image fit? is it OK on a dark background?
-  notes
-Slide 4
-  main
-    does image fit? is it OK on a dark background?
-Slide 5
-  main
-    does image fit? is it OK on a dark background?
-    table
-  notes
-Slide 6
-  main
-    does image fit? is it OK on a dark background?
-  notes
-Slide 7
-  main
-    does image fit? is it OK on a dark background?
-  notes
-Slide 8
-  main
-    does image fit? is it OK on a dark background?
-Slide 9
-  main
-    does image fit? is it OK on a dark background?
-  notes
-Slide 10
-  main
-    does image fit? is it OK on a dark background?
-  notes
-next slide is animated
-Slide 11
-  main
-  notes
-next slide is animated
-Slide 12
-  main
-  notes
-Slide 13
-  main
-  notes
-next slide is two column
-Slide 14
-  main
-    does image fit? is it OK on a dark background?
-  notes
-Slide 15
-  main
-  notes
-Slide 16
-  main
-next slide is two column
-Slide 17
-  main
-    does image fit? is it OK on a dark background?
-  notes
-Headings are the right level?
 
     </textarea>
     <script src="production/remark-0.5.9.min.js" type="text/javascript">
