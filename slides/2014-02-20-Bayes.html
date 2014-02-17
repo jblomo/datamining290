@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Data Mining</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <style type="text/css">
+      @import url(http://fonts.googleapis.com/css?family=Droid+Serif);
+      @import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+
+      body {
+        font-family: 'Droid Serif';
+        font-size: 25px;
+      }
+      .remark-slide-content {
+        padding: 1em 2em 1em 2em;
+      }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: 400;
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+      h1 { font-size: 3em; }
+      h2 { font-size: 1.8em; }
+      h3 { font-size: 1.4em; }
+      .footnote {
+        position: absolute;
+        bottom: 3em;
+      }
+      ul { margin: 8px;}
+      li p { line-height: 1.25em; }
+      .red { color: #fa0000; }
+      .large { font-size: 2em; }
+      a, a > code {
+        color: rgb(249, 38, 114);
+        text-decoration: none;
+      }
+      code {
+        -moz-border-radius: 3px;
+        -web-border-radius: 3px;
+        background: #e7e8e2;
+        color: black;
+        border-radius: 3px;
+      }
+      .tight-code {
+        font-size: 20px;
+      }
+      .white-background {
+        background-color: white;
+        padding: 10px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .limit-size img {
+        height: auto;
+        width: auto;
+        max-width: 1000px;
+        max-height: 500px;
+       }
+      em { color: #80cafa; }
+      .pull-left {
+        float: left;
+        width: 47%;
+      }
+      .pull-right {
+        float: right;
+        width: 47%;
+      }
+      .pull-right ~ p {
+        clear: both;
+      }
+      #slideshow .slide .content code {
+        font-size: 1.6em;
+      }
+      #slideshow .slide .content pre code {
+        font-size: 1.6em;
+        padding: 15px;
+      }
+      .inverse {
+        background: #272822;
+        color: #e3e3e3;
+        text-shadow: 0 0 20px #333;
+      }
+      .inverse h1, .inverse h2 {
+        color: #f3f3f3;
+        line-height: 1.6em;
+      }
+
+      /* Slide-specific styling */
+      #slide-inverse .footnote {
+        bottom: 12px;
+        left: 20px;
+      }
+      #slide-how .slides {
+        font-size: 1.6em;
+        position: absolute;
+        top:  151px;
+        right: 140px;
+      }
+      #slide-how .slides h3 {
+        margin-top: 0.2em;
+      }
+      #slide-how .slides .first, #slide-how .slides .second {
+        padding: 1px 20px;
+        height: 90px;
+        width: 120px;
+        -moz-box-shadow: 0 0 10px #777;
+        -webkit-box-shadow: 0 0 10px #777;
+        box-shadow: 0 0 10px #777;
+      }
+      #slide-how .slides .first {
+        background: #fff;
+        position: absolute;
+        top: 20%;
+        left: 20%;
+        z-index: 1;
+      }
+      #slide-how .slides .second {
+        position: relative;
+        background: #fff;
+        z-index: 0;
+      }
+
+      /* Two-column layout */
+      .left-column {
+        width: 48%;
+        float: left;
+      }
+      .right-column {
+        width: 48%;
+        float: right;
+      }
+      .right-column img {
+        max-width: 120%;
+        max-height: 120%;
+      }
+
+      /* Tables */
+      table {
+        border-collapse: collapse;
+        margin: 0px;
+      }
+      table, th, td {
+        border: 1px solid white;
+      }
+      th, td {
+        padding: 7px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+
+name: inverse
+layout: true
+class: left, top, inverse
+
+---
+
+# Classification: Bayes
+
+---
+
+# Confusion Matrix
+
+  + What are the ways that classification can be wrong?
+  |                  | Predict: Positive | Predict: Negative |
+  | Actual: Positive | True Positive     | False Negative    |
+  | Actual: Negative | False Negative    | True Negative     |
+
+???
+
+## Obtain Data
+
+  + How do we obtain this data?
+
+---
+
+# Testing Data two_col:
+
+  + Data used to test a learned model
+  + Test data was not used to learn
+  + Where does test data come from?
+  <img src="img/stork.jpg"/>
+
+???
+
+## Not from storks
+
+  + img: http://adamsparkadventures.blogspot.com/2011/09/stork-watch.html
+
+---
+
+# Training Data
+
+  + Set aside a portion of training data to test with
+  + Test data:
+  <img src="img/k-fold1.png"/>
+
+---
+
+## Set Aside Testing
+
+  <img src="img/k-fold2.png"/>
+
+  Testing Data  |  Training Data
+
+???
+
+## Colors
+
+  + Red: Testing
+  + Green: Training
+
+---
+
+## Cross Validation
+
+  <img src="img/k-fold3.png"/>
+
+  Train and test model with different subsets of data
+
+???
+
+## Testing the model
+
+  + This is used to test the *model*
+  + How well does it perform with a variety of inputs?
+  + Is it robust against outliers
+
+---
+
+## K-Fold Validation
+
+  <img src="img/k-fold4.png"/>
+
+  Test against K sections of the data
+
+???
+
+## Statistical Significance
+
+  + Similar to the concept in stats: the more distinct samples you have, the
+    better you know your data
+
+---
+
+## K-Fold Validation
+
+  <img src="img/k-fold5.png"/>
+
+---
+
+# Bayes Theorem
+
+  <img src="img/bayes.png"/>
+
+  Can calculate a posterior given priors
+
+???
+
+## Read
+
+  + Probability of A given B equals probability of B given A times prob of A
+    divided prob of B
+  + Importance is that we can figure out what future probabilities are based on
+    what we've already seen
+
+---
+
+# Spam
+
+  <img src="img/bayes-spam.png"/>
+
+  Find the probability of spam given it contains a particular word
+
+???
+
+## Words
+
+  + What words would you associate with spam?
+  + Are these the same across all people?
+  + Why might you want to train a classifier per person?
+
+---
+
+# Multiple Words animate:
+
+  + How to calculate probabilities of multiple independent events occurring?
+  + Model words as independent events
+  + Multiply probabilities
+
+???
+
+## Naive
+
+  + Words are not independent
+  + San? Francisco is more likely
+  + But works suprisingly well in practice
+
+---
+
+# Practical concerns animate:
+
+  + What is the probability of a word we've never seen before?
+  + Underflow: multiplying numbers still everything is rounded to 0
+  + Normalizing words: v1agra
+
+???
+
+## Solutions
+
+  + divide by 0. Instead, add 1 to all words
+  + using log of probabilities
+  + Rules
+
+---
+
+# Ensemble
+
+  + Using multiple models simultaneously
+  + Run all classifiers over new data, take majority vote
+  + Netflix Prize won with combination of models from several teams
+
+???
+
+## Requirements
+
+  + Nice thing is that the diversity of models is important, and not so much
+    the accuracy of any single model
+
+---
+
+# Bootstrap Aggregating two_col:
+
+  + Bagging: training data collected with replacement
+  + Learn models on different samples
+  + Run models on new incoming data
+  <img src="img/bagging.png"/>
+
+???
+
+## Trade-offs
+
+  + Fairly simple:
+  + Majority vote
+  + Train models independently
+  + img: http://cse-wiki.unl.edu/wiki/index.php/Bagging_and_Boosting
+
+---
+
+# Boosting
+
+  + Train classifier to catch what the last one missed
+  + Train and test first classifier
+  + Find classification failures
+  + Weight more heavily those failures in training a new model
+  + Weight models by their accuracy
+
+???
+
+## Trade-offs
+
+  + Boosting can be susceptible to outliers
+  + Longer to train
+  + Observed to be more accurate
+
+---
+
+# Many Decision Trees
+
+  + Train trees with random selection of attributes, subset of data
+  + Combine trees using majority or weights
+  + What to call many arbitrarily picked trees?
+
+---
+
+## Random Forests two_col:
+
+<img src="img/green-forrest.jpg"/>
+  + Used successfully in many recent competitions
+  + Carry over robustness properties from individual decision trees
+  + Can be trained in parallel
+
+???
+
+## Parallel
+
+  + Potentially good fit for MapReduce paradigms
+
+
+
+
+---
+
+Slide 1
+  main
+Slide 2
+  main
+    table
+    table
+    table
+  notes
+next slide is two column
+Slide 3
+  main
+    does image fit? is it OK on a dark background?
+  notes
+Slide 4
+  main
+    does image fit? is it OK on a dark background?
+Slide 5
+  main
+    does image fit? is it OK on a dark background?
+    table
+  notes
+Slide 6
+  main
+    does image fit? is it OK on a dark background?
+  notes
+Slide 7
+  main
+    does image fit? is it OK on a dark background?
+  notes
+Slide 8
+  main
+    does image fit? is it OK on a dark background?
+Slide 9
+  main
+    does image fit? is it OK on a dark background?
+  notes
+Slide 10
+  main
+    does image fit? is it OK on a dark background?
+  notes
+next slide is animated
+Slide 11
+  main
+  notes
+next slide is animated
+Slide 12
+  main
+  notes
+Slide 13
+  main
+  notes
+next slide is two column
+Slide 14
+  main
+    does image fit? is it OK on a dark background?
+  notes
+Slide 15
+  main
+  notes
+Slide 16
+  main
+next slide is two column
+Slide 17
+  main
+    does image fit? is it OK on a dark background?
+  notes
+Headings are the right level?
+
+    </textarea>
+    <script src="production/remark-0.5.9.min.js" type="text/javascript">
+    </script>
+    <script type="text/javascript">
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>
