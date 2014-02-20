@@ -82,8 +82,7 @@ class: left, top, inverse
 
 ## Steps
 
-  + Process
-    + to be able to classify data
+  + to be able to classify data
 
 ---
 
@@ -95,8 +94,7 @@ class: left, top, inverse
 
 ## Steps
 
-  + Training Set
-    + Cleaned, preprocessed data that has labels. What are labels?
+  + Cleaned, preprocessed data that has labels. What are labels?
 
 ---
 
@@ -109,9 +107,8 @@ class: left, top, inverse
 
 ## Steps
 
-  + Learning
-    + Feed the training set into an algorithm. Algorithm associates some of the
-      features with the labels and generates a model.
+  + Feed the training set into an algorithm. Algorithm associates some of the
+    features with the labels and generates a model.
 
 ---
 
@@ -125,9 +122,8 @@ class: left, top, inverse
 
 ## Steps
 
-  + Model / Classifier
-    + Process or formula used to predict the label (class) given inputs (data
-      records)
+  + Process or formula used to predict the label (class) given inputs (data
+    records)
 
 ---
 
@@ -142,9 +138,8 @@ class: left, top, inverse
 
 ## Steps
 
-  + Testing Set
-    + Data *not in training set*, with labels. Run through model to see how the
-      model compares with the real labels.
+  + Data *not in training set*, with labels. Run through model to see how the
+    model compares with the real labels.
 
 ---
 
@@ -160,9 +155,8 @@ class: left, top, inverse
 
 ## Steps
 
-  + Verification / Accuracy
-    + Given the matches / mismatches in the testing set, how can we measure how
-      well the model reflects reality?
+  + Given the matches / mismatches in the testing set, how can we measure how
+    well the model reflects reality?
 
 ---
 
@@ -180,7 +174,7 @@ class: left, top, inverse
 ## Steps
 
   + Unseen Data
-    + Finally, we're ready to start using our model / classifier to label new,
+  + Finally, we're ready to start using our model / classifier to label new,
     real, unknown data! So clean and pre-process it the same way.
 
 ---
@@ -199,8 +193,7 @@ class: left, top, inverse
 
 ## Steps
 
-  + Classification
-    + Feed in the unknown data and get out results!
+  + Feed in the unknown data and get out results!
 
 ---
 
@@ -270,7 +263,7 @@ class: left, top, inverse
 |                  | Predict: Positive | Predict: Negative |
 |------------------|-------------------|-------------------|
 | Actual: Positive | True Positive     | False Negative    |
-| Actual: Negative | False Negative    | True Negative     |
+| Actual: Negative | False Positive    | True Negative     |
 
 ???
 
@@ -422,6 +415,10 @@ class: left, top, inverse
   Gini(D) = 1 - sum(frac**2 for frac in classes)
 ```
   Sum of the squares of the fraction of items in each class
+
+???
+
+  + D is a given partitioning of the data
 
 ---
 

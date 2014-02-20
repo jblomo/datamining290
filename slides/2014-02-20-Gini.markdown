@@ -19,10 +19,9 @@ class: left, top, inverse
 
 ---
 
-*TODO move to new dataset*
-
 ## Data: Campaign Contributions
 
+  + Federal [campaign finance data](ftp://ftp.fec.gov/FEC/2012/pas212.zip) (same as before)
   + Calculating the Gini Index for the Candidate Names for the entire data set
   + Partition by zip code, calculate the weighted average Gini Index score
     over all partitions
@@ -39,11 +38,24 @@ class: left, top, inverse
 
 ## Python Tips
 
-  + [collections](http://docs.python.org/2/library/collections.html)
-  + ```defaultdict``` autovivifies keys
-  + ```Counter``` autovivifies integer keys
+  + [collections](http://docs.python.org/2/library/collections.html) module
+    + ```defaultdict``` auto creates keys
+    + ```Counter``` counts hashable objects
+
 ```python
-zipcodes = defaultdict(Counter)
+>>> x = defaultdict(int)
+>>> x['a'] += 3
+>>> x['a']
+3
+>>> x['b']
+0
+>>> x
+defaultdict(<type 'int'>, {'a': 3, 'b': 0})
+
+>>> y = Counter()
+>>> y.update(['a', 'b', 'a', 'c'])
+>>> y
+Counter({'a': 2, 'c': 1, 'b': 1})
 ```
 
 ---

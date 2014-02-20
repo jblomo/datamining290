@@ -17,7 +17,7 @@ class: left, top, inverse
 |                  | Predict: Positive | Predict: Negative |
 |------------------|-------------------|-------------------|
 | Actual: Positive | True Positive     | False Negative    |
-| Actual: Negative | False Negative    | True Negative     |
+| Actual: Negative | False Positive    | True Negative     |
 
 ???
 
@@ -248,7 +248,7 @@ Find the probability of spam given it contains a particular word
   + Train classifier to catch what the last one missed
   + Train and test first classifier
   + Find classification failures
-  + Weight more heavily those failures in training a new model
+  + Weight those failures more heavily in training a new model
   + Weight models by their accuracy
 
 ???
