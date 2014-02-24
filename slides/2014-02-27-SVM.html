@@ -164,10 +164,10 @@ class: left, top, inverse
 
 ---
 
-# Types of Models animate:
+## Types of Models
 
   + Classifiers
-  + Regressions
+  + *Regressions*
   + Clustering
   + Outlier
 
@@ -175,19 +175,24 @@ class: left, top, inverse
 
 ## Details
 
-  + Classifiers: describes and distinguishes cases. Yelp may want to find a
-    category for a business based on the reviews and business description
-  + Regressions: Predict a continuous value. Eg. predict a home's selling
-    price given sq footage, # of bedrooms
-  + Clustering: find "natural" groups of data *without labels*
-  + Outlier: find anomalous transactions, eg. finding fraud for credit cards
+  + Classifiers
+    + describes and distinguishes cases. Yelp may want to find a category for a
+      business based on the reviews and business description
+  + Regressions
+    + *Predict a continuous value. e.g., predict a home's selling price given
+      square footage and # of bedrooms*
+  + Clustering
+    + find "natural" groups of data *without labels*
+  + Outlier
+    + find anomalous transactions, e.g., finding fraud for credit cards
 
 ---
 
-# Case Study
+## Case Study
 
   + Housing prices: square footage
-  <img src="img/housing-regression.gif"/>
+
+<img src="img/housing-regression.jpg" width=100% />
 
 ???
 
@@ -196,26 +201,54 @@ class: left, top, inverse
   + We'd like to know how to price a house based on the square footage
   + Let's pretend this is the data we have
   + How would we guess that value for 2500 sq ft?
+  + img: http://realestatemetrics.blogspot.com/2013/04/starting-out-square-footage-vs-price.html
 
 ---
 
-# Solution? animate:
-
-  + Find a line that represents the data
-  + ```y = m*x + b```
-  + A line that is not very far from the points
+## Solution?
 
 ???
 
 ## Prompts
 
   + In English, how would you solve this?
+
+---
+
+## Solution?
+
+  + Find a line that represents the data
+
+???
+
+## Prompts
+
   + How to mathematically represent the line?
+
+---
+
+## Solution?
+
+  + Find a line that represents the data
+  + ```y = m*x + b```
+
+???
+
+## Prompts
+
   + What is a good line?
 
 ---
 
-# Similarity
+## Solution?
+
+  + Find a line that represents the data
+  + ```y = m*x + b```
+  + A line that is not very far from the points
+
+---
+
+## Similarity
 
   + Main challenges in data mining: defining a specific metric for an intuition
   + Define distance for an individual point
@@ -229,27 +262,29 @@ class: left, top, inverse
   + We'll cover some concepts, but if you're ever stuck, try looking in related
     fields
   + What are some of the ways we can measure distance between points?
-    Euclidian, Manhattan, Euclidian == L_2 norm
-  + What is a way to aggrgate numbers? sum, sum of squares, sum of logs
+    Euclidean, Manhattan, Euclidean == L<sub>2</sub> norm
+  + What is a way to aggregate numbers? sum, sum of squares, sum of logs
   + Differences between the last two?
 
 ---
 
-## Log & Square two_col:
+## Log & Square
 
-  + Log: Useful for de-emphasizing large raw differences
+  + Log: Useful for deemphasizing large raw differences
   + Square: Useful for taking the approximate absolute value
-  <img src="img/logx.gif"/>
+
+<img src="img/logx.gif"/>
 
 ---
 
-# Point Distance two_col:
+## Point Distance
 
-  + =y= distance from line
+  + ```y``` distance from line
   + Intuitively: error in estimate
   + ```h(x) = m*x + b```
   + ```err = h(x) - y```
-  <img src="img/error.gif"/>
+
+<img src="img/error.gif"/>
 
 ???
 
@@ -260,12 +295,17 @@ class: left, top, inverse
 
 ---
 
-# Aggregate animate:
+## Aggregate
 
   + ```sum```
   + What about negative error?
   + Sum of squares
-  + ```err = sum( (h(x) - y)**2 for x,y in dataset) / len(dataset)```
+
+.tight-code[
+```
+err = sum((h(x) - y)**2 for x,y in dataset) / len(dataset)
+```
+]
 
 ???
 
@@ -281,11 +321,11 @@ class: left, top, inverse
 
 ---
 
-# Fitness Function
+## Fitness Function
 
   + Measures the quality or cost of the solution
   + *Key* ingredient for data mining algorithms
-  + If you can measure it, you can find the best solution
+  + If you can't measure it, you can't find the best solution
 
 ???
 
@@ -295,14 +335,14 @@ class: left, top, inverse
     *cost*
   + Find the maximum or minimum of that metric
   + Depending on your fitness function, this can be easy or difficult
-  + img: http://onlinestatbook.com
 
 ---
 
-# Understanding Error
+## Understanding Error
 
-  <img src="img/Linear_regression.svg.png"/>
-  Several possible solutions
+Several possible solutions
+
+<img src="img/Linear_regression.svg.png" width=100% />
 
 ???
 
@@ -314,16 +354,17 @@ class: left, top, inverse
 
 ---
 
-# Solution as Minimization two_col:
+## Solution as Minimization
 
   + Error is a parabola
   + Several methods for finding the minimum
   + Two categories: analytical, approximations
-<img src="img/parabola.png"/>
+
+<img src="img/parabola.png" width=80% />
 
 ---
 
-# Solution Approximation
+## Solution Approximation
 
   + Some fitness functions can be difficult to solve analytically
   + Alternative: iteratively get closer to the solution
@@ -342,33 +383,35 @@ class: left, top, inverse
 
 ---
 
-# Gradient Descent two_col:
+## Gradient Descent
 
   1. Estimate current gradient (derivative)
-  1. Take a step (=a * deriv=) in the direction of the gradient
+  1. Take a step (```a * deriv```) in the direction of the gradient
   1. Step size is small, stop. Else repeat.
-  <img src="img/parabola.png"/>
+
+<img src="img/parabola.png" width=80% />
 
 ???
 
 ## Steps
 
   + Take gradient by looking at the local derivative, or perturbating x
-  + Choose ```a= as step size weight: big =a``` is large step size
-  + If ```deriv``` is large, will also make you step size large.
+  + Choose ```a``` as step size weight: big ```a``` is large step size
+  + If ```deriv``` is large, will also make your step size large.
   + If ```deriv``` is large, probably means you are far away from minimum
   + Keep repeating
-  + What happens if =a= is too small?
-  + What happens if =a= is too big?
+  + What happens if ```a``` is too small?
+  + What happens if ```a``` is too big?
 
 ---
 
-# General Case two_col:
+## General Case
 
-  + Formulate fitness function for your problem
+  + Formulate a fitness function for your problem
   + Use analytics or approximations to find min/max
   + Approximations: Newton's Method, Gradient Descent
-  <img src="img/error-reduce.png"/>
+
+<img src="img/error-reduce.png" width=80% />
 
 ???
 
@@ -384,19 +427,21 @@ class: left, top, inverse
 
 ---
 
-# Decision Trees two_col:
+## Decision Trees
 
   + Great for separable attributes
   + Rules operate on independent attributes
   + Classes separable along an axis/attribute
-  <img src="img/tree.png"/>
+
+<img src="img/tree.png"/>
 
 ---
 
 ## Linearly Separable
 
   + How to handle case where separator line is not along an axis?
-  <img src="img/dataset_linsep.png"/>
+
+<img src="img/dataset_linsep.png" width=90% />
 
 ???
 
@@ -409,10 +454,11 @@ class: left, top, inverse
 
 ---
 
-# Possibilities
+## Possibilities
 
   + Many lines *could* separate these classes
-  <img src="img/dataset_linsep.png"/>
+
+<img src="img/dataset_linsep.png" width=90% />
 
 ???
 
@@ -423,12 +469,15 @@ class: left, top, inverse
 
 ---
 
-## Best Separator two_col:
+*TODO: what is the bottom part of the graph indicating?*
+
+## Best Separator
 
   + Best line gives the most distance between the two classes
   + Measure distance between closest points
   + Closest points == support vectors
-  <img src="img/separable.jpg"/>
+
+<img src="img/separable.jpg" width=100% />
 
 ???
 
@@ -455,49 +504,110 @@ class: left, top, inverse
 
 ---
 
-# Expressing the Hyperplane animate:
-
-  + ```y = m*x + b```
-  + ```x_2 = m*x_1 + b```
-  + ```0 = m*x_1 + b - x_2```
-  + ```0 = [m -1] * [x_1, x_2] + b```
-  + ```0 = w * x + b```
+## Expressing the Hyperplane
 
 ???
 
 ## Questions
 
   + How do you mathematically represent a line?
+
+---
+
+## Expressing the Hyperplane
+
+  + ```y = m*x + b```
+
+???
+
+## Questions
+
   + Now, we're not going to think of a new letter for every dimension, we're
-    just going to say x_1 , x_2 , x_3 ...
+    just going to say x_1, x_2, x_3 ...
+
+---
+
+## Expressing the Hyperplane
+
+  + ```y = m*x + b```
+  + ```x_2 = m*x_1 + b```
+
+???
+
+## Questions
+
   + Rewrite mathematically
+
+---
+
+## Expressing the Hyperplane
+
+  + ```y = m*x + b```
+  + ```x_2 = m*x_1 + b```
+  + ```0 = m*x_1 - x_2 + b```
+
+???
+
+## Questions
+
   + How to add more dimensions? x_22? Express x as a vector of all attributes
-  + Again, don't want to come up with a bunch more letters after =m=, so use
-    ```w= as the matrix representing all the =m``` slopes
 
 ---
 
-# Challenge two_col:
+## Expressing the Hyperplane
 
-  + Find ```w=, =b``` such that ```w * x + b``` maximizes the distance between the
+  + ```y = m*x + b```
+  + ```x_2 = m*x_1 + b```
+  + ```0 = m*x_1 - x_2 + b```
+  + ```0 = [m -1] * [x_1, x_2] + b```
+
+???
+
+## Questions
+
+  + Again, don't want to come up with a bunch more letters after ```m```, so use
+    ```w``` as the matrix representing all the ```m``` slopes
+
+---
+
+## Expressing the Hyperplane
+
+  + ```y = m*x + b```
+  + ```x_2 = m*x_1 + b```
+  + ```0 = m*x_1 - x_2 + b```
+  + ```0 = [m -1] * [x_1, x_2] + b```
+  + ```0 = w * x + b```
+
+---
+
+## Challenge
+
+  + Find ```w```, ```b``` such that ```w * x + b``` maximizes the distance between the
     support vectors
-  <img src="img/svm.png"/>
+
+.white-background[
+<img src="img/svm.png" width=60% />
+]
 
 ---
 
-# Maximizing Fitness Function two_col:
+## Maximizing Fitness Function
 
   + Now we have a fitness function and parameters we're trying to optimize
   + Sound familiar?
-  <img src="img/svm.png"/>
+
+.white-background[
+<img src="img/svm.png" width=60% />
+]
 
 ---
 
-# Kernel Tricks two_col:
+## Kernel Tricks
 
-  + SVM good for linearly separable data
+  + SVMs are good for linearly separable data
   + How to handle other data?
-  <img src="img/svm-circular.jpg"/>
+
+<img src="img/svm-circular.jpg"/>
 
 ---
 
@@ -505,11 +615,12 @@ class: left, top, inverse
 
   + Transform it into linearly separable
   + What function can we apply to these data points to make them separable?
-  <img src="img/svm-circular.jpg"/>
+
+<img src="img/svm-circular.jpg"/>
 
 ???
 
-### Square
+## Square
 
   + Square all of them
 
@@ -517,9 +628,9 @@ class: left, top, inverse
 
 ## Polynomial Kernel
 
-  <img src="img/kernel-trick.jpg"/>
+  + Now apply SVM
 
-  Now apply SVM
+<img src="img/kernel-trick.jpg"/>
 
 ???
 
@@ -529,122 +640,7 @@ class: left, top, inverse
 
 ---
 
-# *Break*
-
-
-
-
----
-
-Slide 1
-  main
-next slide is animated
-Slide 2
-  main
-  notes
-    a series of sections will work better for some definitions
-    a series of sections will work better for some definitions
-    a series of sections will work better for some definitions
-    a series of sections will work better for some definitions
-Slide 3
-  main
-    does image fit? is it OK on a dark background?
-  notes
-next slide is animated
-Slide 4
-  main
-  notes
-Slide 5
-  main
-  notes
-next slide is two column
-Slide 6
-  main
-    a series of sections will work better for some definitions
-    a series of sections will work better for some definitions
-    does image fit? is it OK on a dark background?
-next slide is two column
-Slide 7
-  main
-    does image fit? is it OK on a dark background?
-  notes
-next slide is animated
-Slide 8
-  main
-  notes
-Slide 9
-  main
-  notes
-Slide 10
-  main
-    does image fit? is it OK on a dark background?
-  notes
-next slide is two column
-Slide 11
-  main
-    does image fit? is it OK on a dark background?
-Slide 12
-  main
-  notes
-next slide is two column
-Slide 13
-  main
-    does image fit? is it OK on a dark background?
-  notes
-next slide is two column
-Slide 14
-  main
-    does image fit? is it OK on a dark background?
-  notes
-Slide 15
-  main
-next slide is two column
-Slide 16
-  main
-    does image fit? is it OK on a dark background?
-Slide 17
-  main
-    does image fit? is it OK on a dark background?
-  notes
-Slide 18
-  main
-    does image fit? is it OK on a dark background?
-  notes
-next slide is two column
-Slide 19
-  main
-    does image fit? is it OK on a dark background?
-  notes
-Slide 20
-  main
-  notes
-next slide is animated
-Slide 21
-  main
-  notes
-next slide is two column
-Slide 22
-  main
-    does image fit? is it OK on a dark background?
-next slide is two column
-Slide 23
-  main
-    does image fit? is it OK on a dark background?
-next slide is two column
-Slide 24
-  main
-    does image fit? is it OK on a dark background?
-Slide 25
-  main
-    does image fit? is it OK on a dark background?
-  notes
-Slide 26
-  main
-    does image fit? is it OK on a dark background?
-  notes
-Slide 27
-  main
-Headings are the right level?
+## *Break*
 
     </textarea>
     <script src="production/remark-0.5.9.min.js" type="text/javascript">

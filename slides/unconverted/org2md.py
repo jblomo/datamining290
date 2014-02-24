@@ -92,14 +92,11 @@ def main(input_filename, output_filename):
                     line = line.replace(' :: ', ': ')
 
                 # Images
-                old_line = line
                 line = re.sub(
                     r'''\[\[(file:)?([^\]]+)\]\]''',
                     r'''<img src="\2"/>''',
                     line
                 )
-                if old_line != line:
-                    todo.append('    does image fit? is it OK on a dark background?')
 
                 # Links
                 old_line = line

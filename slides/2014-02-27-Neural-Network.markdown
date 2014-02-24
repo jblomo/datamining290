@@ -8,7 +8,7 @@ class: left, top, inverse
 
 ---
 
-# Trade-offs
+## Trade-offs
 
   + Similar to precision, we make trade-offs when training models
   + Bias: How far off are the model predictions on average?
@@ -29,18 +29,19 @@ class: left, top, inverse
 
 ---
 
-# Regression two_col:
+## Regression
 
   + Can we do better than linear regression on some data sets?
   + Polynomial regression
   + How many polynomials?
-  <img src="img/overfit1.png"/>
+
+<img src="img/overfit1.png"/>
 
 ???
 
 ## Polynomial
 
-  + Sure! Use a polynomial instead: ```x^2``` ```2x - x^2 + 4x^3```
+  + Sure! Use a polynomial instead: ```x^2```, ```2x - x^2 + 4x^3```, ...
   + If you're not sure what the underlying data model is, have to test
   + img: http://cheshmi.tumblr.com/
 
@@ -48,24 +49,24 @@ class: left, top, inverse
 
 ## One
 
-  <img src="img/overfit1.png"/>
+<img src="img/overfit1.png"/>
 
 ???
 
-### So-So
+## So-So
 
-    + How is the bias? Not great, fair amount of error
-    + How is the variance? Pretty good, assuming random sample
+  + How is the bias? Not great, fair amount of error
+  + How is the variance? Pretty good, assuming random sample
 
 ---
 
 ## Two
 
-  <img src="img/overfit2.png"/>
+<img src="img/overfit2.png"/>
 
 ???
 
-### Better
+## Better
 
   + Bias? Better, less error
   + Variance? more risky depending on which samples you get, since model
@@ -75,11 +76,11 @@ class: left, top, inverse
 
 ## Three
 
-  <img src="img/overfit3.png"/>
+<img src="img/overfit3.png"/>
 
 ???
 
-### Worrying
+## Worrying
 
   + Now getting a little weird. We're not finding the general pattern, more
     like exactly fitting a line over these points
@@ -89,25 +90,26 @@ class: left, top, inverse
 
 ## Many
 
-  <img src="img/overfit5.png"/>
+<img src="img/overfit5.png" width=50% />
 
 ???
 
-### Now kind of ridiculous
+## Now kind of ridiculous
 
-    + Intuitively we know this is not a description of the data
-    + If a point was found near the border, completely dependant on the data the
-      model trained on
+  + Intuitively we know this is not a description of the data
+  + If a point was found near the border, completely dependant on the data the
+    model trained on
 
 ---
 
-# Over-fitting
+## Over-fitting
 
-  + Over-fitting: reflecting the exact data given instead of the general pattern
-  + High variance is a sign of over-fitting: model guesses vary with the exact
-    data given
-  + Avoidance: ensembles average out variance, regularization adds a cost to
-    model complexity
+  + Over-fitting
+    + reflecting the exact data given instead of the general pattern
+  + High variance is a sign of over-fitting
+    + model guesses vary with the exact data given
+  + Avoidance
+    + ensembles average out variance, regularization adds a cost to model complexity
 
 ???
 
@@ -125,9 +127,9 @@ class: left, top, inverse
 
 ---
 
-# Neural Networks
+## Neural Networks
 
-  <img src="img/neuron_culture.jpg"/>
+<img src="img/neuron_culture.jpg" width=90% />
 
 ???
 
@@ -137,7 +139,7 @@ class: left, top, inverse
 
 ---
 
-# Brains
+## Brains
 
   + Neural networks try to model our brains
   + Neurons/perceptrons sense input, transform it, send output
@@ -146,7 +148,9 @@ class: left, top, inverse
 
 ---
 
-# Training
+*TODO: 3rd bullet is strange*
+
+## Training
 
   + Learn by adjusting the strengths of the connections
   + Mathematically, strength is a weight multiplier of the output
@@ -154,22 +158,47 @@ class: left, top, inverse
 
 ---
 
-# Nomenclature two_col:
+## Nomenclature
 
-  + Input layer: neurons whose input is determined by features
-  + Hidden layer: neurons that calculate a combination of features
-  + Output layer: neurons that express the classification
-  + Weights: numeric parameter to adjust input/output
-  <img src="img/nn.png"/>
+.left-column[
+
+Input layer
+
+  + neurons whose input is determined by features
+
+Hidden layer
+
+  + neurons that calculate a combination of features
+
+Output layer
+
+  + neurons that express the classification
+
+Weights
+
+  + numeric parameter to adjust input/output
+
+]
+
+.right-column[
+.white-background[
+<img src="img/nn.png" width=100% />
+]
+]
 
 ---
 
-# Handwriting
+## Handwriting
 
   + Recognize handwritten digits
-  <img src="img/neuron11.gif"/>
+
+.white-background[
+<img src="img/neuron11.gif" width=70% />
+]
 
 ???
+
+*TODO: understand this flow*
 
 ## Inputs => Outputs
 
@@ -180,7 +209,7 @@ class: left, top, inverse
 
 ---
 
-# Forward Propagation
+## Forward Propagation
 
   1. Sum of inputs * weights
   1. Apply sigmoid
@@ -192,22 +221,28 @@ class: left, top, inverse
 ## Repeat
 
   + Multiple hidden layers used to model complex feature interaction
-  <img src="img/2-layer-nn.gif"/>
+
+<img src="img/2-layer-nn.gif" width=70% />
 
 ---
 
-## Sigmoid two_col:
+## Sigmoid
 
   + Normalize input to [0,1]
   + Makes weak input weaker, strong input stronger
   + ```1 / (1 + e^-input)```
-  <img src="img/sigmoid.png"/>]
+
+.white-background[
+<img src="img/sigmoid.png" width=90% />
+]
 
 ---
 
-# Example
+## Example
 
-  <img src="img/nn-fp1.png"/>
+.white-background[
+<img src="img/nn-fp1.png" width=80% />
+]
 
 ???
 
@@ -221,11 +256,13 @@ class: left, top, inverse
 
 ## Weights
 
-  <img src="img/ann2.png"/>
+.white-background[
+<img src="img/ann2.png" width=80% />
+]
 
 ???
 
-### Later
+## Later
 
   + We'll discuss how weights are determined later
   + Fill in the Hidden layer with sum of inputs * weights
@@ -234,11 +271,13 @@ class: left, top, inverse
 
 ## Sigmoid
 
-  <img src="img/ann3.png"/>
+.white-background[
+<img src="img/ann3.png" width=80% />
+]
 
 ???
 
-### Apply
+## Apply
 
   + Apply the sigmoid to the incoming signals
 
@@ -246,11 +285,13 @@ class: left, top, inverse
 
 ## Sigmoid
 
-  <img src="img/ann4.png"/>
+.white-background[
+<img src="img/ann4.png" width=80% />
+]
 
 ???
 
-### Apply
+## Apply
 
   + Apply the sigmoid to the incoming signals
 
@@ -258,11 +299,13 @@ class: left, top, inverse
 
 ## Sigmoid
 
-  <img src="img/ann5.png"/>
+.white-background[
+<img src="img/ann5.png" width=80% />
+]
 
 ???
 
-### Apply
+## Apply
 
   + Apply the sigmoid to the incoming signals
 
@@ -270,11 +313,13 @@ class: left, top, inverse
 
 ## Sigmoid
 
-  <img src="img/ann6.png"/>
+.white-background[
+<img src="img/ann6.png" width=80% />
+]
 
 ???
 
-### Apply
+## Apply
 
   + Apply the sigmoid to the incoming signals
 
@@ -282,23 +327,27 @@ class: left, top, inverse
 
 ## Weights
 
-  <img src="img/ann7.png"/>
+.white-background[
+<img src="img/ann7.png" width=80% />
+]
 
 ???
 
-### Repeat
+## Repeat
 
-    + Take the outputs, apply weights, sum
+  + Take the outputs, apply weights, sum
 
 ---
 
 ## Sigmoid
 
-  <img src="img/ann8.png"/>
+.white-background[
+<img src="img/ann8.png" width=80% />
+]
 
 ???
 
-### Apply
+## Apply
 
   + Apply the sigmoid to the incoming signals
   + Our result is greater than 0.5, so we can assume true
@@ -306,7 +355,7 @@ class: left, top, inverse
 
 ---
 
-# Forward Propagation
+## Forward Propagation
 
   1. Sum of inputs * weights
   1. Apply sigmoid
@@ -321,10 +370,10 @@ class: left, top, inverse
 
 ---
 
-# Fitness Function
+## Fitness Function
 
   + Create a fitness function that measures the error
-  + Take derivative and a step in the right direction
+  + Take the derivative and a step in the right direction
   + Try again
 
 ???
@@ -338,26 +387,33 @@ class: left, top, inverse
 
 ---
 
-# Back Propagation
+## Back Propagation
 
-  + Run forward: O_j is output of node =j=
-  + Calculate error of output layer: Err_j = O_j(1-O_j)(T_j-O_j)
-  + Caclulate error of hidden layer: Err_j = O_j(1-O_j)*sum(Err_k*w_jk)
-  + Find new weights: w_ij = w_ij + l*Err_j*O_i
-  + Repeat: To move closer to correct weights
+  + Run forward
+    + ```O_j``` is output of node ```j```
+  + Calculate error of output layer
+    + ```Err_j = O_j(1-O_j)(T_j-O_j)```
+  + Caclulate error of hidden layer
+    + ```Err_j = O_j(1-O_j)*sum(Err_k*w_jk)```
+  + Find new weights
+    + ```w_ij = w_ij + l*Err_j*O_i```
+  + Repeat
+    + To move closer to correct weights
 
 ???
 
 ## Derivative
 
   + Derivative of the sigmoid is ```O_j(1-O_j)```, so we're taking the gradient
-  + ```l= is the learning rate, similar to =a``` step size in gradient descent
+  + ```l``` is the learning rate, similar to ```a``` step size in gradient descent
 
 ---
 
-# Example
+## Example
 
-  <img src="img/ann8.png"/>
+.white-background[
+<img src="img/ann8.png" width=80% />
+]
 
 ???
 
@@ -379,10 +435,9 @@ l = 10  # learning rate
 w_56 = w_56 + l*err_6*o_5
 ```
 
-
 ---
 
-# Terminate Learning
+## Terminate Learning
 
   + Changes in weights too small
   + Accuracy in training models is high
@@ -400,124 +455,3 @@ w_56 = w_56 + l*err_6*o_5
 ---
 
 # *Break*
-
-
-
-
----
-
-Slide 1
-  main
-Slide 2
-  main
-  notes
-next slide is two column
-Slide 3
-  main
-    does image fit? is it OK on a dark background?
-  notes
-Slide 4
-  main
-    does image fit? is it OK on a dark background?
-  notes
-Slide 5
-  main
-    does image fit? is it OK on a dark background?
-  notes
-Slide 6
-  main
-    does image fit? is it OK on a dark background?
-  notes
-Slide 7
-  main
-    does image fit? is it OK on a dark background?
-  notes
-Slide 8
-  main
-  notes
-Slide 9
-  main
-    does image fit? is it OK on a dark background?
-  notes
-Slide 10
-  main
-Slide 11
-  main
-next slide is two column
-Slide 12
-  main
-    a series of sections will work better for some definitions
-    a series of sections will work better for some definitions
-    a series of sections will work better for some definitions
-    a series of sections will work better for some definitions
-    does image fit? is it OK on a dark background?
-Slide 13
-  main
-    does image fit? is it OK on a dark background?
-  notes
-    table
-Slide 14
-  main
-Slide 15
-  main
-    does image fit? is it OK on a dark background?
-next slide is two column
-Slide 16
-  main
-    does image fit? is it OK on a dark background?
-Slide 17
-  main
-    does image fit? is it OK on a dark background?
-  notes
-Slide 18
-  main
-    does image fit? is it OK on a dark background?
-  notes
-Slide 19
-  main
-    does image fit? is it OK on a dark background?
-  notes
-Slide 20
-  main
-    does image fit? is it OK on a dark background?
-  notes
-Slide 21
-  main
-    does image fit? is it OK on a dark background?
-  notes
-Slide 22
-  main
-    does image fit? is it OK on a dark background?
-  notes
-Slide 23
-  main
-    does image fit? is it OK on a dark background?
-  notes
-Slide 24
-  main
-    does image fit? is it OK on a dark background?
-  notes
-Slide 25
-  main
-  notes
-Slide 26
-  main
-  notes
-Slide 27
-  main
-    a series of sections will work better for some definitions
-    a series of sections will work better for some definitions
-    a series of sections will work better for some definitions
-    a series of sections will work better for some definitions
-    a series of sections will work better for some definitions
-  notes
-Slide 28
-  main
-    does image fit? is it OK on a dark background?
-  notes
-Slide 29
-  main
-  notes
-Slide 30
-  main
-Headings are the right level?
