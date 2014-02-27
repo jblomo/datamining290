@@ -133,8 +133,6 @@ class: left, top, inverse
 
 ???
 
-## notes
-
   + img: http://adrianbowyer.blogspot.com/2010/12/hardwired.html
 
 ---
@@ -148,13 +146,11 @@ class: left, top, inverse
 
 ---
 
-*TODO: 3rd bullet is strange*
-
 ## Training
 
   + Learn by adjusting the strengths of the connections
   + Mathematically, strength is a weight multiplier of the output
-  + When we've found the right weights
+  + Training is done when we've found the right weights
 
 ---
 
@@ -197,8 +193,6 @@ Weights
 ]
 
 ???
-
-*TODO: understand this flow*
 
 ## Inputs => Outputs
 
@@ -390,13 +384,13 @@ Weights
 ## Back Propagation
 
   + Run forward
-    + ```O_j``` is output of node ```j```
+    + O<sub>j</sub> is output of node j
   + Calculate error of output layer
-    + ```Err_j = O_j(1-O_j)(T_j-O_j)```
+    + Err<sub>j</sub> = O<sub>j</sub>(1 - O<sub>j</sub>)(T<sub>j</sub>-O<sub>j</sub>)
   + Caclulate error of hidden layer
-    + ```Err_j = O_j(1-O_j)*sum(Err_k*w_jk)```
+    + Err<sub>j</sub> = O<sub>j</sub>(1 - O<sub>j</sub>) sum(Err<sub>k</sub> w<sub>jk</sub>)
   + Find new weights
-    + ```w_ij = w_ij + l*Err_j*O_i```
+    + w<sub>ij</sub> = w<sub>ij</sub> + l Err<sub>j</sub> O<sub>i</sub>
   + Repeat
     + To move closer to correct weights
 
@@ -404,7 +398,7 @@ Weights
 
 ## Derivative
 
-  + Derivative of the sigmoid is ```O_j(1-O_j)```, so we're taking the gradient
+  + Derivative of the sigmoid is O<sub>j</sub>(1 - O<sub>j</sub>), so we're taking the gradient
   + ```l``` is the learning rate, similar to ```a``` step size in gradient descent
 
 ---
@@ -441,7 +435,8 @@ w_56 = w_56 + l*err_6*o_5
 
   + Changes in weights too small
   + Accuracy in training models is high
-  + Maximum number or times for learning
+  + Maximum number iterations
+  + Maximum time for learning
 
 ???
 
@@ -454,4 +449,4 @@ w_56 = w_56 + l*err_6*o_5
 
 ---
 
-# *Break*
+## *Break*

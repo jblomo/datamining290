@@ -239,7 +239,7 @@ Several possible solutions
 
 ## Steps
 
-  + Take gradient by looking at the local derivative, or perturbating x
+  + Take gradient by looking at the local derivative, or perturbing x
   + Choose ```a``` as step size weight: big ```a``` is large step size
   + If ```deriv``` is large, will also make your step size large.
   + If ```deriv``` is large, probably means you are far away from minimum
@@ -261,8 +261,8 @@ Several possible solutions
 
 ## Approximate visualization
 
-  + Desired output of the error as gradient descent runs
-  + maybe some local problems, as step size is too big, but slowly move down to
+  + Graph of error vs. gradient descent iteration number
+  + Maybe some local problems, as step size is too big, but slowly move down to
     a small amount of error
 
 ---
@@ -312,8 +312,6 @@ Several possible solutions
   + Why?
 
 ---
-
-*TODO: what is the bottom part of the graph indicating?*
 
 ## Best Separator
 
