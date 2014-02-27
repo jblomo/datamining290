@@ -358,21 +358,21 @@ Several possible solutions
 
 ## Expressing the Hyperplane
 
-  + ```y = m*x + b```
+  + y = m*x + b
 
 ???
 
 ## Questions
 
   + Now, we're not going to think of a new letter for every dimension, we're
-    just going to say x_1, x_2, x_3 ...
+    just going to say x<sub>1</sub>, x<sub>2</sub>, x<sub>3</sub> ...
 
 ---
 
 ## Expressing the Hyperplane
 
-  + ```y = m*x + b```
-  + ```x_2 = m*x_1 + b```
+  + y = m*x + b
+  + x<sub>2</sub> = m*x<sub>1</sub> + b
 
 ???
 
@@ -384,24 +384,23 @@ Several possible solutions
 
 ## Expressing the Hyperplane
 
-  + ```y = m*x + b```
-  + ```x_2 = m*x_1 + b```
-  + ```0 = m*x_1 - x_2 + b```
-
+  + y = m*x + b
+  + x<sub>2</sub> = m*x<sub>1</sub> + b
+  + 0 = m*x<sub>1</sub> - x<sub>2</sub> + b
 ???
 
 ## Questions
 
-  + How to add more dimensions? x_22? Express x as a vector of all attributes
+  + How to add more dimensions? x<sub>22</sub>? Express x as a vector of all attributes
 
 ---
 
 ## Expressing the Hyperplane
 
-  + ```y = m*x + b```
-  + ```x_2 = m*x_1 + b```
-  + ```0 = m*x_1 - x_2 + b```
-  + ```0 = [m -1] * [x_1, x_2] + b```
+  + y = m*x + b
+  + x<sub>2</sub> = m*x<sub>1</sub> + b
+  + 0 = m*x<sub>1</sub> - x<sub>2</sub> + b
+  + 0 = [m -1] * [x<sub>1</sub>, x<sub>2</sub>] + b
 
 ???
 
@@ -414,11 +413,11 @@ Several possible solutions
 
 ## Expressing the Hyperplane
 
-  + ```y = m*x + b```
-  + ```x_2 = m*x_1 + b```
-  + ```0 = m*x_1 - x_2 + b```
-  + ```0 = [m -1] * [x_1, x_2] + b```
-  + ```0 = w * x + b```
+  + y = m*x + b
+  + x<sub>2</sub> = m*x<sub>1</sub> + b
+  + 0 = m*x<sub>1</sub> - x<sub>2</sub> + b
+  + 0 = [m -1] * [x<sub>1</sub>, x<sub>2</sub>] + b
+  + 0 = w * x + b
 
 ---
 

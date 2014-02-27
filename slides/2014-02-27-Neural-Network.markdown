@@ -41,7 +41,7 @@ class: left, top, inverse
 
 ## Polynomial
 
-  + Sure! Use a polynomial instead: ```x^2```, ```2x - x^2 + 4x^3```, ...
+  + Sure! Use a polynomial instead: x<sup>2</sup>, 2x - x<sup>2</sup> + 4x<sup>3</sup>, ...
   + If you're not sure what the underlying data model is, have to test
   + img: http://cheshmi.tumblr.com/
 
@@ -150,7 +150,7 @@ class: left, top, inverse
 
   + Learn by adjusting the strengths of the connections
   + Mathematically, strength is a weight multiplier of the output
-  + Training is done when we've found the right weights
+  + Training is complete when we've found good weights
 
 ---
 
@@ -403,31 +403,39 @@ Weights
 
 ---
 
-## Example
+### Example
+
+.left-column[
+
+  + Expected Output is 0
+    + t<sub>6</sub> = 0
+  + Actual Output
+    + o<sub>6</sub> = 0.8387
+  + Output Error:
+    + err<sub>6</sub> =
+    + o<sub>6</sub>\*(1-o<sub>6</sub>)\*(t<sub>6</sub>-o<sub>6</sub>) =
+    + -0.11346127339699999
+  + Setup hidden node 5
+    + o<sub>5</sub> = 0.9933
+    + w<sub>56</sub> = 1.5
+]
+
+.right-column[
+
+  + Error for node 5
+    + err<sub>5</sub> =
+    + o<sub>5</sub>\*(1-o<sub>5</sub>)\*(err<sub>6</sub>*w<sub>56</sub>)
+    + -0.0011326458827956695
+  + Adjust weight w<sub>56</sub>
+    + l = 10  # learn rate
+    + w<sub>56</sub> =
+    + w<sub>56</sub> + l\*err<sub>6</sub>\*o<sub>5</sub> =
+    + 0.37298917134759924
 
 .white-background[
 <img src="img/ann8.png" width=80% />
 ]
-
-???
-
-## Expected
-
-```python
-# Expected Output is 0
-t_6 = 0
-# Actual Output
-o_6 = 0.8387
-# Output Error -0.11346127339699999
-err_6 = o_6*(1-o_6)*(t_6-o_6)
-# Setup hidden node 5
-o_5 = 0.9933 ; w_56 = 1.5
-# Error for node 5 = -0.0011326458827956695
-err_5 = o_5*(1-o_5)*(err_6*w_56)
-# Adjust weight to 0.37298917134759924
-l = 10  # learning rate
-w_56 = w_56 + l*err_6*o_5
-```
+]
 
 ---
 
