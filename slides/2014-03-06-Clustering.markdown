@@ -169,7 +169,7 @@ class: left, top, inverse
 
 ## k-means
 
-  + Start: Randomly pick =k= centers for clusters
+  + Start: Randomly pick ```k``` centers for clusters
   + Repeat:
     + Assign all other points to their closest cluster
     + Recalculate the center of the cluster
@@ -185,7 +185,7 @@ class: left, top, inverse
 
 ## Example
 
-<img src="img/kmeansclustering.jpg"/>
+<img src="img/kmeansclustering.jpg" width=100% />
 
 ???
 
@@ -216,7 +216,7 @@ class: left, top, inverse
 ## Normalization
 
   + Cluster cities by average temperature and population attributes
-  + <x,y> = <temp, pop>
+  + ```<x,y> = <temperature, population>```
   + Using Euclidean distance, which attribute will affect similarity more?
 
 ???
@@ -236,7 +236,7 @@ class: left, top, inverse
   + Min-max
     + ```(v - min) / (max - min)```
   + Decimal
-    + ```* 10``` ```/ 10```
+    + ```* 10^n``` or ```/ 10^n```
   + Square
     + ```x**2```
   + Log
@@ -261,7 +261,7 @@ class: left, top, inverse
 
 ## Local Optima
 
-<img src="img/k-means-local.png"/>
+<img src="img/k-means-local.png" width=100% />
 
 ???
 
@@ -279,7 +279,7 @@ class: left, top, inverse
 
 ## Uneven Groups
 
-<img src="img/k-means-mouse.png"/>
+<img src="img/k-means-mouse.png" width=80% />
 
 ???
 
@@ -311,7 +311,7 @@ class: left, top, inverse
 
 ## Example
 
-<img src="img/k-medoids.png"/>
+<img src="img/k-medoids.png" width=100% />
 
 ???
 
@@ -325,9 +325,10 @@ class: left, top, inverse
 
 # *Break*
 
-<img src="img/screenshot_metroid2.jpg"/>
-
   + Do not confuse Medoid with Metroid
+
+<img src="img/screenshot_metroid2.jpg" width=70% />
+
 
 ???
 

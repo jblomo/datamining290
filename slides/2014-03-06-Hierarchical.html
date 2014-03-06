@@ -198,11 +198,27 @@ class: left, top, inverse
 
 ---
 
-## k-means Input animate:
+## k-means Limitations
 
-  + What did we supply to k-means before we ran it?
-  + =k=: number of clusters
-  + Clusters disjoint*
+  + Must supply ```k```, the number of clusters
+  + Clusters must be disjoint*
+
+???
+
+## Difference
+
+  + *We'll learn about "fuzzy" clustering next time, where cluster membership
+    is a probability
+
+---
+
+## k-means Limitations
+
+  + Must supply ```k```, the number of clusters
+  + Clusters must be disjoint*
+
+## Another Approach
+
   + Hierarchical clustering builds up clusters incrementally
 
 ???
@@ -210,12 +226,10 @@ class: left, top, inverse
 ## Difference
 
   + Hierarchical can find cluster of clusters
-  + Can illustrate clusters at many levels, let human intemperate what makes
+  + Can illustrate clusters at many levels, let human interpret what makes
     sense without guess-and-check
   + Clusters are built 1 cluster at a time, starting with all points being
     their own cluster
-  + *We'll learn about "fuzzy" clustering next time, where cluster membership
-    is a probability
 
 ---
 
@@ -225,7 +239,7 @@ class: left, top, inverse
   + Find closest clusters: Join them
   + Repeat
 
-<img src="img/agglomerative.png"/>
+<img src="img/agglomerative.png" width=100% />
 
 ???
 
@@ -262,7 +276,7 @@ class: left, top, inverse
 
 ## Termination
 
-  + Define have =k= clusters
+  + Define have ```k``` clusters
   + Distance between clusters exceeds threshold
   + Fitness function for cluster
 
@@ -270,21 +284,21 @@ class: left, top, inverse
 
 ## Details
 
-  + If you wanted to look at all potential ```k=, set =k``` to 1, then look at sub
+  + If you wanted to look at all potential ```k```, set ```k = 1```, then look at sub
     clusters
   + Distance or fitness function (eg. density or minimum intra-cluster
-    similarity score) can help define =k= automatically
+    similarity score) can help define ```k``` automatically
 
 ---
 
-## Dendrogram two_col:
-
-<img src="img/dendrogram1.jpg"/>
-
+## Dendrogram
 
   + Display of clustered groups
   + Concise visualization: groups do not need to be identified or named
   + Y axis can represent iteration
+
+
+<img src="img/dendrogram.png" width=100% />
 
 ???
 
@@ -294,14 +308,14 @@ class: left, top, inverse
 
 ---
 
-## CHAMELEON two_col:
+## Chameleon
 
   + Discover large number of small clusters
   + Group together small clusters
   + Join clusters with a high interconnectedness relative to their existing
     interconnectedness
 
-<img src="img/chameleon.png"/>
+<img src="img/chameleon.png" width=105% />
 
 ???
 
@@ -317,7 +331,7 @@ class: left, top, inverse
 
 ## Results
 
-<img src="img/chameleon-cluster.png"/>
+<img src="img/chameleon-cluster.png" width=100% />
 
 ???
 
@@ -327,13 +341,13 @@ class: left, top, inverse
 
 ---
 
-## Density: DBSCAN two_col:
+## Density: DBSCAN
 
   + Find "paths" of points that are in "dense" regions
-  + Paths: points within a distance =e=
-  + Density: surrounded by ```MinPts``` within region of radius =e=
+  + Paths: points within a distance ```e```
+  + Density: surrounded by ```MinPts``` within region of radius ```e```
 
-<img src="img/density-connected.png"/>
+<img src="img/density-connected.png" width=90% />
 
 ???
 
@@ -343,13 +357,20 @@ class: left, top, inverse
 
 ---
 
-## Density Trade-offs two_col:
+## Density Trade-offs
 
-<img src="img/DBSCAN.png"/>
+.left-column[
 
   + Finds clusters of different sizes, shapes
-  + DBSCAN is sensitive to the parameters used. How big is =e=?  How many
+  + DBSCAN is sensitive to the parameters used. How big is ```e```?  How many
     points is "dense"?
+]
+
+.right-column[
+.white-background[
+<img src="img/DBSCAN.png" width=100% />
+]
+]
 
 ???
 
@@ -373,22 +394,22 @@ class: left, top, inverse
     to be right enough: clusters are uniformly sized, don't wander around our
     dimensioned space
   + Topic drift: tendency for a cluster to change its properties slowly over
-    time: eg. articles on politics might use different words
-  + Performance: many of these algos are computationally expensive, hard to
+    time: e.g., articles on politics might use different words
+  + Performance: many of these algorithms are computationally expensive, hard to
     distribute.  Book goes into run times and where to make compromises on the
-    algo
+    algorithm
   + Figure out a fitness function for your metric.  If you used these clusters
     to take action, what would be the result?
 
 ---
 
-## Elbow Method two_col:
+## Elbow Method
 
   + Calculate intra-cluster variance
   + Compare to data set variance (F-test)
   + Find point where marginal gain of explicative power decreases
 
-<img src="img/elbow.JPG"/>
+<img src="img/elbow.JPG" width=70% />
 
 ---
 
@@ -409,18 +430,6 @@ class: left, top, inverse
 ---
 
 # *Break*
-
-
-
-
----
-
-next slide is animated - Slide 3
-next slide is two column - Slide 7
-next slide is two column - Slide 8
-next slide is two column - Slide 10
-next slide is two column - Slide 11
-next slide is two column - Slide 13
 
     </textarea>
     <script src="production/remark-0.5.9.min.js" type="text/javascript">
