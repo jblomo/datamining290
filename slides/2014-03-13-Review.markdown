@@ -24,6 +24,10 @@ class: left, top, inverse
   1. Example of "transactional data"
   1. Example of non-transactional data
 
+???
+
+1, 2
+
 ---
 
 ## Obtaining Data
@@ -31,6 +35,10 @@ class: left, top, inverse
   1. Trade-offs of dataset vs API?
   1. Trade-offs of operational database vs data warehouse
   1. Unix commands to explore data?
+
+???
+
+1, 2, 3
 
 ---
 
@@ -45,6 +53,10 @@ class: left, top, inverse
   1. How to calculate L<sub>2</sub> norm of two points?
   1. What is cosine similarity?
 
+???
+
+1, 2, 3, 4, 5, 7
+
 ---
 
 ## Preprocessing
@@ -55,6 +67,10 @@ class: left, top, inverse
   1. What are some options to deal with missing values?
   1. What are some options to deal with outliers?
   1. What does correlation imply?
+
+???
+
+2, 4, 5
 
 ---
 
@@ -72,6 +88,10 @@ class: left, top, inverse
     1. Dice
     1. Pivot
 
+???
+
+1, 4, 6.1
+
 ---
 
 ## MapReduce
@@ -80,6 +100,10 @@ class: left, top, inverse
   1. Why is log processing a typical use of MapReduce?
   1. What types of processing are not well suited?
   1. For a multi-step job, the output of a reducer is fed into what?
+
+???
+
+1, 2, 3, 4
 
 ---
 
@@ -94,6 +118,10 @@ class: left, top, inverse
     our tree?
   1. What are we optimizing for in the leaf nodes?
 
+???
+
+2, 3, 4
+
 ---
 
 ## Naive Bayes
@@ -105,6 +133,10 @@ class: left, top, inverse
   1. Why can training many models be useful?
   1. What is bootstrap sampling?
   1. What is a random forest?
+
+???
+
+1, 2, 3, 4, 7
 
 ---
 
@@ -118,6 +150,10 @@ class: left, top, inverse
     separability?
   1. If your data is not linearly separable, can you use SVM?
 
+???
+
+2, 3
+
 ---
 
 ## Neural Networks
@@ -128,6 +164,10 @@ class: left, top, inverse
   1. What types of problems are neural networks especially suited for?
   1. What are we improving during backward propagation?
 
+???
+
+1, 2, 4
+
 ---
 
 ## Partitioning Clusters
@@ -136,6 +176,10 @@ class: left, top, inverse
   1. What are some of the problems with k-means?
   1. Why is normalization especially useful in clustering?
   1. What are the tradeoffs for using k-medoid clustering?
+
+???
+
+1, 2
 
 ---
 
@@ -148,6 +192,10 @@ class: left, top, inverse
     Clustering or Partitioned Clustering?
   1. How can we evaluate a clustering algorithm if our data is already labeled
     with clusters?
+
+???
+
+1, 2
 
 ---
 
