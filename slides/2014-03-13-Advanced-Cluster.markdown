@@ -6,15 +6,6 @@ class: left, top, inverse
 
 # Advanced Clustering
 
-
-???
-
-## Questions from last week
-
-  + Heuristic for choosing # of clusters? √(n/2)
-  + k-means: how to calculate the centroid?
-  + k-medoids: how to calculate the medoid?
-
 ---
 
 ## Review
