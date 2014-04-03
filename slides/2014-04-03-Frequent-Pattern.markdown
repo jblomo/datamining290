@@ -83,7 +83,7 @@ class: left, top, inverse
   + Also don't care if ```A``` happens a lot: everybody buys milk, so not a big
     deal if some bought milk and strawberries
   + Also important to note confidence is not symmetric: buying strawberries may be
-    frequent with buying milk, but not visa versa
+    frequent with buying milk, but not vice versa
 
 ---
 
@@ -169,7 +169,7 @@ a,b,d <br/>
 
 ## Details
 
-  + Not cereal column: has a huge effect on if someone plays basketball
+  + Not cereal row: has a huge effect on if someone plays basketball
   + cereal + basketball... sure it happens frequently, but you'd actually
     expect to see a bigger effect
 
