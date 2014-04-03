@@ -294,7 +294,7 @@ class: left, top, inverse
 
 ---
 
-## Distance<sup>2</sup>
+## Distance²
 
 .tight-code[
 ```dist(o,C)**2 / sum(dist(o,c)**2 for c in clusters))```

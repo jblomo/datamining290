@@ -34,9 +34,10 @@ class: left, top, inverse
 ## ```s3cmd```
 
   + Upload / Download files
-  + ```s3cmd --configure``` (```cat ~jretz/mrjob.conf``` to get answers to first two questions, defaults should work for the rest)
-  + ```s3cmd mb s3://i290-group-name```
-  + ```s3cmd put localfile s3://i290-group-name/data/```
+  + ```s3cmd --configure```
+    + ```cat ~jretz/mrjob.conf``` to get answers to first two questions, defaults should work for the rest
+  + ```s3cmd mb s3://i290-name``` ← your name or team name here
+  + ```s3cmd put localfile s3://i290-name/data/```
 
 ???
 
@@ -48,7 +49,7 @@ class: left, top, inverse
 
 ## Elastic MapReduce
 
-  + ```python job.py -r emr -c ~jretz/mrjob.conf s3://i290-group-name/data/file```
+  + ```python job.py -r emr -c ~jretz/mrjob.conf s3://i290-name/data/file```
   + ```-r emr``` : run on EMR instead of localhost
   + ```-c ~jretz/mrjob.conf``` : use a configuration file
     + 5 machines, can change with command line options
@@ -60,19 +61,19 @@ class: left, top, inverse
   + SSH keys are used to connect to server to check status
   + Copy my keys, set correct permissions
 ```bash
-~$ cp ~jretz/mrjob-common.conf ~/mrjob.conf
-~$ chmod 0600 ~/mrjob.conf
+$ cp ~jretz/i290T-03.pem.shared ~/i290T-03.pem
+$ chmod 0600 ~/i290T-03.pem
 ```
 
 ---
 
 .tight-code[
 ```bash
-~$ s3cmd put yelp_academic_dataset.json.gz s3://i290-jretz/data/
+$ s3cmd put yelp_academic_dataset.json.gz s3://i290-jretz/data/
 # yelp_academic_dataset.json.gz -> s3://i290-jretz/data/yelp_academic_dataset.json.gz  [1 of 1]
 # 127506871 of 127506871   100% in    8s    13.60 MB/s  done
 
-~$ cd datamining290/code/
+$ cd datamining290/code/
 ~/datamining290/code$ python unique_review.py -v -r emr \
   -c ~jretz/mrjob.conf \
   --output-dir s3://i290-jretz/output/unique_review/ \
