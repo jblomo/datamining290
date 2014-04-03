@@ -34,7 +34,7 @@ class: left, top, inverse
 ## ```s3cmd```
 
   + Upload / Download files
-  + ```s3cmd --configure```
+  + ```s3cmd --configure``` (```cat ~jretz/mrjob.conf``` to get answers to first two questions, defaults should work for the rest)
   + ```s3cmd mb s3://i290-group-name```
   + ```s3cmd put localfile s3://i290-group-name/data/```
 
