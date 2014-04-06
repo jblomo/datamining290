@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Data Mining</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <style type="text/css">
+      @import url(http://fonts.googleapis.com/css?family=Droid+Serif);
+      @import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+
+      body {
+        font-family: 'Droid Serif';
+        font-size: 25px;
+      }
+      .remark-slide-content {
+        padding: 1em 2em 1em 2em;
+      }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: 400;
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+      h1 { font-size: 3em; }
+      h2 { font-size: 1.8em; }
+      h3 { font-size: 1.4em; }
+      .footnote {
+        position: absolute;
+        bottom: 3em;
+      }
+      ul { margin: 8px;}
+      li p { line-height: 1.25em; }
+      .red { color: #fa0000; }
+      .large { font-size: 2em; }
+      a, a > code {
+        color: rgb(249, 38, 114);
+        text-decoration: none;
+      }
+      code {
+        -moz-border-radius: 3px;
+        -web-border-radius: 3px;
+        background: #e7e8e2;
+        color: black;
+        border-radius: 3px;
+      }
+      .tight-code {
+        font-size: 20px;
+      }
+      .white-background {
+        background-color: white;
+        padding: 10px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .limit-size img {
+        height: auto;
+        width: auto;
+        max-width: 1000px;
+        max-height: 500px;
+       }
+      em { color: #80cafa; }
+      .pull-left {
+        float: left;
+        width: 47%;
+      }
+      .pull-right {
+        float: right;
+        width: 47%;
+      }
+      .pull-right ~ p {
+        clear: both;
+      }
+      #slideshow .slide .content code {
+        font-size: 1.6em;
+      }
+      #slideshow .slide .content pre code {
+        font-size: 1.6em;
+        padding: 15px;
+      }
+      .inverse {
+        background: #272822;
+        color: #e3e3e3;
+        text-shadow: 0 0 20px #333;
+      }
+      .inverse h1, .inverse h2 {
+        color: #f3f3f3;
+        line-height: 1.6em;
+      }
+
+      /* Slide-specific styling */
+      #slide-inverse .footnote {
+        bottom: 12px;
+        left: 20px;
+      }
+      #slide-how .slides {
+        font-size: 1.6em;
+        position: absolute;
+        top:  151px;
+        right: 140px;
+      }
+      #slide-how .slides h3 {
+        margin-top: 0.2em;
+      }
+      #slide-how .slides .first, #slide-how .slides .second {
+        padding: 1px 20px;
+        height: 90px;
+        width: 120px;
+        -moz-box-shadow: 0 0 10px #777;
+        -webkit-box-shadow: 0 0 10px #777;
+        box-shadow: 0 0 10px #777;
+      }
+      #slide-how .slides .first {
+        background: #fff;
+        position: absolute;
+        top: 20%;
+        left: 20%;
+        z-index: 1;
+      }
+      #slide-how .slides .second {
+        position: relative;
+        background: #fff;
+        z-index: 0;
+      }
+
+      /* Two-column layout */
+      .left-column {
+        width: 48%;
+        float: left;
+      }
+      .right-column {
+        width: 48%;
+        float: right;
+      }
+      .right-column img {
+        max-width: 120%;
+        max-height: 120%;
+      }
+
+      /* Tables */
+      table {
+        border-collapse: collapse;
+        margin: 0px;
+      }
+      table, th, td {
+        border: 1px solid white;
+      }
+      th, td {
+        padding: 7px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+
+name: inverse
+layout: true
+class: left, top, inverse
+
+---
+
+# PageRank center:
+
+  <img src="img/PageRanks-Example.svg.png"/>
+
+???
+
+## Web page importance
+
+  + Also used to model importance of people, places... anything that has a
+    reputation
+  + inbound links are important, but scaled by the importance of the source
+  + C still important, even though it only has one inbound
+
+---
+
+# Random Walks
+
+  + Starting from a random page, what is the likelihood of winding up on a target
+    page?
+  + Starting point captured by initial constant
+  + Stopping captured by "damping factor" (0.85)
+  <img src="img/pagerank.png"/>
+
+???
+
+## Original
+
+  + Original paper did not divide by N
+  + This gives relative weights of pages, but not a formal probability because
+    sum will not add up to N
+  + Either way is fine for our purposes
+
+---
+
+# Example
+
+  + ```B=, =C```, ```D=, all link to =A```
+  + =B= has PageRank of 0.5, 4 links
+  + =C= has PageRank of 0.7, 4 links
+  + =D= has PageRank of 0.2, 1 link
+
+???
+
+## Calculations
+
+  + 0.15 + 0.85 * sum(PR/links for (pr,links) in pages)
+  + 0.15 + 0.85 * sum(0.5/4, 0.7/4, 0.2/1)
+  + 0.15 + 0.85 * 0.465
+  + 0.554525
+  + From _Programming Collective Intelligence_
+
+---
+
+# Other Pages
+
+  + But how did we know the PageRank of other pages?
+  + Similar to SimRank, we calculate iteratively until convergence
+
+---
+
+# Representing Graphs
+
+  + Adjacency Matrix: Represent graph edges in a matrix
+
+  | V | A | B | C | D |
+  | A | 0 | 0 | 0 | 0 |
+  | B | 1 | 0 | 1 | 0 |
+  | C | 1 | 0 | 0 | 1 |
+  | D | 1 | 1 | 0 | 0 |
+
+???
+
+## Diversion
+
+  + Take a step back so we can motivate how to express these calculations as
+    linear algebra
+  + Using linear algebra can help us translate graph concepts to fairly elegant
+    code, as well as realize some optimizations
+  + Draw
+  + Symmetric? When?
+
+---
+
+# Representing Graphs
+
+  + Adjacency List: For a vertex, list all connections
+
+```csv
+A []
+B [A,C]
+C [A,D]
+D [A,B]
+```
+
+???
+
+## Diversion
+
+  + You can think of this as keys (vertex) and values (list of vertices)
+  + When would thinking in key-values be useful? MapReduce
+  + Back to matrix representation
+
+---
+
+# Eigenvector
+
+  + PageRank formula divides by number of links
+  + Modify adjacency matrix typically also normalized such that all rows sum to 1
+  + PageRank scores are entries in the largest eigenvector of the matrix
+    representation
+  <img src="img/pagerank-eigen.png"/>
+
+---
+
+# Eigenvector centrality
+
+  + Another measurement for graphs, using the simple adjacency matrix
+  + Relative influence of a node (no normalization)
+
+---
+
+# Adversarial
+
+  + Source does not want to be discovered
+  + Patterns are purposefully hidden: so discover the patterns of hiding
+  + If adversary knows your techniques, they can take advantage of weakness
+
+???
+
+## Weakness
+
+  + Reading: paper discovering hiding patterns
+  + Weakness of pagerank?
+  + We assume that these links are legitimate.
+  + What happens if the links are not conveying authority?
+
+---
+
+# Google Bomb center
+
+  + Milder forms of adversarial work
+  <img src="img/Google_Bomb_Miserable_Failure.png"/>
+
+???
+
+## Link farms
+
+  + Link farms try to create fake links to pages,
+  + [JC Penny's link farm](http://www.nytimes.com/2011/02/13/business/13search.html?pagewanted=all)
+
+---
+
+# Hubs & Authorities two_col:
+
+  + Earlier in the web, more structure
+  + Hubs: collected links to different resources
+  + Authorities: Gave out specific information
+  + Score separately?
+<img src="img/early-yahoo.jpg"/>
+
+???
+
+## Alternatives
+
+  + Some other interesting network analysis tools
+
+---
+
+# HITS
+
+  + Authority score: sum(hub(i) for i in inbound\_links)
+  + Hub score: sum(authority(i) for i in outbound\_links)
+  + Normalize: to ensure convergence, square root sum of squares of scores
+
+???
+
+## Iterative
+
+  + Sill iterative, but now using inbound and outbound links to judge
+  + Hubs have outbound links to authoritive pages
+  + Authorities have inbound links from good hubs
+
+---
+
+# Connections
+
+  + Connected: there exists a path from one vertex to another
+  + Connectivity: minimum number of vertices to remove to disconnect remaining
+    vertices
+  + Clustering Coefficient: Measure of how connected a vertex or group of
+    vertices are
+
+???
+
+## Robustness
+
+  + This is used to understand robustness of a system: if an earthquake
+    damaged the Bay Bridge, could we still travel from one point to another?
+  + What is the connectedness of Oakland and SF?
+  + Closely related to min-cuts, which is discussed in the book
+  + Network topology: what happens if a router fails?
+
+---
+
+# Clustering Coefficient animate:
+
+  + How many directed edges are possible between 3 vertices?
+  + 4 vertices?
+  + ```v*(v-1)```
+  + Undirected?
+  + ```v*(v-1)/2```
+  + Clustering Coefficient: Ratio of actual edges to possible edges
+
+???
+
+## Reading
+
+  + Used in Reading this week
+  + ```v*(v-1)``` connection to every other node but yourself
+  + ```/2``` undirected, don't double count connections
+
+---
+
+## Example
+
+  <img src="img/Directed_acyclic_graph.png"/>
+
+  Connectivity Coefficient of 1; 4
+
+???
+
+### Answer
+
+  + Neighbors of 1: 5 2
+  + 2*(2-1) / 2 = 1
+  + Actual links = 1
+  + Neighbors of 4: 3,5,6
+  + 3*(3-1) / 2 = 3
+  + Actual: 0
+  + If 3-5 connected? 1/3
+
+---
+
+# *Break*
+
+
+
+
+---
+
+Slide 1
+  main
+  notes
+Slide 2
+  main
+  notes
+Slide 3
+  main
+  notes
+Slide 4
+  main
+Slide 5
+  main
+    a series of sections will work better for some definitions
+    table
+    table
+    table
+    table
+    table
+  notes
+Slide 6
+  main
+    a series of sections will work better for some definitions
+  notes
+Slide 7
+  main
+Slide 8
+  main
+Slide 9
+  main
+  notes
+Slide 10
+  main
+  notes
+    check link
+next slide is two column
+Slide 11
+  main
+  notes
+Slide 12
+  main
+    a series of sections will work better for some definitions
+    a series of sections will work better for some definitions
+    a series of sections will work better for some definitions
+  notes
+Slide 13
+  main
+    a series of sections will work better for some definitions
+    a series of sections will work better for some definitions
+    a series of sections will work better for some definitions
+  notes
+next slide is animated
+Slide 14
+  main
+  notes
+Slide 15
+  main
+  notes
+Slide 16
+  main
+Headings are the right level?
+
+    </textarea>
+    <script src="production/remark-0.5.9.min.js" type="text/javascript">
+    </script>
+    <script type="text/javascript">
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>
