@@ -10,7 +10,7 @@ class: left, top, inverse
 
 ## Graphs
 
-  + Graphs (or networks) an model a surprising number of domains
+  + Graphs (or networks) can model a surprising number of domains
   + Modeling with graphs opens up a large number of algorithms
   + Linear Algebra has many connections to graphs
 
