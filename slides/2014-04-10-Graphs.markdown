@@ -12,7 +12,7 @@ class: left, top, inverse
 
   + Graphs (or networks) an model a surprising number of domains
   + Modeling with graphs opens up a large number of algorithms
-  + Linear math has many connections to graphs
+  + Linear Algebra has many connections to graphs
 
 ???
 
@@ -20,7 +20,7 @@ class: left, top, inverse
 
   + Data mining theme: get your problem stated as a math problem, whole slew of
     solutions present themselves
-  + Linear math is really useful for running equations of all nodes, or
+  + Linear Algebra is really useful for running equations of all nodes, or
     simulate moving across network
 
 ---

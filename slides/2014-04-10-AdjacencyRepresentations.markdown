@@ -6,7 +6,7 @@ class: left, top, inverse
 
 ## Homework
 
-  + Represent graphs as adjacency matrix, adjacency list
+  + Represent each of 2 graphs as both an adjacency matrix and an adjacency list
   + Work on your projects
 
 ---
