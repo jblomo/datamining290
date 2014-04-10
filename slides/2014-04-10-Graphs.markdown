@@ -27,9 +27,12 @@ class: left, top, inverse
 
 ## Vertices & Edges
 
-  + Vertex: the interconnected objects, or nodes
-  + Edge: the lines or curves that connect vertices
-  + Graph: Collection of vertices and edges ```G = (V,E)```
+  + Vertex
+    + the interconnected objects, or nodes
+  + Edge
+    + the lines or curves that connect vertices
+  + Graph
+    + Collection of vertices and edges ```G = (V,E)```
 
 .white-background[
 <img src="img/GraphNodesEdges.png" width=100% />
@@ -45,20 +48,26 @@ class: left, top, inverse
 
 ## Examples
 
-  + Vertex: User, building, router, product
-  + Edge: Relationship, road, network cable, purchased
-  + Graph: Social Network, physical infrastructure, Internet, purchasing
+  + Vertex
+    + User, building, router, product
+  + Edge
+    + Relationship, road, network cable, purchased
+  + Graph
+    + Social Network, physical infrastructure, Internet, purchasing
     history
 
 ???
 
 ## Examples
 
-  + Many graphs have assumed edge labels: the edges represent something
+  + Many graphs have assumed edge labels
+    + the edges represent something
     consistent
-  + Some graphs have multiple types of edges: relationship is one of family,
+  + Some graphs have multiple types of edges
+    + relationship is one of family,
     friend, co-worker, etc.
-  + Edge can be anything that ties two things together: purchase history, e.g.,
+  + Edge can be anything that ties two things together
+    + purchase history, e.g.,
     is not a physical thing connecting, but an idea
 
 ---
@@ -107,7 +116,6 @@ class: left, top, inverse
   + Product purchases (directed)
   + Internet links (directed)
   + Class prerequisites (directed)
-  + History of a git repo (directed)
 
 ???
 
@@ -117,17 +125,23 @@ class: left, top, inverse
   + Product purchases: acyclic
   + Internet links: cyclic
   + Class prerequisites: acyclic
-  + Class prerequisites: acyclic
 
 ---
 
-## Bipartite two_col:
+## Bipartite
+
+.left-column[
 
   + Graph whose vertices can be divided into two distinct sets
-  + Vertices in ```U= are only connected to those in =V```, vice versa
-  + Product purchases: users ```U=, products =V```
+  + Vertices in ```U``` are only connected to those in ```V```, vice versa
+  + Product purchases: users ```U```, products ```V```
+]
 
+.right-column[
+.white-background[
 <img src="img/Simple-bipartite-graph.svg.png" width=100% />
+]
+]
 
 ???
 
@@ -142,12 +156,18 @@ class: left, top, inverse
 
 ## Measurements
 
-  + Geodesic distance: Number of edges to connect to vertices
-  + Eccentricity: Largest geodesic distance from =v= to another
-  + Radius: Minimum eccentricity
-  + Diameter: Maximum eccentricity
-  + Peripheral vertex: Vertex with eccentricity == diameter
-  + Incoming/Outgoing edge count: Number of edges point to or from an edge
+  + Geodesic distance
+    + Number of edges to connect two vertices
+  + Eccentricity of ```v```
+    + Largest geodesic distance from ```v``` to the most distant vertex
+  + Radius
+    + Minimum eccentricity of any vertex in the graph
+  + Diameter
+    + Maximum eccentricity of any vertex in the graph
+  + Peripheral vertex
+    + Vertex with eccentricity == diameter
+  + Incoming/Outgoing edge count of a vertex
+    + Number of edges coming in/out of a vertex
 
 ???
 
@@ -155,14 +175,16 @@ class: left, top, inverse
 
   + Similar to getting distribution stats from initial datasets, these
     measurements can help you understand graphs as a summary
-  + Once you have the incoming/outgoing edge counts, can use regular stats:
+  + Once you have the incoming/outgoing edge counts, you can use regular stats:
     what is the distribution of counts?
 
 ---
 
-## Examples center:
+## Examples
 
+.white-background[
 <img src="img/6n-graf.svg.png" width=100% />
+]
 
 ???
 
@@ -172,51 +194,72 @@ class: left, top, inverse
   + Eccentricity 2: 3 (disconnected graph is infinity)
   + Radius: 2
   + Diameter: 3
-  + Pericheral Verticies: 1, 2, 6
+  + Peripheral Verticies: 1, 2, 6
 
 ---
 
-## SimRank
+## Connections
 
-  + Vertices are similar if they share similar neighbors
-  + SimRank between two vertices is the average of the SimRank of its neighbors
-
-<img src="img/simrank.png" width=100% />
-<img src="img/simrank-iterative.png" width=100% />
+  + Connected
+    + there exists a path from one vertex to another
+  + Connectivity
+    + minimum number of vertices to remove to disconnect remaining
+    vertices
+  + Clustering Coefficient
+    + Measure of how connected a vertex or group of vertices are
 
 ???
 
-## Recursive
+## Robustness
 
-  + This is an iterative and recursive definition
-  + Iterative because neighbors are influenced by each other
-    + What is your simrank? Well, what is your simrank?
-    + Converges
-  + Recursive because you're figuring out simrank for all neighbors
+  + This is used to understand robustness of a system: if an earthquake
+    damaged the Bay Bridge, could we still travel from one point to another?
+  + What is the connectedness of Oakland and SF?
+  + Closely related to min-cuts, which is discussed in the book
+  + Network topology: what happens if a router fails?
+
+---
+
+## Clustering Coefficient
+
+  + How many directed edges are possible between 3 vertices?
+  + 4 vertices?
+  + ```v*(v-1)```
+  + Undirected?
+  + ```v*(v-1)/2```
+  + Clustering Coefficient: Ratio of actual edges to possible edges amongst neighbors
+
+???
+
+## Reading
+
+  + Used in Reading this week
+  + ```v*(v-1)``` connection to every other node but yourself
+  + ```/2``` undirected, don't double count connections
 
 ---
 
 ## Example
 
-<img src="img/6n-graf.svg.png" width=100% />
-
-  2 SimRank 4
+.center[
+.white-background[
+<img src="img/6n-graf.svg.png" width=90% />
+]
+]
 
 ???
 
-## Calculations
+## Answer
 
-    + I(u) = 5,3,1
-    + I(v) = 5,3,6
-    + C = 0.6 daming factor.. similarity fades over time
-    + s0(5,5) = 1
-    + s0(3,3) = 1
-    + s0(5,3) = 0
-    + s0(3,5) = 0
-    + s0(1,5) = s0(1,3) = 0, s0(6,1)... = 0
-    + s1= 0.6/(2*2) * sum(1,1,0,0,0,0)
-    + 0.3
-    + Next round, we'll need to figure out s1 of 5,3 to calculate update
+  + Clustering Coefficient of 1:
+    + Neighbors of 1: 5 2
+    + 2*(2-1) / 2 = 1
+    + Actual links = 1
+  + Clustering Coefficient of 4:
+    + Neighbors of 4: 3,5,6
+    + 3*(3-1) / 2 = 3
+    + Actual: 0
+    + If 3-5 connected? 1/3
 
 ---
 
@@ -226,42 +269,8 @@ class: left, top, inverse
     + Follow link or not
     + Which link to follow
   + Simulate the decision many times
-  + What is the probability you will wind up on ```u= from =v```?
+  + What is the probability you will wind up on ```u``` from ```v```?
 
 ---
 
 # *Break*
-
-
-
-
----
-
-next slide is two column - Slide 3
-  main
-    a series of sections will work better for some definitions
-    a series of sections will work better for some definitions
-    a series of sections will work better for some definitions
-Slide 4
-  main
-    a series of sections will work better for some definitions
-    a series of sections will work better for some definitions
-    a series of sections will work better for some definitions
-next slide is two column - Slide 5
-next slide is two column
-Slide 6
-  main
-    a series of sections will work better for some definitions
-    a series of sections will work better for some definitions
-    a series of sections will work better for some definitions
-    a series of sections will work better for some definitions
-next slide is two column - Slide 8
-Slide 9
-  main
-    a series of sections will work better for some definitions
-    a series of sections will work better for some definitions
-    a series of sections will work better for some definitions
-    a series of sections will work better for some definitions
-    a series of sections will work better for some definitions
-    a series of sections will work better for some definitions
-Headings are the right level?

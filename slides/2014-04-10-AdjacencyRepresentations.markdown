@@ -4,25 +4,29 @@ class: left, top, inverse
 
 ---
 
-# Homework
+## Homework
 
   + Represent graphs as adjacency matrix, adjacency list
   + Work on your projects
-  + Review your midterm
 
 ---
 
-# Graphs
+## Graphs
 
-  1. <img src="img/Directed_acyclic_graph.png"/>
-  2. <img src="img/6n-graf.svg.png"/>
+.left-column[
+1. <img src="img/Directed_acyclic_graph.png" width=100% />
+]
+.right-column[
+2. .white-background[<img src="img/6n-graf.svg.png" width=100% />]
+]
 
 ---
 
-# Output
+## Output
 
   + File in Github pull request
   + Represent Matrix and list in some sort of organized way
+
 ```python
 [[0 1 1 1]
 [1 0 0 1]
@@ -43,7 +47,7 @@ class: left, top, inverse
 
 ---
 
-# [NetworkX](http://networkx.github.io/)
+## [NetworkX](http://networkx.github.io/)
 
   + Python library for manipulating graphs
   + Potentially useful for your projects
@@ -51,7 +55,7 @@ class: left, top, inverse
 
 ---
 
-# [VirtualEnv](https://pypi.python.org/pypi/virtualenv)
+## [VirtualEnv](https://pypi.python.org/pypi/virtualenv)
 
   + Install and manage libraries
   + ```activate``` each time you start a new session
@@ -60,22 +64,3 @@ $ virtualenv venv
 $ source venv/bin/activate
 $ pip install <python package>
 ```
-
-
-
-
----
-
-Slide 1
-  main
-Slide 2
-  main
-Slide 3
-  main
-Slide 4
-  main
-    check link
-Slide 5
-  main
-    check link
-Headings are the right level?
