@@ -6,6 +6,15 @@ class: left, top, inverse
 
 # Outliers
 
+???
+
+Min 43
+Max 90
+Mean 75.3
+Median 77
+Mode 77
+Standard Deviation 10.2
+
 ---
 
 ## Generative Model

@@ -4,27 +4,36 @@ class: left, top, inverse
 
 ---
 
-# Multimedia Data Mining
+## Multimedia Data Mining
 
 ---
 
-## Features two_col:
+## Features
+
+.left-column[
 
   + Core algorithms similar to "traditional" data mining
   + Difference lies in feature engineering
   + How to translate intuitions to numbers and formulas?
+]
 
+.right-column[
 <img src="img/face-recognition.jpg" width=100% />
+]
 
 ---
 
 ## Types
 
-  + Spatial: geographic points and features, including natural and man-made
+  + Spatial
+    + geographic points and features, including natural and man-made
     phenomenon
-  + Images: Size, color, shape, curves, relative positions
-  + Music: Tone, tempo, beat, rhythm
-  + Voice: Speed, accent, word pauses, background noise
+  + Images
+    + Size, color, shape, curves, relative positions
+  + Music
+    + Tone, tempo, beat, rhythm
+  + Voice
+    + Speed, accent, word pauses, background noise
 
 ???
 
@@ -39,13 +48,18 @@ class: left, top, inverse
 
 ---
 
-## Generalization two_col:
+## Generalization
+
+.left-column[
 
   + Many of these areas have digital representations
   + Can we use the raw bit representations?
   + Usually not: must generalize patterns
+]
 
+.right-column[
 <img src="img/digits.png" width=100% />
+]
 
 ???
 
@@ -82,13 +96,18 @@ class: left, top, inverse
 
 ---
 
-## GIS two_col:
+## GIS
+
+.left-column[
 
   + Geographic Information Systems
   + Analysis and visualization of geographic data
   + Search, terrain, object detection, flow calculations
+]
 
+.right-column[
 <img src="img/gis.jpg" width=100% />
+]
 
 ---
 
@@ -96,7 +115,8 @@ class: left, top, inverse
 
   + Integrates spatial information with traditional DBMS operations
   + Spatial indexing, distance metrics, polygon definitions, layering
-  + Eg: Oracle Spatial Data Cartridge, ESRI Spatial Engine
+  + e.g., Oracle Spatial Data Cartridge, ESRI Spatial Engine, PostreSQL +
+  PostGIS
 
 ---
 
@@ -110,16 +130,19 @@ class: left, top, inverse
 
 ## Ideas
 
-  + City layouts: Understanding home->work distances, not Euclidean, but
+  + City layouts
+    + Understanding home->work distances, not Euclidean, but
     traffic on streets or by public transportation, recognizing traffic jams
-  + Business centers: analyzing network flow based on roads: industrial
+  + Business centers
+    + analyzing network flow based on roads: industrial
     supply centers nearby?  Creative centers, restaurants, nightlife?
-  + Deforestation: nearby cities' effect? Recognizing forested areas vs
+  + Deforestation
+    + nearby cities' effect? Recognizing forested areas vs
     clear cut. Time series
 
 ---
 
-## ATM Locations given obstacles center:
+## ATM Locations given obstacles
 
 <img src="img/obstacle-clustering.png" width=100% />
 
@@ -127,27 +150,32 @@ class: left, top, inverse
 
 ## Yelp
 
-  + This is a current area we could improve at Yelp:
+  + This is a current area we could improve at Yelp
   + Just because you're a mile from a restaurant doesn't mean it is "close"
   + Maybe across the Bay, or maybe in between metro stops
   + How can you calculate efficiently?
 
 ---
 
-## Images two_col:
+## Images
+
+.left-column[
 
   + General Feature Extraction
   + Sketch Recognition
   + Image Recognition
+]
 
-<img src="img/Sift_keypoints_filtering.jpg" width=100% />
+.right-column[
+<img src="img/Sift_keypoints_filtering.jpg" width=60% />
+]
 
 ???
 
 ## Covering
 
   + We'll cover some interesting ways to extract dimensions
-  + ML/data mining combine these dimensions to do recognition with, eg.
+  + ML/data mining combine these dimensions to do recognition with, e.g.,
     labeled data
   + Image on the right is using an algorithm to pick out, then filter
     "interesting" points on the image
@@ -155,26 +183,27 @@ class: left, top, inverse
 
 ---
 
-## SIFT
+## [SIFT](https://www.google.com/maps/place/San+Francisco,+CA/@37.8023623,-122.4055517,79a,24.4y,152.43h,85.12t,358.65r/data=!3m5!1e4!3m3!1s1547597185919489823!2e3!3e9!4m2!3m1!1s0x80859a6d00690021:0x4a501367f076adff)
 
-<img src="img/Sift_keypoints_filtering.jpg" width=100% />
-
-???
-
-## Process
+.left-column[
 
   + Successively apply Gaussian blur to image
-  + Find points which "stand out" between blurs (ie big differences)
-  + You can connect these keypoints to make a kind of fingerprint
+  + Find points which "stand out" between blurs (i.e., big differences)
+  + You can connect these key points to make a kind of fingerprint
   + These fingerprints can be used, scaled, etc. to match against other images
+]
+
+.right-column[
+<img src="img/Sift_keypoints_filtering.jpg" width=60% />
+]
 
 ---
 
-## Sketch Recognition center:
-
-<img src="img/sketch-1.png" width=100% />
+## Sketch Recognition
 
 + Find (x,y) points along a sketch
+
+<img src="img/sketch-1.png" width=90% />
 
 ???
 
@@ -189,11 +218,11 @@ class: left, top, inverse
 
 ---
 
-## Direction center:
-
-<img src="img/sketch-2.png" width=100% />
+## Direction
 
 + Find angles along a sketch
+
+<img src="img/sketch-2.png" width=90% />
 
 ???
 
@@ -207,11 +236,11 @@ class: left, top, inverse
 
 ---
 
-## Direction Plot center:
-
-<img src="img/sketch-3.png" width=100% />
+## Direction Plot
 
 + Plot angles vs time
+
+<img src="img/sketch-3.png" width=100% />
 
 ???
 
@@ -219,15 +248,15 @@ class: left, top, inverse
 
   + Becomes even more generalized:
     + What is the derivative?
-    + How many times to we change derivatives?
+    + How many times do we change derivatives?
 
 ---
 
-## Direction Plot center:
-
-<img src="img/sketch-4.png" width=100% />
+## Direction Plot
 
 + Plot angles vs time
+
+<img src="img/sketch-4.png" width=100% />
 
 ???
 
@@ -237,19 +266,19 @@ class: left, top, inverse
 
 ---
 
-## Features center:
-
-<img src="img/sketch-4.png" width=100% />
+## Features
 
 + NDDE: Normalized Distance between Direction Extremes
 + DCR: Direction Change Ratio
+
+<img src="img/sketch-4.png" width=90% />
 
 ???
 
 ## Why?
 
-  + NDDE: Are the discontinuous changes in direction, or is the line
-    + generally curvy, and follows a similar path?
+  + NDDE: Are there discontinuous changes in direction, or is the line
+    generally curvy and follows a similar path?
   + DCR: Total amount of angle change in the sketch. Low for first, high
     for second
   + Others?: bounding box size/ratio, stroke length, distance between endpoints,
@@ -259,8 +288,7 @@ class: left, top, inverse
 
 ## All Together Now
 
-<iframe src="http://player.vimeo.com/video/6496886" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> <p><a href="http://vimeo.com/6496886">Sketch2Photo: Internet Image Montage</a> from <a href="http://vimeo.com/user2276797">Tao Chen</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
-[Sketch2Photo](http://vimeo.com/6496886)
+http://player.vimeo.com/video/6496886
 
 ---
 
@@ -285,27 +313,3 @@ class: left, top, inverse
 ---
 
 # *Break*
-
----
-
-next slide is two column - Slide 2
-Slide 3
-  main
-    a series of sections will work better for some definitions
-    a series of sections will work better for some definitions
-    a series of sections will work better for some definitions
-    a series of sections will work better for some definitions
-next slide is two column - Slide 4
-next slide is two column - Slide 6
-next slide is two column - Slide 10
-Slide 16
-  main
-    a series of sections will work better for some definitions
-    a series of sections will work better for some definitions
-  notes
-    a series of sections will work better for some definitions
-    a series of sections will work better for some definitions
-    a series of sections will work better for some definitions
-Slide 17
-  main
-    check link
