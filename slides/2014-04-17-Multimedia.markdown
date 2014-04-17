@@ -8,16 +8,17 @@ class: left, top, inverse
 
 ---
 
-# Features two_col:
+## Features two_col:
 
   + Core algorithms similar to "traditional" data mining
   + Difference lies in feature engineering
   + How to translate intuitions to numbers and formulas?
-  <img src="img/face-recognition.jpg"/>
+
+<img src="img/face-recognition.jpg" width=100% />
 
 ---
 
-# Types
+## Types
 
   + Spatial: geographic points and features, including natural and man-made
     phenomenon
@@ -38,12 +39,13 @@ class: left, top, inverse
 
 ---
 
-# Generalization two_col:
+## Generalization two_col:
 
   + Many of these areas have digital representations
   + Can we use the raw bit representations?
   + Usually not: must generalize patterns
-  <img src="img/digits.png"/>
+
+<img src="img/digits.png" width=100% />
 
 ???
 
@@ -61,7 +63,7 @@ class: left, top, inverse
 
 ---
 
-# Generalized Features
+## Generalized Features
 
   + Derivative / Slope of behavior
   + Min / Max of groups of points
@@ -80,16 +82,17 @@ class: left, top, inverse
 
 ---
 
-# GIS two_col:
+## GIS two_col:
 
   + Geographic Information Systems
   + Analysis and visualization of geographic data
   + Search, terrain, object detection, flow calculations
-  <img src="img/gis.jpg"/>
+
+<img src="img/gis.jpg" width=100% />
 
 ---
 
-# Spatial Databases
+## Spatial Databases
 
   + Integrates spatial information with traditional DBMS operations
   + Spatial indexing, distance metrics, polygon definitions, layering
@@ -97,7 +100,7 @@ class: left, top, inverse
 
 ---
 
-# Discovery
+## Discovery
 
   + What are examples of efficient city layouts?
   + What influences successful business centers?
@@ -116,9 +119,9 @@ class: left, top, inverse
 
 ---
 
-# ATM Locations given obstacles center:
+## ATM Locations given obstacles center:
 
-  <img src="img/obstacle-clustering.png"/>
+<img src="img/obstacle-clustering.png" width=100% />
 
 ???
 
@@ -131,12 +134,13 @@ class: left, top, inverse
 
 ---
 
-# Images two_col:
+## Images two_col:
 
   + General Feature Extraction
   + Sketch Recognition
   + Image Recognition
-  <img src="img/Sift_keypoints_filtering.jpg"/>
+
+<img src="img/Sift_keypoints_filtering.jpg" width=100% />
 
 ???
 
@@ -151,9 +155,9 @@ class: left, top, inverse
 
 ---
 
-# SIFT
+## SIFT
 
-  <img src="img/Sift_keypoints_filtering.jpg"/>
+<img src="img/Sift_keypoints_filtering.jpg" width=100% />
 
 ???
 
@@ -166,9 +170,10 @@ class: left, top, inverse
 
 ---
 
-# Sketch Recognition center:
+## Sketch Recognition center:
 
-  <img src="img/sketch-1.png"/>
+<img src="img/sketch-1.png" width=100% />
+
 + Find (x,y) points along a sketch
 
 ???
@@ -184,9 +189,10 @@ class: left, top, inverse
 
 ---
 
-# Direction center:
+## Direction center:
 
-  <img src="img/sketch-2.png"/>
+<img src="img/sketch-2.png" width=100% />
+
 + Find angles along a sketch
 
 ???
@@ -201,9 +207,10 @@ class: left, top, inverse
 
 ---
 
-# Direction Plot center:
+## Direction Plot center:
 
-  <img src="img/sketch-3.png"/>
+<img src="img/sketch-3.png" width=100% />
+
 + Plot angles vs time
 
 ???
@@ -216,9 +223,10 @@ class: left, top, inverse
 
 ---
 
-# Direction Plot center:
+## Direction Plot center:
 
-  <img src="img/sketch-4.png"/>
+<img src="img/sketch-4.png" width=100% />
+
 + Plot angles vs time
 
 ???
@@ -229,9 +237,10 @@ class: left, top, inverse
 
 ---
 
-# Features center:
+## Features center:
 
-  <img src="img/sketch-4.png"/>
+<img src="img/sketch-4.png" width=100% />
+
 + NDDE: Normalized Distance between Direction Extremes
 + DCR: Direction Change Ratio
 
@@ -248,20 +257,21 @@ class: left, top, inverse
 
 ---
 
-# All Together Now
+## All Together Now
 
 <iframe src="http://player.vimeo.com/video/6496886" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> <p><a href="http://vimeo.com/6496886">Sketch2Photo: Internet Image Montage</a> from <a href="http://vimeo.com/user2276797">Tao Chen</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
 [Sketch2Photo](http://vimeo.com/6496886)
 
 ---
 
-# Music
+## Music
 
   + Generate a finger print: time, frequency, amplitude
   + Filter most intense (largest) amplitudes
   + Create a hash of connections between points
   + Match, in time, the hash between songs
-  <img src="img/music_match.png"/>
+
+<img src="img/music_match.png" width=100% />
 
 ???
 
@@ -276,60 +286,18 @@ class: left, top, inverse
 
 # *Break*
 
-
-
-
 ---
 
-Slide 1
-  main
-next slide is two column
-Slide 2
-  main
+next slide is two column - Slide 2
 Slide 3
   main
     a series of sections will work better for some definitions
     a series of sections will work better for some definitions
     a series of sections will work better for some definitions
     a series of sections will work better for some definitions
-  notes
-next slide is two column
-Slide 4
-  main
-  notes
-Slide 5
-  main
-  notes
-next slide is two column
-Slide 6
-  main
-Slide 7
-  main
-Slide 8
-  main
-  notes
-Slide 9
-  main
-  notes
-next slide is two column
-Slide 10
-  main
-  notes
-Slide 11
-  main
-  notes
-Slide 12
-  main
-  notes
-Slide 13
-  main
-  notes
-Slide 14
-  main
-  notes
-Slide 15
-  main
-  notes
+next slide is two column - Slide 4
+next slide is two column - Slide 6
+next slide is two column - Slide 10
 Slide 16
   main
     a series of sections will work better for some definitions
@@ -341,9 +309,3 @@ Slide 16
 Slide 17
   main
     check link
-Slide 18
-  main
-  notes
-Slide 19
-  main
-Headings are the right level?

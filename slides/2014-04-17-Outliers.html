@@ -168,7 +168,7 @@ class: left, top, inverse
 
 ---
 
-# Generative Model animate:
+## Generative Model animate:
 
   + "Real" model that produced original data points
   + Our mission is to reproduce the original model
@@ -185,12 +185,13 @@ class: left, top, inverse
 
 ---
 
-# Outliers two_col:
+## Outliers two_col:
 
   + Significant deviation
   + Probably generated through a *different model* than the rest of the data
   + Normal / Abnormal
-  <img src="img/outlier.jpg"/>
+
+<img src="img/outlier.jpg" width=100% />
 
 ???
 
@@ -204,7 +205,7 @@ class: left, top, inverse
 
 ---
 
-# Outlier Types
+## Outlier Types
 
   + Global: points which deviate from the rest of the *entire* data set. Point
     anomalies
@@ -214,7 +215,7 @@ class: left, top, inverse
 
 ---
 
-# Which Type?
+## Which Type?
 
   + Given class sizes at Berkeley:
     + A day with 10 people in class
@@ -227,13 +228,13 @@ class: left, top, inverse
 
 ---
 
-# Types of Learning two_col:
+## Types of Learning two_col:
 
   + Supervised
   + Unsupervised
   + Semi-Supervised
 
-  <img src="img/ml-large-icon.png"/>
+<img src="img/ml-large-icon.png" width=100% />
 
 ???
 
@@ -247,7 +248,7 @@ class: left, top, inverse
 
 ---
 
-# Outlier Methods
+## Outlier Methods
 
   + Supervised: Label outliers, treat as classification problem
   + Unsupervised: Cluster data, find points not clustered well
@@ -277,7 +278,7 @@ class: left, top, inverse
 
 ---
 
-# Statistical
+## Statistical
 
   + Assume a distribution
   + Determine parameters
@@ -297,11 +298,12 @@ class: left, top, inverse
   + Assume normal distribution
   + Determine mean and standard distribution
   + If ```(point-mean)/stddev > 3```, consider outlier
-  <img src="img/gaussian-simple.png"/>
+
+<img src="img/gaussian-simple.png" width=100% />
 
 ???
 
-### Pros/Cons
+## Pros/Cons
 
   + Straight forward
   + Can use % to intuitively motivate (3 stdevs is outside 99.7%)
@@ -310,13 +312,14 @@ class: left, top, inverse
 
 ---
 
-# Grubb's Test
+## Grubb's Test
 
   + Takes into account sample size; reliability of mean/stddev measurements
   + Take Z-score of a point, assign to =G=
   + Student t-test: used to measure the distribution of *actual* mean from a
     sample
-  <img src="img/grubbs.png"/>
+
+<img src="img/grubbs.png" width=100% />
 
 ???
 
@@ -330,7 +333,7 @@ class: left, top, inverse
 
 ---
 
-# Outlier Distance animate:
+## Outlier Distance animate:
 
   + How to take outliers in > 1 dimension?
   + Translate distance to 1 dimension, find outliers
@@ -347,13 +350,14 @@ class: left, top, inverse
 
 ---
 
-# Mahalanobis Distance two_col:
+## Mahalanobis Distance two_col:
 
   + ```y= depends somewhat on =x```
   + Euclidean distance measures all dimensions equally
   + Use *covariance matrix* to normalize distances in each dimension
   + Matrix in which ```E_i,j``` is the covariance of ```i=, =j``` dimensions
-<img src="img/GaussianScatterPCA.png"/>
+
+<img src="img/GaussianScatterPCA.png" width=100% />
 
 ???
 
@@ -371,7 +375,8 @@ class: left, top, inverse
 
   + Find mean vector
   + Normalize by covariance
-  <img src="img/mahalanobis.png"/>
+
+<img src="img/mahalanobis.png" width=100% />
 
 ???
 
@@ -384,7 +389,7 @@ class: left, top, inverse
 
 ---
 
-# Contextual Outliers
+## Contextual Outliers
 
   + Typically reduce scope to context, use global techniques
   + Example: Calculate normal distribution for Berkeley weather
@@ -399,25 +404,14 @@ class: left, top, inverse
 
 ---
 
-Slide 1
-  main
-next slide is animated
-Slide 2
-  main
-  notes
-next slide is two column
-Slide 3
-  main
-  notes
+next slide is animated - Slide 2
+next slide is two column - Slide 3
 Slide 4
   main
     a series of sections will work better for some definitions
     a series of sections will work better for some definitions
     a series of sections will work better for some definitions
-Slide 5
-  main
-next slide is two column
-Slide 6
+next slide is two column - Slide 6
   main
   notes
     a series of sections will work better for some definitions
@@ -431,33 +425,9 @@ Slide 7
     a series of sections will work better for some definitions
     a series of sections will work better for some definitions
     a series of sections will work better for some definitions
-  notes
-Slide 8
-  main
-  notes
-next slide is two column
-Slide 9
-  main
-  notes
-Slide 10
-  main
-  notes
-next slide is animated
-Slide 11
-  main
-  notes
-next slide is two column
-Slide 12
-  main
-  notes
-Slide 13
-  main
-  notes
-Slide 14
-  main
-Slide 15
-  main
-Headings are the right level?
+next slide is two column - Slide 9
+next slide is animated - Slide 11
+next slide is two column - Slide 12
 
     </textarea>
     <script src="production/remark-0.5.9.min.js" type="text/javascript">
