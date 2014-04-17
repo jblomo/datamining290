@@ -8,7 +8,7 @@ class: left, top, inverse
 
 ---
 
-## Generative Model animate:
+## Generative Model
 
   + "Real" model that produced original data points
   + Our mission is to reproduce the original model
@@ -25,13 +25,16 @@ class: left, top, inverse
 
 ---
 
-## Outliers two_col:
+## Outliers
 
   + Significant deviation
   + Probably generated through a *different model* than the rest of the data
   + Normal / Abnormal
 
-<img src="img/outlier.jpg" width=100% />
+.center[
+
+<img src="img/outlier.jpg" width=80% />
+]
 
 ???
 
@@ -47,11 +50,14 @@ class: left, top, inverse
 
 ## Outlier Types
 
-  + Global: points which deviate from the rest of the *entire* data set. Point
-    anomalies
-  + Contextual: points which deviate from their *peers*. Conditional outliers
-  + Collective: points which deviate as a *group*, even though individual
-    points may not be considered outliers.
+  + Global
+    + points which deviate from the rest of the *entire* data set - point
+      anomalies
+  + Contextual
+    + points which deviate from their *peers* - conditional outliers
+  + Collective
+    + points which deviate as a *group*, even though individual
+      points may not be considered outliers.
 
 ---
 
@@ -68,7 +74,7 @@ class: left, top, inverse
 
 ---
 
-## Types of Learning two_col:
+## Types of Learning
 
   + Supervised
   + Unsupervised
@@ -78,7 +84,7 @@ class: left, top, inverse
 
 ???
 
-##
+## Types of Learning
 
   + Supervised: learning from "gold standard" labels
   + Unsupervised: learning without labels
@@ -90,13 +96,18 @@ class: left, top, inverse
 
 ## Outlier Methods
 
-  + Supervised: Label outliers, treat as classification problem
-  + Unsupervised: Cluster data, find points not clustered well
-  + Semi-Supervised: Manually label few, find point nearby to automatically
+  + Supervised
+    + Label outliers, treat as classification problem
+  + Unsupervised
+    + Cluster data, find points not clustered well
+  + Semi-Supervised
+    + Manually label a few, find points nearby to automatically
     label, then treat as classification
-  + Statistical: Decide on a generative model / distribution, find points
+  + Statistical
+    + Decide on a generative model / distribution, find points
     which have a low probability of belonging
-  + Proximity: Use relative distance to neighbors
+  + Proximity
+    + Use relative distance to neighbors
 
 ???
 
@@ -104,17 +115,17 @@ class: left, top, inverse
 
   + Some methods may be overlapping
   + When developing features for classification, using relative features can
-    be helpful: eg. distance from mean
-  + Eg. Agglomerative clustering, find lone/small groups that are last to
+    be helpful: e.g., distance from mean
+  + e.g., Agglomerative clustering, find lone/small groups that are last to
     glom together
-  + Eg. k-means find points which are "far" out from centroids
+  + e.g. k-means find points which are "far" out from centroids
     + Determining "far", "last" can be application specific, part of the
       challenge
   + What algorithm could we use to automatically label nearby points? k-nearest
     neighbor
   + Statistical: Again, must define "low" in your domain
-  + Proximity: basically translating features into another, relative, space,
-    then applying a different type of outlier detection (eg. statistical)
+  + Proximity: basically translating features into another, relative space,
+    then applying a different type of outlier detection (e.g., statistical)
 
 ---
 
@@ -128,24 +139,24 @@ class: left, top, inverse
 
 ## Why Statistical
 
-  + We've covered supervised, clustering, so let's skip to statistical methods
+  + We've covered supervised and clustering, so let's skip to statistical methods
   + Most straight forward way is to use distributions
 
 ---
 
-## Statistical Example two_col:
+## Statistical Example
 
-  + Assume normal distribution
+  + Assume a normal distribution
   + Determine mean and standard distribution
-  + If ```(point-mean)/stddev > 3```, consider outlier
+  + If ```(point-mean)/stddev > 3```, consider it an outlier
 
-<img src="img/gaussian-simple.png" width=100% />
+<img src="img/gaussian-simple.png" width=85% />
 
 ???
 
 ## Pros/Cons
 
-  + Straight forward
+  + Straightforward
   + Can use % to intuitively motivate (3 stdevs is outside 99.7%)
   + But must manually determine cut-off
   + How do we know we got the parameters right?
@@ -155,11 +166,13 @@ class: left, top, inverse
 ## Grubb's Test
 
   + Takes into account sample size; reliability of mean/stddev measurements
-  + Take Z-score of a point, assign to =G=
+  + Take Z-score of a point, assign to ```G```
   + Student t-test: used to measure the distribution of *actual* mean from a
     sample
 
+.white-background[
 <img src="img/grubbs.png" width=100% />
+]
 
 ???
 
@@ -173,11 +186,9 @@ class: left, top, inverse
 
 ---
 
-## Outlier Distance animate:
+## Outlier Distance
 
-  + How to take outliers in > 1 dimension?
-  + Translate distance to 1 dimension, find outliers
-  + How to measure distance?
+  + How to find outliers in > 1 dimension?
 
 ???
 
@@ -186,18 +197,33 @@ class: left, top, inverse
   + What are the limitations of the techniques we've seen?
   + Limited to one dimension! Taking mean, stddev, etc. applies to 1
     dimension
+
+---
+
+## Outlier Distance
+
+  + How to find outliers in > 1 dimension?
+  + Translate distance to 1 dimension, find outliers
+  + How to measure distance?
+
+???
+
+## Limitations
+
   + Euclidean: doesn't take into account dependent variables
 
 ---
 
-## Mahalanobis Distance two_col:
+## Mahalanobis Distance
 
-  + ```y= depends somewhat on =x```
+  + ```y``` depends somewhat on ```x```
   + Euclidean distance measures all dimensions equally
   + Use *covariance matrix* to normalize distances in each dimension
-  + Matrix in which ```E_i,j``` is the covariance of ```i=, =j``` dimensions
+  + Matrix in which ```E_i,j``` is the covariance of ```i```, ```j``` dimensions
 
-<img src="img/GaussianScatterPCA.png" width=100% />
+.center[
+<img src="img/GaussianScatterPCA.png" width=60% />
+]
 
 ???
 
@@ -206,17 +232,19 @@ class: left, top, inverse
   + How to capture intuition that a distance along major axis is different than
     along this minor axis?
   + Expand this drawing into 3 dimensions
-  + Euclidean distance will equally weight something that is out in the =z=
+  + Euclidean distance will equally weight something that is out in the ```z```
     direction as something that is along this primary scatter area
 
 ---
 
 ## Mahalanobis Definition
 
-  + Find mean vector
+  + Find the mean vector
   + Normalize by covariance
 
+.white-background[
 <img src="img/mahalanobis.png" width=100% />
+]
 
 ???
 
@@ -238,33 +266,3 @@ class: left, top, inverse
 ---
 
 # *Break*
-
-
-
-
----
-
-next slide is animated - Slide 2
-next slide is two column - Slide 3
-Slide 4
-  main
-    a series of sections will work better for some definitions
-    a series of sections will work better for some definitions
-    a series of sections will work better for some definitions
-next slide is two column - Slide 6
-  main
-  notes
-    a series of sections will work better for some definitions
-    a series of sections will work better for some definitions
-    a series of sections will work better for some definitions
-    a series of sections will work better for some definitions
-Slide 7
-  main
-    a series of sections will work better for some definitions
-    a series of sections will work better for some definitions
-    a series of sections will work better for some definitions
-    a series of sections will work better for some definitions
-    a series of sections will work better for some definitions
-next slide is two column - Slide 9
-next slide is animated - Slide 11
-next slide is two column - Slide 12
