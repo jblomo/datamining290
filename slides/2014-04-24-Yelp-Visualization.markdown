@@ -78,7 +78,7 @@ http://www.yelp.com/wordmap
 
 ---
 
-## Avoid Chart Junk two_col:
+## Avoid Chart Junk
 
   + Edward Tufte rightfully suspicious of cool
   + Worry about ```data/ink``` ratio
@@ -392,8 +392,10 @@ d3.selectAll("p")
 
 ## Investigation: Interactive
 
+.white-background[
 <img src="img/ipy_0.13.png" width=100% />
 <img src="img/IPy_header.png" width=100% />
+]
 
 ---
 

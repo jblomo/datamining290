@@ -234,6 +234,13 @@ class: left, top, inverse
 
 http://www.youtube.com/embed/FWSxSQsspiQ
 
+???
+
+## Comparisons
+
+  + We're good at comparing things side by side.
+  + We're bad at comparing things from memory.
+
 ---
 
 ## Grammar of Graphics
