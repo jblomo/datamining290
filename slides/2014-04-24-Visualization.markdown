@@ -8,12 +8,13 @@ class: left, top, inverse
 
 ---
 
-# Your Brain two_col:
+## Your Brain two_col:
 
   + Pattern detector
   + Visualizations help you search for possible models
   + Help intuitively understand the data
-  <img src="img/memory-recall.png"/>
+
+<img src="img/memory-recall.png" width=100% />
 
 ???
 
@@ -26,7 +27,7 @@ class: left, top, inverse
 
 ---
 
-# Patterns
+## Patterns
 
   + Use visualizations that surface patterns and relationships
   + Know the context for the visualization
@@ -49,7 +50,7 @@ class: left, top, inverse
 
 ---
 
-# Scatter
+## Scatter
 
   + Great for multidimensional data
   + Just plot > 2 dimensions in different plots
@@ -67,7 +68,7 @@ class: left, top, inverse
 
 ## Multiple Dimensions center:
 
-  <img src="img/vp-sample.png"/>
+<img src="img/vp-sample.png" width=100% />
 
 ???
 
@@ -82,9 +83,9 @@ class: left, top, inverse
 
 ---
 
-# Geographic
+## Geographic
 
-  <img src="img/cancer-county.jpg"/>
+<img src="img/cancer-county.jpg" width=100% />
 
 ???
 
@@ -97,11 +98,14 @@ class: left, top, inverse
 
 ---
 
-# Other Chart Types
+## Other Chart Types
 
-  + Box plot: aggregate data
-  + Bar charts: simple summaries
-  + Pie charts: compound proportions
+  + Box plot
+    + aggregate data
+  + Bar charts
+    + simple summaries
+  + Pie charts
+    + compound proportions
 
 ???
 
@@ -114,10 +118,11 @@ class: left, top, inverse
 
 ---
 
-# Aesthetics
+## Aesthetics
 
   + The visual aesthetics you use should be tied to the data
-  <img src="img/graphics-aesthetics.png"/>
+
+<img src="img/graphics-aesthetics.png" width=100% />
 
 ???
 
@@ -144,12 +149,13 @@ class: left, top, inverse
 
 ---
 
-# Color: HCL two_col:
+## Color: HCL two_col:
 
   + Hue: color type, relative to RGBY
   + Chroma: colorfulness, perceived color intensity
   + Luminosity: brightness, light-dark
-  <img src="img/Munsell.png"/>
+
+<img src="img/Munsell.png" width=100% />
 
 ???
 
@@ -174,7 +180,7 @@ class: left, top, inverse
 
 ---
 
-# Careful
+## Careful
 
   + Some aesthetics can combine to form illusions
   + http://www.michaelbach.de/ot/sze_sineIllusion/
@@ -200,12 +206,16 @@ class: left, top, inverse
 
 ---
 
-# Grammar of Graphics
+## Grammar of Graphics
 
-  + Geom: Graphic element
-  + Aesthetics: appearance of a geom
-  + Data: raw, context, statistical aggregations of data
-  + Mapping: functions which map data to geom properties or aesthetics
+  + Geom
+    + Graphic element
+  + Aesthetics
+    + appearance of a geom
+  + Data
+    + raw, context, statistical aggregations of data
+  + Mapping
+    + functions which map data to geom properties or aesthetics
 
 ???
 
@@ -218,9 +228,9 @@ class: left, top, inverse
 
 ---
 
-# Scatter Plot animate:
+## Scatter Plot animate:
 
-  <img src="img/scatter-ice-cream.gif"/>
+<img src="img/scatter-ice-cream.gif" width=100% />
 
   + Geoms?
     + points, tick marks
@@ -244,9 +254,9 @@ class: left, top, inverse
 
 ---
 
-# Bar Plot animate:
+## Bar Plot animate:
 
-  <img src="img/bar-graph-fruit.gif"/>
+<img src="img/bar-graph-fruit.gif" width=100% />
 
   + Geoms?
     + rectangles (ticks, text)
@@ -267,9 +277,9 @@ class: left, top, inverse
 
 ---
 
-# Hipmonk
+## Hipmonk
 
-  <img src="img/hipmonk.png"/>
+<img src="img/hipmonk.png" width=100% />
 
   + Geoms?
     + rectangles, text, ticks,
@@ -288,9 +298,9 @@ class: left, top, inverse
 
 ---
 
-# Recursive
+## Recursive
 
-  <img src="img/grammar-af.png"/>
+<img src="img/grammar-af.png" width=100% />
 
   + Geoms?
 
@@ -308,7 +318,8 @@ class: left, top, inverse
   + Clarity from data
   + Avoid chart junk
   + Techniques for displaying many types
-  <img src="img/tufte-books.jpg"/>
+
+<img src="img/tufte-books.jpg" width=100% />
 
 ???
 
@@ -321,81 +332,8 @@ class: left, top, inverse
 
 # *Break*
 
-
-
-
 ---
 
-Slide 1
-  main
-next slide is two column
-Slide 2
-  main
-  notes
-Slide 3
-  main
-  notes
-Slide 4
-  main
-  notes
-Slide 5
-  main
-  notes
-Slide 6
-  main
-  notes
-Slide 7
-  main
-    a series of sections will work better for some definitions
-    a series of sections will work better for some definitions
-    a series of sections will work better for some definitions
-  notes
-Slide 8
-  main
-  notes
-Slide 9
-  main
-  notes
-next slide is two column
-Slide 10
-  main
-    a series of sections will work better for some definitions
-    a series of sections will work better for some definitions
-    a series of sections will work better for some definitions
-  notes
-Slide 11
-  main
-Slide 12
-  main
-  notes
-Slide 13
-  main
-Slide 14
-  main
-Slide 15
-  main
-    a series of sections will work better for some definitions
-    a series of sections will work better for some definitions
-    a series of sections will work better for some definitions
-    a series of sections will work better for some definitions
-  notes
-next slide is animated
-Slide 16
-  main
-  notes
-next slide is animated
-Slide 17
-  main
-  notes
-Slide 18
-  main
-  notes
-Slide 19
-  main
-  notes
-Slide 20
-  main
-  notes
-Slide 21
-  main
-Headings are the right level?
+next slide is two column - Slide 2
+next slide is animated - Slide 16
+next slide is animated - Slide 17

@@ -4,11 +4,11 @@ class: left, top, inverse
 
 ---
 
-# Visualizing Data at *Yelp* center:
+# Visualizing Data at *Yelp*
 
 ---
 
-# Visualizing Data is Important
+## Visualizing Data is Important
 
   + Effectively summarizes data
   + Highlights patterns
@@ -27,7 +27,7 @@ class: left, top, inverse
 
 ---
 
-# Visualizing Data is Difficult
+## Visualizing Data is Difficult
 
   + Requires investment
   + Dimensions of success
@@ -47,7 +47,7 @@ class: left, top, inverse
 
 ---
 
-# Birth of a City
+## Birth of a City
 
 <video controls="controls">
 <source src="video/boac.ogv" type="video/ogg"/>
@@ -65,11 +65,12 @@ Not supported
 
 ---
 
-# Cool
+## Cool
 
   + Good looking is a dimension of any visualization
   + We want to be Neo or John Anderton, not Milton
-<img src="img/minority-report-int2.jpg"/>
+
+<img src="img/minority-report-int2.jpg" width=100% />
 
 ???
 
@@ -81,12 +82,13 @@ Not supported
 
 ---
 
-# Avoid Chart Junk two_col:
+## Avoid Chart Junk two_col:
 
   + Edward Tufte rightfully suspicious of cool
   + Worry about ```data/ink``` ratio
   + But remember tradeoffs: memorability, fun
-  <img src="img/usefuljunk-monster.jpg"/>
+
+<img src="img/usefuljunk-monster.jpg" width=100% />
 
 ???
 
@@ -100,7 +102,7 @@ Not supported
 
 ---
 
-# Grapperr
+## Grapperr
 
 <video controls="controls">
 <source src="video/grapperr.ogv" type="video/ogg"/>
@@ -121,16 +123,17 @@ Not supported
 
 ## Grapperr Snapshot
 
-<img src="img/graperr.png"/>
+<img src="img/graperr.png" width=100% />
 
 ---
 
-# Actionable two_col:
+## Actionable two_col:
 
   + Realtime*
   + Context
   + Connections
-  <img src="img/dr-who.png"/>
+
+<img src="img/dr-who.png" width=100% />
 
 ???
 
@@ -144,10 +147,12 @@ Not supported
 
 ---
 
-# Dimensions
+## Dimensions
 
-  + Fun: cool, pretty, engaging
-  + Actionable: realtime, contextual, connecting
+  + Fun
+    + cool, pretty, engaging
+  + Actionable
+    + realtime, contextual, connecting
 
 ???
 
@@ -159,7 +164,7 @@ Not supported
 
 ---
 
-# A Tale of Two Datacenters
+## A Tale of Two Datacenters
 
   + Testing datacenter failover
   + Tracking metrics in a new way
@@ -180,7 +185,7 @@ Not supported
 
 ---
 
-# Firefly
+## Firefly
 
 <video controls="controls">
 <source src="video/firefly.ogv" type="video/ogg"/>
@@ -198,7 +203,7 @@ Not supported
 
 ---
 
-# Easy
+## Easy
 
   + Make repeated operations fast and within reach
   + Must understand problem domain
@@ -215,7 +220,7 @@ Not supported
 
 ---
 
-# Easy from Simple
+## Easy from Simple
 
   + Avoid temptation to make visualizations easy from the start
   + Easy systems are designed for non-experts
@@ -236,9 +241,10 @@ Not supported
 
 ---
 
-# Search Maps
+## Search Maps
 
-<img src="img/yelp-beer.png"/>
+<img src="img/yelp-beer.png" width=100% />
+
 Mo' Map
 
 ???
@@ -254,26 +260,30 @@ Mo' Map
 
 ---
 
-# Interactive two_col:
+## Interactive two_col:
 
   + Fast
   + Explorable
   + Feedback
-  <img src="img/yelp-mobile-map.png"/>
+
+<img src="img/yelp-mobile-map.png" width=100% />
 
 ???
 
 ## Definitions
 
-  + Fast: One of the reasons its a fairly recent technology, hard to get fast
+  + Fast
+    + One of the reasons its a fairly recent technology, hard to get fast
     + Speed gives the UI illusion that you are interacting with a physical
       thing, something we're much more comfortable with
-  + Explorable: Multiple levels of detail that can be discovered by user
-  + Feedback: Update all other dependent displays (search results)
+  + Explorable
+    + Multiple levels of detail that can be discovered by user
+  + Feedback
+    + Update all other dependent displays (search results)
 
 ---
 
-# Creation
+## Creation
 
   + Michael Bostock had a problem
   + Protovis useful, but not flexible
@@ -290,13 +300,13 @@ Mo' Map
 
 ---
 
-# D3: Data-Driven Documents center:
+## D3: Data-Driven Documents center:
 
 <iframe src="http://bl.ocks.org/d/1256572/" style="width: 1000px;"></iframe> <p><a href="http://vimeo.com/29862153">D3 Show Reel</a> from <a href="http://vimeo.com/mbostock">Mike Bostock</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
 
 ---
 
-# Flexible
+## Flexible
 
   + Language level
   + Access to medium
@@ -322,13 +332,18 @@ d3.selectAll("p")
 
 ---
 
-# Dimensions
+## Dimensions
 
-  + Fun: cool, pretty, engaging
-  + Actionable: realtime, contextual, connecting
-  + Easy: available for non-experts, remove repetition
-  + Interactive: fast, explorable
-  + Flexible: expressive, full access to lowest level
+  + Fun
+    + cool, pretty, engaging
+  + Actionable
+    + realtime, contextual, connecting
+  + Easy
+    + available for non-experts, remove repetition
+  + Interactive
+    + fast, explorable
+  + Flexible
+    + expressive, full access to lowest level
 
 ???
 
@@ -340,19 +355,19 @@ d3.selectAll("p")
 
 ---
 
-# Understand Usage Context
+## Understand Usage Context
 
 ---
 
 ## Press: Fun
 
-<img src="img/yelp20m.jpg"/>
+<img src="img/yelp20m.jpg" width=100% />
 
 ---
 
 ## Alerting: Actionable
 
-<img src="img/snoopy.png"/>
+<img src="img/snoopy.png" width=100% />
 
 ???
 
@@ -364,20 +379,20 @@ d3.selectAll("p")
 
 ## Product Managers: Easy
 
-<img src="img/admin-metrics.png"/>
+<img src="img/admin-metrics.png" width=100% />
 
 ---
 
 ## Investigation: Interactive
 
-<img src="img/ipy_0.13.png"/>
-<img src="img/IPy_header.png"/>
+<img src="img/ipy_0.13.png" width=100% />
+<img src="img/IPy_header.png" width=100% />
 
 ---
 
 ## Explorable: Interactive
 
-<img src="img/maptivity.png"/>
+<img src="img/maptivity.png" width=100% />
 
 ???
 
@@ -389,13 +404,13 @@ d3.selectAll("p")
 
 ## New tools: Simple
 
-<img src="img/nvd3.png"/>
+<img src="img/nvd3.png" width=100% />
 
 ---
 
 ## New tools: Flexible
 
-<img src="img/tron-db.png"/>
+<img src="img/tron-db.png" width=100% />
 
 ???
 
@@ -407,13 +422,18 @@ d3.selectAll("p")
 
 ---
 
-# Dimensions
+## Dimensions
 
-  + Fun: cool, pretty, engaging
-  + Actionable: realtime, contextual, connecting
-  + Easy: available for non-experts, remove repetition
-  + Interactive: fast, explorable
-  + Flexible: expressive, full access to lowest level
+  + Fun
+    + cool, pretty, engaging
+  + Actionable
+    + realtime, contextual, connecting
+  + Easy
+    + available for non-experts, remove repetition
+  + Interactive
+    + fast, explorable
+  + Flexible
+    + expressive, full access to lowest level
 
 ???
 
@@ -427,102 +447,6 @@ d3.selectAll("p")
 
 ---
 
-Slide 1
-  main
-Slide 2
-  main
-  notes
-Slide 3
-  main
-  notes
-Slide 4
-  main
-  notes
-Slide 5
-  main
-  notes
-next slide is two column
-Slide 6
-  main
-  notes
-Slide 7
-  main
-  notes
-Slide 8
-  main
-next slide is two column
-Slide 9
-  main
-  notes
-Slide 10
-  main
-    a series of sections will work better for some definitions
-    a series of sections will work better for some definitions
-  notes
-Slide 11
-  main
-  notes
-Slide 12
-  main
-    check link
-  notes
-Slide 13
-  main
-  notes
-Slide 14
-  main
-  notes
-Slide 15
-  main
-  notes
-next slide is two column
-Slide 16
-  main
-  notes
-    a series of sections will work better for some definitions
-    a series of sections will work better for some definitions
-    a series of sections will work better for some definitions
-Slide 17
-  main
-  notes
-Slide 18
-  main
-Slide 19
-  main
-  notes
-Slide 20
-  main
-    a series of sections will work better for some definitions
-    a series of sections will work better for some definitions
-    a series of sections will work better for some definitions
-    a series of sections will work better for some definitions
-    a series of sections will work better for some definitions
-  notes
-Slide 21
-  main
-Slide 22
-  main
-Slide 23
-  main
-  notes
-Slide 24
-  main
-Slide 25
-  main
-Slide 26
-  main
-  notes
-Slide 27
-  main
-Slide 28
-  main
-  notes
-Slide 29
-  main
-    a series of sections will work better for some definitions
-    a series of sections will work better for some definitions
-    a series of sections will work better for some definitions
-    a series of sections will work better for some definitions
-    a series of sections will work better for some definitions
-  notes
-Headings are the right level?
+next slide is two column - Slide 6
+next slide is two column - Slide 9
+next slide is two column - Slide 16
