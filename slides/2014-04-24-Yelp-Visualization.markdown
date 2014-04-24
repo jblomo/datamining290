@@ -18,12 +18,13 @@ class: left, top, inverse
 
 ## Metrics
 
-  + Can't improve something till you measure
+  + Can't improve something until you measure it
   + True, but have to look at and understand the data!
   + Often best way to understand data is visually
   + Having metrics you care about evident will make you focus on improving
     them
-  + More sophisticated your visualizations, more sophisticated your goals
+  + The more sophisticated your visualizations, the more sophisticated your
+    goals
 
 ---
 
@@ -38,7 +39,6 @@ class: left, top, inverse
 ## Role in Yelp
 
   + Often requires specific domain knowledge of both the data and the tools
-  + Moving to a new office
   + Ideally have 2 big screens per pod
   + "That's a lot of TVs!"
   + Get motivated everyday
@@ -47,20 +47,16 @@ class: left, top, inverse
 
 ---
 
-## Birth of a City
+## Where are the hipsters?
 
-<video controls="controls">
-<source src="video/boac.ogv" type="video/ogg"/>
-Not supported
-</video>
+http://www.yelp.com/wordmap
 
 ???
 
-## Review activity over time on a map
+## How many reviews include certain words, on a map
 
-  + Written as part of Yelp's quarterly Hackathons
-  + A lot of feedback from our Community Managers on understanding their city
-  + Demonstrable value to advertisers
+  + Can help you find dim sum outside Chinatown
+  + Helps you understand neighborhoods
   + But main feature is... Cool
 
 ---
@@ -68,7 +64,7 @@ Not supported
 ## Cool
 
   + Good looking is a dimension of any visualization
-  + We want to be Neo or John Anderton, not Milton
+  + People keep looking for a "Minority Report UI"
 
 <img src="img/minority-report-int2.jpg" width=100% />
 
@@ -88,7 +84,7 @@ Not supported
   + Worry about ```data/ink``` ratio
   + But remember tradeoffs: memorability, fun
 
-<img src="img/usefuljunk-monster.jpg" width=100% />
+<img src="img/usefuljunk-monster.jpg" width=80% />
 
 ???
 
@@ -102,12 +98,10 @@ Not supported
 
 ---
 
-## Grapperr
+## Graperr
 
-<video controls="controls">
-<source src="video/grapperr.ogv" type="video/ogg"/>
-Not supported
-</video>
+<img src="img/graperr.png" width=100% />
+
 
 ???
 
@@ -121,19 +115,17 @@ Not supported
     + But used for differentiation (data)
 ---
 
-## Grapperr Snapshot
+## Actionable
 
-<img src="img/graperr.png" width=100% />
-
----
-
-## Actionable two_col:
+.left-column[
 
   + Realtime*
   + Context
   + Connections
-
+]
+.right-column[
 <img src="img/dr-who.png" width=100% />
+]
 
 ???
 
@@ -164,6 +156,21 @@ Not supported
 
 ---
 
+## Mario
+
+.center[
+<img src="img/mario.jpg" width=35% />
+]
+
+???
+
+## Ads Visualizations
+
+  + Realtime tracking
+  + Clicks
+
+---
+
 ## A Tale of Two Datacenters
 
   + Testing datacenter failover
@@ -187,11 +194,7 @@ Not supported
 
 ## Firefly
 
-<video controls="controls">
-<source src="video/firefly.ogv" type="video/ogg"/>
-Not supported
-</video>
-[Github: Yelp/firefly](https://github.com/Yelp/firefly)
+<img src="img/firefly.png" width=100% />
 
 ???
 
@@ -243,15 +246,13 @@ Not supported
 
 ## Search Maps
 
-<img src="img/yelp-beer.png" width=100% />
-
-Mo' Map
+<img src="img/yelp-beer.png" width=90% />
 
 ???
 
 ## Times Change
 
-  + 2005, 8 years ago
+  + 2005, 9 years ago
   + May not seem like important visualization, but times have changed
   + Full page refresh for each map square
   + Now we take zoom in, panning for granted
@@ -260,13 +261,17 @@ Mo' Map
 
 ---
 
-## Interactive two_col:
+## Interactive
+
+.left-column[
 
   + Fast
   + Explorable
   + Feedback
-
-<img src="img/yelp-mobile-map.png" width=100% />
+]
+.right-column[
+<img src="img/yelp-mobile-map.png" width=90% />
+]
 
 ???
 
@@ -283,7 +288,7 @@ Mo' Map
 
 ---
 
-## Creation
+## Where did D3 come from?
 
   + Michael Bostock had a problem
   + Protovis useful, but not flexible
@@ -300,9 +305,9 @@ Mo' Map
 
 ---
 
-## D3: Data-Driven Documents center:
+## D3: Data-Driven Documents
 
-<iframe src="http://bl.ocks.org/d/1256572/" style="width: 1000px;"></iframe> <p><a href="http://vimeo.com/29862153">D3 Show Reel</a> from <a href="http://vimeo.com/mbostock">Mike Bostock</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
+http://bl.ocks.org/mbostock/raw/1256572/
 
 ---
 
@@ -361,7 +366,9 @@ d3.selectAll("p")
 
 ## Press: Fun
 
-<img src="img/yelp20m.jpg" width=100% />
+.center[
+<img src="img/yelp20m.jpg" width=60% />
+]
 
 ---
 
@@ -392,7 +399,9 @@ d3.selectAll("p")
 
 ## Explorable: Interactive
 
-<img src="img/maptivity.png" width=100% />
+.center[
+<img src="img/maptivity.png" width=60% />
+]
 
 ???
 
@@ -410,7 +419,9 @@ d3.selectAll("p")
 
 ## New tools: Flexible
 
-<img src="img/tron-db.png" width=100% />
+.center[
+<img src="img/tron-db.png" width=85% />
+]
 
 ???
 
@@ -441,12 +452,3 @@ d3.selectAll("p")
 
   + Visualization is just part of making an effective biz, team
   + Interested in working at Yelp?
-
-
-
-
----
-
-next slide is two column - Slide 6
-next slide is two column - Slide 9
-next slide is two column - Slide 16

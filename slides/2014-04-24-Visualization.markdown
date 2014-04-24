@@ -8,20 +8,24 @@ class: left, top, inverse
 
 ---
 
-## Your Brain two_col:
+## Your Brain
+
+.left-column[
 
   + Pattern detector
   + Visualizations help you search for possible models
   + Help intuitively understand the data
-
+]
+.right-column[
 <img src="img/memory-recall.png" width=100% />
+]
 
 ???
 
 ## Visual
 
-  + Most people, vision is the strongest sense
-  + Recall improves 55% (10%=>65%) with addition of a picture
+  + For most people, vision is the strongest sense
+  + Recall improves 55% (10% => 65%) with the addition of a picture
   + We've talked about the need to understand the data before using
     algorithms on it. Visualization can speed that process up.
 
@@ -44,9 +48,9 @@ class: left, top, inverse
   + We'll discuss, but the context a visualization is going to be used in
     matters a lot. Don't feel like you have to import every cool infographic
     into your project
-  + Clustering, classification, outlier selection can be verified visually, eg.
-    highlighting points.  Use it to gut check conclusions, even if you have to
-    drastically reduce dimensionality
+  + Clustering, classification, outlier selection can be verified visually,
+    e.g., highlighting points.  Use it to gut check conclusions, even if you
+    have to drastically reduce dimensionality
 
 ---
 
@@ -66,7 +70,7 @@ class: left, top, inverse
 
 ---
 
-## Multiple Dimensions center:
+## Multiple Dimensions
 
 <img src="img/vp-sample.png" width=100% />
 
@@ -85,16 +89,41 @@ class: left, top, inverse
 
 ## Geographic
 
-<img src="img/cancer-county.jpg" width=100% />
+.center[
+<img src="img/countymapredbluelarge.png" width=100% />
+]
 
 ???
 
 ## Trade-offs
 
   + Coordinates intuitively understandable
-  + Lots of ways to bucket/aggregate
-  + Dependence on geographical area (eg. when you'd like to depend
+  + Dependence on geographical area (e.g., when you'd like to depend
     on human impact instead)
+  + Lots of ways to bucket/aggregate
+  + 2004 Presidential election - Bush won 50.3% of the popular vote and
+    Kerry 48.3%, does it looks like that here?
+  + img: http://www-personal.umich.edu/~mejn/election/2004/
+
+---
+
+## Geographic
+
+.center[
+<img src="img/election1000.png" width=100% />
+]
+
+???
+
++ Don't be afraid to "bend" things to get different insights
++ Each pixel represents 1,000 votes in the 2004 Presidential election
+  + Red ==> Bush
+  + Blue ==> Kerry
+  + Green ==> Nader
++ Because some parts of the country have far more than 1000 votes per pixel,
+  draw the pixel on the closest part of the map that isn't already used
++ You lose precise vote locations, but you see how mixed the results actually
+  are and how population density is involved
 
 ---
 
@@ -145,17 +174,24 @@ class: left, top, inverse
 
 ## Slide Switch
 
-  + Hadley Wickham slides, OSCON
+  + Hadley Wickham slides, OSCON: http://cdn.oreillystatic.com/en/assets/1/event/80/Designing%20effective%20visualisations_%20matching%20data%20problems%20to%20our%20perceptual%20strengths%20%20Presentation.pdf
 
 ---
 
-## Color: HCL two_col:
+## Color: HCL
 
-  + Hue: color type, relative to RGBY
-  + Chroma: colorfulness, perceived color intensity
-  + Luminosity: brightness, light-dark
+.left-column[
 
+  + Hue
+    + color type
+  + Chroma
+    + colorfulness, perceived color intensity
+  + Luminosity
+    + brightness, light-dark
+]
+.right-column[
 <img src="img/Munsell.png" width=100% />
+]
 
 ???
 
@@ -196,13 +232,7 @@ class: left, top, inverse
 
 ## Careful
 
-<iframe width="560" height="315" src="http://www.youtube.com/embed/FWSxSQsspiQ" frameborder="0" allowfullscreen></iframe>
-
----
-
-## Careful
-
-<iframe src="http://player.vimeo.com/video/18074674" width="500" height="500" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> <p><a href="http://vimeo.com/18074674">Motion silences awareness of color changes</a> from <a href="http://vimeo.com/suchow">Jordan Suchow</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
+http://www.youtube.com/embed/FWSxSQsspiQ
 
 ---
 
@@ -228,51 +258,43 @@ class: left, top, inverse
 
 ---
 
-## Scatter Plot animate:
+## Scatter Plot
 
 <img src="img/scatter-ice-cream.gif" width=100% />
-
-  + Geoms?
-    + points, tick marks
-  + Data?
-    + temperature, sales
-  + Mapping?
-    + sales -> y, temp -> x
-    + Note, not a simple 1:1 mapping, we must map to something visual, like
-      pixels
 
 ???
 
 ## Ice Cream
 
   + Plot shows hypothetical sales of ice cream vs temperature
-  + Geoms: points (actually, ticks are geoms, too)
-  + Data: sales, temperature (and context: how large is the potential plot
+  + Geoms
+    + points (actually, ticks are geoms, too)
+  + Data
+    + sales, temperature (and context: how large is the potential plot
     size)
-  + Mapping: sales
+  + Mapping
+    + sales ==> y, temp ==> x
   + img: http://www.mathsisfun.com/data/scatter-xy-plots.html
 
 ---
 
-## Bar Plot animate:
+## Bar Plot
 
-<img src="img/bar-graph-fruit.gif" width=100% />
-
-  + Geoms?
-    + rectangles (ticks, text)
-  + Data?
-    + Fruit to popularity
-  + Mapping?
-    + popularity -> height, fruit type -> x, color
+.white-background[
+<img src="img/bar-graph-fruit.gif" width=80% />
+]
 
 ???
 
 ## Fruit
 
   + Plot shows fruit popularity
-  + Geoms: bars (and ticket, text)
-  + Data:
-  + Mapping: sales
+  + Geoms
+    + bars (and ticks, text)
+  + Data
+    + fruit to popularity
+  + Mapping
+    + popularity ==> height, fruit type ==> x, color
   + img: http://www.mathsisfun.com/data/bar-graphs.html
 
 ---
@@ -281,43 +303,40 @@ class: left, top, inverse
 
 <img src="img/hipmonk.png" width=100% />
 
-  + Geoms?
-    + rectangles, text, ticks,
-  + Data?
-    + Carrier, flight time, layover time, cost, wifi available, airports
-  + Mapping?
-    + travel time -> bar length, flight times -> sub-bars, "agony" -> y, airline -> color
-
 ???
 
 ## Fruit
 
   + Shows travel options from SFO to Ithica, connecting flights, airports, etc.
   + More complex, but still expressible via Grammar
+  + Geoms?
+    + rectangles, text, ticks
+  + Data?
+    + Carrier, flight time, layover time, cost, wifi available, airports
+  + Mapping?
+    + travel time ==> bar length, flight times ==> sub-bars, airline ==> color
   + img: http://www.hipmonk.com
 
 ---
 
 ## Recursive
 
-<img src="img/grammar-af.png" width=100% />
-
-  + Geoms?
+<img src="img/grammar-af.png" width=80% />
 
 ???
 
 ## Complex
 
-  + Reading will go a further extension of this, where the geoms are themselves
-    other plots
+  + Reading will go into a further extension of this, where the geoms are
+    themselves other plots
 
 ---
 
-# Tufte
+## Tufte
 
   + Clarity from data
   + Avoid chart junk
-  + Techniques for displaying many types
+  + Techniques for displaying many types of data
 
 <img src="img/tufte-books.jpg" width=100% />
 
@@ -331,9 +350,3 @@ class: left, top, inverse
 ---
 
 # *Break*
-
----
-
-next slide is two column - Slide 2
-next slide is animated - Slide 16
-next slide is animated - Slide 17
