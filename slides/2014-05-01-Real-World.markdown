@@ -8,7 +8,7 @@ class: left, top, inverse
 
 ---
 
-# General vs. Practical
+## General vs. Practical
 
   + "the language in which you'll spend most of your working life hasn't been
     invented yet, so we can't teach it to you.  Instead we have to give you the
@@ -25,7 +25,7 @@ class: left, top, inverse
 
 ---
 
-# But
+## But
 
   + Who is doing interviews?
   + Who is starting their own company?
@@ -41,7 +41,7 @@ class: left, top, inverse
 
 ---
 
-# Product or Company Ideas
+## Product or Company Ideas
 
   + Understand exponential growth
   + Get the timing right
@@ -62,11 +62,12 @@ class: left, top, inverse
 
 ---
 
-# Toys
+## Toys
 
   + "the next big thing always starts out being dismissed as a “toy.”"
   + Chris Dixon, [Blog](http://cdixon.org/2010/01/03/the-next-big-thing-will-start-out-looking-like-a-toy/)
-<img src="img/cdixon.jpg"/>
+
+<img src="img/cdixon.jpg" width=100% />
 
 ???
 
@@ -83,11 +84,11 @@ class: left, top, inverse
   + Every field is being quantized, instrumented
   + "You're not on the Internet?": "You're not analyzing your data?"
 
-  <img src="img/cost_per_megabase.jpg"/>
+<img src="img/cost_per_megabase.jpg" width=100% />
 
 ???
 
-### Change to Data
+## Change to Data
 
   + You think your parents are bad at not operating devices? Your habits will
     become out of date > twice as fast.
@@ -100,13 +101,12 @@ class: left, top, inverse
 
 ## Exercise two_col:
 
-  <img src="img/strava.jpg"/>
-
-  <img src="img/strava-ride.png"/>
+<img src="img/strava.jpg" width=100% />
+<img src="img/strava-ride.png" width=100% />
 
 ???
 
-### Strava
+## Strava
 
     + No device, just data
 
@@ -114,11 +114,11 @@ class: left, top, inverse
 
 ## Thermostats center:
 
-  <img src="img/nest.jpg"/>
+<img src="img/nest.jpg" width=100% />
 
 ???
 
-### Nest
+## Nest
 
   + OK, they have a device... but what separates them is data
 
@@ -126,18 +126,18 @@ class: left, top, inverse
 
 ## Biology center:
 
-  <img src="img/cost_per_megabase.jpg"/>
+<img src="img/cost_per_megabase.jpg" width=100% />
 
 ???
 
-### Gene sequencing
+## Gene sequencing
 
     + Biology: data, and data growing so fast a single computer can't keep up
     + img: http://www.genome.gov/sequencingcosts/
 
 ---
 
-# Execute
+## Execute
 
   + Users are hiring you to do a job: what is it?
   + "Institutions will try to preserve the problem to which they are the solution." -- [Clay Shirky](http://www.shirky.com/)
@@ -163,7 +163,7 @@ class: left, top, inverse
 
 ---
 
-# Specifics ([The Joel Test](http://www.joelonsoftware.com/articles/fog0000000043.html))
+## Specifics ([The Joel Test](http://www.joelonsoftware.com/articles/fog0000000043.html))
 
   + Do you use source control?
   + Can you make a build in one step?
@@ -191,11 +191,11 @@ class: left, top, inverse
 
 ## Source Control center:
 
-  <img src="img/git.png"/>
+<img src="img/git.png" width=100% />
 
 ???
 
-### Surprised?
+## Surprised?
 
   + Github will solve a few problems on this list, just use it, even if you're
     developing alone
@@ -210,7 +210,7 @@ class: left, top, inverse
 
 ???
 
-### Area for Improvement
+## Area for Improvement
 
     + This is actually a big area solutions
     + Deploying websites has solutions like Heroku, but no equivilant for
@@ -226,7 +226,7 @@ class: left, top, inverse
 
 ???
 
-### Managing Up
+## Managing Up
 
   + Good defense
 
@@ -240,7 +240,7 @@ class: left, top, inverse
 
 ???
 
-### Bad rap
+## Bad rap
 
   + Developers don't like writing them much
   + But it helps nail down issues
@@ -278,7 +278,7 @@ class: left, top, inverse
 
 ???
 
-### Woodworker
+## Woodworker
 
     + (slightly off topic from Joel's list)
     + Woodworkers don't hammer stuff in with their shoe
@@ -293,12 +293,13 @@ class: left, top, inverse
 
 ---
 
-# How to Use Recommendations two_col:
+## How to Use Recommendations two_col:
 
   + Start with them as default
   + If you understand why something is better for your case, use it
   + Understand trade-offs
-<img src="img/grain-of-salt.jpg"/>
+
+<img src="img/grain-of-salt.jpg" width=100% />
 
 ???
 
@@ -310,7 +311,7 @@ class: left, top, inverse
 
 ---
 
-# Data Storage
+## Data Storage
 
   + S3 for unstructured data
   + PostgreSQL for structured
@@ -328,11 +329,12 @@ class: left, top, inverse
 
 ---
 
-# Exploration two_col:
+## Exploration two_col:
 
   + Python
   + IPython Notebook, matplotlib
-  <img src="img/ipython-notebook.jpg"/>
+
+<img src="img/ipython-notebook.jpg" width=100% />
 
 ???
 
@@ -347,7 +349,7 @@ class: left, top, inverse
 
 ---
 
-# Public Visualizations
+## Public Visualizations
 
   + D3 for visualizations
   + HTML is sharable, universal
@@ -361,12 +363,13 @@ class: left, top, inverse
 
 ---
 
-# Processing two_col:
+## Processing two_col:
 
   + Hadoop + mrjob
   + Elastic MapReduce
   + (Adventurous: [Spark](http://spark-project.org)
-  <img src="img/hadoop.png"/>
+
+<img src="img/hadoop.png" width=100% />
 
 ???
 
@@ -380,7 +383,7 @@ class: left, top, inverse
 
 ---
 
-# Models
+## Models
 
   + Text: Naive Bayes
   + Numeric Classification: SVM^light
@@ -398,7 +401,7 @@ class: left, top, inverse
 
 ---
 
-# Practice
+## Practice
 
   + [Yelp Dataset Challenge](http://www.yelp.com/dataset_challenge/) :)
   + [kaggle](http://www.kaggle.com/)
@@ -418,7 +421,6 @@ class: left, top, inverse
 
 # *Work*
 
-
 ???
 
 ## Topic Change
@@ -428,12 +430,13 @@ class: left, top, inverse
 
 ---
 
-# Hiring two_col:
+## Hiring two_col:
 
   + Learn about the company
   + Ask questions to learn about their problems
   + Provide solutions
-<img src="img/briefcase.jpg"/>
+
+<img src="img/briefcase.jpg" width=100% />
 
 ???
 
@@ -448,7 +451,7 @@ class: left, top, inverse
 
 ---
 
-# Resume is a Formality
+## Resume is a Formality
 
   + Be recognized independently of being in the resume pile
   + Present at meetup
@@ -464,7 +467,7 @@ class: left, top, inverse
 
 ---
 
-# Resume
+## Resume
 
   + Use quantitative data
   + Describe the difference you made in a company/project, not what you did
@@ -480,7 +483,7 @@ class: left, top, inverse
 
 ---
 
-# Negotiation
+## Negotiation
 
   + Always try to have > 2 offers on the table
   + Once a company decides, they've already sunk a lot of resources into you
@@ -494,7 +497,7 @@ class: left, top, inverse
 
 ---
 
-# Do What it Takes
+## Do What it Takes
 
   + Most essential attribute: asking great questions
   + > 50% of the work will be finding, formatting data
@@ -517,13 +520,13 @@ class: left, top, inverse
 
 ---
 
-# T-shape Skills center:
+## T-shape Skills center:
 
-  <img src="img/scrumtshape.jpg"/>
+<img src="img/scrumtshape.jpg" width=100% />
 
 ---
 
-# Managing upward
+## Managing upward
 
   + Ideal email: "I've done the analysis below and recommend we do X.  Sound good?"
   + If no one is in charge, you're in charge
@@ -540,14 +543,18 @@ class: left, top, inverse
 
 ---
 
-# Engineering Career Paths
+## Engineering Career Paths
 
-  + Hacker: Very broad, up-to-date. Best suited in very early startups.
-  + Individual Contributor: Reasonably skilled in areas of interest. Best
+  + Hacker
+    + Very broad, up-to-date. Best suited in very early startups.
+  + Individual Contributor
+    + Reasonably skilled in areas of interest. Best
     suited in mid-sized to large companies.
-  + Principal Engineer: Company or industry wide recognition for contributions
+  + Principal Engineer
+    + Company or industry wide recognition for contributions
     in specific areas. Very strong T-shaped skills.
-  + Manager: Ability and desire to solve people challenges, verify technical
+  + Manager
+    + Ability and desire to solve people challenges, verify technical
     solutions.
 
 ???
@@ -565,13 +572,14 @@ class: left, top, inverse
 
 ---
 
-# Stay Sharp two_col:
+## Stay Sharp two_col:
 
   + Long term, expected to combine the best of both:
     + Skills
     + Wisdom
   + So keep building skills
-  <img src="img/stay-sharp.png"/>
+
+<img src="img/stay-sharp.png" width=100% />
 
 ???
 
@@ -583,13 +591,15 @@ class: left, top, inverse
 
 ---
 
-# Networking
+## Networking
 
   + Ask questions
   + Learn from others
   + Help others
   + Don't skip stuff because you're lazy or scared
-<img src="img/shy-connector.png"/>
+
+<img src="img/shy-connector.png" width=100% />
+
   + [Shy Connector](http://www.slideshare.net/sachac/the-shy-connector)
 
 ???
@@ -602,7 +612,7 @@ class: left, top, inverse
 
 ---
 
-# Just Do It
+## Just Do It
 
   + Practice
   + Start with any idea
@@ -620,143 +630,12 @@ class: left, top, inverse
 
 # *Thank You!*
 
-
-
-
 ---
 
-Slide 1
-  main
-Slide 2
-  main
-    check link
-  notes
-Slide 3
-  main
-  notes
-Slide 4
-  main
-  notes
-Slide 5
-  main
-    check link
-  notes
-    check link
-next slide is two column
-Slide 6
-  main
-    a series of sections will work better for some definitions
-  notes
-next slide is two column
-Slide 7
-  main
-  notes
-Slide 8
-  main
-  notes
-Slide 9
-  main
-  notes
-Slide 10
-  main
-    check link
-  notes
-    check link
-Slide 11
-  main
-    check link
-  notes
-Slide 12
-  main
-  notes
-Slide 13
-  main
-  notes
-Slide 14
-  main
-    check link
-  notes
-Slide 15
-  main
-  notes
-Slide 16
-  main
-  notes
-Slide 17
-  main
-  notes
-next slide is two column
-Slide 18
-  main
-  notes
-Slide 19
-  main
-  notes
-next slide is two column
-Slide 20
-  main
-  notes
-Slide 21
-  main
-  notes
-next slide is two column
-Slide 22
-  main
-    check link
-  notes
-Slide 23
-  main
-  notes
-Slide 24
-  main
-    check link
-    check link
-    check link
-  notes
-Slide 25
-  main
-  notes
-next slide is two column
-Slide 26
-  main
-  notes
-    check link
-Slide 27
-  main
-  notes
-Slide 28
-  main
-  notes
-Slide 29
-  main
-  notes
-Slide 30
-  main
-  notes
-Slide 31
-  main
-Slide 32
-  main
-  notes
-Slide 33
-  main
-    a series of sections will work better for some definitions
-    a series of sections will work better for some definitions
-    a series of sections will work better for some definitions
-    a series of sections will work better for some definitions
-  notes
-    check link
-next slide is two column
-Slide 34
-  main
-  notes
-Slide 35
-  main
-    check link
-  notes
-Slide 36
-  main
-  notes
-Slide 37
-  main
-Headings are the right level?
+next slide is two column - Slide 6
+next slide is two column - Slide 7
+next slide is two column - Slide 18
+next slide is two column - Slide 20
+next slide is two column - Slide 22
+next slide is two column - Slide 26
+next slide is two column - Slide 34
