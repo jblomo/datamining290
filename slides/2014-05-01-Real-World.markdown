@@ -11,31 +11,32 @@ class: left, top, inverse
 ## General vs. Practical
 
   + "the language in which you'll spend most of your working life hasn't been
-    invented yet, so we can't teach it to you.  Instead we have to give you the
+    invented yet, so we can't teach it to you. Instead we have to give you the
     skills you need to learn new languages as they appear."
-  + Brian Harvey, [Why SCIP matters](http://www.eecs.berkeley.edu/~bh/sicp.html)
+
+    -- Brian Harvey, [Why SCIP matters](http://www.eecs.berkeley.edu/~bh/sicp.html)
 
 ???
 
-## Important Parts
+## What's Really Important?
 
   + Important: understanding your domain, asking interesting questions,
     answering them with data, fitting questions to mathematical concepts
-  + Not as important: scipy lingregress, d3
+  + Not as important: scipy, mrjob, d3
 
 ---
 
 ## But
 
-  + Who is doing interviews?
-  + Who is starting their own company?
-  + Who wants to build their portfolio?
+  + Are you interviewing?
+  + Are you starting your own company?
+  + Want to build your portfolio?
 
 ???
 
 ## Real World
 
-  + I realize many of you may be needing to apply this stuff very soon
+  + Many of you may be needing to apply this stuff very soon
   + So here's the lecture where I try to tell you what I would do when
     practicing data mining
 
@@ -52,7 +53,7 @@ class: left, top, inverse
 ## Idea required but not sufficient
 
   + Wide variation of thoughts on ideas
-  + One of the biggest road blocks for wanna be entrepreneurs, but most derided
+  + One of the biggest road blocks for wannabe entrepreneurs, but most derided
   + Timing is mostly luck, is the world ready for your ideas?
   + I think the *vision* is important, it's what drives the company, keeps
     people working
@@ -78,13 +79,15 @@ class: left, top, inverse
 
 ---
 
-## Exponential Improvements two_col:
+## Exponential Improvements
 
   + The future is changing at a faster rate than ever before
   + Every field is being quantized, instrumented
   + "You're not on the Internet?": "You're not analyzing your data?"
 
-<img src="img/cost_per_megabase.jpg" width=100% />
+.center[
+<img src="img/cost_per_megabase.jpg" width=80% />
+]
 
 ???
 
@@ -94,25 +97,28 @@ class: left, top, inverse
     become out of date > twice as fast.
   + So what happens when we combine exponential improvements and instrumented
     fields? Overwhelming amounts of data
-  + Winners will be the ones
-  + Obviously web recommendations: data, but also
+  + Winners will be the ones who use this to their advantage, for example...
 
 ---
 
-## Exercise two_col:
+## Exercise
 
+.left-column[
 <img src="img/strava.jpg" width=100% />
+]
+.right-column[
 <img src="img/strava-ride.png" width=100% />
+]
 
 ???
 
 ## Strava
 
-    + No device, just data
+  + No device, just data
 
 ---
 
-## Thermostats center:
+## Thermostats
 
 <img src="img/nest.jpg" width=100% />
 
@@ -124,7 +130,7 @@ class: left, top, inverse
 
 ---
 
-## Biology center:
+## Biology
 
 <img src="img/cost_per_megabase.jpg" width=100% />
 
@@ -132,8 +138,8 @@ class: left, top, inverse
 
 ## Gene sequencing
 
-    + Biology: data, and data growing so fast a single computer can't keep up
-    + img: http://www.genome.gov/sequencingcosts/
+  + Biology: data growing much faster than hardware is advancing
+  + img: http://www.genome.gov/sequencingcosts/
 
 ---
 
@@ -189,7 +195,7 @@ class: left, top, inverse
 
 ---
 
-## Source Control center:
+## Source Control
 
 <img src="img/git.png" width=100% />
 
@@ -212,9 +218,9 @@ class: left, top, inverse
 
 ## Area for Improvement
 
-    + This is actually a big area solutions
-    + Deploying websites has solutions like Heroku, but no equivilant for
-      storing, processing, serving data
+  + This is actually a big area needing solutions
+  + Deploying websites has solutions like Heroku, but no equivilant for
+    storing, processing, serving data
 
 ---
 
@@ -242,7 +248,7 @@ class: left, top, inverse
 
 ## Bad rap
 
-  + Developers don't like writing them much
+  + Developers don't usually like writing them
   + But it helps nail down issues
   + Yelp uses CEP process
   + If you get to the "agree to disagree" point, data or code can solve
@@ -272,34 +278,38 @@ class: left, top, inverse
 ## Tools
 
   + Right tool for the job
-  + Text Editor: Use ```vim``` or ```emacs```
-  + ```virtualenv``` (Python); ```RVM``` (Ruby)
+  + Text Editor: Use vim, emacs, Sublime Text, etc. for Python, Eclipse for Java, ...
+  + virtualenv (Python); RVM (Ruby)
   + Learn the command line
 
 ???
 
 ## Woodworker
 
-    + (slightly off topic from Joel's list)
-    + Woodworkers don't hammer stuff in with their shoe
-    + Make their own tools as first part of job
-    + When a custom problem comes up, make a custom tool
-    + These slides, written with mappings in ```vim```
-    + Text Editor
-      + Syntax Highlighting
-      + Macros
-      + Interact with other tools
-      + Find across files
+  + (slightly off topic from Joel's list)
+  + Woodworkers don't hammer stuff in with their shoe
+  + Make their own tools as first part of job
+  + When a custom problem comes up, make a custom tool
+  + These slides, written in Markdown in Sublime Text, HTML built with a
+    Makefile
+  + Text Editor
+    + Syntax Highlighting
+    + Macros
+    + Interact with other tools
+    + Find across files
 
 ---
 
-## How to Use Recommendations two_col:
+## How to Use Recommendations
 
   + Start with them as default
   + If you understand why something is better for your case, use it
   + Understand trade-offs
 
-<img src="img/grain-of-salt.jpg" width=100% />
+.center[
+
+<img src="img/grain-of-salt.jpg" width=70% />
+]
 
 ???
 
@@ -321,7 +331,8 @@ class: left, top, inverse
 
 ## Data most important asset
 
-  + S3 is a pay-as-you go model, opens up many data processing possibilities
+  + S3 is a pay-as-you go model, opens up many data processing possibilities,
+    you get price drops without doing any work
   + Don't have to worry about how to connect
   + PostgreSQL solid database, but also offers many improvements like storing
     geo data
@@ -329,16 +340,19 @@ class: left, top, inverse
 
 ---
 
-## Exploration two_col:
+## Exploration
 
   + Python
   + IPython Notebook, matplotlib
 
-<img src="img/ipython-notebook.jpg" width=100% />
+.center[
+
+<img src="img/ipython-notebook.jpg" width=60% />
+]
 
 ???
 
-## Py
+## Python
 
   + Main reason: it is convenient and practical to stay in the same language as
     production
@@ -353,23 +367,17 @@ class: left, top, inverse
 
   + D3 for visualizations
   + HTML is sharable, universal
-  + (Adventurous: Vega)
-
-???
-
-## Visualization
-
-  + Vega more directly maps to grammar of graphics, but is very new library
 
 ---
 
-## Processing two_col:
+## Processing
 
   + Hadoop + mrjob
   + Elastic MapReduce
-  + (Adventurous: [Spark](http://spark-project.org)
+  + (Adventurous: [Spark](http://spark-project.org) and
+    [Storm](http://storm.incubator.apache.org/))
 
-<img src="img/hadoop.png" width=100% />
+<img src="img/hadoop.png" width=60% />
 
 ???
 
@@ -380,13 +388,15 @@ class: left, top, inverse
     bit of computing poser
   + Spark is a new model out of Berkeley that does a better job of keeping data
     in memory, but doesn't have the maturity of Hadoop
+  + Storm is much like MapReduce but designed for doing computation in real
+    time
 
 ---
 
 ## Models
 
   + Text: Naive Bayes
-  + Numeric Classification: SVM^light
+  + Numeric Classification: SVM<sup>light</sup>
   + General: sklearn/RandomForrestClassifier
 
 ???
@@ -430,7 +440,7 @@ class: left, top, inverse
 
 ---
 
-## Hiring two_col:
+## Hiring
 
   + Learn about the company
   + Ask questions to learn about their problems
@@ -478,7 +488,7 @@ class: left, top, inverse
 ## Unique
 
   + What makes you a unique candidate?
-  + Your side projects set you apart. All students here have made a mobile
+  + Your side projects set you apart. All students here have made a web
     page. How is yours different?
 
 ---
@@ -487,7 +497,6 @@ class: left, top, inverse
 
   + Always try to have > 2 offers on the table
   + Once a company decides, they've already sunk a lot of resources into you
-  + "That would make me comfortable"
 
 ???
 
@@ -508,8 +517,8 @@ class: left, top, inverse
 
 ## The Job
 
-  + As Gene said, the thing that can't be taught is to think creatively about
-    all the cool stuff you can do with this data, frame it in a way that is
+  + The thing that can't be taught is to think creatively about
+     all the cool stuff you can do with this data, frame it in a way that is
     specific, actionable
   + Most jobs require a combination of DM and coding skills
   + Companies don't need just "idea people", need "idea + execution"
@@ -520,9 +529,9 @@ class: left, top, inverse
 
 ---
 
-## T-shape Skills center:
+## T-shaped Skills
 
-<img src="img/scrumtshape.jpg" width=100% />
+<img src="img/scrumtshape.jpg" width=80% />
 
 ---
 
@@ -572,14 +581,20 @@ class: left, top, inverse
 
 ---
 
-## Stay Sharp two_col:
+## Stay Sharp
 
-  + Long term, expected to combine the best of both:
+.left-column[
+
+  + Long term, expected to combine the best of both...
     + Skills
     + Wisdom
   + So keep building skills
+]
+
+.right-column[
 
 <img src="img/stay-sharp.png" width=100% />
+]
 
 ???
 
@@ -624,18 +639,8 @@ class: left, top, inverse
 ## Doing is best for learning
 
   + Employers look for engagement in these areas
-  + Almost any are you want to focus in, your website can be your medium
+  + Almost any area you want to focus in, your website can be your medium
 
 ---
 
 # *Thank You!*
-
----
-
-next slide is two column - Slide 6
-next slide is two column - Slide 7
-next slide is two column - Slide 18
-next slide is two column - Slide 20
-next slide is two column - Slide 22
-next slide is two column - Slide 26
-next slide is two column - Slide 34
