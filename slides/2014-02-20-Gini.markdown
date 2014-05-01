@@ -1,0 +1,69 @@
+name: inverse
+layout: true
+class: left, top, inverse
+
+---
+
+## HW: Gini
+
+  + Calculate Gini Index
+
+---
+
+## Gini Index
+
+```python
+  Gini(D) = 1 - sum(frac**2 for frac in classes)
+```
+  Sum of the squares of the fraction of items in each class
+
+---
+
+## Data: Campaign Contributions
+
+  + Federal [campaign finance data](ftp://ftp.fec.gov/FEC/2012/pas212.zip) (same as before)
+  + Calculating the Gini Index for the Candidate Names for the entire data set
+  + Partition by zip code, calculate the weighted average Gini Index score
+    over all partitions
+  + Partitions are weighted by the number of records they contain divided by
+    the total number of records in the data set
+
+---
+
+## Extra Credit
+
+  + Find a best split of a continuous field
+
+---
+
+## Python Tips
+
+  + [collections](http://docs.python.org/2/library/collections.html) module
+    + ```defaultdict``` auto creates keys
+    + ```Counter``` counts hashable objects
+
+```python
+>>> x = defaultdict(int)
+>>> x['a'] += 3
+>>> x['a']
+3
+>>> x['b']
+0
+>>> x
+defaultdict(<type 'int'>, {'a': 3, 'b': 0})
+
+>>> y = Counter()
+>>> y.update(['a', 'b', 'a', 'c'])
+>>> y
+Counter({'a': 2, 'c': 1, 'b': 1})
+```
+
+---
+
+## Git Tips
+
+```bash
+$ git checkout master
+$ git pull jimmy master
+$ git checkout -b hw-gini
+```

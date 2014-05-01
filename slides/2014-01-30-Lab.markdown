@@ -1,0 +1,60 @@
+name: inverse
+layout: true
+class: left, top, inverse
+
+---
+
+## Lab: Obtain and Explore Data
+
+  + Find a data set or external API
+  + Superficially examine it
+  + Summarize findings
+  + Submit assignment via GitHub
+
+---
+
+## Obtain Data
+
+  + Look through the links in slides for interesting data sets, or find your own
+  + Or find a service API, like NYTimes
+  + Explore the data available to answer the following questions
+
+---
+
+## Questions
+
+  + What are the types of data available to you?
+  + For data sets: how many records are in the data set?
+  + For API: what are the limits on fetching data?
+  + Provide an "interesting" record, explain its properties and why it is
+    interesting
+  + What are 3 questions you could answer using your data?
+
+---
+
+## Submit Homework
+
+  + On the ischool server, create a branch called ```hw-obtain-data```
+  + Create a text file to write the solution, a simple editor to use is ```pico```
+  + ```git add``` the file
+  + ```git commit``` the change
+  + ```git push origin hw-obtain-data``` to put it on GitHub
+  + On github, submit a "pull request" from the ```hw-obtain-data``` branch to your master branch
+
+???
+
+## Pull Requests
+
+   + Pull requests are a way of showing updates in a way that lets me provide
+     comments, get notifications
+
+---
+
+## Going Forward
+
+  + Other homework assignments will be completing code
+  + General work-flow:
+    + Start a new branch
+    + Add required files
+    + Push to GitHub
+    + Submit Pull Request

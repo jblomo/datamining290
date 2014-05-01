@@ -1,0 +1,218 @@
+name: inverse
+layout: true
+class: left, top, inverse
+
+---
+
+# PageRank
+
+.center[
+.white-background[
+<img src="img/PageRanks-Example.svg.png" width=85% />
+]
+]
+
+???
+
+## Web page importance
+
+  + Also used to model importance of people, places... anything that has a
+    reputation
+  + inbound links are important, but scaled by the importance of the source
+  + C is still important, even though it only has one inbound edge
+
+---
+
+## Random Walks
+
+  + Starting from a random page, what is the likelihood of winding up on a
+    target page?
+  + Starting point captured by initial constant
+  + Stopping captured by "damping factor" (0.85)
+
+.white-background[
+<img src="img/pagerank.png" width=100% />
+]
+
+???
+
+## Original
+
+  + Original paper did not divide by N
+  + This gives relative weights of pages, but not a formal probability because
+    sum will not add up to N
+  + Either way is fine for our purposes
+
+---
+
+## Example
+
+  + ```B```, ```C```, ```D```, all link to ```A```
+  + ```B``` has PageRank of 0.5, 4 links
+  + ```C``` has PageRank of 0.7, 4 links
+  + ```D``` has PageRank of 0.2, 1 link
+
+.white-background[
+<img src="img/pagerank.png" width=100% />
+]
+
+  + 0.15/4 + 0.85 * sum(PR/links for (pr,links) in pages)
+  + 0.15/4 + 0.85 * sum(0.5/4, 0.7/4, 0.2/1)
+  + 0.15/4 + 0.85 * 0.465
+  + .43275
+
+---
+
+## Other Pages
+
+  + But how did we know the PageRank of other pages?
+  + Start with something and calculate iteratively until convergence (sound familiar?)
+
+---
+
+## Representing Graphs
+
+  + Adjacency Matrix - represent graph edges in a matrix
+
+<br />
+
+| V | A | B | C | D |
+|---|---|---|---|---|
+| A | 0 | 0 | 0 | 0 |
+| B | 1 | 0 | 1 | 0 |
+| C | 1 | 0 | 0 | 1 |
+| D | 1 | 1 | 0 | 0 |
+
+???
+
+## Diversion
+
+  + Take a step back so we can motivate how to express these calculations as
+    linear algebra
+  + Using linear algebra can help us translate graph concepts to fairly elegant
+    code, as well as realize some optimizations
+  + Draw the graph!
+  + Symmetric? When?
+
+---
+
+## Representing Graphs
+
+.left-column[
+
+  + Adjacency List - for each vertex, list all connections
+
+]
+
+.right-column[
+```csv
+A []
+B [A,C]
+C [A,D]
+D [A,B]
+```
+]
+
+???
+
+## Diversion
+
+  + You can think of this as keys (vertex) and values (list of vertices)
+  + When would thinking in key-values be useful? MapReduce
+  + Back to matrix representation
+
+---
+
+## Eigenvector
+
+  + PageRank formula divides by number of links
+  + Adjacency matrix typically normalized such that all columns sum to 1
+  + PageRank scores are entries in the largest eigenvector of the matrix
+    representation
+
+.white-background[
+<img src="img/pagerank-eigen.png" width=100% />
+]
+
+---
+
+## Eigenvector centrality
+
+  + Another measurement for graphs, using the simple adjacency matrix
+  + Relative influence of a node (no normalization)
+
+---
+
+## Adversarial
+
+  + Source does not want to be discovered
+  + Patterns are purposefully hidden: so discover the patterns of hiding
+  + If adversary knows your techniques, they can take advantage of weakness
+
+???
+
+## Weakness
+
+  + Reading: paper discovering hiding patterns
+  + Weakness of pagerank?
+  + We assume that these links are legitimate.
+  + What happens if the links are not conveying authority?
+
+---
+
+## Google Bomb
+
+  + Milder forms of adversarial work
+
+<img src="img/Google_Bomb_Miserable_Failure.png" width=100% />
+
+???
+
+## Link farms
+
+  + Link farms try to create fake links to pages,
+  + [JC Penny's link farm](http://www.nytimes.com/2011/02/13/business/13search.html?pagewanted=all)
+
+---
+
+## Hubs & Authorities
+
+.left-column[
+
+  + Earlier in the web, there was more structure
+  + Hubs: collected links to different resources
+  + Authorities: Gave out specific information
+  + Score separately?
+]
+.right-column[
+<img src="img/early-yahoo.jpg" width=100% />
+]
+
+???
+
+## Alternatives
+
+  + Some other interesting network analysis tools
+
+---
+
+## HITS
+
+  + Authority score
+    + sum(hub(i) for i in inbound_links)
+  + Hub score
+    + sum(authority(i) for i in outbound_links)
+  + Normalize
+    + to ensure convergence, square root sum of squares of scores
+
+???
+
+## Iterative
+
+  + Sill iterative, but now using inbound and outbound links to judge
+  + Hubs have outbound links to authoritive pages
+  + Authorities have inbound links from good hubs
+
+---
+
+# *Break*

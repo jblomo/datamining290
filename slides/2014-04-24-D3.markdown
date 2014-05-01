@@ -1,0 +1,87 @@
+name: inverse
+layout: true
+class: left, top, inverse
+
+---
+
+## Develop a Visualization
+
+  + Learn D3
+  + Extract data from your project
+  + Build a visualization of it
+
+---
+
+## Deliverable
+
+  + HTML with visualization
+  + Dependencies
+
+---
+
+## Example
+
+.tight-code[
+```code/histogram.html```
+
+```shell
+# extract 2000 reviews
+grep 'type": "review' yelp_academic_dataset_review.json | \
+  head -n 200 > reviews-200.json
+```
+
+```python
+import json
+with open("reviews-200.json") as f:
+    r = map(json.loads, f)
+# extract star ratings
+[rev['stars'] for rev in r]
+```
+]
+
+???
+
+## Notes
+
+  + Include notes on how you extracted your data
+  + Notes can be in a separate files, or comments in the code
+  + My notes might be these shell/python commands
+
+---
+
+## Partners
+
+  + If you've *never* written JS on your own:
+    + Find someone familiar with D3
+    + Still must turn in separate homeworks
+    + Cite your sources
+
+???
+
+## Javascript
+
+  + Since this class is not teaching Javascript, you'll need to learn on your
+    own
+  + Special case: find someone to help you *learn*
+  + Folks who know D3: this assignment is not a challenge, so please find
+    someone to help. Teaching is a great way to learn
+
+---
+
+## Extra Credit
+
+  + [Vega](http://trifacta.github.io/vega/) is a JS visualization Grammer
+  + Write homework in Vega instead
+
+???
+
+## Closer to Grammar
+
+  + Vega is a declarative way of specifying a graphic
+  + Uses D3 underneath
+
+---
+
+## D3 Intro
+
+  + [D3 Intro](http://vogievetsky.github.io/IntroD3)

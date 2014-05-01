@@ -1,0 +1,59 @@
+name: inverse
+layout: true
+class: left, top, inverse
+
+---
+
+## Continue Back Propagation from Slides
+
+.white-background[
+<img src="img/ann8.png"/>
+]
+
+???
+
+## Expected
+
+  + Labeling: Top to bottom, left to right:
+  + 1 is upper left, 2 is lower left, 3 is top hidden layer, 6 is output layer
+
+---
+
+## Submit
+
+  ```nn-train.txt```
+```text
+err_6 = -0.11346127339699999
+err_5 = -0.0011326458827956695
+err_4 =
+err_3 =
+
+w_56 = 0.37298917134759924
+w_46 =
+w_36 =
+
+err_2 =
+err_1 =
+w_25 =
+w_24 =
+w_23 =
+w_15 =
+w_14 =
+w_13 =
+```
+
+???
+
+## Fill In
+
+  + Fill in values
+  + You may use a calculator or Python
+  + If you want feedback or partial credit, include any code in another file
+
+---
+
+## Project
+
+  + Find a partner (if applicable)
+  + Find a [data set](http://blog.bigml.com/2013/02/28/data-data-data-thousands-of-public-data-sources/)
+  + Start brainstorming

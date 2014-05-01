@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Data Mining</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <style type="text/css">
+      @import url(http://fonts.googleapis.com/css?family=Droid+Serif);
+      @import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+
+      body {
+        font-family: 'Droid Serif';
+        font-size: 25px;
+      }
+      .remark-slide-content {
+        padding: 1em 2em 1em 2em;
+      }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: 400;
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+      h1 { font-size: 3em; }
+      h2 { font-size: 1.8em; }
+      h3 { font-size: 1.4em; }
+      .footnote {
+        position: absolute;
+        bottom: 3em;
+      }
+      ul { margin: 8px;}
+      li p { line-height: 1.25em; }
+      .red { color: #fa0000; }
+      .large { font-size: 2em; }
+      a, a > code {
+        color: rgb(249, 38, 114);
+        text-decoration: none;
+      }
+      code {
+        -moz-border-radius: 3px;
+        -web-border-radius: 3px;
+        background: #e7e8e2;
+        color: black;
+        border-radius: 3px;
+      }
+      .tight-code {
+        font-size: 20px;
+      }
+      .white-background {
+        background-color: white;
+        padding: 10px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .limit-size img {
+        height: auto;
+        width: auto;
+        max-width: 1000px;
+        max-height: 500px;
+       }
+      em { color: #80cafa; }
+      .pull-left {
+        float: left;
+        width: 47%;
+      }
+      .pull-right {
+        float: right;
+        width: 47%;
+      }
+      .pull-right ~ p {
+        clear: both;
+      }
+      #slideshow .slide .content code {
+        font-size: 1.6em;
+      }
+      #slideshow .slide .content pre code {
+        font-size: 1.6em;
+        padding: 15px;
+      }
+      .inverse {
+        background: #272822;
+        color: #e3e3e3;
+        text-shadow: 0 0 20px #333;
+      }
+      .inverse h1, .inverse h2 {
+        color: #f3f3f3;
+        line-height: 1.6em;
+      }
+
+      /* Slide-specific styling */
+      #slide-inverse .footnote {
+        bottom: 12px;
+        left: 20px;
+      }
+      #slide-how .slides {
+        font-size: 1.6em;
+        position: absolute;
+        top:  151px;
+        right: 140px;
+      }
+      #slide-how .slides h3 {
+        margin-top: 0.2em;
+      }
+      #slide-how .slides .first, #slide-how .slides .second {
+        padding: 1px 20px;
+        height: 90px;
+        width: 120px;
+        -moz-box-shadow: 0 0 10px #777;
+        -webkit-box-shadow: 0 0 10px #777;
+        box-shadow: 0 0 10px #777;
+      }
+      #slide-how .slides .first {
+        background: #fff;
+        position: absolute;
+        top: 20%;
+        left: 20%;
+        z-index: 1;
+      }
+      #slide-how .slides .second {
+        position: relative;
+        background: #fff;
+        z-index: 0;
+      }
+
+      .center {
+        float: center;
+      }
+
+      /* Two-column layout */
+      .left-column {
+        width: 48%;
+        float: left;
+      }
+      .right-column {
+        width: 48%;
+        float: right;
+      }
+      .right-column img {
+        max-width: 120%;
+        max-height: 120%;
+      }
+
+      /* Tables */
+      table {
+        border-collapse: collapse;
+        margin: 0px;
+      }
+      table, th, td {
+        border: 1px solid white;
+      }
+      th, td {
+        padding: 7px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+
+name: inverse
+layout: true
+class: left, top, inverse
+
+---
+
+# Amazon Web Services
+
+---
+
+## Grant
+
+  + $5,600 for this class
+  + Store data in S3
+  + Use mrjob on EMR
+
+???
+
+## No crazy
+
+  + Overcharges go on my credit card!
+  + Ask me before doing anything not discussed here
+
+---
+
+## S3
+
+  + [S3](http://aws.amazon.com/s3/): Simple Storage Service
+  + Can store and share large data files
+  + Free bandwidth when processing with EMR
+
+---
+
+## ```s3cmd```
+
+  + Upload / Download files
+  + ```s3cmd --configure```
+    + ```cat ~jretz/mrjob.conf``` to get answers to first two questions, defaults should work for the rest
+  + ```s3cmd mb s3://i290-name``` ← your name or team name here
+  + ```s3cmd put localfile s3://i290-name/data/```
+
+???
+
+## Configuration
+
+  + check ```~jretz/mrjob.conf```
+
+---
+
+## Elastic MapReduce
+
+  + ```python job.py -r emr -c ~jretz/mrjob.conf s3://i290-name/data/file```
+  + ```-r emr``` : run on EMR instead of localhost
+  + ```-c ~jretz/mrjob.conf``` : use a configuration file
+    + 5 machines, can change with command line options
+
+---
+
+## Copying Keys
+
+  + SSH keys are used to connect to server to check status
+  + Copy my keys, set correct permissions
+```bash
+$ cp ~jretz/i290T-03.pem.shared ~/i290T-03.pem
+$ chmod 0600 ~/i290T-03.pem
+```
+
+---
+
+.tight-code[
+```bash
+$ s3cmd put yelp_academic_dataset.json.gz s3://i290-jretz/data/
+# yelp_academic_dataset.json.gz -> s3://i290-jretz/data/yelp_academic_dataset.json.gz  [1 of 1]
+# 127506871 of 127506871   100% in    8s    13.60 MB/s  done
+
+$ cd datamining290/code/
+~/datamining290/code$ python unique_review.py -v -r emr \
+  -c ~jretz/mrjob.conf \
+  --output-dir s3://i290-jretz/output/unique_review/ \
+  --no-output \
+  s3://i290-jretz/data/yelp_academic_dataset.json.gz
+# ...
+# Creating Elastic MapReduce job flow
+# ...
+# Job flow created with ID: j-EFG48CIR1APW
+# ...
+# Job launched 60.8s ago, status STARTING: Provisioning Amazon EC2 capacity
+# ...
+# Job launched 334.4s ago, status RUNNING: Running step (unique_review.jretz.20130406.171258.267523: Step 1 of 3)
+# ...
+# map 73% reduce  42%
+# ...
+# Counters from step 1:
+# ...
+
+~/datamining290/code$ s3cmd ls -r s3://i290-jretz/output/
+# ...
+# 2013-04-06 18:05        29   s3://i290-jretz/output/unique_review/part-00005
+# ...
+```
+]
+
+???
+
+## Trade-offs
+
+  + Jobs may take 5 minutes to spin up
+  + Errors are harder to debug because they are mixed in with Hadoop and EMR
+    errors
+
+---
+
+## Extra Notes
+
+  + Cannot overwrite output directory: choose a new one for each run
+  + Errors may be hard to debug. Run locally with a sample of your data
+  + Output from job will be split into files, recall the Hadoop video lecture
+
+    </textarea>
+    <script src="production/remark-0.5.9.min.js" type="text/javascript">
+    </script>
+    <script type="text/javascript">
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>

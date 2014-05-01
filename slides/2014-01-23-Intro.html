@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Data Mining</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <style type="text/css">
+      @import url(http://fonts.googleapis.com/css?family=Droid+Serif);
+      @import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+
+      body {
+        font-family: 'Droid Serif';
+        font-size: 25px;
+      }
+      .remark-slide-content {
+        padding: 1em 2em 1em 2em;
+      }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: 400;
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+      h1 { font-size: 3em; }
+      h2 { font-size: 1.8em; }
+      h3 { font-size: 1.4em; }
+      .footnote {
+        position: absolute;
+        bottom: 3em;
+      }
+      ul { margin: 8px;}
+      li p { line-height: 1.25em; }
+      .red { color: #fa0000; }
+      .large { font-size: 2em; }
+      a, a > code {
+        color: rgb(249, 38, 114);
+        text-decoration: none;
+      }
+      code {
+        -moz-border-radius: 3px;
+        -web-border-radius: 3px;
+        background: #e7e8e2;
+        color: black;
+        border-radius: 3px;
+      }
+      .tight-code {
+        font-size: 20px;
+      }
+      .white-background {
+        background-color: white;
+        padding: 10px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .limit-size img {
+        height: auto;
+        width: auto;
+        max-width: 1000px;
+        max-height: 500px;
+       }
+      em { color: #80cafa; }
+      .pull-left {
+        float: left;
+        width: 47%;
+      }
+      .pull-right {
+        float: right;
+        width: 47%;
+      }
+      .pull-right ~ p {
+        clear: both;
+      }
+      #slideshow .slide .content code {
+        font-size: 1.6em;
+      }
+      #slideshow .slide .content pre code {
+        font-size: 1.6em;
+        padding: 15px;
+      }
+      .inverse {
+        background: #272822;
+        color: #e3e3e3;
+        text-shadow: 0 0 20px #333;
+      }
+      .inverse h1, .inverse h2 {
+        color: #f3f3f3;
+        line-height: 1.6em;
+      }
+
+      /* Slide-specific styling */
+      #slide-inverse .footnote {
+        bottom: 12px;
+        left: 20px;
+      }
+      #slide-how .slides {
+        font-size: 1.6em;
+        position: absolute;
+        top:  151px;
+        right: 140px;
+      }
+      #slide-how .slides h3 {
+        margin-top: 0.2em;
+      }
+      #slide-how .slides .first, #slide-how .slides .second {
+        padding: 1px 20px;
+        height: 90px;
+        width: 120px;
+        -moz-box-shadow: 0 0 10px #777;
+        -webkit-box-shadow: 0 0 10px #777;
+        box-shadow: 0 0 10px #777;
+      }
+      #slide-how .slides .first {
+        background: #fff;
+        position: absolute;
+        top: 20%;
+        left: 20%;
+        z-index: 1;
+      }
+      #slide-how .slides .second {
+        position: relative;
+        background: #fff;
+        z-index: 0;
+      }
+
+      .center {
+        float: center;
+      }
+
+      /* Two-column layout */
+      .left-column {
+        width: 48%;
+        float: left;
+      }
+      .right-column {
+        width: 48%;
+        float: right;
+      }
+      .right-column img {
+        max-width: 120%;
+        max-height: 120%;
+      }
+
+      /* Tables */
+      table {
+        border-collapse: collapse;
+        margin: 0px;
+      }
+      table, th, td {
+        border: 1px solid white;
+      }
+      th, td {
+        padding: 7px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+
+name: inverse
+layout: true
+class: left, top, inverse
+
+---
+
+class: center
+
+# Data Mining 290T-03
+## Jimmy Retzlaff & Shreyas
+
+---
+
+## Course Goals
+  + Extract *information* from *data*
+  + Understand techniques to find patterns
+  + Apply algorithms to real data sets
+
+---
+
+## We'll Do Stuff
+  + 30%: 10 Homework Assignments
+  + 30%: 1 Midterm
+  + 40%: 1 Project: Find, Mine, Report on Data
+
+???
+
+## Homework Details
+  + Homework due at midnight Wednesday before class
+  + Each 24 hours late is 10% off
+  + Homework will be turned in by GitHub pull request
+  + Project will be submitted by email & presentation
+
+---
+
+## But Don't Worry
+  + This isn't a programming class
+  + Grades are based on understanding of the concepts, not the craziest project
+  + Shreyas & I are here to help
+
+???
+
+## Help
+  + We realize there's a wide range of technical skill
+  + We will help get anyone up to speed in these technical areas
+
+---
+
+## This is a Graduate Course
+  + Perform well without supervision
+  + Readings from both book and online documentation
+  + TMTOWTDI
+  + Getting frameworks working on your computer
+
+???
+
+## Style
+  + More fire hose than spoon fed, you'll need to follow up for understanding
+  + Honor system: No copying code or answers. Helping each other with
+    concepts is encouraged, but document it.
+  + Everybody has a different work flow.  We'll be covering the most basic.
+    Great if you want to do something different, but realize we may not be
+    able to help you as much.
+  + Non ISchool students should email student ID from EDU account to shreyas
+    and jretz and we will get you an ischool accounts.
+  + You may want to use other frameworks for your projects. Great! But again,
+    we may not be familiar with them.
+
+---
+
+## Prerequisites
+  + Basic probability: P(A), P(A or B), P(A and B), P(A | B)
+  + Basic programming: Python
+  + Basic command line: SSH, downloading, copying large files, running programs
+    against data
+  + Textbook: Han, J., Kamber, M., & Pei, J. (2011). _Data Mining: Concepts and Techniques_, Third Edition *(3rd ed.)*. Morgan Kaufmann.
+  + Technology will be available on ```ischool.berkeley.edu```
+
+???
+
+## Basics
+  + "Probability of A", "Probability of A or B" "A and B" "A given B"
+  + Most assignments filling in algorithm code
+  + Project you may use any language, though we suggest Python.
+  + We'll introduce any specific frameworks
+  + Command line: cp, mv, less... Imagine you have a 10GB file, how are you
+    going to inspect the contents?
+
+---
+
+## Material
+  + Process: from finding data to mining it to visualizing results
+  + Algorithms: all intuitively motivated, some rigorously studied
+  + Programming: using algorithms against data sets
+  + Discovery: finding information in a self-defined project
+
+???
+
+## What will we learn?
+  + Data mining is not just about algorithms. We'll learn how to obtain, clean,
+    and store data.
+  + In real life, this is 70% of the job!
+  + We'll cover many different algorithms, and dive deep on several of
+    them. But we're not going to get into any hairy math proofs.
+  + Programming is the best way to precisely describe an algorithm. It is also
+    the way data mining is used in the real world.
+  + Your own project should emphasize your passion. Again, the real world requires
+    you to grab data and squeeze information out of it without external help.
+
+---
+
+## Lectures & Labs
+  + Start with Q&A for at least 10 minutes
+  + Expect to be asked a question
+  + Breaks
+  + Lab: Stick around and get the first question of homework done
+  + Slides on http://jretz.github.io/datamining290/
+  + Source for everything on https://github.com/jretz/datamining290/
+
+???
+
+## Helpful tips
+  + Helpful to me if you say your name
+  + Sorry, I tend to forget names
+  + If I am not calling on you, check to make sure you are on the class list!
+  + I'm not taking attendance, but let me know if you can't make it so I
+    won't call on you
+
+---
+
+## Office Hours
+  + We'll stay after class
+  + or schedule a Skype call
+  + [Piazza](https://piazza.com/berkeley/spring2014/info290t03/home) for
+    questions and announcements
+  + Wait list will be processed normally until 3rd week... then I'll accept
+    everyone who's participated in class if we have physical room
+
+---
+
+## *Questions?*
+
+---
+
+## Schedule
+Available at [GitHub Syllabus page](http://jretz.github.io/datamining290/)
+
+  + Jan 23 Class Intro ; Tools Intro by GUEST: Shreyas
+    + lab: Git Intro
+  + Jan 30 Case Studies ; Obtaining Data
+  + Feb 6 Probability ; Preprocessing
+  + Feb 13 MapReduce, Data Warehouse
+  + Feb 20 Decision Trees; Naive Bayes
+  + Feb 27 SVM ; Neural Networks
+  + Mar 6 Clustering
+  + Mar 13 Advanced Clustering ; Review
+  + Mar 20 *Midterm*
+    + lab: -
+  + Mar 27 HOLIDAY
+  + Apr 3 Patterns ; Evaluations
+    + lab: Project Proposal Due
+  + Apr 10 Graphs; PageRank
+  + Apr 17 Feature Extraction ; Evaluation
+  + Apr 24 Outliers ; Images ; Audio
+  + May 1 Visualization ; HTML
+  + May 8 In Real Life ; Review
+    + lab: -
+  + May 15 Final Presentation
+    + lab: Bye!
+
+---
+
+## Hi, I'm Jimmy Retzlaff
+  + Yelp - ads engineer and now ads engineering manager
+  + Amazon / Lab126 - Kindle on-device content search
+  + Aver - sales visualizations for the investment industry
+  + Career Central - allow employers to search for job seekers
+  + Animatrix - executive information systems
+  + Xerox - printer drivers for high volume printers
+  + Harvey Mudd College, B.S. Math
+
+---
+
+## Hi, I'm Shreyas
+  + Second year graduate student at ISchool
+  + Also TA'd Analyzing Big Data class and this class last year
+  + I can be reached at [shreyas@ischool](mailto:shreyas@ischool)
+
+---
+
+## Data is Important
+  + Making decisions is a core part of humanity
+  + Data can help you make better decisions
+  + Challenge: extract information from data to improve decisions
+
+???
+
+## Decisions
+  + From big to small; from planning to execution
+  + Business questions: what is the ROI of this feature? Where to concentrate
+    development?
+  + Personal questions: Where to eat dinner tonight? What movie to see?
+  + Improving decisions means improving quality of life
+
+---
+
+## Data is Important
+[![Reviews, Reputation, and Revenue: The Case for Yelp.com](http://img.youtube.com/vi/y7een27u1GM/0.jpg)](http://www.youtube.com/embed/y7een27u1GM)
+
+???
+[![Reviews, Reputation, and Revenue: The Case for Yelp.com](http://img.youtube.com/vi/y7een27u1GM/0.jpg)](http://www.youtube.com/watch?v=y7een27u1GM)
+
+## Nice example of data mining
+  + Stop at 3:51
+  + Had to work with external parties to get data (Yelp, city of Seattle)
+  + Had to clean data (literally, sometimes he was just handed paper receipts)
+  + Used regression analysis to discover patterns
+  + created follow up questions
+  + Used result to understand the meaning behind the data
+
+---
+
+## Data Mining ecosystem
+  + Data mining is part of a process to make decisions from data
+  + Intersection between statistics, computer science, data management, and
+    machine learning
+  + Analysis & visualization often required
+
+???
+
+## Ecosystem
+  + We'll talk about several ways to think about the process from data to
+    knowledge
+  + No universally agreed process, or black-and-white boundaries
+  + Analysis: used at the beginning of investigations to understand data
+    characteristics
+  + Visualization: better understanding of the results of analysis or data
+    mining
+
+---
+
+## Analysis vs. Data Mining
+
+### Analysis
+  + Manually investigating data. No algorithms.
+  + Statistical qualities: mean, median, standard deviation
+  + Histograms (manually set buckets)
+  + Counts / Percentages
+
+### Data Mining
+  + Discovering patterns though automated algorithms
+  + Regressions: fitting data to a model
+  + Clustering: grouping data without manually set descriptions
+  + Classification: identifying divisive features
+
+???
+
+## Pedantic
+
+  + Difference is subtle, but important for both the project and your resume
+
+---
+
+## Machine Learning
+
+  + Programs that can learn from data
+  + Focus on prediction, based on verified training data
+  + Used in two ways: during Data Mining and after Data Mining
+
+[![Robot reading](http://distillery.s3.amazonaws.com/media/2011/06/15/04cfeacce2f4404483d96a4428f9adbd_7.jpg)](http://photopile.me/user/hartanta/?max_id=100596871_2487764#)
+
+???
+
+## Uses
+
+  + During - assume we have training data, train on it, see how useful trained
+    program is or find outliers
+  + After - Discover clusters, verify and label clusters. Use labeled clusters
+    to train a program to recognize new data points
+
+---
+
+## Probability & Statistics
+
+  + Data describes real world events
+  + Probability can describe real world *expected* events
+  + Distributions can be used to summarize data, understand the factors behind
+    its creation
+
+<center><img src="img/Poisson_cdf.svg.png" width=60% /></center>
+
+???
+
+## Uses
+
+  + Can "fit" data to a distribution, find outliers that are unexpected
+  + An example: Poisson distribution describes the expectation of a particular
+    number of events occurring.
+    + e.g., pieces of mail. Average is 4, but it can vary. Is getting 7 or more
+      pieces of mail really an outlier?
+
+---
+
+## Process
+
+### [Knowledge Discovery in Databases (KDD)](http://en.wikipedia.org/wiki/Data_mining#Process)
+  + Selection
+  + Pre-processing
+  + Transformation
+  + Data Mining
+  + Interpretation/Evaluation
+
+### [Cross Industry Standard Process for Data Mining](http://en.wikipedia.org/wiki/Cross_Industry_Standard_Process_for_Data_Mining)
+  + Business Understanding
+  + Data Understanding
+  + Data Preparation
+  + Modeling
+  + Evaluation
+  + Deployment
+
+???
+
+## Common Themes
+   + Figure out what you want to do
+   + Get the data
+   + Make sure it's OK
+   + Understanding
+   + Make a decision, test its effectiveness
+   + Reading will cover another process, aimed at "Data Science", but basically
+     applies to Data Mining
+
+---
+
+## *Break*
+
+    </textarea>
+    <script src="production/remark-0.5.9.min.js" type="text/javascript">
+    </script>
+    <script type="text/javascript">
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>

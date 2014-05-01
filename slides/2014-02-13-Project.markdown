@@ -1,0 +1,118 @@
+name: inverse
+layout: true
+class: left, top, inverse
+
+---
+
+# Final Project
+
+---
+
+## Deliverables
+
+  + Project Proposal (due April 9)
+  + Code (due April 30)
+  + Data (URL or sampled, due April 30)
+  + Presentation (May 8)
+  + Written Report (due May 14)
+
+---
+
+## Groups
+
+  + 1-3 people
+
+---
+
+## Proposal
+
+  + Informal, not graded
+  + A plan for your project
+  + After the proposal you should just be executing, not brainstorming
+  + Discussions before proposal encouraged
+
+---
+
+## Report
+
+  + Introduction
+    + problem, insights, solutions
+  + Problem
+    + motivation, data set
+  + Solution
+    + techniques, failures, examples
+  + Details
+    + parameter tuning, software engineering challenges
+  + Related work
+    + including resources you used
+  + Further work
+    + any remaining ideas you have
+
+???
+
+## Notes
+
+  + Length
+    + around 2 pages, but more important to hit these points
+  + Introduction
+    + "gosh, if these insights are true, it would be really
+    exciting"
+  + Problem
+    + include problems with your data set
+  + Solution
+    + if you do clustering, give examples of a cluster you found and
+    individual data points that it contains
+  + Details
+    + what commands did you use for particular libraries. Can someone
+    duplicate your work?
+  + Formats
+    + PDF, Google Doc
+
+---
+
+## Research Paper
+
+  + [How to write a good research paper](http://research.microsoft.com/en-us/um/people/simonpj/papers/giving-a-talk/writing-a-paper-slides.pdf)
+  + But much shorter!
+
+???
+
+## Skip sections
+
+  + No abstract
+  + Think paragraphs instead of pages
+
+---
+
+## Presentation
+
+  + ~10 minutes
+  + Think: 1 slide per paragraph
+  + Focus on images, stories, examples
+  + Motivate people to read your paper, don't read it to them
+
+---
+
+## Code
+
+  + Another GitHub repository
+  + Public is best, but if private then add Shreyas and me
+  + Include README with info on how to run algorithms
+  + Suggestion: include your paper
+
+???
+
+## Reproducible
+
+  + Imagine if someone wanted to reproduce your results
+  + Also great for portfolio (with Paper)
+
+---
+
+## Data
+
+  + If large, just point to URL in paper and README
+    + git is not very good at handling large data files, don't commit large
+      datasets
+  + If very large, talk with me about hosting on Amazon Web Services
+  + We'll have computing resources available from Amazon

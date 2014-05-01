@@ -1,0 +1,103 @@
+name: inverse
+layout: true
+class: left, top, inverse
+
+---
+
+# Lab: mrjob
+
+  + Understand ```review_word_count.py```
+  + Find review with most unique words
+    + Fill in ```unique_review.py```
+  + Find similar users
+    + Write ```user_similarity.py```
+
+???
+
+## mrjob
+
+  + Using the Yelp Academic Dataset
+  + In lecture, we covered the steps for most unique words
+  + Use Jaccard similarity for user_similarity
+
+---
+
+## Data
+
+  + May copy or use in place on ischool machine
+  + ischool:
+
+```bash
+~jretz/
+  yelp_phoenix_academic_dataset/
+    yelp_academic_dataset_review.json
+```
+
+## Agreement
+
+  + Dataset can only be used for academic purposes
+  + You can download it yourself from the [Yelp Dataset Challenge](http://www.yelp.com/dataset_challenge/)
+
+---
+
+## Understand review_word_count.py
+
+  + Note, this will take ~8 minutes on the ischool machine
+  + Don't run it just yet!
+
+.tight-code[
+```bash
+$ python review_word_count.py yelp_academic_dataset_review.json
+
+no configs found; falling back on auto-configuration
+creating tmp directory /tmp/review_word_count.jretz.20130215.071901.095847
+reading from file
+> /home/jretz/src/datamining290/code/venv/bin/python review_word_count.py --step-num=0 --mapper /tmp/review_word_count.jretz.20130215.071901.095847/input_part-00000
+writing to /tmp/review_word_count.jretz.20130215.071901.095847/step-0-mapper_part-00000
+Counters from step 1:
+  (no counters found)
+...
+Streaming final output from /tmp/review_word_count.jretz.20130215.071901.095847/output
+"4" 2
+"5" 1
+"50"  1
+"6" 2
+"7" 2
+"70s" 1
+"9" 2
+"a" 46
+"abbey" 4
+"able"  1
+"about" 4
+```
+]
+
+---
+
+## A trick for running quickly while developing...
+
+.tight-code[
+```bash
+$ head -n 1000 yelp_academic_dataset_review.json | \
+    python review_word_count.py
+```
+]
+
++ That runs over the first 1,000 lines
++ When things start looking good, try 10,000, then the entire file
+
+---
+
+## Fill in unique_review.py
+
+  + Mutli-step map reduce
+  + Steps are explained in lecture
+  + Skeleton in code
+
+---
+
+## Write user_similarity.py
+
+  + Find users >= 0.5 similarity
+  + User Similarity: Jaccard similarity of businesses reviewed
+  + {BizA, BizB, BizC} ~ {BizF, BizB, BizG}

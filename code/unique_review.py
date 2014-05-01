@@ -5,11 +5,12 @@ import re
 
 WORD_RE = re.compile(r"[\w']+")
 
+
 class UniqueReview(MRJob):
     INPUT_PROTOCOL = JSONValueProtocol
 
     def extract_words(self, _, record):
-        """Take in a record, filter by type=review, yield <word, review_id>"""
+        """Take in a record, yield <word, review_id>"""
         if record['type'] == 'review':
             ###
             # TODO: for each word in the review, yield the correct key,value
@@ -34,7 +35,7 @@ class UniqueReview(MRJob):
         """Output the number of unique words for a given review_id"""
         ###
         # TODO: summarize unique_word_counts and output the result
-        # 
+        #
         ##/
 
     def aggregate_max(self, review_id, unique_word_count):
@@ -61,9 +62,12 @@ class UniqueReview(MRJob):
         reducer1: <key, [values]>
         mapper2: ...
         """
-        return [self.mr(self.extract_words, self.count_reviews),
-                self.mr(reducer=self.count_unique_words),
-                self.mr(self.aggregate_max, self.select_max)]
+        return [
+            self.mr(self.extract_words, self.count_reviews),
+            self.mr(reducer=self.count_unique_words),
+            self.mr(self.aggregate_max, self.select_max),
+        ]
+
 
 if __name__ == '__main__':
     UniqueReview.run()

@@ -1,0 +1,117 @@
+name: inverse
+layout: true
+class: left, top, inverse
+
+---
+
+# Amazon Web Services
+
+---
+
+## Grant
+
+  + $5,600 for this class
+  + Store data in S3
+  + Use mrjob on EMR
+
+???
+
+## No crazy
+
+  + Overcharges go on my credit card!
+  + Ask me before doing anything not discussed here
+
+---
+
+## S3
+
+  + [S3](http://aws.amazon.com/s3/): Simple Storage Service
+  + Can store and share large data files
+  + Free bandwidth when processing with EMR
+
+---
+
+## ```s3cmd```
+
+  + Upload / Download files
+  + ```s3cmd --configure```
+    + ```cat ~jretz/mrjob.conf``` to get answers to first two questions, defaults should work for the rest
+  + ```s3cmd mb s3://i290-name``` ← your name or team name here
+  + ```s3cmd put localfile s3://i290-name/data/```
+
+???
+
+## Configuration
+
+  + check ```~jretz/mrjob.conf```
+
+---
+
+## Elastic MapReduce
+
+  + ```python job.py -r emr -c ~jretz/mrjob.conf s3://i290-name/data/file```
+  + ```-r emr``` : run on EMR instead of localhost
+  + ```-c ~jretz/mrjob.conf``` : use a configuration file
+    + 5 machines, can change with command line options
+
+---
+
+## Copying Keys
+
+  + SSH keys are used to connect to server to check status
+  + Copy my keys, set correct permissions
+```bash
+$ cp ~jretz/i290T-03.pem.shared ~/i290T-03.pem
+$ chmod 0600 ~/i290T-03.pem
+```
+
+---
+
+.tight-code[
+```bash
+$ s3cmd put yelp_academic_dataset.json.gz s3://i290-jretz/data/
+# yelp_academic_dataset.json.gz -> s3://i290-jretz/data/yelp_academic_dataset.json.gz  [1 of 1]
+# 127506871 of 127506871   100% in    8s    13.60 MB/s  done
+
+$ cd datamining290/code/
+~/datamining290/code$ python unique_review.py -v -r emr \
+  -c ~jretz/mrjob.conf \
+  --output-dir s3://i290-jretz/output/unique_review/ \
+  --no-output \
+  s3://i290-jretz/data/yelp_academic_dataset.json.gz
+# ...
+# Creating Elastic MapReduce job flow
+# ...
+# Job flow created with ID: j-EFG48CIR1APW
+# ...
+# Job launched 60.8s ago, status STARTING: Provisioning Amazon EC2 capacity
+# ...
+# Job launched 334.4s ago, status RUNNING: Running step (unique_review.jretz.20130406.171258.267523: Step 1 of 3)
+# ...
+# map 73% reduce  42%
+# ...
+# Counters from step 1:
+# ...
+
+~/datamining290/code$ s3cmd ls -r s3://i290-jretz/output/
+# ...
+# 2013-04-06 18:05        29   s3://i290-jretz/output/unique_review/part-00005
+# ...
+```
+]
+
+???
+
+## Trade-offs
+
+  + Jobs may take 5 minutes to spin up
+  + Errors are harder to debug because they are mixed in with Hadoop and EMR
+    errors
+
+---
+
+## Extra Notes
+
+  + Cannot overwrite output directory: choose a new one for each run
+  + Errors may be hard to debug. Run locally with a sample of your data
+  + Output from job will be split into files, recall the Hadoop video lecture

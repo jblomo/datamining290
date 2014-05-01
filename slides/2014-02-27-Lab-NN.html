@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Data Mining</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <style type="text/css">
+      @import url(http://fonts.googleapis.com/css?family=Droid+Serif);
+      @import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+
+      body {
+        font-family: 'Droid Serif';
+        font-size: 25px;
+      }
+      .remark-slide-content {
+        padding: 1em 2em 1em 2em;
+      }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: 400;
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+      h1 { font-size: 3em; }
+      h2 { font-size: 1.8em; }
+      h3 { font-size: 1.4em; }
+      .footnote {
+        position: absolute;
+        bottom: 3em;
+      }
+      ul { margin: 8px;}
+      li p { line-height: 1.25em; }
+      .red { color: #fa0000; }
+      .large { font-size: 2em; }
+      a, a > code {
+        color: rgb(249, 38, 114);
+        text-decoration: none;
+      }
+      code {
+        -moz-border-radius: 3px;
+        -web-border-radius: 3px;
+        background: #e7e8e2;
+        color: black;
+        border-radius: 3px;
+      }
+      .tight-code {
+        font-size: 20px;
+      }
+      .white-background {
+        background-color: white;
+        padding: 10px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .limit-size img {
+        height: auto;
+        width: auto;
+        max-width: 1000px;
+        max-height: 500px;
+       }
+      em { color: #80cafa; }
+      .pull-left {
+        float: left;
+        width: 47%;
+      }
+      .pull-right {
+        float: right;
+        width: 47%;
+      }
+      .pull-right ~ p {
+        clear: both;
+      }
+      #slideshow .slide .content code {
+        font-size: 1.6em;
+      }
+      #slideshow .slide .content pre code {
+        font-size: 1.6em;
+        padding: 15px;
+      }
+      .inverse {
+        background: #272822;
+        color: #e3e3e3;
+        text-shadow: 0 0 20px #333;
+      }
+      .inverse h1, .inverse h2 {
+        color: #f3f3f3;
+        line-height: 1.6em;
+      }
+
+      /* Slide-specific styling */
+      #slide-inverse .footnote {
+        bottom: 12px;
+        left: 20px;
+      }
+      #slide-how .slides {
+        font-size: 1.6em;
+        position: absolute;
+        top:  151px;
+        right: 140px;
+      }
+      #slide-how .slides h3 {
+        margin-top: 0.2em;
+      }
+      #slide-how .slides .first, #slide-how .slides .second {
+        padding: 1px 20px;
+        height: 90px;
+        width: 120px;
+        -moz-box-shadow: 0 0 10px #777;
+        -webkit-box-shadow: 0 0 10px #777;
+        box-shadow: 0 0 10px #777;
+      }
+      #slide-how .slides .first {
+        background: #fff;
+        position: absolute;
+        top: 20%;
+        left: 20%;
+        z-index: 1;
+      }
+      #slide-how .slides .second {
+        position: relative;
+        background: #fff;
+        z-index: 0;
+      }
+
+      .center {
+        float: center;
+      }
+
+      /* Two-column layout */
+      .left-column {
+        width: 48%;
+        float: left;
+      }
+      .right-column {
+        width: 48%;
+        float: right;
+      }
+      .right-column img {
+        max-width: 120%;
+        max-height: 120%;
+      }
+
+      /* Tables */
+      table {
+        border-collapse: collapse;
+        margin: 0px;
+      }
+      table, th, td {
+        border: 1px solid white;
+      }
+      th, td {
+        padding: 7px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+
+name: inverse
+layout: true
+class: left, top, inverse
+
+---
+
+## Continue Back Propagation from Slides
+
+.white-background[
+<img src="img/ann8.png"/>
+]
+
+???
+
+## Expected
+
+  + Labeling: Top to bottom, left to right:
+  + 1 is upper left, 2 is lower left, 3 is top hidden layer, 6 is output layer
+
+---
+
+## Submit
+
+  ```nn-train.txt```
+```text
+err_6 = -0.11346127339699999
+err_5 = -0.0011326458827956695
+err_4 =
+err_3 =
+
+w_56 = 0.37298917134759924
+w_46 =
+w_36 =
+
+err_2 =
+err_1 =
+w_25 =
+w_24 =
+w_23 =
+w_15 =
+w_14 =
+w_13 =
+```
+
+???
+
+## Fill In
+
+  + Fill in values
+  + You may use a calculator or Python
+  + If you want feedback or partial credit, include any code in another file
+
+---
+
+## Project
+
+  + Find a partner (if applicable)
+  + Find a [data set](http://blog.bigml.com/2013/02/28/data-data-data-thousands-of-public-data-sources/)
+  + Start brainstorming
+
+    </textarea>
+    <script src="production/remark-0.5.9.min.js" type="text/javascript">
+    </script>
+    <script type="text/javascript">
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>

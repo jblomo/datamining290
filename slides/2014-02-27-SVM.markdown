@@ -1,0 +1,484 @@
+name: inverse
+layout: true
+class: left, top, inverse
+
+---
+
+# Linear Regression
+
+---
+
+## Types of Models
+
+  + Classifiers
+  + *Regressions*
+  + Clustering
+  + Outlier
+
+???
+
+## Details
+
+  + Classifiers
+    + describes and distinguishes cases. Yelp may want to find a category for a
+      business based on the reviews and business description
+  + Regressions
+    + *Predict a continuous value. e.g., predict a home's selling price given
+      square footage and # of bedrooms*
+  + Clustering
+    + find "natural" groups of data *without labels*
+  + Outlier
+    + find anomalous transactions, e.g., finding fraud for credit cards
+
+---
+
+## Case Study
+
+  + Housing prices: square footage
+
+<img src="img/housing-regression.jpg" width=100% />
+
+???
+
+## Problem
+
+  + We'd like to know how to price a house based on the square footage
+  + Let's pretend this is the data we have
+  + How would we guess that value for 2500 sq ft?
+  + img: http://realestatemetrics.blogspot.com/2013/04/starting-out-square-footage-vs-price.html
+
+---
+
+## Solution?
+
+???
+
+## Prompts
+
+  + In English, how would you solve this?
+
+---
+
+## Solution?
+
+  + Find a line that represents the data
+
+???
+
+## Prompts
+
+  + How to mathematically represent the line?
+
+---
+
+## Solution?
+
+  + Find a line that represents the data
+  + ```y = m*x + b```
+
+???
+
+## Prompts
+
+  + What is a good line?
+
+---
+
+## Solution?
+
+  + Find a line that represents the data
+  + ```y = m*x + b```
+  + A line that is not very far from the points
+
+---
+
+## Similarity
+
+  + Main challenges in data mining: defining a specific metric for an intuition
+  + Define distance for an individual point
+  + Define how to aggregate distances together
+
+???
+
+## Challenge
+
+  + This is big problem for engineering and math (stats) in general
+  + We'll cover some concepts, but if you're ever stuck, try looking in related
+    fields
+  + What are some of the ways we can measure distance between points?
+    Euclidean, Manhattan, Euclidean == L<sub>2</sub> norm
+  + What is a way to aggregate numbers? sum, sum of squares, sum of logs
+  + Differences between the last two?
+
+---
+
+## Log & Square
+
+  + Log: Useful for deemphasizing large raw differences
+  + Square: Useful for taking the approximate absolute value
+
+<img src="img/logx.gif"/>
+
+---
+
+## Point Distance
+
+  + ```y``` distance from line
+  + Intuitively: error in estimate
+  + ```h(x) = m*x + b```
+  + ```err = h(x) - y```
+
+<img src="img/error.gif"/>
+
+???
+
+## Error
+
+  + We want the difference from what we estimate to be the value to what the
+    value actually is
+
+---
+
+## Aggregate
+
+  + ```sum```
+  + What about negative error?
+  + Sum of squares
+
+.tight-code[
+```
+err = sum((h(x) - y)**2 for x,y in dataset) / len(dataset)
+```
+]
+
+???
+
+## Questions
+
+  + Now we have info about all the errors from points, how to summarize?
+  + Some points have negative error, some positive? Do they cancel each other
+    out?
+  + Imagine data set of two points: one solutions covers lines, other divides
+    them. Which is better?
+  + Use our squaring trick to make sure we don't have any negative values
+  + Normalize by the number of points
+
+---
+
+## Fitness Function
+
+  + Measures the quality or cost of the solution
+  + *Key* ingredient for data mining algorithms
+  + If you can't measure it, you can't find the best solution
+
+???
+
+## Fitness
+
+  + Function spits out a metric. Metric can be thought of as *fitness* or
+    *cost*
+  + Find the maximum or minimum of that metric
+  + Depending on your fitness function, this can be easy or difficult
+
+---
+
+## Understanding Error
+
+Several possible solutions
+
+<img src="img/Linear_regression.svg.png" width=100% />
+
+???
+
+## Error
+
+  + What happens to the error as we move line around?
+  + Decreases until best fit, then increases
+  + What happens if we plot this error? Say, slope (x) against error (y)?
+
+---
+
+## Solution as Minimization
+
+  + Error is a parabola
+  + Several methods for finding the minimum
+  + Two categories: analytical, approximations
+
+<img src="img/parabola.png" width=80% />
+
+---
+
+## Solution Approximation
+
+  + Some fitness functions can be difficult to solve analytically
+  + Alternative: iteratively get closer to the solution
+  + Stop when answer is close enough
+
+???
+
+## Analytical
+
+  + How to find the minimum of functions in general?
+  + Take derivative, find 0
+  + Taking derivative can be complex or impossible (discontinuities) for some
+    functions, or solving for 0 is difficult
+  + Instead, well keep getting closer to the minimum using the function we
+    already have
+
+---
+
+## Gradient Descent
+
+  1. Estimate current gradient (derivative)
+  1. Take a step (```a * deriv```) in the direction of the gradient
+  1. Step size is small, stop. Else repeat.
+
+<img src="img/parabola.png" width=80% />
+
+???
+
+## Steps
+
+  + Take gradient by looking at the local derivative, or perturbing x
+  + Choose ```a``` as step size weight: big ```a``` is large step size
+  + If ```deriv``` is large, will also make your step size large.
+  + If ```deriv``` is large, probably means you are far away from minimum
+  + Keep repeating
+  + What happens if ```a``` is too small?
+  + What happens if ```a``` is too big?
+
+---
+
+## General Case
+
+  + Formulate a fitness function for your problem
+  + Use analytics or approximations to find min/max
+  + Approximations: Newton's Method, Gradient Descent
+
+<img src="img/error-reduce.png" width=80% />
+
+???
+
+## Approximate visualization
+
+  + Graph of error vs. gradient descent iteration number
+  + Maybe some local problems, as step size is too big, but slowly move down to
+    a small amount of error
+
+---
+
+# Support Vector Machines
+
+---
+
+## Decision Trees
+
+  + Great for separable attributes
+  + Rules operate on independent attributes
+  + Classes separable along an axis/attribute
+
+<img src="img/tree.png"/>
+
+---
+
+## Linearly Separable
+
+  + How to handle case where separator line is not along an axis?
+
+<img src="img/dataset_linsep.png" width=90% />
+
+???
+
+## Details
+
+  + Could say if ```x>2``` and ```y>2```, but not a great intuitive fit
+  + Draw a line that takes both into account
+  + ```y = m*x + b```
+  + img: http://www.eric-kim.net/eric-kim-net/posts/1/kernel_trick.html
+
+---
+
+## Possibilities
+
+  + Many lines *could* separate these classes
+
+<img src="img/dataset_linsep.png" width=90% />
+
+???
+
+## Best?
+
+  + Which is the best?
+  + Why?
+
+---
+
+## Best Separator
+
+  + Best line gives the most distance between the two classes
+  + Measure distance between closest points
+  + Closest points == support vectors
+
+<img src="img/separable.jpg" width=100% />
+
+???
+
+## Points, Vectors
+
+  + Points can be represented as vectors
+  + Vector math can be easier to express succinctly
+  + img: http://www.sciencedirect.com/science/article/pii/S1072751511001918
+
+---
+
+# Dimensions
+
+  + When separating two dimensions, we need a line
+  + When separating 3 dimensions?
+  + 4 dimensions?
+
+???
+
+## Vocabulary
+
+  + Plane
+  + Hyperplane
+
+---
+
+## Expressing the Hyperplane
+
+???
+
+## Questions
+
+  + How do you mathematically represent a line?
+
+---
+
+## Expressing the Hyperplane
+
+  + y = m*x + b
+
+???
+
+## Questions
+
+  + Now, we're not going to think of a new letter for every dimension, we're
+    just going to say x<sub>1</sub>, x<sub>2</sub>, x<sub>3</sub> ...
+
+---
+
+## Expressing the Hyperplane
+
+  + y = m*x + b
+  + x<sub>2</sub> = m*x<sub>1</sub> + b
+
+???
+
+## Questions
+
+  + Rewrite mathematically
+
+---
+
+## Expressing the Hyperplane
+
+  + y = m*x + b
+  + x<sub>2</sub> = m*x<sub>1</sub> + b
+  + 0 = m*x<sub>1</sub> - x<sub>2</sub> + b
+???
+
+## Questions
+
+  + How to add more dimensions? x<sub>22</sub>? Express x as a vector of all attributes
+
+---
+
+## Expressing the Hyperplane
+
+  + y = m*x + b
+  + x<sub>2</sub> = m*x<sub>1</sub> + b
+  + 0 = m*x<sub>1</sub> - x<sub>2</sub> + b
+  + 0 = [m -1] * [x<sub>1</sub>, x<sub>2</sub>] + b
+
+???
+
+## Questions
+
+  + Again, don't want to come up with a bunch more letters after ```m```, so use
+    ```w``` as the matrix representing all the ```m``` slopes
+
+---
+
+## Expressing the Hyperplane
+
+  + y = m*x + b
+  + x<sub>2</sub> = m*x<sub>1</sub> + b
+  + 0 = m*x<sub>1</sub> - x<sub>2</sub> + b
+  + 0 = [m -1] * [x<sub>1</sub>, x<sub>2</sub>] + b
+  + 0 = w * x + b
+
+---
+
+## Challenge
+
+  + Find ```w```, ```b``` such that ```w * x + b``` maximizes the distance between the
+    support vectors
+
+.white-background[
+<img src="img/svm.png" width=60% />
+]
+
+---
+
+## Maximizing Fitness Function
+
+  + Now we have a fitness function and parameters we're trying to optimize
+  + Sound familiar?
+
+.white-background[
+<img src="img/svm.png" width=60% />
+]
+
+---
+
+## Kernel Tricks
+
+  + SVMs are good for linearly separable data
+  + How to handle other data?
+
+<img src="img/svm-circular.jpg"/>
+
+---
+
+## Polynomial Kernel
+
+  + Transform it into linearly separable
+  + What function can we apply to these data points to make them separable?
+
+<img src="img/svm-circular.jpg"/>
+
+???
+
+## Square
+
+  + Square all of them
+
+---
+
+## Polynomial Kernel
+
+  + Now apply SVM
+
+<img src="img/kernel-trick.jpg"/>
+
+???
+
+## Details
+
+  + img: http://www.sciencedirect.com/science/article/pii/S1072751511001918
+
+---
+
+## *Break*

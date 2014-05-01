@@ -1,0 +1,202 @@
+name: inverse
+layout: true
+class: left, top, inverse
+
+---
+
+# Review
+
+---
+
+## Review
+
+  + Midterm target length: 1.5 hours
+  + Time limit: 3 hours
+  + 1 cheat sheet, 8.5 x 11
+  + Calculators OK, not required
+  + Questions from slides have a higher probability of appearing
+  + Questions from the reading are fair game
+
+---
+
+## Case Studies
+
+  1. Example of "transactional data"
+  1. Example of non-transactional data
+
+???
+
+1, 2
+
+---
+
+## Obtaining Data
+
+  1. Trade-offs of dataset vs API?
+  1. Trade-offs of operational database vs data warehouse
+  1. Unix commands to explore data?
+
+???
+
+1, 2, 3
+
+---
+
+## Probability
+
+  1. Other names for a Feature
+  1. Difference between Discrete and Continuous feature
+  1. What type of feature is day of the week?
+  1. Ways to measure central tendency?
+  1. What is skew?
+  1. When is asymmetric binary dissimilarity useful?
+  1. How to calculate L<sub>2</sub> norm of two points?
+  1. What is cosine similarity?
+
+???
+
+1, 2, 3, 4, 5, 7
+
+---
+
+## Preprocessing
+
+  1. When storing the same fact in different ways, what type of problem is
+    likely?
+  1. Can data corruption happen with no mistakes and no bugs?
+  1. What are some options to deal with missing values?
+  1. What are some options to deal with outliers?
+  1. What does correlation imply?
+
+???
+
+2, 4, 5
+
+---
+
+## Data Warehouse
+
+  1. OLAP vs OLTP
+  1. Examples of database metadata?
+  1. What is a data multi-cube?
+  1. What is at the center of a star schema?
+  1. What is the tradeoff being made in dimension tables?
+  1. Define:
+    1. Rollup
+    1. Drill-down
+    1. Slice
+    1. Dice
+    1. Pivot
+
+???
+
+1, 4, 6.1
+
+---
+
+## MapReduce
+
+  1. What tradeoff are we making with MapReduce?
+  1. Why is log processing a typical use of MapReduce?
+  1. What types of processing are not well suited?
+  1. For a multi-step job, the output of a reducer is fed into what?
+
+???
+
+1, 2, 3, 4
+
+---
+
+## Decision Tree
+
+  1. What table can we create from the verification results to understand
+    performance of our model?
+  1. For supervised learning, what is required to train a model?
+  1. What is a naive way to optimize precision?
+  1. Recall?
+  1. Assuming we use all attributes to classify, what is the height of
+    our tree?
+  1. What are we optimizing for in the leaf nodes?
+
+???
+
+2, 3, 4
+
+---
+
+## Naive Bayes
+
+  1. Where does the testing set come from?
+  1. What is the ```k``` in k-fold cross-validation?
+  1. Bayes theorem finds P(A|B). In email spam detection, what are A and B?
+  1. What is the Naive assumption we make in Naive Bayes?
+  1. Why can training many models be useful?
+  1. What is bootstrap sampling?
+  1. What is a random forest?
+
+???
+
+1, 2, 3, 4, 7
+
+---
+
+## SVM
+
+  1. When finding a linear fit for home prices, what is our fitness function?
+  1. What is the gradient in gradient descent?
+  1. In the general case, are you guaranteed to find the globally optimal
+    solution when using gradient descent?
+  1. Why does SVM work so well in practice, even though it requires linear
+    separability?
+  1. If your data is not linearly separable, can you use SVM?
+
+???
+
+2, 3
+
+---
+
+## Neural Networks
+
+  1. What is model variance?
+  1. What problem does high model variance indicate?
+  1. What is an activation function?
+  1. What types of problems are neural networks especially suited for?
+  1. What are we improving during backward propagation?
+
+???
+
+1, 2, 4
+
+---
+
+## Partitioning Clusters
+
+  1. What is the difference between k-means and k-medoids?
+  1. What are some of the problems with k-means?
+  1. Why is normalization especially useful in clustering?
+  1. What are the tradeoffs for using k-medoid clustering?
+
+???
+
+1, 2
+
+---
+
+## Hierarchical Clustering
+
+  1. What are the options to calculate cluster distance?
+  1. Describe how to draw a dendrogram
+  1. What are the drawbacks to density clustering with DBSCAN?
+  1. If you had movie description data, but no genres, would you use Fuzzy
+    Clustering or Partitioned Clustering?
+  1. How can we evaluate a clustering algorithm if our data is already labeled
+    with clusters?
+
+???
+
+1, 2
+
+---
+
+#  *Good Luck!*

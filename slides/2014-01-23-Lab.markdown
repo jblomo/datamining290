@@ -1,0 +1,91 @@
+name: inverse
+layout: true
+class: left, top, inverse
+
+---
+
+## Lab: Github
+
+  + Setup GitHub account
+  + Submit assignment via GitHub
+
+---
+
+## Why GitHub?
+
+  + ```git``` tool is standard in industry
+  + GitHub provides best tools for sharing, commenting code
+  + This assignment will not have code, just practice submitting
+
+---
+
+## Setup GitHub account
+
+  + Create a [GitHub Account](https://github.com/signup/free), making sure to
+    use your .edu address
+  + Use [GitHub/Edu](https://github.com/edu) to request a free micro plan:
+    these let us use private accounts
+  + Setup a [GitHub SSH Key](https://help.github.com/articles/generating-ssh-keys)
+
+---
+
+## Setup git repository on ischool server (can also use your own laptop)
+
+  + On the server ischool.berkeley.edu
+```bash
+$ git clone git://github.com/jretz/datamining290.git
+```
+  + On the server, in the datamining290 directory run
+```bash
+$ git remote rename origin jretz
+```
+
+---
+
+## Connect it to GitHub
+
+  + After you receive your free micro account on GitHub, create a private repository called datamining290
+  + It will provide you with an SSH git path, let's call it PATH
+  + You must use the *SSH* PATH starting with ```git://```
+  + On the server, in the datamining290 directory, run
+```bash
+$ git remote add origin PATH
+$ git push origin master
+```
+
+---
+
+## Share with us
+
+  + Hopefully you now have a private copy of my repository
+  + Add Shreyas and me (users: seekshreyas, jretz) as a contributor to your private repository
+
+---
+
+## Submit Homework
+
+  + On the ischool server, create a branch called ```hw1```
+  + Create a new text file with your favorite editor (a simple one is
+    ```pico```) telling us what you hope to get out of the course
+  + ```git add``` the file
+  + ```git commit``` the change
+  + ```git push origin hw1``` to put it on GitHub
+  + On github, submit a "pull request" from the ```hw1``` branch to your master branch
+
+???
+
+## Pull Requests
+
+   + Pull requests are a way of showing updates in a way that lets me provide
+     comments, get notifications
+
+---
+
+## Going Forward
+
+  + Other homework assignments will be completing code
+  + General work-flow:
+    + Start a new branch
+    + Add required files
+    + Push to GitHub
+    + Submit Pull Request
